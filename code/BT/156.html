@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+                <style>
+        @keyframes a2{
+            0%{
+                background-color: #ff0000;
+                color: #00ffff;
+                border-radius: 0%;
+                /* transform: rotate(000deg); */
+            }
+            12.5%{
+                background-color: #ff9900;
+                color: #0000ff;
+                border-radius: 12.50%;
+                /* transform: rotate(045deg); */
+            }
+            25%{
+                background-color: #eeff00;
+                color: #ee00ff;
+                border-radius: 25%;
+                /* transform: rotate(090deg); */
+            }
+            37.5%{
+                background-color: #00ff00;
+                color: #ffffff;
+                border-radius: 37.5%;
+                /* transform: rotate(135deg); */
+            }
+            50%{
+                background-color: #00ffff;
+                color: #ff0000;
+                border-radius: 50%;
+                /* transform: rotate(180deg); */
+            }
+            62.5%{
+                background-color: #0000ff;
+                color: #ff9900;
+                border-radius: 37.5%;
+                /* transform: rotate(225deg); */
+            }
+            75%{
+                background-color: #ee00ff;
+                color: #eeff00;
+                border-radius: 25%;
+                /* transform: rotate(270deg); */
+            }
+            87.5%{
+                background-color: #ffffff;
+                color: #00ff00;
+                border-radius: 12.5%;
+                /* transform: rotate(3155deg); */
+            }
+            100%{
+                background-color: #ff0000;
+                color: #00ffff;
+                border-radius: 0%;
+                /* transform: rotate(360deg); */
+            }
+        }
+        *{
+            animation: a2;
+            animation-duration: 5.32s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+        }
+        font{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background: #000;
+            margin: 1px;
+            text-align: center;
+            font-size: 35px;
+            animation: a2;
+            animation-duration: 3.33s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        for (let i = 1; i<= 1000; i++){
+            document.write(`<font class='dd'color='#9f${i}07'></font>`)
+        }
+    </script>
+</body>
+</html>
