@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes a1{
+            0%{
+                background-color: #ff0000;
+                border: 50px double #ffffff;
+                transform: scale(2) rotate(0deg);
+                border-radius: 0%;
+            }
+            12.5%{
+                background-color: #ff9900;
+                border: 50px double #ee00ff;
+                transform: scale(2) rotate(45deg);
+                border-radius: 12.5%;
+            }
+            25%{
+                background-color: #eeff00;
+                border: 50px double #0000ff;
+                transform: scale(2) rotate(90deg);
+                border-radius: 25%;
+            }
+            37.5%{
+                background-color: #00ff00;
+                border: 50px double #eeff00;
+                transform: scale(2) rotate(135deg);
+                border-radius: 37.5%;
+            }
+            50%{
+                background-color: #00ffff;
+                border: 50px double #00ff00;
+                transform: scale(2) rotate(180deg);
+                border-radius: 50%;
+            }
+            62.5%{
+                background-color: #0000ff;
+                border: 50px double #00ffff;
+                transform: scale(2) rotate(225deg);
+                border-radius: 37.5%;
+            }
+            75%{
+                background-color: #ee00ff;
+                border: 50px double #0000ff;
+                transform: scale(2) rotate(270deg);
+                border-radius: 25%;
+            }
+            87.5%{
+                background-color: #ffffff;
+                border: 50px double #ee00ff;
+                transform: scale(2) rotate(315deg);
+                border-radius: 12.5%;
+            }
+            100%{
+                background-color: #ff0000;
+                border: 50px double #ffffff;
+                transform: scale(2) rotate(360deg);
+                border-radius: 0%;
+            }
+        }
+        @keyframes a2{
+            0%{
+                background-color: #ff0000;
+            }
+            12.5%{
+                background-color: #ff9900;
+            }
+            25%{
+                background-color: #eeff00;
+            }
+            37.5%{
+                background-color: #00ff00;
+            }
+            50%{
+                background-color: #00ffff;
+            }
+            62.5%{
+                background-color: #0000ff;
+            }
+            75%{
+                background-color: #ee00ff;
+            }
+            87.5%{
+                background-color: #ffffff;
+            }
+            100%{
+                background-color: #ff0000;
+            }
+        }
+        *{
+            background: #000;
+            /* animation: a2; */
+            animation-duration: 2.5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        .tp0 {
+            width: 300px;
+            height: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .tp1 {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 30%;
+            left: 30%;
+            padding: 50px;
+            animation: a1;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        </style>
+</head>
+<body>
+    <div class="tp0">
+        <img src="./3.png" class="tp1">
+    </div>
+</body>
+</html>
