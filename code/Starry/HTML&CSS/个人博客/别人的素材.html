@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>山羊の前端小窝</title>
+    <style>
+        * {
+            /*设置所有元素为边框包含，即margin为0，padding为0*/
+            box-sizing: border-box;
+            /*设置所有元素的padding为0*/
+            padding: 0;
+            /*设置所有元素的margin为0*/
+            margin: 0;
+        }
+
+        body {
+            /* 设置body的显示方式为flex */
+            display: flex;
+            /* 设置justify-content为center，使元素在水平方向上居中 */
+            justify-content: center;
+            /* 设置align-items为center，使元素在垂直方向上居中 */
+            align-items: center;
+            /* 设置body的高度为100vh，使元素占据整个视口 */
+            height: 100vh;
+            /* 设置背景图片，并使用fixed将背景图片固定在中心 */
+            background: url(./bg.jpg) no-repeat center center fixed;
+            /* 设置背景图片的大小为cover，使图片覆盖整个元素 */
+            background-size: cover;
+        }
+
+        #nav {
+            /* 设置绝对定位，相对于最近的父元素 */
+            position: relative;
+            /* 去除边框 */
+            border: none;
+            /* 设置圆角 */
+            border-radius: 10em;
+            /* 设置为弹性盒子布局 */
+            display: flex;
+            /* 去除列表样式 */
+            list-style: none;
+            /* 设置背景颜色 */
+            background: #f5f5f5;
+            /* 设置阴影 */
+            box-shadow: 20px 40px 40px #00000033;
+            /* 设置内边距 */
+            padding: 10px;
+        }
+
+        #nav li a {
+            /* 设置链接相对定位，并设置内边距 */
+            position: relative;
+            padding: 15px 50px;
+            /* 设置字体，字体加粗，字体大小为24px，字体样式为'优设标题黑' */
+            font: 500 24px '优设标题黑';
+            /* 设置边框为none */
+            border: none;
+            /* 设置轮廓为none */
+            outline: none;
+            /* 设置字体颜色为蓝色 */
+            color: rgb(70, 100, 180);
+            /* 设置为行内块级元素 */
+            display: inline-block;
+            /* 设置文本装饰为none */
+            text-decoration: none;
+            /* 设置索引为3 */
+            z-index: 3;
+        }
+
+        .slide1,
+        .slide2 {
+            /* 设置绝对定位，使其相对于其父元素定位 */
+            position: absolute;
+            /* 设置为内联块元素，使其与其他元素保持相对位置 */
+            display: inline-block;
+            /* 设置高度 */
+            height: 60px;
+            /* 设置边框圆角 */
+            border-radius: 10em;
+            /* 设置过渡效果，所有属性在0.6s内平滑变化 */
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1.05);
+        }
+
+        .slide1 {
+            /* 设置背景颜色为蓝色 */
+            background-color: rgb(170, 190, 255);
+            /* 设置z-index值为2 */
+            z-index: 2;
+        }
+        .slide2 {
+            /* 透明度为0 */
+            opacity: 0;
+            /* 背景颜色为半透明的蓝色 */
+            background-color: rgba(170, 190, 255, .5);
+            /* 层级为1 */
+            z-index: 1;
+            /* 添加阴影 */
+            box-shadow: 0 0 20px #ffffffaa inset;
+        }
+
+        .squeeze {
+            /* 缩小元素的大小，使其大小为原始大小的90% */
+            transform: scale(0.9);
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="nav">
+        <li class="slide1"></li>
+        <li class="slide2"></li>
+        <li><a href="#">Alpha</a></li>
+        <li><a href="#">Beta</a></li>
+        <li><a href="#">Gamma</a></li>
+        <li><a href="#">Delta</a></li>
+        <li><a href="#">Epsilon</a></li>
+    </ul>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    // 当点击导航链接时，将显示第一个slide，并设置其位置和宽度
+    $("#nav a").on("click", function () {
+        var position = $(this).parent().position();
+        var width = $(this).parent().width();
+        $("#nav .slide1").css({ opacity: 1, left: +position.left, width: width });
+    });
+    // 当鼠标悬停在导航链接上时，将显示第二个slide，并设置其位置和宽度
+    $("#nav a").on("mouseover", function () {
+        var position = $(this).parent().position();
+        var width = $(this).parent().width();
+        $("#nav .slide2").css({ opacity: 1, left: +position.left, width: width }).addClass("squeeze");
+    });
+    // 当鼠标离开导航链接时，将隐藏第二个slide
+    $("#nav a").on("mouseout", function () {
+        $("#nav .slide2").css({ opacity: 0 }).removeClass("squeeze");
+    });
+    // 设置初始宽度
+    var currentWidth = $("#nav li:nth-of-type(3) a").parent("li").width();
+    var current = $("li:nth-of-type(3) a").position();
+    // 设置slide1的位置和宽度
+    $("#nav .slide1").css({ left: +current.left, width: currentWidth });
+</script>
+
+</html>

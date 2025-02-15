@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // while (true) {
+    //   let num = +prompt('输入一个数字来猜数字')
+    //   let random = Math.floor(Math.random() * 10)
+    //   if (num === random) {
+    //     alert(`OK你答对了，答案是${random}`)
+    //   }
+    //   else if (num < random) {
+    //     alert(`猜小了`)
+    //   }
+    //   else {
+    //     alert(`猜大了`)
+    //   }
+    // }
+
+
+
+     // 1. 随机生成一个数字 1~10
+    // 取到 N ~ M 的随机整数
+    function getRandom(N, M) {
+      return Math.floor(Math.random() * (M - N + 1)) + N
+    }
+    let random = getRandom(1, 10)
+    console.log(random)
+    // 需要不断的循环
+    while (true) {
+      // 2. 用户输入一个值
+      let num = +prompt('请输入你猜的数字:')
+      // 3. 判断输出
+      if (num > random) {
+        alert('您猜大了')
+      } else if (num < random) {
+        alert('您猜小了')
+      } else {
+        alert('猜对啦，真厉害')
+        break  // 退出循环
+      }
+    }
+  </script>
+</body>
+
+</html>

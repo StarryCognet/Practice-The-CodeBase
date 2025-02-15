@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes move{
+            0%{
+                width: 0px;
+            }
+
+            100%{
+                width: 100px;
+            }
+
+        }
+        div{
+            width: 0px;
+            height: 30px;
+            font-size: 20px;
+            background-color: pink;
+            overflow: hidden;
+            white-space: nowrap;  /* 强制让文字在一行显示 */
+
+            /* 调用 */
+            animation: move 3s steps(5)  forwards;
+        }
+    </style>
+</head>
+<body>
+    <div>今天周六了</div>
+</body>
+</html>

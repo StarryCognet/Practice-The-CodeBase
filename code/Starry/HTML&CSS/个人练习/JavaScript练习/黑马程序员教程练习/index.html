@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p{
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <p style="size: 0px;"></p>
+  <script>
+    for (let i = 0; i <= 100; i++) {
+      for (let j = 0; j <= 100; j++) {
+        document.write(` <p style="size: ${j}px;">${j}</p>`)
+      }
+    }
+  </script>
+</body>
+
+</html>

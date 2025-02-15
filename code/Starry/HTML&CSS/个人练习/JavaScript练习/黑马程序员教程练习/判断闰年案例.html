@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let nian = prompt('输入年份')
+    if (nian % 4 === 0 && nian % 100 !== 0 || nian % 400 === 0 ){
+      alert(`${nian}是闰年`)
+    }
+    else{
+      alert(`${nian}是平年`)
+    }
+  </script>
+</body>
+</html>

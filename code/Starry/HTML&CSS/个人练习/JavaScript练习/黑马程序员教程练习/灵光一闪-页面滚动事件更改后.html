@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .top2 {
+      width: 0px;
+      height: 10px;
+      background-color: #00ff0d;
+      position: fixed;
+      transition: 0.3s ease;
+    }
+
+    body {
+      height: 2000px; /* 可以根据需要调整 */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top2"></div>
+  <script>
+    // 获取 body 的实际高度
+    const bodyHeight = document.querySelector('body').offsetHeight;
+
+    const to = document.querySelector('.top2');
+
+    window.addEventListener('scroll', function () {
+      const scrollTop = document.documentElement.scrollTop; // 当前滚动的距离
+      const scrollPercentage = Math.min((scrollTop / bodyHeight) * 200, 100); // 计算滚动的百分比，最大不超过 100%
+
+      console.log(scrollPercentage);
+      to.style.width = `${scrollPercentage}%`;
+    });
+  </script>
+</body>
+
+</html>

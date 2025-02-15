@@ -1,0 +1,90 @@
+<html>
+    <head>
+         <title>标题</title>
+	<style>
+			/* 全局选择器*/
+			*{
+				color: red;
+			}	 
+
+			/* 标签选择器*/
+			p{
+				color: red;
+			} 
+
+			/* 类选择器 */
+			.a{
+				color: blue;
+			}
+
+			/* id选择器 */
+			#b{
+				color: blueviolet;
+			}
+
+			/* 交集选择器 */
+			h1.a{
+				color: green;
+			}
+
+			/* 并集选择器 */
+			.a,p,h4{
+				color: red;
+			}
+
+			/* 子代选择器 */
+			ul>a{
+				color:red;
+			}
+
+
+			/* 后代选择器 */
+			ul li a{
+				color: red;
+			}
+			*/
+
+			/* 未访问 */
+			a:link{
+				color: red;
+			}
+
+			/* 已访问 */
+			a:visited{
+				color: pink;
+			}
+
+			/* 鼠标滑过 */
+			a:hover{
+				color:green;
+			}
+
+			/* 正在访问中 */
+			a:active{
+				color: yellow;
+			}
+	</style>
+    </head>
+    <body>
+	
+    <h1 class="a">22级16班</h1>
+    <h1 id="b">22级16班</h1>
+	<p class="a">22级16班</p>
+	<p>22级16班</p>
+	<h4>22级16班</h4>
+	<h4>22级16班</h4>
+
+	<ul>
+		<li>22级16班</li>
+		<li>22级26班</li>
+		<li><a href="#">22级16班</a></li>
+		<a href="#">21级16班</a>
+	</ul>
+	
+
+	 <a href="#">21级16班</a>
+
+    </body>
+
+</html>
+

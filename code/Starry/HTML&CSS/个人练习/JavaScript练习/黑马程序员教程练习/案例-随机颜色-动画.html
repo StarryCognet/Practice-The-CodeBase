@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .color,.color2{
+      width: 100px;
+      height: 100px;
+
+    }
+    .anm{
+      animation: anm 10s linear ease infinite alternate;
+    }
+    @keyframes anm{
+      0%{
+        transform: rotate(0deg) translateX();
+        transform: scale(0);
+      }
+      100%{
+        transform: rotate(360deg);
+        transform: scale(2);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="color"></div>
+  <div class="color2"></div>
+
+  <script>
+    function getRandomColor(fag) {
+      if (fag === true) {
+        let sta = '#'
+        let arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
+        for(let i = 0; i<6; i++){
+          let random = Math.floor(Math.random() *arr.length)
+          sta = sta + arr[random]
+        }
+        return sta
+      }
+      else {
+        let r = Math.floor(Math.random() * 256)
+        let g = Math.floor(Math.random() * 256)
+        let b = Math.floor(Math.random() * 256)
+        return `rgb(${r},${g},${b})`
+      }
+    }
+    console.log(getRandomColor(false));
+    console.log(getRandomColor(true));
+    document.write(`
+      <style>
+        .color{
+             background: ${getRandomColor(false)};
+         }
+        .color2{
+             background: ${getRandomColor(true)};
+         }
+     </style>`)
+
+     for (let i = 1; i <= 999; i++) {
+        document.write(`<div class="anm${i} wz${i}"></div>`)
+        document.write(`
+        <style>
+        .wz${i}{
+             color: ${getRandomColor(true)};
+             border: 10px solid ${getRandomColor(true)};
+             border-radius: 5px;
+             margin: 5px;
+             display: inline-block;
+         }
+        .anm${i}{
+             animation: anm${i} 1s 0.${i}s ease infinite alternate;
+         }
+        @keyframes anm${i}{
+          0%{
+            transform: rotate(0deg) scale(1) translateX(-200px);
+        }
+         100%{
+            transform: rotate(360deg) scale(1.5) translateX(100px);
+        }
+       }
+        </style>`)
+      // document.write('<br>')
+    }
+  </script>
+</body>
+
+</html>

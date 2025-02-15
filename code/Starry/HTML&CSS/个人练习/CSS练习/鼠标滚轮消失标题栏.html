@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Appear/Disappear</title>
+    <style>
+        #image {
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .image {
+            width: 100px;}
+            .div{
+                background-color: aqua;
+                width: 100px;
+                height: 10000px;
+            }
+    </style>
+</head>
+<body>
+    <div id="ima0ge2" src="吃搅拌机.png"></div>
+    <img  id="image" src="吃搅拌机.png" alt="">
+    <img  class="image" src="吃搅拌机.png" alt="">
+    <div class="div"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const image = document.getElementById('image');
+
+    window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 50) {
+            image.style.opacity = 0;
+        } else {
+            image.style.opacity = 1;
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
