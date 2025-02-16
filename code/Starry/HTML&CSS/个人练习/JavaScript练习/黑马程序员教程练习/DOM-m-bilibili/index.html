@@ -285,19 +285,26 @@
     }
   </style>
   <script>
+    // 获取tabs-list元素
     const list = document.querySelector('.tabs-list');
+    // 获取line元素
     const line = document.querySelector('.line');
+    // 定义一个变量，用于存储当前激活的tab
     let activeTab = null;
+    // 定义一个变量，用于存储line元素
     let listt = 0
+    // 给list元素添加点击事件
     list.addEventListener('click', function (e) {
+      // 判断点击的元素是否为a标签
       if (e.target.tagName === 'A') {
+        // 将点击的a标签赋值给activeTab
         activeTab = e.target;
+        // 将line元素的transform属性设置为点击的a标签的offsetLeft值
         line.style.transform = `translateX(${e.target.offsetLeft}px)`;
+        // 将line元素赋值给listt
         listt = line
       }
     });
-
-
   </script>
 </body>
 
