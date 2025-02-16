@@ -1,0 +1,46 @@
+<script>
+/* 循环嵌套：
+语法：
+for(外部的变量起始值；退出条件； 变化值){
+    for(内部的变量起始值； 退出条件；变化值){
+        循环体
+    }
+
+    外层循环执行一次，里面循环执行全部
+} */
+
+   /*   1.例：五行五列星星  *
+    for(let i = 1 ; i <= 5; i++){
+        for(let j = 1; j <= 5; j++){
+            document.write(`*`)
+        }
+        document.write(`<br>`)
+    } */
+
+    /*2.每天记5个单词，3天后一共能记住多少单词？
+      for(let i = 1; i < 4; i++){
+
+        document.write(`第${i}天：<br>`)
+
+            for(let j = 1 ; j < 6; j++){
+                document.write(`第${j}个单词<br>`)
+            }
+        document.write(`<br>`)
+      }
+      */
+
+    /*   3.打印三角形星星
+    分析：
+    1.外层循环控制行，内层循环控制列
+    2.内层循环的个数跟第几行是一一对应的
+
+      for(let i = 1; i < 6; i++){
+            for(let j = 1 ; j <= i; j++){
+                document.write(`*`)
+            }
+            document.write(`<br>`)
+      }
+    */
+
+   
+</script>

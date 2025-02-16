@@ -1,0 +1,142 @@
+<script>
+/* 1.打印0~100以内所有的能被3整除的数字    
+
+    for(let i = 0; i <= 100; i++){
+        if(i % 3 === 0){
+            document.write(`${i}<br>`)
+        }
+    }
+*/
+/* 2.打印100–200之间所有能被3或者7整除的数 
+   
+
+    for(let i = 100; i <= 200; i++){
+        if(i % 3 === 0 || i % 7 === 0){
+            document.write(`${i}<br>`)
+        }
+    }
+*/
+/* 3.打印两位数中有3或者7的数字    数位分离      
+
+    197 = a
+    个位：a / 1 % 10   7
+    十位：a / 10 % 10  9
+    百：a / 100 % 10  1
+
+    任意一个数字（197），a 先 / 再 % 10 ，就是求的哪位数 
+
+    for(let i = 10; i <= 99; i++){
+        let shi = parseInt(i / 10 % 10)  
+        let ge = parseInt(i / 1 % 10)
+
+        if(shi === 3 || ge === 3 || shi === 7 || ge === 7){
+            document.write(`${i}<br>`)
+        }
+
+    }
+*/
+   
+/* 4.计算10的阶乘 10....1     10 * 9 * 8 * 7 ..... 1 
+    
+
+    let jc = 1    
+
+    for(let i = 1; i <= 10; i++){
+        jc = jc * i  
+    }
+    document.write(jc)
+*/
+
+
+
+
+/* 5.求100-999之间的水仙花数。abc =a^3+b^3+c^3      数位分离
+
+    水仙花数：指各位数字立方之和等于该数的数
+    a^3 是a的立方，a * a * a
+    例：153 = 1^3 + 5^3 + 3^3,所以是水仙花数            
+
+    for(let i = 100; i <= 999 ; i++){
+        let ge = parseInt( i / 1 % 10)
+        let shi = parseInt(i / 10 % 10)
+        let bai = parseInt(i / 100 % 10)
+
+        if(bai * bai * bai + shi * shi * shi + ge * ge * ge === i){
+            document.write(`这个水仙花数是${i}<br>`)
+        }
+    }
+*/
+   
+
+
+/* 6.输出100以内所有的素数 （概念：只能被1和自身整除的数，并且1和0 不是素数， 素数又称质数）
+    for(let i = 2; i < 100; i++){
+
+        // 声明素数的变量
+        let a = true
+        for(let j = 2; j < i; j++){
+            // 判断i 能否被 j 整除
+            if(i % j === 0){
+
+                // 能被整除说明不是素数，修改布尔值为false
+                a = false
+                break;
+            }
+        }
+        // 打印素数
+        if(a){
+            document.write(`是素数：${i}<br>`)
+        }
+    }
+
+ */
+
+
+
+/* 7.完成一个直角三角形的打印   5行5列
+    for(let i = 1 ; i < 6; i++){
+        for(let j = 1 ; j <= i ; j++){
+            document.write(`a`)
+        }
+        document.write(`<br>`)
+    }
+ */ 
+
+
+/* 8.打印九九乘法表 */
+    for(let a = 1; a <= 9 ; a++){
+        for(let s = 1; s <= a ; s++){
+            document.write(`
+                <div>
+                    ${s} * ${a} = ${a*s}
+                </div>
+            `)
+        }
+        document.write(`<br>`)
+    } 
+
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: inline-block;
+            height: 30px;
+            width: 80px;
+            line-height: 30px;
+            border: 1px solid #666;
+            border-radius: 5px;
+            background-color: pink;
+
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>
