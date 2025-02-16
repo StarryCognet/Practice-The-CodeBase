@@ -1,3 +1,1 @@
-每人必须安装Markdown，读取.md文档时必须使用，不要嫌麻烦
-
-支持Markdown格式的Typora下载链接：https://download2.typoraio.cn/windows/typora-setup-x64.exe
+md文档要用vscode打开具体看“2”

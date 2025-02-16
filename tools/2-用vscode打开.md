@@ -1,3 +1,5 @@
+用vscode打开后点击右上角的打开侧边预览，或者下载Markdown Preview Enhanced插件
+
 #简单的Markdown演示
 
 下面是一个Markdown格式的笔记示例，它包含了标题、子标题、列表、代码块、引用、链接、图片以及表格等常见的Markdown元素：
