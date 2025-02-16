@@ -58,7 +58,7 @@
             color: #fff;
             line-height: 80px;
             font-size: 30px;
-            transition: all .3s;
+            transition: ease .3s;
         }
 
         /* 设置秒杀模块的样式 */
@@ -72,11 +72,8 @@
 </head>
 
 <body>
-    <!-- 顶部导航栏 -->
     <div class="header">我是顶部导航栏</div>
-    <!-- 内容区域 -->
     <div class="content">
-        <!-- 秒杀模块 -->
         <div class="sk">秒杀模块</div>
     </div>
     <div class="backtop">
@@ -95,11 +92,12 @@
             // 如果滚动条距离顶部的距离大于等于sk元素的offsetTop值
             if (n >= sk.offsetTop) {
                 // 将header元素的top值设置为0
-                header.style.top = '0'
+                header.style.top = 0
             } else {
                 // 否则将header元素的top值设置为-80px
                 header.style.top = '-80px'
             }
+
         })
     </script>
 </body>
