@@ -285,16 +285,29 @@
     }
   </style>
   <script>
-    const list = document.querySelector('.tabs-list')
-    const line = document.querySelector('.line')
+    const list = document.querySelector('.tabs-list');
+    const line = document.querySelector('.line');
+    let activeTab = null;
+    let listt = 0
     list.addEventListener('click', function (e) {
-      if (e.target.tarName = 'A') {
-        // console.log(11)
-        // console.log((e.target.offsetLeft - 16) / 3.75 + 'vw')
-        // console.log((e.target.offsetLeft) / 3.75 + 'vw')
-        line.style.left = (e.target.offsetLeft + 16) / 3.75 + 'vw'
+      if (e.target.tagName === 'A') {
+        activeTab = e.target;
+        line.style.transform = `translateX(${e.target.offsetLeft}px)`;
+        listt = line
       }
-    })
+    });
+
+    list.addEventListener('mousemove', function (e) {
+      if (e.target.tagName === 'A') {
+        line.style.transform = `translateX(${e.target.offsetLeft}px)`;
+      }
+    });
+
+    list.addEventListener('mouseout', function (e) {
+      if (e.target.tagName === 'A') {
+        line.style.transform = `translateX(${listt}px)`;
+      }
+    });
   </script>
 </body>
 
