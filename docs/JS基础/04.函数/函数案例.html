@@ -1,0 +1,79 @@
+<script>
+    // 1.封装一个函数，计算1-100之间所有的和
+    /*无参无返回值
+    function getSum(){
+        let sum = 0
+        for(let i = 1; i <= 100; i++){
+            sum = sum + i
+        }
+        document.write(sum)
+    }
+    getSum()
+    */
+
+   /* 有参无返回值  
+   function getSum(a,b){
+       let sum = 0
+       for(let i = a; i <= b; i++){
+         sum = sum + i
+       }
+       document.write(sum)
+    }
+    getSum(1,100)
+    getSum(20,50)
+    */
+
+ /*   有参有返回值 
+    function getSum(a,b){
+       let sum = 0
+       for(let i = a; i <= b; i++){
+         sum = sum + i
+       }
+      return sum
+    }
+    let rel = getSum(1,100)
+    console.log(rel)
+ */
+
+
+/* 2.封装函数 求学生总分
+学生分数是一个数组，计算每个学生的总分
+1.封装一个求和函数
+2.传递过去的参数是数组
+3.在函数内部遍历数组求和
+*/
+ 
+ /*    function getSum(arr){
+      let sum = 0
+      for(let i = 0;i < arr.length;i++){
+        sum = sum + arr[i]
+      }
+      document.write(`学生总分是${sum}<br>`)
+    }
+    getSum([100,120,90])
+    getSum([110,120,130])
+
+
+    function getSum(arr){
+      let sum = 0
+      for(let i = 0;i < arr.length;i++){
+        sum = sum + arr[i]
+      }
+      return sum
+    }
+    let rel = getSum([100,120,90])
+    document.write(rel)
+     */
+
+    /* 3.求圆的周长2 * π * r  和 圆的面积 π * r * r
+    圆的半径：r */
+    function circleL(r){
+        let pai = 3.14
+        let l = 2 * pai * r
+
+        return l
+    }
+    let r = prompt('请输入圆的半径')
+    let a = circleL(r)
+    document.write(a)
+</script>

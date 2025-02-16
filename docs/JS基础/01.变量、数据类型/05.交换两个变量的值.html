@@ -1,0 +1,35 @@
+<script>
+    /*
+    交换变量的值:
+    有两个变量，num1里放的是10， num2里放的是20 
+    最后变成num1里放20，num2里放10
+    
+
+   let num1 = 10
+   let num2 = 20
+
+   console.log(num1)
+   console.log(num2)
+    */
+
+    /*
+
+   步骤:
+   1.声明一个临时变量a
+   2.把num1的值赋值给a
+   3.把num2的值赋值给num1
+   4.把临时变量a的值给num2
+
+   */
+
+     let num1 = 10
+     let num2 = 20
+
+    let a
+    a  = num1
+    num1 = num2
+    num2 = a
+
+    console.log(num1,num2)
+
+</script>

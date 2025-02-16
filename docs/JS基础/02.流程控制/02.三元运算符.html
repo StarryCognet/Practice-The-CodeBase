@@ -1,0 +1,27 @@
+<script>
+   /*  三元表达式/ 三元运算符
+    
+    符号： ？ 和 ：配合使用
+    语法：
+    条件？ 满足条件执行的代码 ： 不满足条件执行的代码 */
+
+    // 3 > 5 ? alert('真') : alert('假')
+
+    /*  例:判断两个数的最大值
+     需求:用户输入两个数,控制台输出最大值
+    let num = +prompt('第一个')
+    let num1 = +prompt('第二个')     
+
+    let rel = num > num1 ? num : num1
+    console.log(rel) */
+/* 
+    例：数字补0案例
+    1.用户输入数字
+    2.判断条件小于10，则数字前面补0 ，就是 +0   否则不补 */
+    let num = prompt('请输入一个数字')
+    let rel = num < 10 ? 0 + num : num
+
+    console.log(rel)
+
+ 
+</script>

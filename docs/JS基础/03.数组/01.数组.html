@@ -1,0 +1,116 @@
+<script>
+// （Array）数组：是一种可以按顺序保存数据的数据类型
+// for循环最大的价值：循环数组
+
+// 将数组里的数据依次打印出来   ['刘亚菲', '男' , '18' , '菏泽']
+
+// 声明一个数组
+            
+// let arr =  ['刘亚菲', '男' , '18' , '菏泽', '刘亚菲', '男' , '18' , '菏泽']
+// for(let i = 0; i < arr.length; i++){
+//     document.write(`${arr[i]}<br>`)
+// }
+// document.write(arr.length)
+// 数组里数据的排序： 索引号 / 下标   也就是序号的意思   数组里的索引号从0开始
+// 取值：arr[0]   数组名[索引号]
+// 数组长度：arr.length   索引号永远比数组的长度小1
+// 循环数组也叫遍历数组：一遍一遍去循环
+
+/* 1.数组求和和平均值：
+需求：求数组[12, 20 ,5, 61 ,23, 42]里面所有元素的和以及平均值
+let arr = [12, 20 ,5, 61 ,23, 42]
+let sum = 0
+let average = 0
+
+for(let i = 0; i < arr.length;i++){
+    sum = sum + arr[i]
+}
+average = sum / arr.length
+document.write(`总和为${sum}<br>平均值为${average}`)
+*/
+
+// 2.求数组中的最大值[12, 20 ,5, 61 ,23, 42]
+/* 分析：
+1.声明一个保存最大值的变量max
+2.默认最大值，可以去数组里第一个元素
+3.遍历这个数组，把里面每个元素都和max比较
+4.如果这个数组元素大于max,就把这个元素赋值给max
+5.最后输出max 
+    let arr = [12, 20 ,5, 61 ,23, 42]
+    let max = arr[0]   
+
+    for(let i = 1; i < arr.length; i++){
+        if(max < arr[i]){
+            max = arr[i]
+        }
+    }
+    document.write(max)
+    */
+
+    // 操作数组：增   删    改    查  
+
+    /* 1.查询数组数据
+     数组[索引]
+    let arr = [12, 20 ,5, 61 ,23, 42]
+    console.log(arr[3])
+    */
+
+    /*2.改  （重新赋值）
+    数组[索引] = 新值
+    let arr = [12, 20 ,5, 61 ,23, 42]
+    arr[3] = 10
+
+    console.log(arr)
+    */
+
+//    3.增：给数组添加新的数据
+/*   01.arr.push(新增的内容；后)
+
+arr.push（）是将一个或多个元素添加到数组的末尾，并返回该数组的新长度
+
+语法：
+数组名.push(元素1，元素2，......元素n)
+
+let arr = [12, 20 ,5, 61 ,23, 42]
+arr.push(10,30)
+// console.log(arr.push(10,30))  返回的是数组长度
+console.log(arr)
+*/
+
+
+
+/*  02.arr.unshift(新增的内容；前)
+let arr = [12, 20 ,5, 61 ,23, 42]
+
+console.log(arr.unshift(10,30))  返回的是数组长度
+console.log(arr)
+*/
+
+/* 1.需求：将数组[2,0,6,77,1,0,52,25,9,8]中大于等于10的元素选出来，放入新的数组
+分析：
+01.声明一个新的数组存放新数据newArr
+02.遍历原来的数组，找出大于等于10的数据
+03.依次追加给新的数组 
+    let arr = [2,0,6,77,1,0,52,25,9,8]
+    let newArr = [ ]
+
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] >= 10){
+            newArr.push(arr[i])
+        }
+    }
+    console.log(newArr)
+*/
+
+    // 2.数组去0
+    // 需求：将数组[2,0,6,77,1,0,52,25,0,8]中的0去掉后，形成一个新的不包含0 的数组
+    let arr = [2,0,6,77,1,0,52,25,0,8]
+    let newArr = []
+
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] !== 0){
+            newArr.push(arr[i])
+        }
+    }
+    console.log(newArr)
+</script>

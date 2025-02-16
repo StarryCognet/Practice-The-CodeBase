@@ -1,0 +1,16 @@
+需求：用户输入商品价格和数量，收货地址，可以自动打印订单信息
+
+    分析：
+    1.需要3个变量价格price    数量num  地址address
+    2.需要计算总价 total
+    3.页面打印生成表格（渲染表格），里面填充数据
+    4.填充的数据多，最好使用模板字符串
+
+
+  border-collapse: collapse;  /*合并边框，变成细线边框*/
+  caption:表格标题
+
+打印到页面    document.write(    )
+
+
+prompt

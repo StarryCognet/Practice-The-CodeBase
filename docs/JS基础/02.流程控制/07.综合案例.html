@@ -1,0 +1,43 @@
+<script>
+/*    简易ATM取款机        
+   需求：用户可以选择存钱  取钱  查看余额 和  退出
+   分析：
+    1.需要反复提示输入框，所以提示框要写在循环里
+    2.退出条件是用户输入了4，如果是4，则结束循环
+    3.提前准备一个金额
+    4.存钱是加   取钱减   查看余额是显示余额
+    5.输入不同的值，用switch来执行不同的操作
+*/
+ let box=1000
+
+ while(true){
+    let a = prompt(`
+    选择：
+    1.存钱
+    2.取钱
+    3.余额
+    4.退出
+    `)
+
+    if(a === '4'){
+        break
+    }
+
+    switch(a){
+        case'1': 
+        let mn = +prompt('存钱')
+        box = box +mn 
+        break;
+
+        case'2': 
+        let bo = +prompt('取钱')
+        box = box -bo 
+        break;
+
+        case'3':
+        alert(`余额${box}元`)
+        break;
+      }
+ }
+
+</script>

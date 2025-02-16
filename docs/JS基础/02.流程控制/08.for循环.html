@@ -1,0 +1,63 @@
+<script>
+/* for循环：也是重复执行代码
+
+语法：
+for(变量起始值；退出条件；变化量){
+    循环体
+} */
+
+/* 1.用for 打印10句好好学习
+    for(let i = 1 ; i <= 10 ; i++){
+        document.write(`好好学习<br>`)
+    }
+*/ 
+/*2.用for循环输出1-100
+    for(let i = 1 ; i <= 100 ; i++){
+        document.write(`这个数是${i}<br>`)
+    }
+*/
+
+/* 3.求1 - 100 之间所有的偶数和
+    let sum = 0
+
+    for(let i = 1 ; i <= 100 ;i++){
+        if(i % 2 === 0){
+            sum = sum + i
+        }
+    }
+    document.write(sum)
+*/
+
+/*4.用户输入次数，打印好好学习
+    let num = prompt('请输入次数')
+
+    for(let i = 1 ; i <= num ; i++){
+        document.write(`好好学习<br>`)
+    }
+*/
+
+/*5.输出1-100岁  并提示 出生   死亡
+    for(let i = 1 ; i <= 100; i++){
+        if(i === 1){
+            document.write(`这个人今年1岁,他出生了<br>`)
+        }else if(i === 100){
+            document.write(`这个人今年100岁，他去世了<br>`)
+        }else{
+            document.write(`这个人今年${i}岁了<br>`)
+        }
+
+    }
+    */
+
+    /* 退出循环：
+    1.continue ：结束本次循环，继续下次循环
+    2.break:跳出所在循环 */
+
+    for(let i = 1; i <= 5 ; i++){
+        if(i === 3){
+            // continue
+            break
+        }
+        document.write(`吃的第${i}个包子<br>`)
+    }
+</script>
