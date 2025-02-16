@@ -1,0 +1,116 @@
+<script>
+// 操作数组：增   删    改    查  
+
+/* 1.查询数组数据
+ 数组[索引]
+let arr = [12, 20 ,5, 61 ,23, 42]
+console.log(arr[3])
+*/
+
+
+
+
+/*2.改  （重新赋值）
+数组[索引] = 新值
+let arr = [12, 20 ,5, 61 ,23, 42]
+arr[3] = 10
+
+console.log(arr)
+*/
+
+
+
+
+
+//    3.增：给数组添加新的数据
+/*   01.arr.push(新增的内容；后)
+
+arr.push（）是将一个或多个元素添加到数组的末尾，并返回该数组的新长度
+
+语法：
+数组名.push(元素1，元素2，......元素n)
+
+let arr = [12, 20 ,5, 61 ,23, 42]
+arr.push(10,30)
+// console.log(arr.push(10,30))  返回的是数组长度
+console.log(arr)
+*/
+
+
+
+/*  02.arr.unshift(新增的内容；前)
+let arr = [12, 20 ,5, 61 ,23, 42]
+
+console.log(arr.unshift(10,30))  返回的是数组长度
+console.log(arr)
+*/
+
+/* 1.需求：将数组[2,0,6,77,1,0,52,25,9,8]中大于等于10的元素选出来，放入新的数组
+分析：
+01.声明一个新的数组存放新数据newArr
+02.遍历原来的数组，找出大于等于10的数据
+03.依次追加给新的数组 
+let arr = [2,0,6,77,1,0,52,25,9,8]
+let newArr = [ ]
+
+for(let i = 0; i < arr.length; i++){
+    if(arr[i] >= 10){
+        newArr.push(arr[i])
+    }
+}
+console.log(newArr)
+*/
+
+/*  2.数组去0
+ 需求：将数组[2,0,6,77,1,0,52,25,0,8]中的0去掉后，形成一个新的不包含0 的数组
+let arr = [2,0,6,77,1,0,52,25,0,8]
+let newArr = []
+
+for(let i = 0; i < arr.length; i++){
+    if(arr[i] !== 0){
+        newArr.push(arr[i])
+    }
+}
+console.log(newArr ) */
+
+
+
+/* 4.删：删除数组中数据 */
+/* 01. 
+
+语法：arr.pop() 
+数组名.pop() :从数组中删除最后一个元素，并返回改元素的值
+
+
+
+let arr = [2,0,6,25,0,8]
+
+console.log(arr.pop()) //删除的元素，告诉你删的是谁
+console.log(arr)
+
+*/
+
+
+/* 02.
+语法：arr.shift() 
+数组名.shift():删除数组中第一个元素，并返回该元素的值
+
+let arr = [2,0,6,25,0,8]
+
+console.log(arr.shift())
+console.log(arr)
+*/
+
+
+
+/* 03.arr.splice(起始位置，删除几个元素)
+
+语法：
+数组名.splice(start,deleteCount)
+start:起始位置，指定修改的开始位置（从索引号 0 开始）
+deleteCount：表示要移除数组元素的个数，可选，如果省略则默认从指定的起始位置删到最后
+
+*/
+
+
+</script>

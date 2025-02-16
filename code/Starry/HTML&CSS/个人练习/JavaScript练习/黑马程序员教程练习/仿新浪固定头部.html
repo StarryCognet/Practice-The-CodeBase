@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 设置全局样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 设置内容区域的样式 */
+        .content {
+            overflow: hidden;
+            width: 1000px;
+            height: 3000px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+
+        /* 设置返回顶部的样式 */
+        .backtop {
+            display: none;
+            width: 50px;
+            left: 50%;
+            margin: 0 0 0 505px;
+            position: fixed;
+            bottom: 60px;
+            z-index: 100;
+        }
+
+        /* 设置返回顶部链接的样式 */
+        .backtop a {
+            height: 50px;
+            width: 50px;
+            background: url(./images/bg2.png) 0 -600px no-repeat;
+            opacity: 0.35;
+            overflow: hidden;
+            display: block;
+            text-indent: -999em;
+            cursor: pointer;
+        }
+
+        /* 设置顶部导航栏的样式 */
+        .header {
+            position: fixed;
+            top: -80px;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background-color: purple;
+            text-align: center;
+            color: #fff;
+            line-height: 80px;
+            font-size: 30px;
+            transition: ease .3s;
+        }
+
+        /* 设置秒杀模块的样式 */
+        .sk {
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+            margin-top: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">我是顶部导航栏</div>
+    <div class="content">
+        <div class="sk">秒杀模块</div>
+    </div>
+    <div class="backtop">
+        <img src="./images/close2.png" alt="">
+        <a href="javascript:;"></a>
+    </div>
+    <script>
+        // 获取header元素
+        let header = document.querySelector('.header')
+        // 获取sk元素
+        let sk = document.querySelector('.sk')
+        // 监听滚动事件
+        window.addEventListener('scroll', function () {
+            // 获取滚动条距离顶部的距离
+            let n = document.documentElement.scrollTop
+            // 如果滚动条距离顶部的距离大于等于sk元素的offsetTop值
+            if (n >= sk.offsetTop) {
+                // 将header元素的top值设置为0
+                header.style.top = 0
+            } else {
+                // 否则将header元素的top值设置为-80px
+                header.style.top = '-80px'
+            }
+
+        })
+    </script>
+</body>
+
+</html>

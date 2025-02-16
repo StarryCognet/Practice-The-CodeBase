@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+/* 模版字符串：拼接字符串和变量
+符号：反引号  `  `    内容拼接变量时，用${ 变量 } */
+
+//let a = prompt('请输入你的年龄')   //输入语法
+
+// console.log('我今年' + a +'岁啦')
+// document.write(`我今年${a}岁啦`)
+
+
+// 例：页面弹出对话框，输入名字和年龄，页面显示：大家好，我叫XX，今年XX岁了
+let name = prompt('请输入你的姓名')
+let age = prompt('请输入你的年龄')
+
+document.write(`我叫<span>${name}</span>,今年<span>${age}</span>岁了`)
+</script>

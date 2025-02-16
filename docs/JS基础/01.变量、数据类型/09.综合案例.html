@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        table{
+            margin: 0 auto;
+            text-align: center;
+            border-collapse: collapse;  /*合并边框，变成细线边框*/
+        }
+
+        table th,td{
+            border: 1px solid #000000;
+            padding: 15px;
+        }
+
+        table caption{
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+ 
+</body>
+</html>
+<script>
+  /*   需求：用户输入商品价格和数量，收货地址，可以自动打印订单信息
+    分析：
+    1.需要3个变量价格price    数量num  地址address
+    2.需要计算总价 total
+    3.页面打印生成表格（渲染表格），里面填充数据
+    4.填充的数据多，最好使用模板字符串 */
+    let price = +prompt('请输入商品价格')
+    let num = +prompt('请输入商品数量')
+    let address = prompt('请输入地址')
+
+    let total = price*num
+
+
+    document.write(`
+    <table>
+        <caption>
+            <h2>订单确认</h2>
+        </caption>
+        <tr>
+            <th>商品名称</th>
+            <th>商品价格</th>
+            <th>商品数量</th>
+            <th>商品总价</th>
+            <th>地址</th>
+        </tr>
+
+        <tr>
+            <td>手机</td>
+            <td>${price}元</td>
+            <td>${num}部</td>
+            <td>${total}元</td>
+            <td>${address}</td>
+        </tr>
+    </table>   
+    `)
+</script>

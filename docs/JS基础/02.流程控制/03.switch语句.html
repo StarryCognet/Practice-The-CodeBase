@@ -1,0 +1,75 @@
+<script>
+   /*  switch语句
+    语法：
+
+    switch(数据){
+        case 值1：
+                代码1
+                break;
+        
+        case 值2：
+                代码2
+                break;
+
+        case 值3：
+                代码3
+                break;
+
+        default:
+            代码n
+            break;
+    }
+
+    释义：
+    1.找到跟小括号里数据全等的case值，并执行里面对应的代码
+    2.若没有全等=== 则执行default 里的代码
+
+    switch：开关   case：情况/选项  break  换行 */
+
+
+   /*  switch(2){
+        case 1:
+            alert(1)
+            break;
+        
+        case 2:
+            alert(2)
+            // break;   不给会造成穿透
+        
+        case 3:
+            alert(3)
+            break;
+
+        default:
+            alert('无')
+            break;
+    } */
+
+  /*   简易计算器
+    需求：用户输入两个数字，然后输入+ - * / 任何一个，计算结果
+    分析：
+    1.用户输入数字
+    2.用户输入不同的运算符，执行不同的运算 */
+
+    let num = +prompt('请输入第一个数')
+    let num1 = +prompt('请输入第二个数')
+    let y = prompt('请选择+ - * /')
+
+    switch(y){
+        case '+':
+            alert(`您选择的是加法，结果是${num + num1}`)
+            break;
+        case '-':
+            alert(`您选择的是减法，结果是${num - num1}`)
+            break;
+        case '*':
+            alert(`您选择的是乘法，结果是${num * num1}`)
+            break;
+        case '/':
+            alert(`您选择的是除法，结果是${num / num1}`)
+            break;
+        default:
+            alert('请输入+ - * /')
+            break;
+    }
+</script>

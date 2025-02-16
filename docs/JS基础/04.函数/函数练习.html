@@ -1,0 +1,94 @@
+<script>
+     //封装函数  完成检测是否为闰年
+    /*
+        用户输入一个年份
+        封装函数  检测年份是否为闰年
+       
+   
+    function year(n){
+        if(n % 4 === 0 && n % 100 !== 0 || n % 400 === 0 ){
+            alert(`${n}为闰年`)
+        }else{
+            alert(`${n}为平年`)
+        }
+    }
+    let n = prompt('请输入年份')
+    year(n)
+    */
+    //封装函数  完成 一个数组中成年的年龄
+    /*
+        定义数组[19,20,18,16,14,23]
+        封装函数  将数组中 大于等于18的 数据 
+        作为数组返回
+    
+    function arr(age){
+        let newArr = []
+        for(let i = 0; i < age.length; i++){
+            if(age[i] >= 18){
+                newArr.push(age[i])
+            }
+        }
+        return newArr
+    }
+    let a = arr([19,20,18,16,14,23])
+    console.log(a)
+       */
+
+
+    //封装函数  完成一个计算器
+    /*
+        用户输入 第一个数  符号   第二个数
+        使用函数完成计算  并将计算结果返回
+    
+   function a(num1,num2){
+        switch(y){
+            case '+':
+                let jia = num1 + num2
+                return jia
+                break;
+
+            case '-':
+                let jian = num1 - num2
+                return jian
+                break;
+            
+            case '*':
+                let cheng = num1 * num2
+                return cheng
+                break;
+
+            case '/':
+                let chu = num1 / num2
+                return chu
+                break;
+
+            default:
+                alert('请输入+ - * /')
+                break;
+        }
+
+   }
+   let num1 = +prompt('第一个数')
+   let num2 = +prompt('第二个数')
+   let y = prompt('输入+ - * /')
+   let res = a(num1,num2)
+   document.write(`结果是${res}`)
+*/
+
+ /*  4.封装函数，打印几行  几列  "学" 字 
+  
+ */ 
+    function study( a,b){
+        for(let i = 1; i <= a; i++){
+            for(let j = 1; j <= b; j++){
+                document.write('学')
+            }
+            document.write(`<br>`)
+        }
+    }
+    let num1 = prompt('输入行')
+    let num2 = prompt('输入列')
+    num1 = parseInt(num1)
+    num2 = parseInt(num2)
+    study(num1,num2)
+</script>
