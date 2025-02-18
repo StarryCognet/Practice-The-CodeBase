@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>扫雷游戏</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .board {
+            display: grid;
+            grid-template-columns: repeat(10, 30px);
+            gap: 2px;
+            margin: 20px auto;
+            justify-content: center;
+        }
+        .cell {
+            width: 30px;
+            height: 30px;
+            background-color: #ccc;
+            border: 1px solid #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .cell.revealed {
+            background-color: #fff;
+            cursor: default;
+        }
+        .cell.mine {
+            background-color: #f00;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>扫雷游戏</h1>
+    <div class="board" id="board"></div>
+    <script src="/code/li/minesweeper.js"></script>
+</body>
+</html>
