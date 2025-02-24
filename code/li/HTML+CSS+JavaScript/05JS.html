@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜数字游戏</title>
+</head>
+<body>
+    <h1>猜数字游戏</h1>
+    <p>我已经想好了一个1到100之间的数字，你能猜出来吗？</p>
+    <input type="number" id="guessInput" placeholder="输入你的猜测">
+    <button onclick="checkGuess()">提交</button>
+    <p id="message"></p>
+
+    <script>
+        // 生成一个1到100之间的随机数
+        const randomNumber = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+
+        function checkGuess() {
+            // 获取玩家输入的数字
+            const userGuess = parseInt(document.getElementById('guessInput').value);
+            const message = document.getElementById('message');
+
+            if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
+                message.textContent = '请输入一个1到100之间的有效数字！';
+                return;
+            }
+
+            attempts++;
+
+            if (userGuess < randomNumber) {
+                message.textContent = '太小了，再试一次！';
+            } else if (userGuess > randomNumber) {
+                message.textContent = '太大了，再试一次！';
+            } else {
+                message.textContent = `恭喜你！你猜对了！你用了${attempts}次尝试。`;
+            }
+        }
+        <!-- kddkdkk -->
+        
+    </script>
+</body>
+</html>
