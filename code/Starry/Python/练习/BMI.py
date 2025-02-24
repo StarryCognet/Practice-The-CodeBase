@@ -11,6 +11,6 @@ def getcmd(wi, hi):
     print(f"BMI指数为：{crd}{BMI}")
 
 
-h = float(input("请输入身高："))
+搞 = float(input("请输入身高："))
 w = float(input("请输入体重："))
 getcmd(w, h)
