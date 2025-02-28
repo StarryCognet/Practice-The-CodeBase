@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+  /*
+  1.初识js
+<input type="button" value="点一点" onclick="alert('hello js')">-->
+<!-- 内嵌
+<script>
+// 单行注释
+/*
+ 多行注释
+*/
+alert('hello js')
+</script>
+<script src="./初识js.js"></script>
+                               */
+    /*        
+            02.js输入输出语法
+// 输出语句 alert  浏览器弹框   只要不是纯数字  都要用引号包裹
+// alert('hello js')
+//console.log('mas')
+//控制台打印输出的输出信息
+/ 在页面输出内容   可以解析标签
+// 文档       写
+/ document.write('js')
+// document.write('<h1>')
+// document.write(555555555555)
+// document.write('</h1>')
+                               */
+        /* 
+            03.js变量
+        //  js变量
+// 语法：   let 变量名 = 值
+// let:定义变量的关键字
+// 空格：分隔关键字和变量名的  必须有
+// 变量名：你自己起的一个名字来代表后面的一串内容
+// = ：赋值   把右边的内容给到左边的变量名
+// 值：定义的变量内容
+边声明  边赋值
+let name = "汇聚力量"
+console.log(name)
+一个变量只能存一个值，当你给第二个值的时候就会覆盖第一个
+let a = "hello word"
+    a = "你好 世界"
+console.log(a)
+只声明  不赋值   占位
+let a 
+console.log(a)
+不声明  只赋值  不建议使用
+a = 'hello word'
+console.log(a)
+定义多个变量，用逗号隔开
+let a = 1,
+    b = 2,
+    c = 3；
+console.log(a,b,c)
+                     */
+    
+    /* 
+            04.变量命名规范
+//规则:由字母(A-Za-z)、数字(0-9)、下划线(_)、美元符号( $ )组成，如：usrAge, num01, _name
+严格区分大小写。var app; 和 var App; 是两个变量
+不能 以数字开头。 18age 是错误的
+不能 是关键字、保留字。例如：var、for、while
+变量名必须有意义。 MMD BBD nl → age 
+遵守驼峰命名法。首字母小写，后面单词的首字母需要大写。myFirstName*/
+
+   /* 
+             05.js的数据类型
+  // 1.Number  数字型   数值型
+    var age = 21;       // 整数var Age = 21.3747;  // 小数  
+    let a1 = 100
+    let a2 = -100
+    console.log(a1+1)
+    console.log(a2)
+    // 浮点数  
+    let a3 = 1.2
+    console.log(a3)
+    // 2.字符串  一切使用引号包裹的都是字符串（''    " "     ` `）    表示一段文本内容，是一个字符串一个字符串连起来的
+    let b1 = '100'
+    console.log(b1+1)
+    // 3.布尔值  true 真    false假
+    // 1.true  表示真，在计算机存储的时候就是1
+    // 2，false  表示假，在计算机存储的时候就是0
+    let c = true
+    let d = false
+    console.log(c)
+    console.log(d)
+    // 4.undefined  空    
+        let aa 
+        console.log(aa)
+    // 5.Null  空
+        let aaa = null
+        console.log(aaa)
+                                        */
+  /*                                      
+                     06.输入语法
+   // 输入语法
+    let name = prompt('请输入你的名字')
+    document.write(name)
+    document.write('<br>')
+    let age = prompt('请输入你的年龄')
+    document.write(age)
+                                          */    
+                 07.交换两个变量的值   
+  // let  age; // 声明一个 名称为age 的变量
+            // 赋值
+            let  = 10; // 给 age 这个变量赋值为 10
+           // 变量的初始化
+          //  let  age = 18; // 声明变量同时赋值为 18
+  // 声明一个变量并赋值， 我们称之为变量的初始化。
+           // 变量语法扩展
+          // let age = 18;
+age = 81; // 最后的结果就是81因为18 被覆盖掉了
+// 同时声明多个变量时，只需要写一个 var， 多个变量名之间使用英文逗号隔开。
+// let nq ; console.log(nq);    只声明不赋值    结果 undefinedu
+//  console.log(nq);    不声明不赋值直接使用      结果   报错 
+//  nq = 10; console.log(nq);    不声明只赋值     结果     10
+
+
+/*
+                   08.字符串
+//     字符串的长度
+//    let name = 'aaaaaaaaa aaa'
+//    console.log(name.length)
+// 字符串拼接
+/* +号，可以把两个字符串拼成一个字符串
+let name = '张三'
+let age = '今年18岁'
+document.write(name+age)
+document.write('<br>')
+let age1 = 20
+document.write('我的年龄是' + age1)
+document.write('<br>')
+document.write('10' + 10)
+*/
+/*输入名字，页面弹出   我的名字叫什么
+let name = prompt(' 请输入你的名字')
+document.write('我的名字叫' + name)
+*/
+
+// 输入年龄 页面弹出  我今年XX岁了
+let age = prompt('请输入你的年龄')
+document.write(我今年 + age + '岁了')   */
+
+/*
+                     09.模版字符串
+   // 模版字符串 
+    //  ``  反引号   内容拼接变量时 用${ } 包裹
+    // 页面弹出对话框，输入年龄和姓名。页面显示，大家好，我叫XX，今年XX岁了
+    let name = prompt('请输入你的名字')
+    let age = prompt('请输入你的年龄')
+    document.write(`大家好，我叫<span>${name}</span>,今年<span>${age}</span>岁了`)
+                                                                                         */
+
+                           10.检测数据类型
+ // let num = 10
+    // let num1 = '10'
+    // console.log(typeof num + 11)
+    // console.log(typeof num1)
+    // let age = prompt('请输入年龄')
+    // console.log(typeof age)
+    // 为什么要进行类型转换：把已汇总昂数据类型转换成我们需要的数据类型
+   /* 1.隐式转换
+        某些运算符被执行时，系统内部自动将数据类型进行转换，这种称为隐式转换
+        规则：
+        +号两边只要有一个是字符串，都会把另外一个转换成字符串   除了+号以外， - * / 都会把数据类型转成数字型
+        console.log('10' + 10)
+        console.log('15' - 5)
+        +可以作为正号 解析转换成数字型
+        let num = '10'
+        console.log(+num + 10)
+        console.log(11 + 11)
+        console.log('11' + 11)
+        console.log(+'11' + 1)
+        console.log('11' * 10)
+        console.log(typeof +num)
+    */
+        // 2.显示转换
+        /* 转成数字型    语法:转成数字型：Number(数据)      只保留整数：parseInt(数据)     可以保留小数：parseFloat(数据)
+        let num = '10.11'
+        console.log(Number(num))
+        // 转换成数字型  只保留整数
+        console.log(parseInt(num))
+        // 转换成数字型，会保留小数
+        console.log(parseFloat(num))
+        console.log(Number('10a'))
+        console.log(parseInt('10.1a'))
+        console.log(parseFloat('10.11a'))
+        */
+    /*   转换为字符串     语法： String(数据)        数据.toString()
+        let num = 10
+        console.log(String(num))   强制转换
+        console.log(num.toString())  
+    */ 
+//    转换成布尔值  有5个值代表false 空   假    ' ', 0 , NaN, null, undefined
+       let num = 10
+       console.log(Boolean(num))
+       console.log(Boolean(''))
+                                   */
+</body>
+</html>
