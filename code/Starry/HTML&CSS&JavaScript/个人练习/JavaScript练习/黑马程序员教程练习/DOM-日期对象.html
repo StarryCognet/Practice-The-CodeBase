@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
+  <div id="time">1</div>
   <script>
-    let d = new Date()
-    console.log(d);
-    
+    // let date = new Date()
+    // console.log(date.getDate());
+
+    function FillInZero(s) {
+      s = s >= 10 ? s : '0' + s
+      return s
+    }
+
+    function updateDateTime() {
+      let date = new Date();
+      document.getElementById('time').innerHTML = `
+        ${date.getFullYear()}-
+        ${FillInZero(date.getMonth() + 1)}-
+        ${FillInZero(date.getDate() + 1)}-
+        ${FillInZero(date.getHours())}-
+        ${FillInZero(date.getMinutes())}-
+        ${FillInZero(date.getSeconds())}
+      `;
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
   </script>
 </body>
+
 </html>
