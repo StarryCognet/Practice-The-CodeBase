@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        h3{
+        h3 {
             text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            height: 80px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        th{
+            padding: 5px 30px ;
+        }
+        td{
+            padding: 5px 40px;
+        }
+
+        table,th ,td {
+            border: 1px solid #000;
         }
     </style>
 </head>
+
 <body>
     <h3>订单确认</h3>
-    <table>
+    
+    <script>
+        let pricd = +prompt('请输入商品价格；')
+        let num = +prompt('请输入商品数量；')
+        let address = prompt('请输入收货地址；')
+
+        let total = pricd*num
+
+        document.write(`
+        <table>
         <tr>
             <th>商品名称</th>
             <th>商品价格</th>
@@ -20,6 +48,17 @@
             <th>总量</th>
             <th>收货地址</th>
         </tr>
+        <tr>
+            <td>小米手机青春版</td>
+            <td>${pricd}元</td>
+            <td>${num}</td>
+            <td>${total}元</td>
+            <td>${address}</td>
+        </tr>
     </table>
+        `)
+
+    </script>
 </body>
+
 </html>
