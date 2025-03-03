@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .time {
+      width: 200px;
+      height: 250px;
+      background-color: #b40d0d;
+      margin: 200px auto;
+      padding: 10px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .xiab {
+      font-size: 30px;
+      margin: 20px;
+    }
+
+    .djs span {
+      padding: 2px 5px;
+      margin: 5px;
+      background: #000;
+      border-radius: 3px;
+    }
+
+    .xksj {
+      position: relative;
+      top: 50px;
+      font-size: 20px;
+    }
+
+    .djs span:last-of-type {
+      display: inline-block;
+      width: 70px;
+      height: 28px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="time">
+    <p class="jin">今天是2222年2月22日</p>
+    <p class="xiab">下课倒计时</p>
+    <div class="djs">
+      <span>22</span>:
+      <span>23</span>:
+      <span>24</span>
+      <span>0000</span>
+    </div>
+    <div class="xksj">10:00:00下课</div>
+  </div>
+  <script>
+    const date = new Date()
+    const jin = document.querySelector('.jin')
+    const djs = document.querySelectorAll('span')
+
+    jin.innerHTML = (`今天是${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`)
+    console.log(djs[0].innerHTML = '222');
+
+    function getTime() {
+      let ssjc = +new Date('2025-3-3 10:20:00')
+      let sjc = +new Date()
+      let xsjc = (ssjc - sjc) / 1000
+      let decimalPart = xsjc.toString().split('.')[1];
+      let h = parseInt(xsjc / 60 / 60 % 24)
+      let m = parseInt(xsjc / 60 % 60)
+      let s = parseInt(xsjc % 60)
+      h = h < 10 ? '0' + h : h
+      m = m < 10 ? '0' + m : m
+      s = s < 10 ? '0' + s : s
+
+      djs[0].innerHTML = h
+      djs[1].innerHTML = m
+      djs[2].innerHTML = s
+      djs[3].innerHTML = decimalPart
+
+    }
+    getTime()
+    setInterval(getTime, 1)
+
+
+
+
+  </script>
+</body>
+
+</html>
