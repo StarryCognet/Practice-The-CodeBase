@@ -7,18 +7,21 @@
 </head>
 <body>
     <script>
-        //逻辑与一假全假
-        //console.log(true && true)
-        //console.log(3<5 && 3>5)
-        //逻辑或一真全真
-        //console.log(true || false)
-        //console.log(false|| false)
-        //console.log(true|| true)
-        //console.log("---------------------------")
         //单分支语句
         if (true){
             console.log("请输你的名字")
         }
+        //1. 输入用户名
+        let score = +prompt("请输入你的分数")
+        //2. 判断分数是否大于等于690
+        if (score >=690) {
+            alert("恭喜你，考上了国防科技大学")
+        }
+        else{
+            alert('很遗憾，您没有被录取')
+        }
+        
+
     </script>
 </body>
 </html>
