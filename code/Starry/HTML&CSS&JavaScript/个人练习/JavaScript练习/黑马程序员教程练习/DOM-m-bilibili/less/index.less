@@ -1,0 +1,155 @@
+// 导入base.less
+@import url(base.less);
+// 声明基准值变量
+@baseSize: 3.75vw;
+// 顶部盒子
+.suspension {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #fff;
+  box-shadow: 0 0.53333vw 2.66667vw rgb(0 0 0 / 20%);
+  .m-navbar {
+    padding: 0 (12 / @baseSize) 0 (18 / @baseSize);
+    height: (44 / @baseSize);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      i {
+        font-size: (28 / @baseSize);
+        color: #fb7299;
+      }
+    }
+
+    .right {
+      display: flex;
+      .search {
+        color: #ccc;
+        i {
+          font-size: (22 / @baseSize);
+        }
+      }
+      .face {
+        overflow: hidden;
+        width: (24 / @baseSize);
+        height: (24 / @baseSize);
+        border-radius: 50%;
+        margin: 0 (20 / @baseSize);
+      }
+      .app-btn {
+        width: (72 / @baseSize);
+        height: (24 / @baseSize);
+       
+      }
+    }
+  }
+
+  // 频道
+  .channel-menu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: (40 / @baseSize);
+    border-bottom: 1px solid #e7e7e7;
+    // tabs
+    .tabs {
+      overflow: hidden;
+      flex: 1;
+      .tabs-list {
+        display: flex;
+        a {
+          padding: 0 (16 / @baseSize);
+          // 我们不需要文字换行
+          white-space: nowrap;
+          font-size: (14 / @baseSize);
+          height: (40 / @baseSize);
+          line-height: (40 / @baseSize);
+        }
+
+        .line {
+          position: absolute;
+          left: (16 / @baseSize);
+          bottom: 0;
+          width: (28 / @baseSize);
+          height: (2 / @baseSize);
+          background-color: #fb7299;
+        }
+      }
+    }
+    // after
+    .after {
+      width: (40 / @baseSize);
+      height: (39 / @baseSize);
+      text-align: center;
+      line-height: (39 / @baseSize);
+      background-color: #fff;
+      color: #ccc;
+      i {
+        font-size: (20 / @baseSize);
+      }
+    }
+  }
+
+}
+
+// 主体部分
+.m-home {
+  padding: (85 / @baseSize)  (5 / @baseSize) 0;
+  .video-list {
+    display: flex;
+    // 让弹性盒子换行
+    flex-wrap: wrap;
+    .video-item {
+      width: 50%;
+      padding: (8 / @baseSize) (5 / @baseSize);
+
+      .card {
+        position: relative;
+        height: (97 / @baseSize);
+        .count {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: (27 / @baseSize);
+          padding: 0 (5 / @baseSize);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: (12 / @baseSize);
+          color: #fff;
+          background-image: linear-gradient( transparent, red);
+        }
+      }
+      .title {
+        margin-top: (5 / @baseSize);
+        font-size: (12 / @baseSize);
+      }
+    }
+  }
+}
+
+// 底部模块
+.app {
+  position: fixed;
+  left: 0;
+  bottom: (30 / @baseSize);
+  width: 100%;
+  height: (38 / @baseSize);
+  
+  .btn-app {
+    margin: 0 (20 / @baseSize);
+    height: (38 / @baseSize);
+    background-color: purple;
+    border-radius: (19 / @baseSize);
+    text-align: center;
+    line-height: (38 / @baseSize);
+    background-color: #fb7299;
+    color: #fff;
+    box-shadow: 0 0.53333vw 2.66667vw rgb(0 0 0 / 20%);
+  }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    button {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: #fff;
+      transition: 0.2s ease;
+    }
+
+    button:hover {
+      transform: scale(1.2);
+      border: 4px solid #000;
+    }
+
+    button:active {
+      transform: scale(1);
+      border: 10px solid #000;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <button>按下任意键</button>
+  <canvas id="canvas"></canvas>
+
+  <script>
+    let bu = document.querySelector('button');
+    let canvas = document.getElementById('canvas');
+    let ctx = canvas.getContext('2d');
+
+    // 设置画布大小
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // 初始位置
+    let startX = 0;
+    let startY = 0;
+
+    bu.addEventListener('click', function () {
+      let randomWidth = Math.floor(Math.random() * (window.innerWidth - 100));
+      let randomHeight = Math.floor(Math.random() * (window.innerHeight - 100));
+      bu.style.top = `${randomHeight}px`;
+      bu.style.left = `${randomWidth}px`;
+
+      // 绘制移动曲线
+      drawCurve(startX, startY, randomWidth, randomHeight);
+      startX = randomWidth;
+      startY = randomHeight;
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key) {
+        let randomWidth = Math.floor(Math.random() * (window.innerWidth - 100));
+        let randomHeight = Math.floor(Math.random() * (window.innerHeight - 100));
+        bu.style.top = `${randomHeight}px`;
+        bu.style.left = `${randomWidth}px`;
+
+        // 绘制移动曲线
+        drawCurve(startX, startY, randomWidth, randomHeight);
+        startX = randomWidth;
+        startY = randomHeight;
+      }
+    });
+
+    function drawCurve(startX, startY, endX, endY) {
+      ctx.beginPath();
+      ctx.moveTo(startX, startY);
+      ctx.quadraticCurveTo(startX, startY, endX, endY);
+      ctx.strokeStyle = 'black';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    }
+  </script>
+</body>
+
+</html>

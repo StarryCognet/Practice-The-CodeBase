@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0 100px;
+      float: left;
+    }
+
+    li {
+      float: left;
+      margin: 20px;
+    }
+
+    p {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <script>
+      let num = prompt('输入需要展示的数量')
+      let arr = [
+        './imgs/1.webp',
+        './imgs/2.webp',
+        './imgs/3.webp',
+        './imgs/4.webp',
+        './imgs/5.webp',
+        './imgs/6.webp',
+        './imgs/7.webp',
+        './imgs/8.webp',
+        './imgs/9.webp',
+        './imgs/10.webp',
+        './imgs/11.webp',
+        './imgs/12.webp',
+        './imgs/13.webp',
+        './imgs/14.webp',
+        './imgs/15.webp',
+        './imgs/16.webp',
+        './imgs/17.webp',
+        './imgs/18.webp',
+        './imgs/19.webp',
+        './imgs/20.webp'
+      ]
+      for (let i = 0; i < num; i++) {
+        if (num > 20) {
+          alert('必须输入20以内的数')
+          num = prompt('输入需要展示的数量')
+          continue
+        }
+        document.write(`
+      <li>
+          <img src="${arr[i]}">
+          <p>${i + 1}</p>
+      </li>
+      `)
+      }
+    </script>
+  </ul>
+</body>
+
+</html>

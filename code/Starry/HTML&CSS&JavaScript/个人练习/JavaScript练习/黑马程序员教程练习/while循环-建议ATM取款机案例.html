@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let ckye = 10
+    while (true) {
+      // let qk
+      // let ck
+      let atm = +prompt(`
+           请选择您的操作:
+                  1.取款
+                  2. 存款
+                  3. 查看余额
+                  4.退出
+                  `)
+      if (atm === 4){
+        break
+      }
+      switch (atm) {
+        case 1: {
+          let qk = +prompt(`输入取款金额`)
+          ckye -= qk
+          alert(`取款成功，余额还有${ckye}`)
+          continue
+        }
+        case 2: {
+          let ck = +prompt(`输入存款金额`)
+          ckye += ck
+          alert(`存款成功，余额还有${ckye}`)
+          continue
+        }
+        case 3: {
+          alert(`余额还有：${ckye}`)
+          continue
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

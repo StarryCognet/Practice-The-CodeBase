@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .top2 {
+      width: 0px;
+      height: 10px;
+      background-color: #00ff0d;
+      position: fixed;
+      transition: 0.3s ease;
+    }
+
+    body {
+      height: 2000px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top2"></div>
+  <p class="p1">body的高度是</p>
+  <p class="p2"></p>
+  <p class="p3"></p>
+  <script>
+    const b = document.querySelector('body').offsetHeight;
+    const to = document.querySelector('.top2')
+    const p1 = document.querySelector('.p1')
+    window.addEventListener('scroll', function () {
+      const n = document.documentElement.scrollTop
+      const i = ((n / b)*206)
+      console.log(i);
+      to.style.width = `${i}%`
+    })
+  </script>
+</body>
+
+</html>

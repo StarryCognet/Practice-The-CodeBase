@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点灯泡</title>
+    <style>
+        .bulb {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            border-radius: 50%;
+            transition: background-color 0.5s;
+        }
+
+        .bulb .on {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+<div class="bulb" id="bulb"></div>
+<script>
+    document.getElementById('bulb').addEventListener('click', function () {
+        this.classList.toggle('on');
+    });
+
+</script>
+</body>
+
+</html>
