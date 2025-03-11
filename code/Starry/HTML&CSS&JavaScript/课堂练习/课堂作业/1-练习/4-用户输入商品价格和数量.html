@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table{
+      width: 500px;
+      border: 1px solid #000;
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
+    td{
+      border: 1px solid #000;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    let spm = prompt('请输入商品名');
+    let spjg = prompt('请输入商品价格');
+    let spsl = prompt('请输入商品数量');
+    let shdz = prompt('请输入收货地址');
+    let zj = spjg * spsl;
+    document.write(`
+    <table>
+    <tr>
+      <td>商品名称</td>
+      <td>商品价格</td>
+      <td>商品数量</td>
+      <td>总价</td>
+      <td>收货地址</td>
+    </tr>
+    <tr>
+      <td>${spm}</td>
+      <td>${spjg}元</td>
+      <td>${spsl}</td>
+      <td>${zj}元</td>
+      <td>${shdz}</td>
+    </tr>
+  </table>
+    `);
+  </script>
+</body>
+</html>
