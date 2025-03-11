@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let cj = prompt("请输入本次考试成绩：")
+
+    cj = parseInt(cj)
+
+    if (cj < 60) {
+      alert("不及格")
+    } else if (cj >= 60 && cj <= 79) {
+      alert("及格")
+    } else if (cj >= 80 && cj <= 89) {
+      alert("良好")
+    } else if (cj >= 90 && cj <= 99) {
+      alert("优秀")
+    } else if (cj === 100) {
+      alert("学习之星")
+    } else {
+      alert("NaN")
+    }
+  </script>
+</body>
+
+</html>

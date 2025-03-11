@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const date = new Date()
+    const hours = date.getHours()
+
+    if (hours < 12) {
+      alert("上午好，好好学习")
+    } else if (hours < 18) {
+      alert("下午好，好好学习")
+    } else if (hours >= 21) {
+      alert("好好睡觉")
+    } else {
+      alert("夜深了，还不赶紧休息")
+    }
+  </script>
+</body>
+
+</html>

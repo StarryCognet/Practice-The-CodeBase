@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 获取用户输入的第一个数字
+    let num1 = +prompt("请输入第一个数字：")
+
+    // 获取用户输入的第二个数字
+    let num2 = +prompt("请输入第二个数字：")
+
+    // 获取用户输入的运算符
+    let op = prompt("请输入运算符（+、-、*、/）")
+
+
+    // 根据运算符执行不同的运算
+    let re
+
+    if (op === "+") {
+      re = num1 + num2
+    } else if (op === "-") {
+      re = num1 - num2
+    } else if (op === "*") {
+      re = num1 * num2
+    } else if (op === "/") {
+      // 检查除数是否为0
+      if (num2 === 0) {
+        alert("除数不能为0！")
+      } else {
+        re = num1 / num2
+      }
+    } else {
+      alert("输入的运算符无效！")
+    }
+
+    // 判断运算符有效
+    if (re !== undefined) {
+      alert("计算结果是：" + re)
+    }
+  </script>
+</body>
+
+</html>
