@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for(let i = 100; i <= 999; i++){
+            let ge = i % 10
+            let shi = Math.floor(i / 10 % 10)
+            let bai = Math.floor(i / 100)
+            if(ge * ge * ge + shi * shi * shi + bai * bai * bai === i){
+                console.log(i);
+                
+            }
+        }
+    </script>
+</body>
+</html>
