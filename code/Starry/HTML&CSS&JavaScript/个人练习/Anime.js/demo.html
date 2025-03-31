@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anime.js Example</title>
     <style>
         /* 添加一些基本样式 */
-        #box {
+        .box {
             width: 100px;
             height: 100px;
             background-color: red;
-            position: absolute;
-            top: 20px;
-            left: 20px;
+            margin: 70px;
         }
     </style>
 </head>
+
 <body>
-    <div id="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
 
     <!-- 引入 anime.js -->
     <script src="./node_modules/animejs/lib/anime.min.js"></script>
     <script>
         // 在这里编写你的 anime.js 动画代码
+        let em = document.querySelectorAll('.box')
         anime({
-            targets: '#box',
-            translateX: 200,
+            targets: em,
+            translateX: 500,
             rotate: '1turn',
             backgroundColor: '#00ff00',
-            duration: 2000,
-            loop: true
+            duration: 1000,
+            loop: true,
+            borderRadius: ['0%', '50%'],
+            easing: 'easeInOutQuad',
+            direction: 'alternate',
+            easing: 'easeInOutSine'
         });
     </script>
 </body>
+
 </html>
