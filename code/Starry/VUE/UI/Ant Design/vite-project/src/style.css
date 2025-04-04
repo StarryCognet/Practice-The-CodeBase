@@ -4,7 +4,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(73, 73, 73, 0.87);
   background-color: #ffffff;
 
   font-synthesis: none;
@@ -75,5 +75,19 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+/* 暗黑模式下的样式 */
+.dark {
+  background-color: #202020;
+  color: #d8d8d8;
+
+  .ant-button-primary {
+    background-color: #1890ff;
+    border-color: #1890ff;
+  }
+  :root {
+    background-color: #202020;
   }
 }

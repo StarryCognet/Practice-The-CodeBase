@@ -2,6 +2,7 @@
 // import HelloWorld from './components/HelloWorld.vue'
 import demo from './components/demo.vue'
 import demo2 from './components/demo2.vue'
+import demo3 from './components/demo3.vue'
 </script>
 
 <!-- <template>
@@ -26,8 +27,9 @@ import demo2 from './components/demo2.vue'
     </a>
   </div> -->
   <!-- <HelloWorld msg="Vite + Vue" /> -->
-  <demo />
   <demo2 />
+  <demo3 />
+  <demo />
 </template>
 
 
