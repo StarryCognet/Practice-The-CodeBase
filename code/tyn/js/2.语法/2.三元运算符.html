@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* 三元运算符：
+    比if语句更简单的一个写法，也叫三元表达式
+    符号：  ？ 和 ：配合使用
+
+    语法：
+    条件 ? 满足提交执行的代码 ： 不满足条件执行的代码
+    */
+
+    // false ? alert('1') : alert('2')
+
+    /* 例：判断两个数的最大值
+    用户输入两个数，控制台输出最大值
+    let num1 = +prompt('第一个数')
+    let num2 = +prompt('第二个数')   
+    // num1 > num2 ? console.log(num1) : console.log(num2)
+    let rel = num1 > num2 ? num1 : num2
+    console.log(rel)
+    */
+
+    //  例：用户输入一个数，如果数字小于10，则前面补0，  01   02
+
+    let num = prompt('请输入一个数字')
+    let rel = num < 10 ? 0 + num : num
+document.write(rel)
+  </script>
+</body>
+</html>

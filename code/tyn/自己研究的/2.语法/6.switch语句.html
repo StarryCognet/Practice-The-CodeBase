@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 写法：
+     switch (数据) {
+       case 值1：
+      alert('值1')
+       break            意思：退出
+
+       case 值2：
+        alert('值2')
+       break           意思：退出
+
+          alert('值n')
+         break         意思：退出
+
+       default:        都不执行执行的代码
+          alert('值n')
+     }
+         */
+    //  练习
+    // 需求：用户输入2个数字，然后输入 + - * / 一个，可以计算结果
+    let ss = +prompt('请输入一个数字')
+    let ss1 = +prompt('请输入二个数字')
+    let ss2 = prompt('请输入 + - * /')
+
+    switch (ss2) {
+      case '+':
+        alert(`这俩个数字相加是${ss + ss1}`)
+        break
+        case '-':
+        alert(`这俩个数字相减是${ss - ss1}`)
+        break
+        case '*':
+        alert(`这俩个数字相乘是${ss * ss1}`)
+        break
+        case '/':
+        alert(`这俩个数字相除是${ss / ss1}`)
+        break
+        default: 
+        alert(`只能输入+-*/，不可以输入别的`)
+    }
+
+  </script>
+</body>
+
+</html>

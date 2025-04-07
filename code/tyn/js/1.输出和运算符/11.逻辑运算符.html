@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+
+/* 5.逻辑运算符
+01.逻辑与：
+符号：&&
+读法：并且
+特点：符号两边都为true结果才为true
+口诀：一假则假
+
+
+    console.log(true && true)
+    console.log(false && true)
+    console.log(5 > 3 && 5 < 2)  
+
+    // 02.逻辑或：
+    // 符号： ||
+    // 读法：或者
+    // 特点：符号两边有一个为true 结果就为true
+    // 口诀：一真则真
+
+    console.log(false || true)
+    console.log(false || false)
+    console.log(true || false)
+
+    // 03.逻辑非：
+    // 符号：！
+    // 读法：取反
+    // 特点：true边false    false变true
+    // 口决：真变假，  假变真
+    console.log(!true)*/
+    console.log(!false)
+
+
+// 逻辑与：一假则假，左边为false就短路(如果左边为false，右边不执行)
+// 逻辑或：一真则真，左边为true就短路（如果左边为true，右边不执行）
+
+// console.log( 6 < 5 && 20)
+// console.log(0 && 20)
+// console.log(10 && 20)
+// console.log( false || 20)
+// console.log( 5 > 3 || 5 < 3)
+
+// 练习：判断一个数是4的倍数，且不是100的倍数
+/*需求：用户输入一个数，判断这个数能被4整除，但是不能被100整除
+let num = prompt('请输入一个数')
+
+console.log(num % 4 === 0 && num % 100 !== 0)
+*/
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    h1{
+      text-align: center;
+    }
+    
+     table th,td{
+      border: 1px solid #060606;
+      padding: 40px;
+     
+    }  
+    
+    table{
+      margin: 0 auto;
+      border-collapse:collapse;
+      text-align: center;
+   }
+    
+      </style> 
+    
+</head>
+<body>
+  <script>
+/*
+1.
+交换变量的值:
+    有两个变量，num1里放的是10， num2里放的是20 
+    最后变成num1里放20，num2里放10
+
+步骤:
+   1.声明一个临时变量a
+   2.把num1的值赋值给a
+   3.把num2的值赋值给num1
+   4.把临时变量a的值给num2
+let num1 = 10
+let num2 = 20
+let a 
+a = num1
+num1 = num2
+num2 = a
+document.write(num1,num2)
+*/
+
+
+/* 
+2.输入年龄，输入完以后页面弹出一个效果是  我今年XX岁啦    （字符串+变量+字符串）
+  let nane = prompt('请输入年龄')
+document.write('我今年' + nane + '岁了')
+*/
+
+
+/*
+3.输入名字，输入完以后页面弹出一个效果是  我的名字叫什么(模版字符串) 
+let nane = prompt('请输入年龄')
+document.write(`我今年${nane}岁了`) 
+*/
+
+
+
+/*
+4.需求：用户输入商品价格和数量，收货地址，可以自动打印订单信息
+    分析：
+    1.需要3个变量价格price    数量num  地址address
+    2.需要计算总价 total
+    3.页面打印生成表格（渲染表格），里面填充数据
+    4.填充的数据多，最好使用模板字符串
+  border-collapse: collapse;  合并边框，变成细线边框
+  caption:表格标题
+*/
+
+/*
+let price = prompt('请输入价格')
+let num = prompt('请输入数量')
+let address = prompt('请输入地址')
+let total = price * num
+document.write(`
+ <table>
+<h1>订单确认</h1>
+<tr>
+  <th>商品名字</th>
+  <th>商品价格</th>
+  <th>商品数量</th>
+  <th>总价</th>
+  <th>收货地址</th>
+</tr>
+<tr>
+  <td>游戏机</td>
+  <td>${price}</td>
+  <td>${num}</td>
+  <td>${total}</td>
+  <td>${address}</td>
+</tr>
+  </table>
+`)
+*/
+
+
+/*
+5.对话框输入圆的半径，算出圆的面积并显示到页面
+   1.圆的面积数学公式：π * r的平方（r表示半径， d表示直径）
+   2.转换为js写法： 3.14 * r * r   
+let r = prompt('请输入圆的半径')
+r =  3.14 * r * r  
+document.write(r)
+ */
+
+
+
+/*
+6.用户输入一个数，判断这个数是4的倍数，且不是100的倍数
+
+let na = prompt('请输入一个数字')
+document.write(na % 4 === 0 && na % 100 !== 0)
+*/
+
+
+
+  </script>
+</body>
+</html>
