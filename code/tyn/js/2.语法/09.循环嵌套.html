@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+      /*
+      循环嵌套：
+    for(外部起始值； 退出条件 ； 变化量){
+        for(内部起始值； 退出条件； 变化量){
+            循环体
+        }
+    }   i    j    
+    外面循环执行一次，里面循环执行全部
+    */
+
+/*
+   我的理解：
+第一个for是外面的一个框，包裹者
+第二给for是里面的内容，被包裹者
+*/
+/*
+    for(let i = 1; i <= 4; i++){
+      document.write(`我是${i}<br>`)
+
+        for(let j = 1; j <= 5; j++){
+          document.write(`你好我是${j}<br>`)
+        }
+       
+    }     
+*/
+
+ /*01.每天记住5个单词  (3天)
+   外部循环：记录第几天
+   内部循环：记录几个单词
+   */
+
+
+for(let i = 1; i <= 3; i++){
+document.write(`这是第${i}天<br>`)
+for(let j = 1; j <= 5; j++){
+  document.write(`这是第${j}个单词<br>`)
+}
+}
+
+
+  </script>
+</body>
+</html>

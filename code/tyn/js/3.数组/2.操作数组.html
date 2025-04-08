@@ -1,0 +1,95 @@
+<script>
+    /*增   删   改   查
+
+
+    1.改：重新赋值
+     数组[索引号] = 新值
+     
+
+    let arr = ['aa','bb','cc']
+    arr[1] = 'dd'
+
+    console.log(arr)
+  
+
+   2.查：查询数组数据
+   数组[索引号]
+    
+     let arr = ['aa','bb','cc']
+     console.log(arr[2])
+     
+
+    3.增：数组里添加新的数据
+   
+   arr.push(新增的内容)   后           
+   数组名.push() 将一个或多个元素添加到数组的末尾，并返回该数组的新长度
+   
+    let arr = ['aa','bb','cc']
+    arr.push('dd','ee','ff')
+    console.log(arr)
+    // console.log(arr.push('dd')) 返回值是新的数组长度
+     */
+
+    /*arr.unshift(新增的内容)：  将一个或多个元素放到数组的开头，并返回该数组的新长度
+    let a = ['aa','bb','cc']
+    // a.unshift('dd')
+    // console.log(a)
+
+    console.log(a.unshift('dd'))
+    */
+/*   将数组[2,0,6,1,77,0,52,10,35,7]中大于等于10的元素选出来，放入新数组
+    let arr = [2,0,6,1,77,10,52,0,35,7]
+    let newArr = []  
+
+    for(let i = 0; i < arr.length;i++){
+
+        if(arr[i] >= 10){
+            newArr.push(arr[i])
+        }
+    }
+    console.log(newArr)
+    */
+
+    /* 将数组[2,0,6,1,77,0,52,10,35,7]中的0去掉 形成一个不包含0的数组
+    let arr = [2,0,6,1,77,0,52,10,35,7]
+    let newArr = []
+
+    for(let i = 0; i < arr.length; i++){
+           
+        if(arr[i]!== 0 ){
+            newArr.push(arr[i])
+        }
+    }
+    console.log(newArr)
+    */
+
+   /*4.删：删除数组中的数据
+   1.arr.pop()： 删除数组中最后一个元素，并返回该元素的值
+     let arr = [2,7,5,0]
+    // arr.pop()
+
+    // 
+    console.log(arr.pop())  //删除的元素，告诉你删的是谁
+    console.log(arr)
+
+
+   2.arr.shift()：删除数组中第一个元素，并返回该元素的值
+    let arr = [2,7,5,0]
+//    arr.shift()
+
+   console.log(arr.shift())
+   console.log(arr)
+
+
+   3.arr.splice(操作的索引，删除的个数)
+
+    arr.splice(索引号(起始位置)，删除个数)
+    arr.splice(start,deleteCount)
+  
+  
+    let arr = [2,7,5,0]
+    // arr.splice(1,1) 第一个值是从索引号1开始，第二个值代表删一个
+    arr.splice(1) //从索引号1开始，删除后面全部
+    console.log(arr)
+     */
+</script>

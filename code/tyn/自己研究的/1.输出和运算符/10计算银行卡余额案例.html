@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            width: 700px;
+            height: 90px;
+            margin: 0 auto;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #333;
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>2020年12月消费支出</h2>
+
+    <script>
+
+        // 1. 声明5个变量 
+        const total = prompt('请输入银行卡总额:')
+        const waterBill = prompt('请输入水费:')
+        const dianBill = prompt('请输入电费:')
+        const netBill = prompt('请输入网费:')
+        const money = total - waterBill - dianBill - netBill
+        // console.log(money)
+        document.write(`<table>
+        <tr>
+            <th>银行卡余额</th>
+            <th>水费</th>
+            <th>电费</th>
+            <th>网费</th>
+            <th>银行卡余额</th>
+        </tr>
+        <tr>
+            <td>${total}元</td>
+            <td>${waterBill}元</td>
+            <td>${dianBill}元</td>
+            <td>${netBill}元</td>
+            <td>${money}元</td>
+        </tr>
+    </table>`)
+    </script>
+</body>
+
+</html>
