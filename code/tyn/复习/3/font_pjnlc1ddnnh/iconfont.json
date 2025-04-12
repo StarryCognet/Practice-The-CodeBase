@@ -1,0 +1,23 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1253",
+      "name": "收藏",
+      "font_class": "shoucang",
+      "unicode": "f0144",
+      "unicode_decimal": 983364
+    },
+    {
+      "icon_id": "18170319",
+      "name": "星,星星,星形,半星",
+      "font_class": "star-half",
+      "unicode": "e9a1",
+      "unicode_decimal": 59809
+    }
+  ]
+}
