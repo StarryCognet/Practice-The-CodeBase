@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: -8px 0;
+      padding: 0;
+    }
+    .d1{
+      width: 20px;
+      height: 20px;
+      /* border: 1px solid #d1d1d1; */
+      display: inline-block;
+
+    }
+    .d1:hover{
+      transition: 0.1s ease;
+      background-color: #000000;
+    }
+    .d1:not(:hover){
+      transition: 20s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    for(let i = 1; i <= 10000; i++){
+      document.write(`<span class="d1"></span>`)
+    }
+  </script>
+</body>
+</html>

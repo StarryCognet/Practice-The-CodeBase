@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>455</title>
+</head>
+<body>
+12544
+</body>
+</html>                                                                             								             		
+<img src="" 图片插入>											              
+<a href="" 超链接>											                             
+<无序列表 ul li> 												                                                                                                          
+<有序列表 ol li>												             
+<自定义列表 dl dt提问 dd回答>											              
+<table表格 双标签  border边框  width宽度  height高度  tr行  td列>
+<cellpadding 字与边的距离>     <cellspacing 单元格与单元格之间的距离>							              
+<align水平对齐  left左  center中  right右  >									              
+<valign垂直对齐  top上  middle中  bottom下>									             
+<bgcolor=""背景颜色><style=""文字颜色>
+<colspan水平合  yowspan垂直合>
+<form表单 ><input sype=""缩写>
+<text 文本域  password密码框  radio单线框  checked默认  checkbox复线框>
+<file文件域  image图像域   button普通按钮  submit提交按钮  value值 >
+< textarea文本域    tows行   cols列>双标签
+<select下拉菜单 <option /option  双标签>
+style="background-color:#颜色;color:#颜色">背景颜色加文字颜色
+全局{color:颜色;}   标签选择器   { }     类选择器   .{color:颜色;} <class="">
+ld选择器   #{color:颜色;}<ld="">  别集选择器  , , , , ,{color:颜色;}  
+子代选择器 >  {color:颜色;}  < 后代选择器- 空格>
+{font-size:     xp:}文字的大小    {font-family:      ;}文字的字体    
+{font-weight;        normal  加粗变不加粗  bold 不加粗变加粗   }文字的粗细  
+{font-style;        normal  倾斜变不倾斜   italic  不倾斜变倾斜 } 文字的风格
+{text-decoration;  underline 添加下划线 overline 添加上划线 line-through 删除线 none去掉下划线 }文本的修饰
+{text-align;    left左  center中  right右}文本的对齐
+{text-indent:   数字em;}首行缩进
+{line-height:数字px;}行高间距
+{list-style     circle空心圆  square实心块  none去掉黑点}去掉列表项目符号
+&nbsp;文字空格
+ red红色      green绿色     yellow黄色    blue蓝色     pink粉色
+ black黑色      brack棕色     white白色     orange橙色
+&nbsp；空格     <span万能标签   双标签>
+br文字之间的距离

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime.js Example</title>
+  <style>
+    /* 添加一些基本样式 */
+    .box {
+      width: 70px;
+      height: 70px;
+      background-color: red;
+      border-radius: 5px;
+      margin: 20px;
+      margin-left: 150px;
+    }
+
+    * {
+      margin: -8px 0;
+      padding: 0;
+    }
+
+    .d1 {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #d1d1d1;
+      border-radius: 40%;
+      background-color: #00000033;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <!-- 引入 anime.js -->
+  <script src="./node_modules/animejs/lib/anime.min.js"></script>
+  <script>
+    for (let i = 1; i <= 3306; i++) {
+      document.write(`<span class="d1"></span>`)
+    }
+
+    // 在这里编写你的 anime.js 动画代码
+    let em = document.querySelectorAll('.box')
+    // 使用anime.js库创建动画
+    anime({
+      // 设置动画目标元素
+      targets: em,
+      // 设置动画属性
+      translateX: [
+        // 第一个动画，向右移动450px，持续时间为1000ms，延迟500ms
+        { value: 450, duration: 1000, delay: 500 },
+        // 第二个动画，向左移动到原位，持续时间为1000ms，延迟500ms
+        { value: 0, duration: 1000, delay: 500 }
+      ],
+      // 设置动画循环
+      loop: true,
+      // 设置动画延迟
+      delay: anime.stagger(100, { start: 800 })
+    });
+
+    anime({
+      targets: '.d1', // 目标元素
+      translateX: anime.stagger(10, { grid: [14, 5], from: 'center', axis: 'x' }),
+      translateY: anime.stagger(10, { grid: [14, 5], from: 'center', axis: 'y' }),
+      rotateZ: anime.stagger([0, 90], { grid: [14, 5], from: 'center', axis: 'x' }),
+      delay: anime.stagger(200, { grid: [80, 10], from: 'center' }),
+      easing: 'easeInOutQuad'
+    })
+  </script>
+</body>
+
+</html>

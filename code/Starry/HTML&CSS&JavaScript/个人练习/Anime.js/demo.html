@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime.js Example</title>
+    <style>
+        /* 添加一些基本样式 */
+        .box {
+            width: 70px;
+            height: 70px;
+            background-color: red;
+            border-radius: 5px;
+            margin: 20px;
+            margin-left: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <!-- <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div> -->
+
+    <!-- 引入 anime.js -->
+    <script src="./node_modules/animejs/lib/anime.min.js"></script>
+    <script>
+        // 在这里编写你的 anime.js 动画代码
+        let em = document.querySelectorAll('.box')
+        anime({
+            targets: em,
+            translateX: [
+                { value: 450, duration: 1000, delay: 500 },
+                { value: 0, duration: 1000, delay: 500 }
+            ],
+            translateY: [
+                { value: 100, duration: 500 },
+                { value: 40, duration: 500, delay: 1000 },
+                { value: 0, duration: 500, delay: 1000 }
+            ],
+            rotate: [
+                {value: 360, duration: 1000 }
+            ],
+            scale: [
+                {value: 3, duration: 1000},
+                {value: 1, duration: 1000,}
+            ],
+            scaleX: [
+                { value: 4, duration: 100, delay: 500, },
+                { value: 1, duration: 900 },
+                { value: 4, duration: 100, delay: 500, },
+                { value: 1, duration: 900 }
+            ],
+            // easing: 'easeOutElastic(1, .8)',
+            loop: true,
+            delay: anime.stagger(100, { start: 800 })
+        });
+    </script>
+</body>
+
+</html>
