@@ -129,6 +129,6 @@ width: 200px;
   height: 206px;
   background-color: aqua;
   border: 1px solid rebeccapurple;
-  /* float: left; */
+  float: left;
 
 }
