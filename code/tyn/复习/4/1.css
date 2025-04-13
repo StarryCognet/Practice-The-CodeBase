@@ -1,0 +1,146 @@
+.d {
+  width: 1347px;
+  height: 514px;
+  /* background-color: antiquewhite; */
+  margin: 0 auto;
+}
+
+.y {
+  width: 100%;
+  height: 93px;
+  /* background-color: aqua; */
+  border-bottom: 1px solid rgb(141, 136, 136);
+}
+
+img {
+  margin: 35px 0px 0px 0px;
+  float: left;
+}
+
+.e {
+  width: 230px;
+  height: 91px;
+  /* background-color: rgb(220, 232, 232); */
+  margin-left: 75px;
+
+  float: left;
+}
+
+.ye {
+  width: 95px;
+  height: 45px;
+  /* background-color: rgb(95, 189, 189); */
+  color: #3b6596;
+  margin-top: 31px;
+  float: left;
+  border-right: 1px solid rgb(163, 156, 156);
+  font-size: 20px;
+}
+
+.yy {
+  width: 75px;
+  height: 45px;
+  /* background-color: rgb(95, 189, 189); */
+  color: #385d85;
+  margin-top: 31px;
+  float: left;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+span {
+  font-size: 10px;
+  float: left;
+}
+
+.q {
+  width: 75px;
+  height: 50px;
+  /* background-color: aquamarine; */
+  float: right;
+  margin-right: 20px;
+  margin-top: 39px;
+
+}
+
+.q6 {
+  width: 100px;
+  height: 50px;
+  /* background-color: aquamarine; */
+  float: right;
+  margin-right: 20px;
+  margin-top: 39px;
+
+}
+
+.q7 {
+  width: 60px;
+  height: 50px;
+  /* background-color: aquamarine; */
+  float: right;
+  margin-right: 20px;
+  margin-top: 39px;
+
+}
+
+.q9 {
+  width: 90px;
+  height: 50px;
+  /* background-color: aquamarine; */
+  float: right;
+  margin-right: 20px;
+  margin-top: 39px;
+
+}
+
+.qq {
+  margin: 7px 0px 0px 0px;
+  float: right;
+
+}
+
+.t {
+  width: 222px;
+  height: 180px;
+  background-color: #ededed;
+  float: left;
+  margin-top: 28px;
+  margin-left: 74px;
+  text-align: center;
+}
+
+.t1 {
+  width: 222px;
+  height: 180px;
+  background-color: #f9f9f9;
+  float: left;
+  margin-top: 28px;
+  margin-left: 34px;
+  text-align: center;
+}
+
+.t11 {
+  width: 222px;
+  height: 180px;
+  background-color: #f9f9f9;
+  float: left;
+  margin-top: 28px;
+  margin-left: 74px;
+  text-align: center;
+}
+
+.ww {
+  width: 222px;
+  height: 100px;
+  float: left;
+}
+
+b:hover {
+  color: #1159a5;
+}
+
+.qp {
+  font-size: 15px;
+  /* color: #223d5a; */
+  text-align: center;
+}
