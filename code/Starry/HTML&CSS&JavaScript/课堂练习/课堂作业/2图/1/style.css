@@ -1,0 +1,12 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.top *{
+  float: left;
+  margin: 10px;
+  list-style: none;
+}
+.user{
+  float: right;
+}
