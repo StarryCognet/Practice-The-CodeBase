@@ -60,39 +60,55 @@
     </tbody>
   </table>
   <script>
-    const arr = []
 
     const uname = document.querySelector('.uname')
     const age = document.querySelector('.age')
+    const gender = document.querySelector('.gender')
     const salary = document.querySelector('.salary')
+    const city = document.querySelector('.city')
+    // const table = document.querySelector('table')
+    const tbody = document.querySelector('tbody')
+    const arr = []
+    
     const info = document.querySelector('.info')
-    const table = document.querySelector('table')
-
-    info.addEventListener('submit', function (e){
+    info.addEventListener('submit', function (e) {
       e.preventDefault()
-      const tbody = document.createElement('tbody')
-      tbody.innerHTML = `
-        <tr>
-          <td>1001</td>
-          <td>欧阳霸天</td>
-          <td>19</td>
-          <td>男</td>
-          <td>15000</td>
-          <td>上海</td>
+      const obj = {
+        stUid: arr.length + 1,
+        uname: uname.value,
+        age: age.value,
+        gender: gender.value,
+        salary: salary.value,
+        city: city.value
+      }
+      arr.push(obj)
+      console.log(arr);
+      this.reset()
+      // document.querySelector('table').appendChild(tbody);
+      render()
+    })
+
+    function render() {
+      for (let i = 0; i < arr.length; i++) {
+        const tr = document.createElement('tr')
+        tr.innerHTML = `
+          <td>${arr[i].stUid}</td>
+          <td>${arr[i].uname}</td>
+          <td>${arr[i].age}</td>
+          <td>${arr[i].gender}</td>
+          <td>${arr[i].salary}</td>
+          <td>${arr[i].city}</td>
           <td>
             <a href="javascript:">删除</a>
           </td>
-        </tr> 
       `
-      table.appendChild(tbody)
-      console.log('hhhh');
-      
-    })
-    console.log(uname.innerHTML);
+        tbody.appendChild(tr)
+      }
+    }
 
 
-    
-    
+
+
   </script>
 
 </body>
