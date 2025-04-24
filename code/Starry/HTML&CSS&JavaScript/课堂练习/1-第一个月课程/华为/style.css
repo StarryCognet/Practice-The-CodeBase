@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f1f3f5;
+}
+
+body>div {
+  width: 1820px;
+  margin-left: 60px;
+}
+
+h1{
+  margin: 40px;
+}
+
+.home-container {
+  width: 575px;
+  height: 275px;
+  /* border: 1px solid #000; */
+  border-radius: 5px;
+  background-color: #fff;
+  float: left;
+  margin: 10px;
+}
+
+img {
+  width: 230px;
+  float: left;
+  margin-top: 25px;
+}
+
+.contents {
+  float: left;
+  margin: 30px;
+  margin-left: 40px;
+}
+
+.contents p:first-of-type {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.contents p:last-of-type {
+  font-size: 17px;
+  color: #a7a7a7;
+  margin-bottom: 5px;
+}
+
+.contents div:first-of-type>span>span:first-of-type {
+  color: #ff0000;
+  border: 1px solid #ff0000;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 0 4px;
+}
+
+.contents div:first-of-type>span>span:last-of-type {
+  border: 1px solid #000000;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 5px;
+  padding: 0 5px;
+}
+
+.contents div:last-of-type>span:first-of-type {
+  font-size: 20px;
+}
+
+.contents div:last-of-type>s {
+  font-size: 15px;
+  color: #7f7f7f;
+}
+.contents div:last-of-type>span:last-of-type{
+  font-size: 22px;
+  border: 1px solid #000;
+  border-radius: 25px;
+  display: inline-block;
+  padding: 4px 10px 7px 10px;
+  margin-left: 40px;
+}
+.contents div:last-of-type{
+  margin-top: 80px;
+}
