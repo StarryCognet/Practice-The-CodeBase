@@ -51,7 +51,8 @@
 
 .product-grid>div>img {
   width: 250px;
-  margin-left: 55px;
+  display: block;
+  margin: 0 auto;
   margin-bottom: 30px;
 }
 
@@ -70,20 +71,24 @@
   color: #ff9d00;
   font-weight: 700;
 }
-.last-products div>div{
+
+.last-products div>div {
   float: left;
   margin: 40px;
 }
-.last-products div img{
+
+.last-products div img {
   float: right;
   margin-top: 60px;
   margin-right: 40px;
 }
-.last-products div p:nth-child(4){
+
+.last-products div p:nth-child(4) {
   color: #ff9d00;
   margin-top: 10px;
   font-weight: 700;
 }
-.last-products div{
+
+.last-products div {
   color: #a7a7a7;
 }
