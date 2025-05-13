@@ -67,7 +67,7 @@
     //   num = arr[i] + num
     // }
     // console.log(num);
-    
+
 
     // 7、将数组 [1,3,5,7,10]  中所有值 求平均数
     // let arr = [1,3,5,7,10]
@@ -76,7 +76,7 @@
     //   num = num + arr[i]
     // }
     // console.log(num / arr.length);
-    
+
 
     // 8、将数组 [1,2,3,4,5,6,7,8,9,10,15,19,22] 中所有有偶数求和
     // let arr = [1,2,3,4,5,6,7,8,9,10,15,19,22]
@@ -99,7 +99,7 @@
     //   }
     // }
     // console.log(newe);
-    
+
 
     // 10、将数组['red','green','blue','pink','purple']的内容，逆向输出到浏览器中
     // let arr = ['red','green','blue','pink','purple']
@@ -124,7 +124,7 @@
     //   }
     // }
     // console.log(num);
-    
+
 
     // 难度***
     // 13、随机输出 数组 [10,15,23,47,100,26,239]中的任意一个值
@@ -134,21 +134,79 @@
     // console.log(arr[random])
 
     // 14、获取数组中 [10,12,43,24,28,80,50] 中的最大值（排序），输出最大值、获取数组中 [10,12,43,24,28,80,50] 中的最小值（排序），输出最小值
-    
+    // let arr = [10, 12, 43, 24, 28, 80, 50]
+    // let narr = arr.sort()
+    // let max = narr[arr.length - 1]
+    // let min = narr[0]
+    // console.log(max);
+    // console.log(min); ?????????????????????????????????????????????????????????????????????
+
+
+
 
     // 难度****
     // 15、将数组[2,0,6,1,77,0,52,0,25,7]中大于10的元素选出来，放入新数组,打印出新数组
+    // let arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7]
+    // let narr = []
+    // for(let i = 0; i < arr.length; i++){
+    //   if(arr[i] > 10){
+    //     narr.push(arr[i])
+    //   }
+    // }
+    // console.log(narr);
+
 
     // 16、将数组 [1,2,0,3,0,14,20] 中所有不为0 的数字 单独存入一个新数组中。
+    // let arr = [1, 2, 0, 3, 0, 14, 20]
+    // let narr = []
+    // for (let i = 0; i < arr.length; i++) {
+    //   if (arr[i] !== 0) {
+    //     narr.push(arr[i])
+    //   }
+    // }
+    // console.log(narr);
 
     // 17、将10-40之间既能被3整除 又能被5整除的数 存入新数组中
+    // let arr = []
+    // for(let i = 10; i < 40; i++){
+    //   if(i % 3 === 0 && i % 5 ===0){
+    //     arr.push(i)
+    //   }
+    // }
+    // console.log(arr);
+
 
 
     // 难度*****
     // 18、将数组 var arr = ["1234@qq.com","23452aa34@163.com","13543456@qq.com","qwer1234@sina.com"];  中每个邮箱加上 邮箱的类型例如 ["1234@qq.com为qq邮箱","23452aa34@163.com为163邮箱","13543456@qq.com为qq邮箱","qwer1234@sina.com为sina邮箱"];
+    // let arr = ["1234@qq.com", "23452aa34@163.com", "13543456@qq.com", "qwer1234@sina.com"]
+    // let narr = []
+    // for(let i = 0; i < arr.length; i++){
+    //   let email = arr[i]
+    //   let start = email.indexOf('@')
+    //   let end = email.indexOf('.')
+    //   let doa = email.slice(start, end)
+    //   narr.push(email + "为" + doa + "邮箱")
+    // }
+    // console.log(narr);
+
 
     // 19、将数组 var arr = ["5公里","8公里","2公里","4公里","4.5公里"];中的 路程公里数 加上需要支付的金额。计算公式为 2公里及以内7元，超2公里 每公里3元。将司机今天的全部收入打印出来，净利润为总收入的70%。净利润打印出来。
-
+    // let arr = ["5公里", "8公里", "2公里", "4公里", "4.5公里"];
+    // let total = 0;
+    // for (let i = 0; i < arr.length; i++) {
+    //   let end = arr[i].indexOf('公');
+    //   let km = parseFloat(arr[i].slice(0, end))
+    //   if(km <= 2){
+    //     total += 7
+    //   }else{
+    //     total += 7 +(km - 2) * 3
+    //   }
+    // }
+    // let jlr = total * 0.7
+    // console.log(`总输入：${total}元`);
+    // console.log(`净利润：${Math.floor(jlr)}元`)
+    
 
   </script>
 </body>
