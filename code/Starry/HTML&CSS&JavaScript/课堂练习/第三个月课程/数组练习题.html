@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //     难度*
+    // 1、循环输出数组 [“张三”,”男”,”18”]中的每一个值 for、for in两种方式
+    // let arr = [21, 65, 98, 44, 5, 464, 59]
+    // for(let i = 0; i < arr.length; i++){
+    //   console.log(arr[i]);
+    // }
+    // for(let index in arr){
+    //   console.log(arr[index]);
+
+    // }
+
+    // 2、循环将数组var arr = ["张三","男",18,"张家口"];中的每个值 都改为”2402A”,for、for in两种方式
+    // let arr = ["张三", "男", 18, "张家口"]
+    // for (let i = 0; i < arr.length; i++) {
+    //   arr[i] = '2402A'
+    // }
+    // console.log(arr);
+
+    // for(let index in arr){
+    //   arr[index] = '2402A'
+    // }
+    // console.log(arr);
+
+
+
+    // 3、将数组 var arr = ["贾杰义","孙华栋","陈猛","张世博"] 每个名字后边加上班级号”2402A”
+    // let arr = ["贾杰义", "孙华栋", "陈猛", "张世博"]
+    // for (let index in arr) {
+    //   arr[index] = arr[index] + '2402A'
+    // }
+    // console.log(arr);
+
+    // 4、将数组 [10,15,23,47,100]中的值 翻倍
+    // let arr = [10,15,23,47,100]
+    // for (let index in arr) {
+    //   arr[index] = arr[index] * 2
+    // }
+    // console.log(arr);
+
+    // 难度**
+    // 5、将数组var arr = [100,50,20,45,85,75];成绩大于60分的加上”及格”，小于60分的加上”不及格”
+    // let arr = [100,50,20,45,85,75]
+    // for (let i = 0; i < arr.length; i++) {
+    //   if(arr[i] >= 60){
+    //     arr[i] = arr[i] + '及格'
+    //   }else{
+    //     arr[i] = arr[i] + '不及格'
+    //   }
+    // }
+    // console.log(arr);
+
+    // 6、将数组 [10,13,23,44,13]中的所有值 求和
+    // let arr = [10,13,23,44,13]
+    // let num = 0
+    // for(let i = 0; i < arr.length; i++){
+    //   num = arr[i] + num
+    // }
+    // console.log(num);
+    
+
+    // 7、将数组 [1,3,5,7,10]  中所有值 求平均数
+    // let arr = [1,3,5,7,10]
+    // let num = 0
+    // for (let i = 0; i < arr.length; i++){
+    //   num = num + arr[i]
+    // }
+    // console.log(num / arr.length);
+    
+
+    // 8、将数组 [1,2,3,4,5,6,7,8,9,10,15,19,22] 中所有有偶数求和
+    // let arr = [1,2,3,4,5,6,7,8,9,10,15,19,22]
+    // let num = 0
+    // for(let i = 0; i < arr.length; i++){
+    //   if(arr[i] % 2 == 0){
+    //     num = num + arr[i]
+    //   }
+    // }
+    // console.log(num / arr.length);
+
+    // 9、将数组[‘a’,’b’,’c’,’d’] 使用-拼接成字符串 a-b-c-d。不允许使用数组方法join，自己写循环拼接。
+    // let arr = ['a','b','c','d']
+    // let newe = ''
+    // for(let i = 0; i < arr.length; i++){
+    //   if(arr[i] !== arr[3]){
+    //     newe = newe + arr[i] + '-'
+    //   }else{
+    //     newe = newe + arr[i]
+    //   }
+    // }
+    // console.log(newe);
+    
+
+    // 10、将数组['red','green','blue','pink','purple']的内容，逆向输出到浏览器中
+    // let arr = ['red','green','blue','pink','purple']
+    // for(let i = arr.length - 1; i >= 0; i--){
+    //   console.log(arr[i]);
+    // }
+
+    // 11、打印出数组[1, 23, 4, 5, 86, 15, 34, 86]中的奇数
+    // let arr = [1, 23, 4, 5, 86, 15, 34, 86]
+    // for(let i = 0; i < arr.length; i++){
+    //   if(arr[i] % 2 !== 0){
+    //     console.log(arr[i]);
+    //   }
+    // }
+
+    // 12、计算数组[2, 6, 18, 15, 40]中能【被3整除】的【偶数】 的和
+    // let arr = [2, 6, 18, 15, 40]
+    // let num = 0
+    // for(let i = 0; i < arr.length; i++){
+    //   if(arr[i] % 3 === 0 && arr[i] % 2 === 0){
+    //     num = num + arr[i]
+    //   }
+    // }
+    // console.log(num);
+    
+
+    // 难度***
+    // 13、随机输出 数组 [10,15,23,47,100,26,239]中的任意一个值
+    // Console.log(arr[0-5])
+    // let arr = [10,15,23,47,100,26,239]
+    // let random = Math.floor(Math.random() * arr.length)
+    // console.log(arr[random])
+
+    // 14、获取数组中 [10,12,43,24,28,80,50] 中的最大值（排序），输出最大值、获取数组中 [10,12,43,24,28,80,50] 中的最小值（排序），输出最小值
+    
+
+    // 难度****
+    // 15、将数组[2,0,6,1,77,0,52,0,25,7]中大于10的元素选出来，放入新数组,打印出新数组
+
+    // 16、将数组 [1,2,0,3,0,14,20] 中所有不为0 的数字 单独存入一个新数组中。
+
+    // 17、将10-40之间既能被3整除 又能被5整除的数 存入新数组中
+
+
+    // 难度*****
+    // 18、将数组 var arr = ["1234@qq.com","23452aa34@163.com","13543456@qq.com","qwer1234@sina.com"];  中每个邮箱加上 邮箱的类型例如 ["1234@qq.com为qq邮箱","23452aa34@163.com为163邮箱","13543456@qq.com为qq邮箱","qwer1234@sina.com为sina邮箱"];
+
+    // 19、将数组 var arr = ["5公里","8公里","2公里","4公里","4.5公里"];中的 路程公里数 加上需要支付的金额。计算公式为 2公里及以内7元，超2公里 每公里3元。将司机今天的全部收入打印出来，净利润为总收入的70%。净利润打印出来。
+
+
+  </script>
+</body>
+
+</html>

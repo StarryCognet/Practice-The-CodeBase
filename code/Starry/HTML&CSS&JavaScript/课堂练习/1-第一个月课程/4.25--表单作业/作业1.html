@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table td:first-child {
+      text-align: right;
+      padding: 10px 30px;
+    }
+    input:not(.haitao input){
+      width: 350px;
+      height: 30px;
+      border: 1px solid #c5c5c5;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td>管理人姓名:</td>
+      <td>
+        <input type="text" placeholder="请输入管理人的真实姓名">
+      </td>
+    </tr>
+    <tr>
+      <td>管理人邮箱:</td>
+      <td>
+        <input type="text" placeholder="请输入常用邮箱，便于审核信息及后期规则的及时送达">
+      </td>
+    </tr>
+    <tr>
+      <td>管理人手机号:</td>
+      <td>
+        <input type="text" placeholder="请输入管理人常用手机号，不支持座机号">
+      </td>
+    </tr>
+    <tr>
+      <td>再次输入管理人手机号:</td>
+      <td>
+        <input type="text" placeholder="请再次输入手机号码">
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td style="color: rgb(255, 79, 79);">
+        注:此手机号为商家首次登陆后台的账号，提现接收验证码的初始手机号
+      </td>
+    </tr>
+    <tr>
+      <td>身份证号:</td>
+      <td>
+        <input type="text" placeholder="请输入管理人的证件号(身份证、护照、军官证等均可">
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td style="color: rgb(255, 79, 79);">
+        注:请确认您的身份证号码填写无误，该身份证号必须与您上传的身份证照片一致
+      </td>
+    </tr>
+    <tr>
+      <td>紧急联系人名称:</td>
+      <td>
+        <input type="text" placeholder="紧急联系人与管理人不能为同一人">
+      </td>
+    </tr>
+    <tr>
+      <td>紧急联系人手机号码:</td>
+      <td>
+        <input type="text" placeholder="紧急联系人手机号不能与管理人手机号相同">
+      </td>
+    </tr>
+    <tr>
+      <td>再次输入紧急联系人手机号码:</td>
+      <td>
+        <input type="text" placeholder="请输入紧急联系人手机号码">
+      </td>
+    </tr>
+    <tr class="haitao">
+      <td>开店性质:</td>
+      <td>
+        <input type="radio" name="haitao">海淘
+        <input type="radio" name="haitao">非海淘
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <p>注:</p>
+        <p>
+          1、海淘类店铺可销售进口、直邮、直供等海外商品,非海淘类店铺可销售进口、国内商品
+        </p>
+        <p>
+          2、店铺性质会选择影响到后期可售商品的类型及经营范围，具体可见
+          <a href="" style="text-decoration: none;">
+            《常见问题解答》
+          </a>
+        </p>
+        <p style="color: rgb(255, 79, 79);">
+          3、目前只允许企业店铺经营酒类，个人店铺不可经营酒类
+        </p>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
