@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //1、输入一个年龄，判断是否大于18岁，大于18岁，输出成年，否则输出未成年
+    // let age = +prompt('请输入年龄')
+    // if(age >= 18){
+    //     alert('成年')
+    // }else{
+    //     alert('未成年')
+    // }
+
+
+
+    //2、输入两个数字，控制台输出 这两个数字的和
+    // let num1 = +prompt('1')
+    // let num2 = +prompt('2')
+    // console.log(num1 + num2);
+
+
+
+
+    //3、输入一个数字，判断是否为 偶数，如果为偶数控制台输出 **数字为偶数，否则输出**数字为奇数
+    // let num = +prompt('数')
+    // if(num % 2 === 0){
+    //     console.log(num + '是偶数');
+    // }else{
+    //     console.log(num + '是奇数');
+    // }
+
+
+
+    //4、输入一个成绩（数字），判断成绩的等级 0-59 为D, 60-70为C, 80-90为B   90-100为A。输出结果为 你的成绩为**，等级是**
+    // let num = +prompt('成绩')
+    // if(num > 0 && num < 60){
+    //     alert(`你的成绩为${num},等级是D`)
+    // }else if(num >= 60 && num < 70){
+    //     alert(`你的成绩为${num},等级是C`)
+    // }else if(num >= 80 && num < 90){
+    //     alert(`你的成绩为${num},等级是B`)
+    // }else if(num >= 90 && num < 100){
+    //     alert(`你的成绩为${num},等级是A`)
+    // }
+
+
+    //5、输入一个数字，如果这个数字是7的倍数，提示用户“您中奖了”
+    // let num = +prompt('输入数字')
+    // if(num % 7 === 0){
+    //     alert('您中奖了')
+    // }
+
+
+
+    //6、控制台循环输出1-10之间的所有数字
+    // for(let i = 1; i < 10; i++){
+    //     console.log(i);
+    // }
+
+
+
+    //7、控制台循环输出10-20之间的所有偶数
+    // for(let i = 10; i < 20; i++){
+    //     if(i % 2 === 0){
+    //         console.log(i);
+    //     }
+    // }
+
+
+
+    //8、控制台循环输出10-100之间所有的奇数
+    // for (let i = 10; i < 100; i++) {
+    //     if (i % 2 !== 0) {
+    //         console.log(i);
+    //     }
+    // }
+
+
+
+    //9、控制台输出 1-10之间所有数字的和
+    // let num = 0
+    // for(let i = 1; i < 10; i++){
+    //     num = num + i
+    // }
+    // console.log(num);
+
+
+
+    //10、控制台输出5阶乘（5的阶乘就是 1*2*3*4*5）
+    // let num = 1
+    // for (let i = 1; i < 5; i++) {
+    //     num = num * i
+    // }
+    // console.log(num);
+
+
+
+    //11、控制台输出 1-100之间既能被三整除，又能被5整除的数
+    // for(let i = 1; i < 100; i++){
+    //     if(i % 3 === 0 && i % 5 === 0){
+    //         console.log(i);
+    //     }
+    // }
+
+
+
+    //12、控制台输出 30-50之间所有的偶数的和
+    // let num = 0
+    // for (let i = 1; i < 100; i++) {
+    //     if (i % 2 === 0) {
+    //         num = num + i
+    //     }
+    // }
+    // console.log(num);
+
+
+
+
+    //13、控制台输出 10-1之间的所有数字（10 9 8 7 6 5 4 3 2 1）
+    // for (let i = 10; i > 0; i--) {
+    //     console.log(i);
+    // }
+
+
+
+    //14、输入两个数字，循环输出这两个数字之间的所有数
+    // let num1 = +prompt('1')
+    // let num2 = +prompt('2')
+    // let max = Math.max(num1, num2)
+    // let min = Math.min(num1, num2)
+    // for (let i = min; i <= max; i++) {
+    //     console.log(i);
+    // }
+
+
+
+    //15、输入一个数字 输出这个数字之后的11个数字（例如 输入5，输出5 6 7 8 9 10 11 12 13 14 15）
+    // let num = +prompt('数')
+    // for (let i = num + 1; i <= num + 10; i++) {
+    //     console.log(i);
+    // }
+
+
+
+    //16、输入一个年份，输出这个年份之前的11年，（例如 输入2024,输出 2024  2023 2022 ...  2014）
+    // let num = +prompt('年')
+    // for (let i = num - 1; i >= num - 10; i--) {
+    //     console.log(i);
+    // }
+
+
+    //17、输入两个数字，输出这两个数字之间所有数的和
+    // let num1 = +prompt('1')
+    // let num2 = +prompt('2')
+    // let max = Math.max(num1, num2)
+    // let min = Math.min(num1, num2)
+    // let num = 0
+    // for (let i = min; i <= max; i++) {
+    //     num = num + i
+    // }
+    // console.log(num);
+
+
+    //18、输入两个数字，输出这两个数字之间所有偶数的和
+    // let num1 = +prompt('1')
+    // let num2 = +prompt('2')
+    // let max = Math.max(num1, num2)
+    // let min = Math.min(num1, num2)
+    // let num = 0
+    // for (let i = min; i <= max; i++) {
+    //     if(i % 2 === 0){
+    //         num = num + i
+    //     }
+    // }
+    // console.log(num);
+
+
+
+
+    //19、浏览器输出一个6行直角三角形，三角形文字为"国"（双层for循环）
+    /*
+        国
+        国国
+        国国国
+        国国国国
+        国国国国国
+        国国国国国国
+    */
+    // for(let i = 1; i <= 6; i++){
+    //     for(let j = 1; j <= i; j++){
+    //         document.writeln('国')
+    //     }
+    //     document.writeln('<br>')
+    // }
+
+    // 20、浏览器输出 九九乘法表
+    // for (let i = 1; i <= 9; i++) {
+    //     for (let j = 1; j <= i; j++) {
+    //         document.writeln(`${j}X${i}=${j*i}&nbsp;&nbsp;&nbsp;&nbsp;`)
+    //     }
+    //     document.writeln('<br>')
+    // }
+
+
+
+</script>
+
+</html>
