@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>技能考试</title>
 </head>
+
 <body>
     <script>
         //一、考试要求：
@@ -18,40 +20,150 @@
         // 1.求六位数之间的随机数（5分）
         // let ran = Math.floor(Math.random() * 999999) +100000
         // console.log(ran);
-        
+
         // 2、用构造方法创建一个明星对象，给对象添加属性和方法，并且在控制台 循环 输出对象的每个属性和方法(5分)
         // ????????????????????????????????????????????????????????????????
 
         // 3、封装函数，利用内置对象的方法，完成字符串翻转的功能，将结果做为返回值返回，例如'abcd'变为'dcba'(10分)
-        let str = 'abcd'
-        function gitRan(){
-            str.slice()
-        }
+        // let str = 'abcd'
+        // function gitRan(){
+        //     // 使用 split('') 将字符串拆分为字符数组
+        //     // 使用 reverse() 方法反转数组
+        //     // 使用 join('') 将字符数组重新组合为字符串
+        //     return str.split('').reverse().join('')
+        // }
+        // console.log(gitRan(str))
 
         // 4、已知页面的网址，
-         var url = 'https://search.jd.com/Search?keyword=手机&enc=utf-8'
+        //  var url = 'https://search.jd.com/Search?keyword=手机&enc=utf-8'
         // 利用内置对象的方法，找出问号?后面的keyword，以及第一个等号'='后面的'手机'两个字,控制台最终输出'keyword:手机'
         // 以及找出&符号后面的enc，第二个等号后面的'utf-8'，在控制台最终输出'enc:utf-8'（10分）
-        
+        // let url = 'https://search.jd.com/Search?keyword=手机&enc=utf-8'
+        // let str1 = url.slice(url.indexOf('?') + 1, url.indexOf('='))
+        // let str2 = url.slice(url.indexOf('=') + 1, url.indexOf('&'))
+        // console.log(str1 + ':' + str2);
+        // let str3 = url.slice(url.indexOf('&') + 1, url.indexOf('&') + 4)
+        // let str4 = url.slice(url.indexOf('&') + 5, url.indexOf('&') + 10)
+        // console.log(str3 + ':' + str4);
+
+        // AI写的↓
+        // let url = 'https://search.jd.com/Search?keyword=手机&enc=utf-8'
+        // // 提取问号后的查询字符串
+        // let queryString = url.split('?')[1]
+        // // 分割每个键值对
+        // let params = {}
+        // queryString.split('&').forEach(pair => {
+        //     let [key, value] = pair.split('=')
+        //     params[key] = decodeURIComponent(value) // 解码中文字符
+        // })
+        // console.log(`keyword:${params.keyword}`) // keyword:手机
+        // console.log(`enc:${params.enc}`)         // enc:utf-8
+        // AI写的↑
+
+
+
+
         // 5.将字符串“我爱中国”中的‘中国’替换为‘中华人民共和国’（5分）
+        // let str = "我爱中国"
+        // str = str.replace('中国', '中华人民共和国')
+        // console.log(str);
+
+
         // 6.利用indexOf的方法，将数组[1,2,3,4,4,3,2,1]中重复的元素去除，形成一个新的数组（10分）
+        // let arr = [1, 2, 3, 4, 4, 3, 2, 1];
+        // let uniqueArr = [];
+        // for (let i = 0; i < arr.length; i++) {
+        //     if (uniqueArr.indexOf(arr[i]) === -1) {
+        //         uniqueArr.push(arr[i]);
+        //     }
+        // }
+        // console.log(uniqueArr);
+        // ???????????????????????????????????????????????????????????????????
+
+
         // 7.删除数组[2, 0, 0, 6, 77, 0, 52, 0, 25, 7]中为0的元素（10分）
+        // let arr = [2, 0, 0, 6, 77, 0, 52, 0, 25, 7]
+        // for(let i = 0; i < arr.length; i++){
+        //     if(arr[i] === 0){
+        //         arr.splice(i, 1)
+        //         i--
+        //     }
+        // }
+        // console.log(arr);
+
+
         // 8、利用内置对象的方法，实现每次点击“随机按钮”，根据数组的特点，在控制台打印出不同的人名(15分)
         // var username=['张三','李四','王五','赵六']
+        // let username = ['张三', '李四', '王五', '赵六']
+        // document.write('<input type="submit" value="随机">')
+        // const but = document.querySelector('input')
+        // but.addEventListener('click', function(){
+        //     const ran = Math.floor(Math.random() * username.length)
+        //     console.log(username[ran]);
+        // })
+
+
         // 9.有如下的数据、请完成以下要求（共30分）
         // var arr=[
-            //     {'id': 1, name: '张三', score: 55, subject: '语文'},
-            //     {'id': 4, name: '张三', score: 23, subject: '数学'},
-            //     {'id': 2, name: '李四', score: 76, subject: '语文'},
-            //     {'id': 3, name: '王五', score: 67, subject: '语文'},
-            //     {'id': 5, name: '李四', score: 81, subject: '数学'},
-            //     {'id': 6, name: '王五', score: 64, subject: '数学'},
-            // ]
-            // a)求所有学生总成绩（5分）
-            // b)求所有学生的语文总成绩（5分）
-            // c)求所有超过60分的学生语文总成绩（10分）
-            // d)删除不及格的科目信息（10分）
-         
+        //     {'id': 1, name: '张三', score: 55, subject: '语文'},
+        //     {'id': 4, name: '张三', score: 23, subject: '数学'},
+        //     {'id': 2, name: '李四', score: 76, subject: '语文'},
+        //     {'id': 3, name: '王五', score: 67, subject: '语文'},
+        //     {'id': 5, name: '李四', score: 81, subject: '数学'},
+        //     {'id': 6, name: '王五', score: 64, subject: '数学'},
+        // ]
+        // a)求所有学生总成绩（5分）
+        // b)求所有学生的语文总成绩（5分）
+        // c)求所有超过60分的学生语文总成绩（10分）
+        // d)删除不及格的科目信息（10分）
+
+
+        // let arr = [
+        //     { 'id': 1, name: '张三', score: 55, subject: '语文' },
+        //     { 'id': 4, name: '张三', score: 23, subject: '数学' },
+        //     { 'id': 2, name: '李四', score: 76, subject: '语文' },
+        //     { 'id': 3, name: '王五', score: 67, subject: '语文' },
+        //     { 'id': 5, name: '李四', score: 81, subject: '数学' },
+        //     { 'id': 6, name: '王五', score: 64, subject: '数学' },
+        // ]
+
+        // a
+        // let num = 0
+        // for(let i in arr){
+        //     num += arr[i].score
+        // }
+        // console.log('所有学生总成绩：' + num);
+
+        // b
+        // let num = 0
+        // for(let i in arr){
+        //     if(arr[i].subject == '语文'){
+        //         num += arr[i].score
+        //     }
+        // }
+        // console.log('所有学生的语文成绩：' + num);
+
+        // c
+        // let num = 0
+        // for (let i in arr) {
+        //     if (arr[i].score > 60) {
+        //         num += arr[i].score
+        //     }
+        // }
+        // console.log('所有超过60分的学生语文总成绩：' + num);
+
+        // d
+        // for (let i = 0; i < arr.length; i++) {
+        //     if (arr[i].score < 60) {
+        //         arr.splice(i, 1)
+        //         i--
+        //     }
+        // }
+        // console.log(arr);
+
+
+
     </script>
 </body>
+
 </html>
