@@ -11,14 +11,72 @@
   <script>
     // 1、for循环应用
     // 2、请输出1-50之间所有数
+    for (let i = 1; i < 50; i++) {
+      console.log(i);
+    }
+
     // 3、请输出 20-80之间所有的数
+    for (let i = 20; i < 80; i++) {
+      console.log(i);
+    }
+
     // 4、请输出1-50之间所有的奇数
+    for (let i = 1; i < 50; i++) {
+      if (i % 2 !== 0) {
+        console.log(i);
+      }
+    }
+
     // 5、请输出 20-80之间所有的偶数
-    // 6、请输出10-50之间既能被三整除 有能被5整除的数//请输出1990-2021之间所有的年份
+    for (let i = 20; i < 80; i++) {
+      if (i % 2 === 0) {
+        console.log(i);
+      }
+    }
+
+    // 6、请输出10-50之间既能被三整除 有能被5整除的数
+    for (let i = 10; i < 50; i++) {
+      if (i % 3 === 0 && i % 5 === 0) {
+        console.log(i);
+      }
+    }
+
+    // 7、请输出1990-2021之间所有的年份
+    for (let i = 1990; i < 2021; i++) {
+      console.log(i);
+    }
+
     // 7、求1-5之间所有数的和
+    let num = 0
+    for (let i = 1; i < 5; i++) {
+      num += i
+    }
+    console.log(num);
+
     // 8、求出1-20间所有奇数的和
+    let num1 = 0
+    for (let i = 1; i < 5; i++) {
+      if (i % 2 !== 0) {
+        num1 += i
+      }
+    }
+    console.log(num1);
+
     // 9、打印九九乘法表
+    for (let i = 1; i <= 9; i++) {
+      for (let j = 1; j <= i; j++) {
+        document.write(i + 'X' + j + '=' + j * i + '&nbsp;&nbsp;&nbsp;&nbsp;')
+      }
+      document.write('<br>')
+    }
+
     // 10、打印三角形
+    for (let i = 1; i <= 9; i++) {
+      for (let j = 1; j <= i; j++) {
+        document.write('*')
+      }
+      document.write('<br>')
+    }
   </script>
 </body>
 
