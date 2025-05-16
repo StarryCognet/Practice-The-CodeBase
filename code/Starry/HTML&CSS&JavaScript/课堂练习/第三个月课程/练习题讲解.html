@@ -1,42 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-   
-</body>
-
+  <body></body>
 </html>
 <script>
-    // 输入 任意数字 求这个数字的阶乘(5分)
-    //5! = 5 * 4 * 3 * 2 * 1 = 120;
-    //1+2+3+4+5
-    var num = Number(prompt('请输入一个数字'));
+  // 输入 任意数字 求这个数字的阶乘(5分)
+  //5! = 5 * 4 * 3 * 2 * 1 = 120;
+  //1+2+3+4+5
+  var num = Number(prompt('请输入一个数字'))
 
-    var str = num + "!=";
-    var res = 1;        //积
-    for (var i = 1; i <= num; i++) {
-        res = res * i;
-        if (i != 5) {
-            str += i + "*";
-        } else {
-            str += i;
-        }
+  var str = num + '!='
+  var res = 1 //积
+  for (var i = 1; i <= num; i++) {
+    res = res * i
+    if (i != 5) {
+      str += i + '*'
+    } else {
+      str += i
     }
+  }
 
-    str += "=" + res;
-    console.log(str);
+  str += '=' + res
+  console.log(str)
 
-    console.log(res);
+  console.log(res)
 
-
-
-    /*
+  /*
         // 6.将数组对象循环输出在页面表格中(10分)
         // var data = [
         //   {"id":1,"name":"张三","age":20,"sex":"男","phone":"15473124380"},
@@ -45,14 +39,14 @@
         //   {"id":4,"name":"赵六","age":20,"sex":"女","phone":"15173124380"}
         // ]
     */
-    var data = [
-        { "id": 1, "name": "张三", "age": 20, "sex": "男", "phone": "15473124380" },
-        { "id": 2, "name": "李四", "age": 20, "sex": "男", "phone": "15373124380" },
-        { "id": 3, "name": "王五", "age": 20, "sex": "男", "phone": "15273124380" },
-        { "id": 4, "name": "赵六", "age": 20, "sex": "女", "phone": "15173124380" }
-    ]
+  var data = [
+    { id: 1, name: '张三', age: 20, sex: '男', phone: '15473124380' },
+    { id: 2, name: '李四', age: 20, sex: '男', phone: '15373124380' },
+    { id: 3, name: '王五', age: 20, sex: '男', phone: '15273124380' },
+    { id: 4, name: '赵六', age: 20, sex: '女', phone: '15173124380' },
+  ]
 
-    var str = ` <table border='1' width="600px">
+  var str = ` <table border='1' width="600px">
         <tr>
             <th>id</th>
             <th>姓名</th>
@@ -60,58 +54,55 @@
             <th>性别</th>
             <th>电话</th>
         </tr>
-    `;
-    for(var i in data){
-       str += ` <tr align="center">
+    `
+  for (var i in data) {
+    str += ` <tr align="center">
             <td>${data[i].id}</td>
             <td>${data[i].name}</td>
             <td>${data[i].age}</td>
             <td>${data[i].sex}</td>
             <td>${data[i].phone}</td>
-        </tr>`;
+        </tr>`
+  }
+
+  str += `</table>`
+
+  document.write(str)
+
+  //封装函数，求任意一个数组中的最大值
+
+  function getMax(arr) {
+    //获取数组的最大值
+    //假设数组中的第一个值为最大值
+    var max = arr[0]
+    for (var i = 1; i < arr.length; i++) {
+      if (arr[i] > max) {
+        max = arr[i]
+      }
     }
 
-    str += `</table>`;
+    return max
+  }
 
-    document.write(str);
+  var nums = [10, 30, 2, 40, 50, 220]
 
+  var max = getMax(nums)
+  console.log(max)
 
-    //封装函数，求任意一个数组中的最大值
-
-    function getMax(arr){
-        //获取数组的最大值
-        //假设数组中的第一个值为最大值
-        var max = arr[0];
-        for(var i = 1; i < arr.length; i++){
-            if(arr[i] > max){
-                max = arr[i];
-            }
-        }
-
-        return max;
+  //封装一个方法，如果传入的参数是两个，那么我们求乘积，如果参数是一个，我们求平方，如果是三个，我们求和
+  function getResult() {
+    var res
+    if (arguments.length == 1) {
+      res = arguments[0] * arguments[0]
+    } else if (arguments.length == 2) {
+      res = arguments[0] * arguments[1]
+    } else if (arguments.length == 3) {
+      res = arguments[0] + arguments[1] + arguments[2]
     }
+    console.log('结果为:' + res)
+  }
 
-
-    var nums = [10,30,2,40,50,220];
-
-    var max = getMax(nums);
-    console.log(max);
-    
-
-    //封装一个方法，如果传入的参数是两个，那么我们求乘积，如果参数是一个，我们求平方，如果是三个，我们求和
-    function getResult() {
-        var res;
-        if (arguments.length == 1) {
-            res = arguments[0] * arguments[0];
-        } else if (arguments.length == 2) {
-            res = arguments[0] * arguments[1];
-        } else if (arguments.length == 3) {
-            res = arguments[0] + arguments[1] + arguments[2];
-        }
-        console.log("结果为:"+res);
-    }
-
-    getResult(2);
-    getResult(2,4);
-    getResult(2,4,8);
+  getResult(2)
+  getResult(2, 4)
+  getResult(2, 4, 8)
 </script>
