@@ -1,15 +1,13 @@
-
-
 body {
   background-color: #f1f3f5;
 }
 
-body>div {
+body > div {
   width: 1820px;
   margin-left: 60px;
 }
 
-h1{
+h1 {
   margin: 40px;
 }
 
@@ -46,7 +44,7 @@ img {
   margin-bottom: 5px;
 }
 
-.contents div:first-of-type>span>span:first-of-type {
+.contents div:first-of-type > span > span:first-of-type {
   color: #ff0000;
   border: 1px solid #ff0000;
   border-radius: 5px;
@@ -54,7 +52,7 @@ img {
   padding: 0 4px;
 }
 
-.contents div:first-of-type>span>span:last-of-type {
+.contents div:first-of-type > span > span:last-of-type {
   border: 1px solid #000000;
   border-radius: 5px;
   font-size: 16px;
@@ -62,15 +60,15 @@ img {
   padding: 0 5px;
 }
 
-.contents div:last-of-type>span:first-of-type {
+.contents div:last-of-type > span:first-of-type {
   font-size: 20px;
 }
 
-.contents div:last-of-type>s {
+.contents div:last-of-type > s {
   font-size: 15px;
   color: #7f7f7f;
 }
-.contents div:last-of-type>span:last-of-type{
+.contents div:last-of-type > span:last-of-type {
   font-size: 22px;
   border: 1px solid #000;
   border-radius: 25px;
@@ -78,6 +76,6 @@ img {
   padding: 4px 10px 7px 10px;
   margin-left: 40px;
 }
-.contents div:last-of-type{
+.contents div:last-of-type {
   margin-top: 80px;
 }
