@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>床前明月光，疑是地上霜。</p>
+</body>
+
+</html>
+<script>
+    //获取h1的dom对象
+    var pDom = document.querySelector("p");
+
+    //改变内容
+    //pDom.innerHTML = "<h1>离离原上草，一岁一枯荣。</h1>";
+    //pDom.innerText = "<h1>离离原上草，一岁一枯荣。</h1>";
+
+    //获取标签内容
+    console.log(pDom.innerHTML);
+    console.log(pDom.innerText);
+
+    // 区别：
+    // 相同点：都能修改内容，都会覆盖原来的内容
+    // 不同点：
+    // innerText只能修改文字内容，不能解析标签
+    // innerHTML既能修改文字内容，又能解析标签
+</script>

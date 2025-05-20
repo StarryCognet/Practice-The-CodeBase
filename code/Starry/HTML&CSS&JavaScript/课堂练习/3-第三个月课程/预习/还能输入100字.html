@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <textarea></textarea>
+    <p>您还可以输入<b style="color: red">100</b>个字</p>
+    <script>
+      const text = document.querySelector('textarea')
+      const p = document.querySelector('p')
+      text.addEventListener('input', function () {
+        p.innerHTML = `您还可以输入<b style="color: red;">${100 - text.value.length}</b>个字`
+        if (100 - text.value.length <= 0) {
+          alert('超过了')
+          p.innerHTML = `您还可以输入<b style="color: red;">0</b>个字`
+        }
+        console.log(text.value)
+      })
+      
+    </script>
+  </body>
+</html>

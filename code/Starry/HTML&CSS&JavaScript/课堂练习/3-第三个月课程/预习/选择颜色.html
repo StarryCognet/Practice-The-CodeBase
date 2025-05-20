@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select style="width: 140px; height: 50px">
+      <option>--请选择--</option>
+      <option>红色</option>
+      <option>绿色</option>
+      <option>蓝色</option>
+    </select>
+    <script>
+      const color = {
+        "--请选择--": '#fff',
+        红色: 'red',
+        绿色: 'green',
+        蓝色: 'blue',
+      }
+      let se = document.querySelector('select')
+      se.onchange = function(){
+        se.style.backgroundColor = color[se.value]
+        console.log(se.value);
+      }
+    </script>
+  </body>
+</html>

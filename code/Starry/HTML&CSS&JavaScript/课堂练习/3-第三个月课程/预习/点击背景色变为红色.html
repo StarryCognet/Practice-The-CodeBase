@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        list-style: none;
+        float: left;
+        padding: 20px 50px;
+        border: 1px solid #000;
+        text-align: center;
+        background-color: #fff;
+      }
+      li.active {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>乔丹</li>
+      <li>nike</li>
+      <li>李宁</li>
+      <li>安踏</li>
+    </ul>
+    <script>
+      let li = document.querySelectorAll('li')
+      for (let i = 0; i < li.length; i++) {
+        li[i].onclick = function () {
+          console.log('1111')
+          li[i].style.backgroundColor = 'red'
+        }
+      }
+      // for (let i = 0; i < li.length; i++) {
+      //   li[i].onclick = function () {
+      //     li[i].classList.toggle('active')
+      //   }
+      // }
+    </script>
+  </body>
+</html>

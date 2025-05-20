@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    li{
+      float: left;
+      list-style: none;
+      margin-right: 15px;
+    }
+    .coo{
+      color: red;
+    }
+  </style>
+</head>
+<script>
+  // 页面加载事件（入口函数）:页面加载完成后，再加载js代码
+  window.onload = function(){
+    var list = document.querySelectorAll('li')
+    var ipt = document.querySelector('input')
+    // 循环点击事件
+    for(var i=0;i<list.length;i++){
+      list[i].onclick = function(){
+        // 排它:去掉所有li的类名
+        for(var i=0;i<list.length;i++){
+          list[i].className = ''
+        }
+        // 给当前点击的添加类名
+        this.className = 'coo'
+        // 将当前点击的内容，放在input框里
+        console.log(this.innerText)
+        ipt.value = this.innerText
+      }
+    }
+  }
+</script>
+<body>
+  <input type="text">
+  <ul>
+    <li class="coo">苹果</li>
+    <li>香蕉</li>
+    <li>榴莲</li>
+    <li>西瓜</li>
+    <li>橙子</li>
+  </ul>
+</body>
+</html>

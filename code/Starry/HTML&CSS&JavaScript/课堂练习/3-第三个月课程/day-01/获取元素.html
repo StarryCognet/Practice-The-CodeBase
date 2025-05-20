@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p1">好好学习，天天向上</p>
+    <p class="p1" name="myP1">我是一个学生</p>
+    姓名：<input type="text" name="username">
+</body>
+
+</html>
+<script>
+    // js的组成：
+    // ECMAscript（核心）   js的基本语法
+    // dom  文档对象模型(document)  其实就是用js去操作页面中的元素
+    // bom  浏览器对象模型  操作浏览器
+
+    //获取元素
+    // 1.通过id去获取元素  get(获取)Element(元素)By(通过)Id(id)
+    var p1Dom = document.getElementById("p1");
+    console.log(p1Dom);
+
+    p1Dom.style.color = "red";
+
+    // 2.通过类名获取元素
+    var p1Dom = document.getElementsByClassName("p1");
+    console.log(p1Dom[0]);
+
+
+    // 3.通过标签名获取元素
+    var pDom = document.getElementsByTagName("p");
+    console.log(pDom);
+    console.log(pDom[0]);
+    console.log(pDom[1]);
+
+    // 4.通过name名称获取元素
+    var username = document.getElementsByName("username");
+    console.log(username[0]);
+
+    // 5.获取单个元素
+    var p1Dom = document.querySelector("#p1");
+    console.log(p1Dom);
+
+    var p1Dom = document.querySelector(".p1");
+    console.log(p1Dom);
+
+    // 6.获取多个元素  all全部 所有
+    var pDom = document.querySelectorAll("p");
+    console.log(pDom[0]);
+    console.log(pDom[1]);
+    
+</script>

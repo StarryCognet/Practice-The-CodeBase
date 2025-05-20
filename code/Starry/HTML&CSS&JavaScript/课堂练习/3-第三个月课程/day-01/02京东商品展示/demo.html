@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <title></title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      #box {
+        width: 360px;
+        border: 1px solid #ccc;
+        margin: 100px auto;
+        overflow: hidden;
+      }
+
+      #box img {
+        vertical-align: middle;
+      }
+
+      #box ul {
+        overflow: hidden;
+        border-top: 1px solid #ccc;
+      }
+
+      #box li {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <img id="bigImg" src="images/01big.jpg" alt="" />
+      <ul id="imgs">
+        <li><img src="images/01.jpg" alt="1" /></li>
+        <li><img src="images/02.jpg" alt="2" /></li>
+        <li><img src="images/03.jpg" alt="3" /></li>
+        <li><img src="images/04.jpg" alt="4" /></li>
+        <li><img src="images/05.jpg" alt="5" /></li>
+      </ul>
+    </div>
+    <script>
+      let baigImg = document.querySelector('#bigImg')
+      let img = document.querySelectorAll('#imgs img')
+      for (let i in img) {
+        img[i].onclick = function () {
+          baigImg.src = `images/0${img[i].alt}big.jpg`
+          baigImg.style.width = '360px'
+        }
+      }
+      log
+    </script>
+  </body>
+</html>

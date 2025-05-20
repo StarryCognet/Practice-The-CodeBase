@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <ul>
+      <li>这是第1个</li>
+      <li>这是第2个</li>
+      <li>这是第3个</li>
+      <li>这是第4个</li>
+      <li>这是第5个</li>
+      <li>这是第6个</li>
+    </ul>
+  </body>
+</html>
+<script>
+  let li = document.querySelectorAll('li')
+  for (let i in li) {
+    if (i % 2 === 0) {
+      li[i].style.backgroundColor = 'red'
+    } else {
+      li[i].style.backgroundColor = 'green'
+    }
+    li[i].onclick = function () {
+      alert(this.innerHTML)
+    }
+  }
+  console.log(window);
+  
+</script>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>动态创建表格案例</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      thead {
+        background-color: #ccc;
+      }
+      th,
+      td {
+        width: 100px;
+        height: 40px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>动态创建表格</h1>
+    姓名：<input type="text" id="userName" /><br />
+    科目：<input type="text" id="subject" /><br />
+    成绩：<input type="text" id="score" /><br />
+    性别：<input type="radio" name="sex" value="男" checked />男
+    <input type="radio" name="sex" value="女" />女<br />
+    爱好：<input type="checkbox" value="篮球" />篮球 
+    <input type="checkbox" value="足球" />足球
+    <input type="checkbox" value="排球" />排球<br />
+    籍贯：
+    <select name="" id="provice">
+      <option value="河北">河北</option>
+      <option value="山东">山东</option>
+      <option value="河南">河南</option>
+      <option value="陕西">陕西</option>
+      <option value="辽宁">辽宁</option>
+    </select>
+    <br />
+    自我介绍：<textarea name="" id="introduce" cols="30" rows="10"></textarea><br />
+    <button id="btn">提交</button>
+    <table id="wrap" border="1">
+      <thead>
+        <tr>
+          <th onclick="fun()">姓名</th>
+          <th>科目</th>
+          <th>成绩</th>
+          <th>性别</th>
+          <th>爱好</th>
+          <th>籍贯</th>
+          <th>介绍</th>
+          <th>操作</th>
+        </tr>
+        <script>
+          let thead = document.querySelector('thead')
+          let btn = document.querySelector('#btn')
+          let userName = document.querySelector('#userName')
+          let subject = document.querySelector('#subject')
+          let score = document.querySelector('#score')
+          let sexs = document.querySelectorAll('input[name="sex"]')
+          let checkboxs = document.querySelectorAll('input[type="checkbox"]')
+          let options = document.querySelectorAll('option')
+          let textarea = document.querySelector('#introduce')
+          btn.addEventListener('click', function () {
+            thead.innerHTML = `
+              <tr>
+                  <th>姓名</th>
+                  <th>科目</th>
+                  <th>成绩</th>
+                  <th>性别</th>
+                  <th>爱好</th>
+                  <th>籍贯</th>
+                  <th>介绍</th>
+                  <th>操作</th>
+              </tr>
+              <tr>
+                  <th>${userName.value}</th>
+                  <th>${subject.value}</th>
+                  <th>${score.value}</th>
+                  <th>
+                    ${(function () {
+                      let sex = ''
+                      for (let i = 0; i < sexs.length; i++) {
+                        if (sexs[i].checked) {
+                          sex = sexs[i].value
+                        }
+                      }
+                      return sex
+                    })()}
+                  </th>
+                  <th>
+                    ${(function () {
+                      let checkbox = ''
+                      for (let i = 0; i < checkboxs.length; i++) {
+                        if (checkboxs[i].checked) {
+                          checkbox += checkboxs[i].value + '<br>'
+                        }
+                      }
+                      return checkbox
+                    })()}
+                  </th>
+                  <th>
+                    ${(function () {
+                      let option = ''
+                      for (let i = 0; i < options.length; i++) {
+                        if (options[i].selected) {
+                          option = options[i].value
+                        }
+                      }
+                      return option
+                    })()}
+                  </th>
+                  <th>${textarea.value}</th>
+                  <th><a href="" onclick='fun()'>删除</a></th>
+              `
+            // return false
+          })
+          function fun() {
+            thead.innerHTML = `
+            <tr>
+                  <th>姓名</th>
+                  <th>科目</th>
+                  <th>成绩</th>
+                  <th>性别</th>
+                  <th>爱好</th>
+                  <th>籍贯</th>
+                  <th>介绍</th>
+                  <th>操作</th>
+              </tr>
+            `
+          }
+        </script>
+      </thead>
+      <tbody id="tb"></tbody>
+    </table>
+  </body>
+</html>

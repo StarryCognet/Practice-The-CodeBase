@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: antiquewhite;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn1">点击我盒子显示</button>
+    <button id="btn2">点击我盒子隐藏</button>
+    <button id="btn3">显示/隐藏</button>
+
+    <div class="box">
+
+    </div>
+
+    <form action="" id="form1">
+        姓名：<input type="text" name="username" id="name"> <br>
+        班级:
+        <select id="grade">
+            <option value="0">--请选择--</option>
+            <option value="1">一年级</option>
+            <option value="2">二年级</option>
+            <option value="3">三年级</option>
+        </select> <br>
+        <input type="submit" value="提交">
+    </form>
+</body>
+
+</html>
+<script>
+    // 事件的作用：让用户可以和页面进行交互
+
+    // ⭐事件三要素
+    // 事件源
+    // 事件类型  例如：点击事件，鼠标事件，键盘事件。。。
+    // 事件处理程序  举例：触发了这个事件要干什么事情
+
+    // 事件的运用
+    // 语法：事件源.事件类型 = function(){事件处理程序}
+
+    //点击按钮让盒子显示
+    document.querySelector("#btn1").onclick = function () {
+        //获取盒子的dom对象
+        var box = document.querySelector(".box");
+        box.style.display = "block";
+    }
+
+    //点击按钮让盒子隐藏
+    document.querySelector("#btn2").onclick = function () {
+        //获取盒子的dom对象
+        var box = document.querySelector(".box");
+        box.style.display = "none";
+    }
+
+    //点击按钮让盒子显示/隐藏
+    document.querySelector("#btn3").onclick = function () {
+        //获取盒子的dom对象
+        var box = document.querySelector(".box");
+        console.log(box.style.display);
+
+        if (box.style.display == "none") {
+            box.style.display = "block";
+        } else {
+            box.style.display = "none";
+        }
+    }
+
+    //获取焦点事件
+    document.querySelector("#name").onfocus = function () {
+        console.log("获取焦点事件!");
+    }
+    //失去焦点事件
+    document.querySelector("#name").onblur = function () {
+        console.log("失去焦点事件!");
+    }
+
+    //表单元素改变事件
+    document.querySelector("#grade").onchange = function () {
+        console.log("表单元素改变事件!");
+    }
+
+    //表单的提交事件
+    document.querySelector("#form1").onsubmit = function(){
+        alert("表单被提交");
+    }
+    // 常用的事件类型
+    // onclick  点击事件
+    // onmouseover/onmouseenter  鼠标移入事件
+    // onmouseout/onmouseleave  鼠标移出事件
+    // onkeydown 键盘按下事件
+    // onkeyup 键盘谈起事件
+    // onblur 失去焦点
+    // onfocus 获得焦点
+    // onsubmit 提交事件
+    // onchange 内容改变事件
+
+
+    //键盘按下    onkeydown
+    //键盘按压    onkeypress
+    //键盘抬起    onkeyup
+</script>
