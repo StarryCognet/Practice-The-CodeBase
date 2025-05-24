@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
+<script>
+    // 1.传统绑定方式
+    var div = document.querySelector('div');
+    // div.onclick = function () {
+    //     console.log('点击事件')
+    // }
+    // div.onclick = function () {
+    //     console.log('点击事件2')
+    // }
+    // div.onmouseover = function () {
+    //     console.log('移入事件')
+    // }
+
+
+    // 2.事件监听绑定
+    div.addEventListener('click', function () {
+        console.log('点击事件');
+    })
+
+    div.addEventListener('click', fn);
+    function fn() {
+        console.log('点击事件2');
+    }
+
+    div.addEventListener("mouseover", function () {
+        console.log('移入事件');
+    })
+
+    div.removeEventListener("click", fn);
+
+    // 事件兼容 
+    // 绑定事件：div.attachEvent('click',function(){})
+    // 移出事件：div.detachEvent('click',fn)
+</script>

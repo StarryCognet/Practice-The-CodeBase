@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>表格示例</title>
+  </head>
+  <body>
+    <table border="1" cellspacing="0" style="border-color: rgb(238, 238, 238)">
+      <tr style="background-color: rgb(0, 183, 255)">
+        <th>代码</th>
+        <th>名称</th>
+        <th>最新公布净值</th>
+        <th>累计净值</th>
+        <th>前单位净值</th>
+        <th>净值增长率</th>
+      </tr>
+      <tr>
+        <td>003526</td>
+        <td>农银金穗3个月定期开放债券</td>
+        <td>1.075</td>
+        <td>1.079</td>
+        <td>1.074</td>
+        <td>+0.047%</td>
+      </tr>
+      <tr>
+        <td>003526</td>
+        <td>农银金穗3个月定期开放债券</td>
+        <td>1.075</td>
+        <td>1.079</td>
+        <td>1.074</td>
+        <td>+0.047%</td>
+      </tr>
+      <tr>
+        <td>003526</td>
+        <td>农银金穗3个月定期开放债券</td>
+        <td>1.075</td>
+        <td>1.079</td>
+        <td>1.074</td>
+        <td>+0.047%</td>
+      </tr>
+      <tr>
+        <td>003526</td>
+        <td>农银金穗3个月定期开放债券</td>
+        <td>1.075</td>
+        <td>1.079</td>
+        <td>1.074</td>
+        <td>+0.047%</td>
+      </tr>
+      <tr>
+        <td>003526</td>
+        <td>农银金穗3个月定期开放债券</td>
+        <td>1.075</td>
+        <td>1.079</td>
+        <td>1.074</td>
+        <td>+0.047%</td>
+      </tr>
+    </table>
+    <script>
+      let tr = document.querySelectorAll('tr')
+      for (let i = 0; i < tr.length; i++) {
+        if (tr[i] !== tr[0]) {
+          tr[i].onmousemove = function () {
+            tr[i].style.backgroundColor = 'red'
+          }
+          tr[i].onmouseout = function () {
+            tr[i].style.backgroundColor = ''
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

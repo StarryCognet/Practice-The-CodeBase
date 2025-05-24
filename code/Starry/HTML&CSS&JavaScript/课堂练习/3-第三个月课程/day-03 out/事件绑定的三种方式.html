@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn" onclick="fn()">点击</button> <br>
+    <input type="text" onfocus="fn1()" onblur="fn2()"><br>
+    <button id="btn2">点击2</button>
+</body>
+
+</html>
+<script>
+    // 1.普通绑定方式  事件源.事件类型 = function(){}
+    // document.querySelector("#btn").onclick = function(){
+
+    // }
+    // 2.标签上直接绑定
+    // function fn(){
+    //     alert('点击');
+    // }
+
+    // function fn1(){
+    //     console.log('获取焦点');
+
+    // }
+
+    // function fn2(){
+    //     console.log('失去焦点');
+    // }
+
+    // 3.监听事件
+    // 语法：事件源.addEventListener('事件类型不需要加on',function(){事件处理程序})
+    // document.querySelector("#btn2").addEventListener('click', function () {
+    //     console.log("btn2被点击!");
+    // });
+
+    // document.querySelector("#btn2").addEventListener('click', fn3);
+
+    // function fn3(){
+    //     alert('btn2被点击!');
+    // }
+
+    // 兼容性：在ie6，7，8下
+    // 事件源.attachEvent('事件类型  要加on',function(){})
+</script>

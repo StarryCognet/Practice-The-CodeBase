@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 500px;
+            height: 500px;
+            background-color: yellow;
+        }
+
+        .box2 {
+            width: 400px;
+            height: 400px;
+            background-color: red;
+        }
+
+        .box3 {
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <div class="box2">
+            <div class="box3">
+
+            </div>
+        </div>
+    </div>
+
+    <input type="text" id="i">
+</body>
+
+</html>
+<script>
+    var box1 = document.querySelector(".box1");
+    var box2 = document.querySelector(".box2");
+    var box3 = document.querySelector(".box3");
+
+
+    box1.onclick = function (e) {
+        //console.log(e);
+        // console.log(e.target);              //返回事件的触发对象   事件源  ie 9之后    //      e.srcElement;       ie  6 7 8
+        // console.log(e.type);
+        // console.log(e.pageX);
+        // console.log(e.pageY);
+        console.log('我是最大盒子');
+        console.log(this);
+        console.log(e.target);
+
+    }
+    box2.onclick = function () {
+        console.log('我是中间盒子')
+        //阻止事件冒泡
+        //event.stopPropagation();
+    }
+    box3.onclick = function (e) {
+        console.log('我是最小盒子');
+        //阻止事件冒泡
+        //event.stopPropagation();        //ie 9  之后
+        //event.cancelbubble;           //ie 6 7 8
+
+        console.log("box3====");
+        console.log(this);
+
+        console.log("box3====");
+        console.log(e.target);
+
+    }
+
+    document.querySelector("#i").onkeyup = function (e) {
+        if (e.keyCode == "13") {        //enter键的键码值是13
+            console.log("搜索数据");
+        }
+    }
+
+    /*
+        ③this与target区别	
+        1)this  	 事件绑定的元素
+        2)target     事件触发的元素
+    */
+</script>

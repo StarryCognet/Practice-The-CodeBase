@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        width: 400px;
+        height: 300px;
+        border: 1px solid black;
+        margin: 0 auto;
+      }
+      .box span {
+        display: inline-block;
+        width: 90px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background-color: pink;
+      }
+      li {
+        width: 400px;
+        height: 250px;
+        background-color: green;
+        list-style: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+      }
+      .bd {
+        position: relative;
+      }
+      .bd ul .show {
+        display: block;
+      }
+      .box .hd .current {
+        background-color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="hd">
+        <span class="current">1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+      </div>
+      <div class="bd">
+        <ul>
+          <li class="show">第1个</li>
+          <li>第2个</li>
+          <li>第3个</li>
+          <li>第4个</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

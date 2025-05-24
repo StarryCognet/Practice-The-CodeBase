@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <title></title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .wrap {
+        width: 300px;
+        margin: 100px auto 0;
+      }
+
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 1px solid #c0c0c0;
+        width: 300px;
+      }
+
+      th,
+      td {
+        border: 1px solid #d0d0d0;
+        color: #404060;
+        padding: 10px;
+      }
+
+      th {
+        background-color: #09c;
+        font: bold 16px '微软雅黑';
+        color: #fff;
+      }
+
+      td {
+        font: 14px '微软雅黑';
+      }
+
+      tbody tr {
+        background-color: #f0f0f0;
+      }
+
+      tbody tr:hover {
+        cursor: pointer;
+        background-color: #fafafa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <table>
+        <!--全选反选按钮所在行-->
+        <thead>
+          <tr>
+            <th>
+              <input type="checkbox" id="selectAll" />
+            </th>
+            <th>菜名</th>
+            <th>饭店</th>
+          </tr>
+        </thead>
+
+        <!--每一个菜的选项-->
+        <tbody id="cai">
+          <tr>
+            <td>
+              <input type="checkbox" />
+            </td>
+            <td>红烧肉</td>
+            <td>田老师</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" />
+            </td>
+            <td>西红柿鸡蛋</td>
+            <td>田老师</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" />
+            </td>
+            <td>红烧狮子头</td>
+            <td>田老师</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" />
+            </td>
+            <td>日式肥牛</td>
+            <td>田老师</td>
+          </tr>
+        </tbody>
+      </table>
+      <button id="all">全选</button>
+      <button id="noAll">全不选</button>
+      <button id="fan">反选</button>
+    </div>
+    <script>
+      let selectAll = document.querySelector('#selectAll')
+      let cai = document.querySelectorAll('#cai input')
+      let inputAll = document.querySelectorAll('input')
+      let all = document.querySelector('#all')
+      let noAll = document.querySelector('#noAll')
+      let fan = document.querySelector('#fan')
+
+      function allc() {
+        for (let j = 0; j < cai.length; j++) {
+          cai[j].checked = selectAll.checked
+        }
+      }
+      function allx() {
+        selectAll.checked = document.querySelectorAll('#cai input:checked').length === cai.length
+      }
+
+      selectAll.addEventListener('click', allc)
+      all.addEventListener('click', function () {
+        selectAll.checked == false ? (selectAll.checked = true) : selectAll.checked
+        allc()
+      })
+      noAll.addEventListener('click', function () {
+        selectAll.checked == true ? (selectAll.checked = false) : selectAll.checked
+        allc()
+      })
+      fan.addEventListener('click', function () {
+        for (let i = 0; i < cai.length; i++) {
+          cai[i].checked == true ? (cai[i].checked = false) : (cai[i].checked = true)
+          allx()
+        }
+      })
+      for (let i = 0; i < cai.length; i++) {
+        cai[i].addEventListener('click', allx)
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+.box{
+    width: 1349px;
+    height: 41px;
+    background-color: #333333;
+}
+/* 头部导航 */
+.box .head{
+    width: 1235px;
+    height: 41px;
+    background-color:  #333333;
+    margin: 0 auto;
+    overflow: hidden;
+}  
+
+/* 头部导航左侧 */
+.box .head .head_left{
+    width: 810px;
+    height: 41px;
+    float: left;
+}
+
+.box .head .head_left ul>li{
+    height: 41px;
+    float: left;
+    line-height: 41px;
+    font-size: 11px;
+    text-align: center;
+    margin-left: 8px;
+}
+
+/* 头部导航右侧 */
+.box .head .head_right{
+    width: 285px;
+    height: 41px;
+    float: right;
+}
+
+.box .head .head_right ul>li{
+    height: 41px;
+    float: left;
+    line-height: 41px;
+    font-size: 11px;
+    text-align: center;
+    margin-left: 8px;
+}
+
+/* 购物车 */
+.box .head .head_right .cart{
+    width: 120px;
+    height: 41px;
+    float: right;
+    background-color: #424242;
+    line-height: 41px;
+    text-align: center;
+}

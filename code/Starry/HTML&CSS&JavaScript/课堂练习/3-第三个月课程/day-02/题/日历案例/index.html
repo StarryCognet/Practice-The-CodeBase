@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>五月 2020 日历</title>
+    <style>
+      .big {
+        width: 300px;
+        border: 1px solid #000;
+      }
+      table {
+        width: 250px;
+        /* border-collapse: collapse; */
+        /* float: left; */
+      }
+      ul {
+        position: relative;
+        left: -40px;
+      }
+      li {
+        list-style: none;
+        float: left;
+        background-color: #bbbbbb;
+        padding: 2px 10px;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        text-align: center;
+        padding: 5px;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      .header {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="big">
+      <div>
+        <div>
+          <span>上一月&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+          ><span
+            >2020&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+          ><span>下一月</span>
+          <p style="text-align: center">五月</p>
+        </div>
+      </div>
+      <ul>
+        <li>日</li>
+        <li>一</li>
+        <li>二</li>
+        <li>三</li>
+        <li>四</li>
+        <li>五</li>
+        <li>六</li>
+      </ul>
+      <table>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>1</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+          <td>15</td>
+          <td>16</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>18</td>
+          <td>19</td>
+          <td>20</td>
+          <td>21</td>
+          <td>22</td>
+          <td>23</td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td>25</td>
+          <td>26</td>
+          <td>27</td>
+          <td>28</td>
+          <td>29</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>31</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      let td = document.querySelectorAll('td')
+      for (let i = 0; i < td.length; i++) {
+        td[i].addEventListener('mousemove', function () {
+          td[i].style.color = 'red'
+        })
+        td[i].addEventListener('mouseout', function () {
+          td[i].style.color = ''
+        })
+      }
+    </script>
+  </body>
+</html>

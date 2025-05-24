@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <script>
+      let div = document.createElement('div')
+      let body = document.querySelector('body')
+      body.appendChild(div)
+      div.style.width = '150px'
+      div.style.height = '150px'
+      div.style.border = '1px solid #000'
+      div.style.backgroundColor = 'red'
+      div.innerHTML = '这是一个div'
+      div.addEventListener('mouseenter', function () {
+        div.style.backgroundColor = 'green'
+        div.style.color = '#fff'
+      })
+      div.addEventListener('mouseleave', function () {
+        div.style.backgroundColor = 'red'
+        div.style.color = '#000'
+      })
+
+      let ul = document.querySelector('ul')
+      let li = document.querySelectorAll('li')
+      let arr = ['张三', '李四','老五']
+    </script>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>循环作业4</title>
+</head>
+
+<body>
+  <script>
+    // （一）题目1
+    // 控制台输出 1-50之间所有的奇数
+    // for(let i = 1; i < 50; i++){
+    //   if(i % 2 !== 0){
+    //     console.log(i);
+    //   }
+    // }
+
+    // （二）题目2
+    // 控制台输出  20-40之间所有偶数的和
+    // let num = 0
+    // for (let i = 20; i < 40; i++) {
+    //   if (i % 2 === 0) {
+    //     num += i
+    //   }
+    // }
+    // console.log(num);
+
+    // （三）题目3
+    // 控制台输出 20-50之间 既能被3整除又能被5整数的 数
+    // for (let i = 20; i < 50; i++) {
+    //   if (i % 3 === 0 && i % 5 === 0) {
+    //     console.log(i);
+    //   }
+    // }
+
+    // （四）题目4
+    // 控制台输出 1-100之间所有 5的倍数的数字
+    // for (let i = 1; i < 100; i++) {
+    //   if (i % 5 === 0) {
+    //     console.log(i);
+    //   }
+    // }
+
+    // （五）题目5
+    // 使用prompt输入两个数字。打印这两个数字之间的偶数。例如输入 10-20，则打印出来 10  12  14  16  18  20
+    // let num1 = +prompt()
+    // let num2 = +prompt()
+    // let max = Math.max(num1, num2)
+    // let min = Math.min(num1, num2)
+    // for (let i = min; i <= max; i++) {
+    //   if (i % 2 == 0) {
+    //     document.writeln(i)
+    //   }
+    // }
+
+    // （六）题目6
+    // 使用prompt输入一个年份，打印出来 输入的年份到2023年之间的闰年。闰年规则 (能被4整除且不能被100整除,或能被400整除）
+    // let num = +prompt()
+    // if (num < 2023) {
+    //   for (let i = num; i <= 2023; i++) {
+    //     if (i % 4 === 0 && i % 100 !== 0 || i % 400 === 0) {
+    //       console.log(i);
+    //     }
+    //   }
+    // } else if (num > 2023) {
+    //   for (let i = 2023; i <= num; i++) {
+    //     if (i % 4 === 0 && i % 100 !== 0 || i % 400 === 0) {
+    //       console.log(i);
+    //     }
+    //   }
+    // }
+    // // AI写的↓
+    // let year = +prompt("请输入一个年份：");
+    // let start, end;
+    // // 确定循环范围
+    // if (year <= 2023) {
+    //   start = year;
+    //   end = 2023;
+    // } else {
+    //   start = 2023;
+    //   end = year;
+    // }
+    // // 统一处理闰年判断
+    // for (let i = start; i <= end; i++) {
+    //   if ((i % 4 === 0 && i % 100 !== 0) || i % 400 === 0) {
+    //     console.log(i);
+    //   }
+    // }
+    // // AI写的↑
+
+    // （七）题目7
+    // 使用prompt输入两个  1-10之间的任意数字
+    // 例如:第一个数字为3  第二个数字为8
+    // 打印出来 3行 8列的表格  我爱学习。
+    // let num1 = +prompt()
+    // let num2 = +prompt()
+    // document.write('<table border="1">')
+    // for (let i = 1; i <= num1; i++) {
+    //   document.write('<tr>')
+    //   for (let i = 1; i <= num2; i++) {
+    //     document.write('<td>我爱学习</td>')
+    //   }
+    //   document.write('</tr>')
+    // }
+    // document.write('</table>')
+
+    // （八）题目8
+    // 使用prompt输入1-10之间的任意一个数字
+    // 例如:输入数字7
+    // 打印出 7行星号
+    // *
+    // **
+    // ***
+    // ****
+    // *****
+    // ******
+    // *******
+    // let num = +prompt()
+    // for(let i = 1; i <= num; i++){
+    //   for(let j = 1; j <= i; j++){
+    //     document.write('*')
+    //   }
+    //   document.write('<br>')
+    // }
+
+    // （九）题目9
+    // 输入 一个1-10之间数字，求出这个数字的阶乘结果。如果不是1-10之间的数字 给出错误提示。
+    // let pro = +prompt()
+    // let num = 1
+    // if (pro < 10 && pro > 1) { 
+    //   for (let i = 1; i <= pro; i++) {
+    //     num *= i
+    //   }
+    // }else{
+    //   alert('请输入1-10以内的数')
+    // }
+    // console.log(num);
+    
+    // （十）题目10
+    // 输入 一个1-9之间的数字，在浏览器中打印出  对应数字的乘法表。
+    // 例如 输入数字5  则打印出5行乘法表。
+      // let num = +prompt()
+      // for(let i = 1; i <= num; i++){
+      //   for(let j = 1; j <= i; j++){
+      //     document.write(j + 'X' + i + '=' + j * i + '&nbsp;&nbsp;&nbsp;&nbsp;')
+      //   }
+      //   document.writeln('<br>')
+      // }
+
+  </script>
+</body>
+
+</html>

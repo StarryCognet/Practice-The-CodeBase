@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dv {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+
+        .dv2 {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="txt">
+    <div id="box" class="dv" haha="hehe">测试</div>
+</body>
+
+</html>
+<script>
+    // 属性操作
+    //1. 标签自带的属性  例如：id  class name type
+    // 操作标签自带的属性  直接用  元素.属性名
+    var txt = document.querySelector("#txt");
+    console.log(txt);
+    txt.type = "password";
+
+
+    var box = document.querySelector("#box");
+    box.id = "box2";
+
+    var box2 = document.querySelector("#box2");
+    box2.style.color = "white";
+
+    //特殊：操作类名需要使用className
+    box2.className = "dv2";
+
+
+    //自定义属性
+    var box = document.querySelector(".dv2");
+
+    console.log(box.haha);      //获取不到，也修改不了
+
+    // 设置自定义属性  setAttribute('自定义的属性名','属性值')
+    box.setAttribute("username", "zhangsan");
+    // 获取自定义属性  getAttribute('自定义的属性名')
+    console.log(box.getAttribute("username"));
+    // 移出自定义属性  removeAttribute('自定义的属性名')
+    box.removeAttribute("username");
+
+
+    //也能操作自带属性
+    box.setAttribute("id",'box3');
+    box.setAttribute("class",'dv3');
+</script>

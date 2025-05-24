@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      td{
+        padding: 20px 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <td>
+          <input class="ckAll" type="checkbox" />全选
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          <input class="ck" type="checkbox" />
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          <input class="ck" type="checkbox" />
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          <input class="ck" type="checkbox" />
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          <input class="ck" type="checkbox" />
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <script>
+      let = ckAll = document.querySelector('.ckAll')
+      let = ck = document.querySelectorAll('.ck')
+      ckAll.onclick = function(){
+        for(let i = 0; i < ck.length; i++){
+          ck[i].checked = this.checked
+        }
+      }
+    </script>
+  </body>
+</html>

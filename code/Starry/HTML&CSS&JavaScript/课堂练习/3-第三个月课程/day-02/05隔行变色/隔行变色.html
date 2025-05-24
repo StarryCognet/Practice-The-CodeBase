@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <!-- <script>
+		// 效果描述：
+		//  1 给li设置奇偶行不同背景色
+		//  2 鼠标移入移出某个li时，设置当前li高亮显示和取消高亮显示
+	
+		// 实现：
+		//  1 获取元素
+		//  2 遍历
+		window.onload = function () {
+			//获取所有li
+			var lis = document.querySelectorAll("li");
+	
+			for (var i = 0; i < lis.length; i++) {
+				if (i % 2 == 0) {
+					lis[i].style.backgroundColor = "green";
+				} else {
+					lis[i].style.backgroundColor = "yellow";
+				}
+			}
+	
+	
+			//鼠标移入和鼠标移出
+			for (var i = 0; i < lis.length; i++) {
+				//每个li绑定一个鼠标移入事件
+				lis[i].onmouseover = function () {
+					this.className = "colorRed asa adsa";
+				}
+				//每个li绑定一个鼠标移出事件
+				lis[i].onmouseout = function () {
+					this.className = "";
+				}
+			}
+		}
+	</script> -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      /*div {
+			background-color: red;
+		}
+		div.box {
+			background-color: pink;
+		}*/
+      .colorRed {
+        background-color: red !important;
+      }
+
+      /* !important>ID>类>标签 */
+    </style>
+  </head>
+
+  <body>
+    <!-- <div class="">这是div</div> -->
+    <ul>
+      <li>这是li</li>
+      <li>这是li</li>
+      <li>这是li</li>
+      <li>这是li</li>
+      <li>这是li</li>
+      <li>这是li</li>
+      <li>这是li</li>
+    </ul>
+  </body>
+  <script>
+    window.onload = function () {
+      let arr = document.querySelectorAll('ul li')
+      console.log(arr)
+      for (let i = 0; i < arr.length; i++) {
+        if (i % 2 == 0) {
+          arr[i].style.backgroundColor = 'red'
+          arr[i].onmouseout = function () {
+            arr[i].style.backgroundColor = 'red'
+          }
+        } else {
+          arr[i].style.backgroundColor = 'green'
+          arr[i].onmouseout = function () {
+            arr[i].style.backgroundColor = 'green'
+          }
+        }
+        arr[i].onmouseover = function () {
+          arr[i].style.backgroundColor = '#665598'
+        }
+      }
+    }
+  </script>
+</html>

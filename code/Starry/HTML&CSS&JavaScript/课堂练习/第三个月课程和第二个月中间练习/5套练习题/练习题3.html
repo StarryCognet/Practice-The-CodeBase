@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+</body>
+
+</html>
+<script>
+  // 1.在页面打印99乘法表(5分)
+  // for (let i = 1; i <= 9; i++) {
+  //   for (let j = 1; j <= i; j++) {
+  //     document.writeln(`${j}X${i}=${j * i}&nbsp;&nbsp;&nbsp;&nbsp;`)
+  //   }
+  //   document.writeln('<br>')
+  // }
+
+  // 2.求10-20之间偶数的和(5分)
+  // let num = 0
+  // for(let i = 10; i < 20; i++){
+  //   if(i % 2 === 0){
+  //     num += i
+  //   }
+  // }
+  // console.log(num);
+
+  // 3.输入 任意数字 求这个数字的阶乘(5分)
+  // let n = +prompt()
+  // let num = 1
+  // for(let i = 1; i <= n; i++){
+  //   num = num * i
+  // }
+  // console.log(num);
+
+
+  // 4.将1-100倒序输出 例如：100，99，98，97。。。。。(5分)
+  // for(let i = 100; i >= 1; i--){
+  //   console.log(i); 
+  // }
+
+  // 5.求45-78之间的随机数(10分)
+  // let re = Math.floor(Math.random() * (78 - 45 + 1) ) + 45
+  // console.log(re);
+
+
+  // 6.将数组对象循环输出在页面表格中(10分)
+  // var data = [
+  //   {"id":1,"name":"张三","age":20,"sex":"男","phone":"15473124380"},
+  //   {"id":2,"name":"李四","age":20,"sex":"男","phone":"15373124380"},
+  //   {"id":3,"name":"王五","age":20,"sex":"男","phone":"15273124380"},
+  //   {"id":4,"name":"赵六","age":20,"sex":"女","phone":"15173124380"}
+  // ]
+  // let data = [
+  //   { "id": 1, "name": "张三", "age": 20, "sex": "男", "phone": "15473124380" },
+  //   { "id": 2, "name": "李四", "age": 20, "sex": "男", "phone": "15373124380" },
+  //   { "id": 3, "name": "王五", "age": 20, "sex": "男", "phone": "15273124380" },
+  //   { "id": 4, "name": "赵六", "age": 20, "sex": "女", "phone": "15173124380" }
+  // ]
+
+  // for(let i in data){
+  //   document.writeln(`
+  //   <table border='1'>
+  //     <tr>
+  //       <td>${data[i].id}</td>
+  //       <td>${data[i].name}</td>
+  //       <td>${data[i].age}</td>
+  //       <td>${data[i].sex}</td>
+  //       <td>${data[i].phone}</td>
+  //     </tr>
+  //   </table>
+  //   `)
+  // }
+
+
+  // 7.for循环将邮箱数组中的 每个值 改为截取后的邮箱号 ['23452345@qq.com','24564@qq.com','qerqw@163.com'](10分)
+  // let arr = ['23452345@qq.com', '24564@qq.com', 'qerqw@163.com']
+  // let narr = []
+  // for (let i in arr) {
+  //   narr[i] = arr[i].substring(0, arr[i].indexOf('@'))
+  // }
+  // console.log(narr);
+
+
+  // 8.让数组[22,3,44,5,6,9]的每个元素后添加一个"😄"图案,最终结果['22😄', '3😄', '44😄', '5😄', '6😄', '9😄'](10分)
+  // let arr = [22, 3, 44, 5, 6, 9]
+  // for(let i in arr){
+  //   arr[i] += '😄'
+  // }
+  // console.log(arr);
+
+
+  // 9.封装函数，求任意一个数组中的最大值(10分)
+  // let arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7]
+  // function gitMax(arr) {
+  //   let num = 0
+  //   for(let i in arr){
+  //     if(arr[i] > num){
+  //       num = arr[i]
+  //     }
+  //   }
+  //   console.log(num);
+  // }
+  // gitMax(arr)
+
+  // 10.定义一个函数名称为：calc，传入两个数时，做加法。传入1个数时，求平方。(10分)
+  // function calc() {
+  //   if (arguments.length === 2) {
+  //     return arguments[0] + arguments[1]
+  //   } else if (arguments.length === 1) {
+  //     return arguments[0] ** 2
+  //   }
+  // }
+  // console.log(calc(4));
+  // console.log(calc(5, 10));
+
+  // function calc(...args) {
+  //   if (args.length === 2) {
+  //     return args[0] + args[1];
+  //   } else if (args.length === 1) {
+  //     return args[0] ** 2;
+  //   }
+  // }
+  // console.log(calc(4));
+  // console.log(calc(5, 10));
+
+
+
+</script>
