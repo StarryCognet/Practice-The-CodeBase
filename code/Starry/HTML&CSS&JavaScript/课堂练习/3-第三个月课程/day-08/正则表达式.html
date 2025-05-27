@@ -28,21 +28,21 @@
     // 2.构造函数方式
     // var reg = new RegExp('正则表达式')
 
-    // 如何验证正则写的对不对
-    var reg1 = /zhangsan/;
-    var reg2 = new RegExp('lisi');
+    // // 如何验证正则写的对不对
+    // var reg1 = /zhangsan/;
+    // var reg2 = new RegExp('lisi');
 
 
-    // 1.test方法  返回值是true和false
-    var result = reg1.test("zhangsan");
-    console.log(result);
-    var result2 = reg2.test("lisi");
-    console.log(result2);
+    // // 1.test方法  返回值是true和false
+    // var result = reg1.test("zhangsan");
+    // console.log(result);
+    // var result2 = reg2.test("lisi");
+    // console.log(result2);
 
 
-    //2.exec方法  如果满足正则，返回数组，否则返回null
-    var result3 = reg1.exec('abcd');
-    console.log(result3);
+    // //2.exec方法  如果满足正则，返回数组，否则返回null
+    // var result3 = reg1.exec('abcd');
+    // console.log(result3);
 
 
     //数字3位
@@ -50,6 +50,9 @@
     // var reg = /^[0-9]{3}$/;
     // //\d 表示0-9  数字
     // var reg = /^\d{3}$/;
+    var ds = /^\w{2,5}$/
+    console.log(ds.test(''));
+    
 
     // //\D 表示非数字
     // var reg = /^\D{3}$/;
