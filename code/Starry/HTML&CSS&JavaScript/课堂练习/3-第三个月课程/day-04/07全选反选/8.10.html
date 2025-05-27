@@ -1,0 +1,290 @@
+<!doctype html>
+<html>
+  <!-- <script>
+    // 获取元素
+    var all = document.querySelector('#all')
+    var noAll = document.querySelector('#noAll')
+    var fan = document.querySelector('#fan')
+    var selectAll = document.querySelector('#selectAll')
+    var cai = document.querySelectorAll('#cai input')
+  
+    //全选按钮点击事件
+    all.onclick = function () {
+      //让所有的菜品复选框被选中
+      for (var i = 0; i < cai.length; i++) {
+        cai[i].checked = true
+      }
+  
+      //最上面的复选框也被选中
+      selectAll.checked = true
+    }
+  
+    //全不选按钮点击事件
+    noAll.onclick = function () {
+      //让所有的菜品复选框不被选中
+      for (var i = 0; i < cai.length; i++) {
+        cai[i].checked = false
+      }
+  
+      //最上面的复选框也不被选中
+      selectAll.checked = false
+    }
+  
+    //反选按钮点击事件
+    fan.onclick = function () {
+      //让所有的菜品复选框和原来的状态相反
+      for (var i = 0; i < cai.length; i++) {
+        cai[i].checked = !cai[i].checked
+      }
+  
+      //处理菜品复选框都被选中，那么最上面全选复选框也应该选中，反之，不被选中
+      var count = 0 //记录菜品复选框被选中的个数
+  
+      for (var i = 0; i < cai.length; i++) {
+        if (cai[i].checked) {
+          count++
+        }
+      }
+  
+      if (count == 4) {
+        //全选复选框被选中
+        selectAll.checked = true
+      } else {
+        selectAll.checked = false
+      }
+    }
+  
+    //全选复选框
+    selectAll.onclick = function () {
+      for (var i = 0; i < cai.length; i++) {
+        //this指的是当前事件源对象
+        cai[i].checked = this.checked
+      }
+    }
+  
+    //菜品复选框的点击事件
+    for (var i = 0; i < cai.length; i++) {
+      cai[i].onclick = function () {
+        var count = 0 //记录菜品复选框被选中的个数
+  
+        for (var i = 0; i < cai.length; i++) {
+          if (cai[i].checked) {
+            count++
+          }
+        }
+  
+        if (count == 4) {
+          //全选复选框被选中
+          selectAll.checked = true
+        } else {
+          selectAll.checked = false
+        }
+      }
+    }
+  </script> -->
+  <!-- <script>
+    let selectAll = document.querySelector('#selectAll')
+    let checkbox = document.querySelectorAll('#cai input[type="checkbox"]')
+    let all = document.querySelector('#all')
+    let noAll = document.querySelector('#noAll')
+    let fan = document.querySelector('#fan')
+    function checkedTrue() {
+      for (let i = 0; i < checkbox.length; i++) {
+        checkbox[i].checked = selectAll.checked
+      }
+    }
+    function checkedAll() {
+      selectAll.checked = document.querySelectorAll('#cai input:checked').length === checkbox.length
+    }
+    selectAll.addEventListener('click', checkedTrue)
+    all.onclick = function () {
+      selectAll.checked = true
+      checkedTrue()
+    }
+    noAll.onclick = function () {
+      selectAll.checked = false
+      checkedTrue()
+    }
+    fan.onclick = function () {
+      for (let i = 0; i < checkbox.length; i++) {
+        checkbox[i].checked == true ? (checkbox[i].checked = false) : (checkbox[i].checked = true)
+      }
+      checkedAll()
+    }
+    // for (let i = 0; i < checkbox.length; i++){
+    //   checkbox[i].onclick = checkedAll()
+    // }
+    for (let i = 0; i < checkbox.length; i++) {
+      checkbox[i].addEventListener('click', checkedAll)
+    }
+  </script> -->
+  <!-- <script>
+    let selectAll = document.querySelector('#selectAll')
+    let cai = document.querySelectorAll('#cai input')
+    let all = document.querySelector('#all')
+    let noAll = document.querySelector('#noAll')
+    let fan = document.querySelector('#fan')
+
+    function checkedTrue() {
+      for (let i = 0; i < cai.length; i++) {
+        cai[i].checked = selectAll.checked
+      }
+    }
+    function checkedAll() {
+      selectAll.checked = document.querySelectorAll('#cai input:checked').length === cai.length
+    }
+    selectAll.addEventListener('click', checkedTrue)
+    all.addEventListener('click', function () {
+      selectAll.checked = true
+      checkedTrue()
+    })
+    noAll.addEventListener('click', function () {
+      selectAll.checked = false
+      checkedTrue()
+    })
+    fan.addEventListener('click', function () {
+      for (let i = 0; i < cai.length; i++) {
+        cai[i].checked == true ? (cai[i].checked = false) : (cai[i].checked = true)
+      }
+      checkedAll()
+    })
+    for (let i = 0; i < cai.length; i++) {
+      cai[i].addEventListener('click', checkedAll)
+    }
+  </script> -->
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <title></title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      .wrap {
+        width: 300px;
+        margin: 100px auto 0;
+      }
+
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 1px solid #c0c0c0;
+        width: 300px;
+      }
+
+      th,
+      td {
+        border: 1px solid #d0d0d0;
+        color: #404060;
+        padding: 10px;
+      }
+
+      th {
+        background-color: #09c;
+        font: bold 16px '微软雅黑';
+        color: #fff;
+      }
+
+      td {
+        font: 14px '微软雅黑';
+      }
+
+      tbody tr {
+        background-color: #f0f0f0;
+      }
+
+      tbody tr:hover {
+        cursor: pointer;
+        background-color: #fafafa;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <table>
+        <!--全选反选按钮所在行-->
+        <thead>
+          <tr>
+            <th>
+              <input type="checkbox" id="selectAll" />
+            </th>
+            <th>菜名</th>
+            <th>饭店</th>
+          </tr>
+        </thead>
+
+        <!--每一个菜的选项-->
+        <tbody id="cai">
+          <tr>
+            <td>
+              <input type="checkbox" />
+            </td>
+            <td>红烧肉</td>
+            <td>田老师</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" />
+            </td>
+            <td>西红柿鸡蛋</td>
+            <td>田老师</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" />
+            </td>
+            <td>红烧狮子头</td>
+            <td>田老师</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" />
+            </td>
+            <td>日式肥牛</td>
+            <td>田老师</td>
+          </tr>
+        </tbody>
+      </table>
+      <button id="all">全选</button>
+      <button id="noAll">全不选</button>
+      <button id="fan">反选</button>
+    </div>
+    <script>
+      let cai = document.querySelectorAll('#cai input')
+      let selectAll = document.querySelector('#selectAll')
+      let all = document.querySelector('#all')
+      let noAll = document.querySelector('#noAll')
+      let fan = document.querySelector('#fan')
+
+      function allTrue() {
+        for (let i = 0; i < cai.length; i++) {
+          cai[i].checked = selectAll.checked
+        }
+      }
+      function gitTrfa() {
+        selectAll.checked = document.querySelectorAll('#cai input:checked').length === cai.length
+      }
+      selectAll.onclick = allTrue
+      all.onclick = function () {
+        selectAll.checked = true
+        allTrue()
+      }
+      noAll.onclick = function () {
+        selectAll.checked = false
+        allTrue()
+      }
+      fan.onclick = function () {
+        for (let i = 0; i < cai.length; i++) {
+          // cai[i].checked == true ? (cai[i].checked = false) : (cai[i].checked = true)
+          cai[i].checked = !cai[i].checked
+        }
+        gitTrfa()
+      }
+      for (let i = 0; i < cai.length; i++) {
+        cai[i].onclick = gitTrfa
+      }
+    </script>
+  </body>
+</html>

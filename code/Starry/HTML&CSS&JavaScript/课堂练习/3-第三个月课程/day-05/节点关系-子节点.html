@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>这是一段话</p>
+        <a href="#">超链接</a>
+        <h6>这是一个标题</h6>
+        <span>这是一个span</span>
+    </div>
+</body>
+
+</html>
+<script>
+    //获取div
+    var dv = document.querySelector("div");
+    //获取该元素下面的所有子元素节点(子标签节点)
+    console.log(dv.children);
+    //获取p标签
+    console.log(dv.children[0]);
+
+    // 所有子节点(可以获取到空格) 不常用
+    console.log(dv.childNodes);
+    //获取p标签
+    console.log(dv.childNodes[1]);
+
+    // 第一个子节点  不常用
+    console.log(dv.firstChild)
+
+    // 第一个子元素节点
+    console.log(dv.firstElementChild)
+
+    // 最后一个子节点 不常用
+    // console.log(dv.lastChild)
+
+    // 最后一个子元素节点
+    // console.log(dv.lastElementChild)
+
+    // 举例：获取第三个
+    // console.log(dv.children[2])
+    // console.log(dv.children[0])
+</script>

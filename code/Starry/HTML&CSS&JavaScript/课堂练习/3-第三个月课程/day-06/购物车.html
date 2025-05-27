@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <!-- 1
+  <script>
+    let table = document.querySelector('table')
+    let jian = document.querySelectorAll('.jian')
+    let jia = document.querySelectorAll('.jia')
+    let shiq = document.querySelectorAll('.shiq')
+    let danjia = document.querySelectorAll('.price')
+    let zhongji = document.querySelectorAll('.danz')
+    let zongpin = document.querySelector('.zongpin')
+    let zong = document.querySelector('.zong')
+    let quan = document.querySelector('#quan')
+    let fux = document.querySelectorAll('.fux')
+    console.log(zhongji[1].parentNode.previousElementSibling.innerHTML)
+  
+    function zongJia() {
+      zong.innerHTML = 0
+      for (let j = 0; j < shiq.length; j++) {
+        if (fux[j].checked) {
+          zong.innerHTML = parseInt(zong.innerHTML) + parseInt(zhongji[j].innerHTML)
+        }
+      }
+    }
+    function zongShangpin() {
+      zongpin.innerHTML = 0
+      for (let j = 0; j < shiq.length; j++) {
+        if (fux[j].checked) {
+          zongpin.innerHTML = parseInt(zongpin.innerHTML) + parseInt(shiq[j].value)
+        }
+      }
+    }
+    zongShangpin()
+    zongJia()
+    for (let i = 0; i < shiq.length; i++) {
+      jian[i].addEventListener('click', function () {
+        if (shiq[i].value > 0) {
+          shiq[i].value--
+          zhongji[i].innerHTML = parseInt(zhongji[i].innerHTML) - parseInt(danjia[i].innerHTML)
+          zongShangpin()
+          zongJia()
+        }
+      })
+      jia[i].addEventListener('click', function () {
+        if (parseInt(shiq[i].value) < parseInt(zhongji[i].parentNode.previousElementSibling.innerHTML)) {
+          shiq[i].value++
+          zhongji[i].innerHTML = parseInt(zhongji[i].innerHTML) + parseInt(danjia[i].innerHTML)
+          zongShangpin()
+          zongJia()
+        }
+      })
+      quan.addEventListener('click', function () {
+        fux[i].checked = quan.checked
+        zongShangpin()
+        zongJia()
+      })
+      fux[i].addEventListener('click', function () {
+        quan.checked = document.querySelectorAll('.fux:checked').length === fux.length
+        zongShangpin()
+        zongJia()
+      })
+    }
+  </script> -->
+  <!-- 
+  2
+  <script>
+    let shiq = document.querySelectorAll('.shiq')
+    let jia = document.querySelectorAll('.jia')
+    let jian = document.querySelectorAll('.jian')
+    let fux = document.querySelectorAll('.fux')
+    let quan = document.querySelector('#quan')
+    let zongpin = document.querySelector('.zongpin')
+    let zong = document.querySelector('.zong')
+
+    function getQuanjian(){
+      zongpin.innerHTML = 0
+      for (let i = 0; i < shiq.length; i++) {
+        if(fux[i].checked){
+          zongpin.innerHTML = Number(zongpin.innerHTML) + Number(shiq[i].value)
+        }
+      }
+    } 
+    function getZongji(){
+      zong.innerHTML = 0
+      let danz = document.querySelectorAll('.danz')
+      for (let i = 0; i < shiq.length; i++) {
+        if(fux[i].checked){
+          zong.innerHTML = Number(zong.innerHTML) + Number(danz[i].innerHTML)
+        }
+      }
+    }
+    getQuanjian()
+    getZongji()
+    for (let i = 0; i < shiq.length; i++) {
+      jia[i].onclick = function () {
+        if (shiq[i].value < Number(this.parentNode.nextElementSibling.innerHTML)) {
+          shiq[i].value++
+          let xiaoji = this.parentNode.previousElementSibling.children[0].innerHTML * shiq[i].value
+          this.parentNode.parentNode.lastElementChild.firstElementChild.innerHTML = xiaoji
+        }
+        getQuanjian()
+        getZongji()
+      }
+      jian[i].onclick = function () {
+        if (shiq[i].value > 0) {
+          shiq[i].value--
+          let xiaoji = this.parentNode.previousElementSibling.children[0].innerHTML * shiq[i].value
+          this.parentNode.parentNode.lastElementChild.firstElementChild.innerHTML = xiaoji
+        }
+        getQuanjian()
+        getZongji()
+      }
+      fux[i].onclick = function(){
+        quan.checked = document.querySelectorAll('.fux:checked').length === fux.length
+        getQuanjian()
+        getZongji()
+      }
+    }
+    quan.onclick = function () {
+      for (let i = 0; i < shiq.length; i++) {
+        fux[i].checked = quan.checked
+      }
+      getQuanjian()
+      getZongji()
+    }
+  </script> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .box {
+        width: 800px;
+        height: 500px;
+        border: 1px solid #177ecb;
+        margin: 0 auto;
+      }
+      h4 {
+        width: 785px;
+        height: 36px;
+        font-weight: normal;
+        line-height: 36px;
+        padding-left: 15px;
+        background: skyblue;
+        color: black;
+        font-weight: bold;
+      }
+      td {
+        height: 31px;
+        line-height: 31px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h4>购物车</h4>
+      <form action="#" method="get">
+        <table cellspacing="0" cellpadding="0" border="1px">
+          <tr>
+            <td style="width: 110px"><input type="checkbox" name="" id="quan" />全选</td>
+            <td style="width: 98px">商品代码</td>
+            <td style="width: 192px">商品名称</td>
+            <td style="width: 97px">商品单价</td>
+            <td style="width: 97px">商品数量</td>
+            <td style="width: 97px">商品库存</td>
+            <td style="width: 111px">商品小计</td>
+          </tr>
+          <tr>
+            <td style="width: 110px">
+              <input type="checkbox" name="" id="" class="fux" checked />
+            </td>
+            <td style="width: 98px">10001</td>
+            <td style="width: 192px">商品一</td>
+            <td style="width: 97px">￥<span class="price">26</span></td>
+            <td style="width: 97px; position: relative">
+              <button style="width: 20px; height: 20px; position: absolute; top: 6px; left: 3px; background: green; color: white" class="jian">
+                -
+              </button>
+              <input type="text" value="1" style="width: 40px; height: 20px" class="shiq" />
+              <button style="width: 20px; height: 20px; position: absolute; top: 6px; right: 3px; background: green; color: white" class="jia">
+                +
+              </button>
+            </td>
+            <td style="width: 97px">6</td>
+            <td style="width: 111px">￥<span class="danz">26</span></td>
+          </tr>
+          <tr>
+            <td style="width: 110px">
+              <input type="checkbox" name="" id="" class="fux" />
+            </td>
+            <td style="width: 98px">10002</td>
+            <td style="width: 192px">商品二</td>
+            <td style="width: 97px">￥<span class="price">34</span></td>
+            <td style="width: 97px; position: relative">
+              <button style="width: 20px; height: 20px; position: absolute; top: 6px; left: 3px; background: green; color: white" class="jian">
+                -
+              </button>
+              <input type="text" value="1" style="width: 40px; height: 20px" class="shiq" />
+              <button style="width: 20px; height: 20px; position: absolute; top: 6px; right: 3px; background: green; color: white" class="jia">
+                +
+              </button>
+            </td>
+            <td style="width: 97px">14</td>
+            <td style="width: 111px">￥<span class="danz">34</span></td>
+          </tr>
+          <tr>
+            <td style="width: 110px">
+              <input type="checkbox" name="" id="" class="fux" />
+            </td>
+            <td style="width: 98px">10003</td>
+            <td style="width: 192px">商品三</td>
+            <td style="width: 97px">￥<span class="price">48</span></td>
+            <td style="width: 97px; position: relative">
+              <button style="width: 20px; height: 20px; position: absolute; top: 6px; left: 3px; background: green; color: white" class="jian">
+                -
+              </button>
+              <input type="text" value="1" style="width: 40px; height: 20px" class="shiq" />
+              <button style="width: 20px; height: 20px; position: absolute; top: 6px; right: 3px; background: green; color: white" class="jia">
+                +
+              </button>
+            </td>
+            <td style="width: 97px">2</td>
+            <td style="width: 111px">￥<span class="danz">48</span></td>
+          </tr>
+          <tr>
+            <td style="width: 110px">
+              <input type="checkbox" name="" id="" class="fux" />
+            </td>
+            <td style="width: 98px">10004</td>
+            <td style="width: 192px">商品四</td>
+            <td style="width: 97px">￥<span class="price">63</span></td>
+            <td style="width: 97px; position: relative">
+              <button style="width: 20px; height: 20px; position: absolute; top: 6px; left: 3px; background: green; color: white" class="jian">
+                -
+              </button>
+              <input type="text" value="1" style="width: 40px; height: 20px" class="shiq" />
+              <button style="width: 20px; height: 20px; position: absolute; top: 6px; right: 3px; background: green; color: white" class="jia">
+                +
+              </button>
+            </td>
+            <td style="width: 97px">12</td>
+            <td style="width: 111px">￥<span class="danz">63</span></td>
+          </tr>
+          <tr>
+            <td style="width: 110px">
+              <input type="checkbox" name="" id="" class="fux" />
+            </td>
+            <td style="width: 98px">10005</td>
+            <td style="width: 192px">商品五</td>
+            <td style="width: 97px">￥<span class="price">50</span></td>
+            <td style="width: 97px; position: relative">
+              <button style="width: 20px; height: 20px; position: absolute; top: 6px; left: 3px; background: green; color: white" class="jian">
+                -
+              </button>
+              <input type="text" value="1" style="width: 40px; height: 20px" class="shiq" />
+              <button style="width: 20px; height: 20px; position: absolute; top: 6px; right: 3px; background: green; color: white" class="jia">
+                +
+              </button>
+            </td>
+            <td style="width: 97px">92</td>
+            <td style="width: 111px">￥<span class="danz">50</span></td>
+          </tr>
+        </table>
+      </form>
+      <div class="xia" style="width: 800px; height: 80px; border-top: 1px solid #177ecb; margin-top: 186px; background: pink">
+        <p style="text-align: right; margin-top: 22px; width: 800px"><span class="zongpin">0</span>件商品</p>
+        <h3 style="float: right">总计： <b style="color: red">￥</b><span style="color: red" class="zong">0</span></h3>
+      </div>
+    </div>
+  </body>
+</html>

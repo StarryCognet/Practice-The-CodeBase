@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <!-- <script>
+    var btn = document.querySelector('#btn')
+  
+    btn.onclick = function () {
+      //姓名
+      var userName = document.querySelector("#userName").value;
+  
+      if(userName == ""){
+        alert("姓名不能为空!");
+        return false;
+      }
+      //科目
+      var subject = document.querySelector("#subject").value;
+      if(subject == ""){
+        alert("科目不能为空!");
+        return false;
+      }
+      //成绩
+      var score = document.querySelector("#score").value;
+      if(score == ""){
+        alert("成绩不能为空!");
+        return false;
+      }
+      //性别
+      var sexs = document.querySelectorAll("input[name='sex']");
+  
+      var sex = "";
+      for (var i = 0; i < sexs.length; i++) {
+        if (sexs[i].checked) {
+          sex = sexs[i].value;
+        }
+      }
+      if(sex == ""){
+        alert("性别不能为空!");
+        return false;
+      }
+      //爱好
+      var hobbies = document.querySelectorAll("input[type='checkbox']");
+  
+      var hStr = "";
+      for (var i = 0; i < sexs.length; i++) {
+        if (hobbies[i].checked) {
+          hStr += hobbies[i].value + " ";
+        }
+      }
+      if(hStr == ""){
+        alert("爱好不能为空!");
+        return false;
+      }
+      //籍贯
+      var provice = document.querySelector("#provice").value;
+  
+      //自我介绍
+      var introduce = document.querySelector("#introduce").value;
+  
+  
+  
+      document.querySelector("#tb").innerHTML += `<tr>
+        <td>${userName}</td>
+        <td>${subject}</td>
+        <td>${score}</td>
+        <td>${sex}</td>
+        <td>${hStr}</td>
+        <td>${provice}</td>
+        <td>${introduce}</td>
+        <td><a href=''>删除</a><a href=''>修改</a></td>
+      </tr>`;
+    }
+  
+    var introduceSpan = document.querySelector("#in");
+    var txt = document.querySelector("#introduce");
+    //表单输入事件
+    txt.oninput = function () {
+      if (txt.value.length > 40) {
+        introduceSpan.innerText = '您输入的文字个数不能超过40个';
+        txt.value = txt.value.substring(0, 40);
+      }
+  
+      //剩余字符数
+      var len = 40 - txt.value.length;
+      introduceSpan.innerText = "还剩下" + len + "个字可以输入";
+  
+    }
+  </script> -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>动态创建表格案例</title>
+    <style>
+      /* table {
+      botder-collapse: collapse;
+    } */
+
+      thead {
+        background-color: #ccc;
+      }
+
+      th,
+      td {
+        width: 100px;
+        height: 40px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>动态创建表格</h1>
+    姓名：<input type="text" id="userName" /><br />
+    科目：<input type="text" id="subject" /><br />
+    成绩：<input type="text" id="score" /><br />
+    性别：<input type="radio" name="sex" checked value="男" />男 <input type="radio" name="sex" value="女" />女<br />
+    爱好：<input type="checkbox" value="篮球" />篮球 <input type="checkbox" value="足球" />足球 <input type="checkbox" value="排球" />排球<br />
+    籍贯：<select name="" id="provice">
+      <option value="河北">河北</option>
+      <option value="山东">山东</option>
+      <option value="河南">河南</option>
+      <option value="陕西">陕西</option>
+      <option value="辽宁">辽宁</option>
+    </select>
+    <br />
+    自我介绍：<textarea name="" id="introduce" cols="30" rows="10"></textarea>
+    <span id="in">还剩下40个字可以输入</span>
+    <br />
+    <button id="btn">提交</button>
+    <table id="wrap" botder="1">
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>科目</th>
+          <th>成绩</th>
+          <th>性别</th>
+          <th>爱好</th>
+          <th>籍贯</th>
+          <th>介绍</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody id="tb"></tbody>
+    </table>
+    <script>
+      let button = document.querySelector('button')
+      let tb = document.querySelector('#tb')
+      let userName = document.querySelector('#userName')
+      let subject = document.querySelector('#subject')
+      let score = document.querySelector('#score')
+      let sexs = document.querySelectorAll('input[name="sex"]')
+      let checkboxs = document.querySelectorAll('input[type="checkbox"]')
+      let provice = document.querySelector('#provice')
+      let text = document.querySelector('#introduce')
+      let span = document.querySelector('#in')
+
+      button.onclick = function () {
+        let sex = ''
+        for (let i = 0; i < sexs.length; i++) {
+          if (sexs[i].checked) {
+            sex = sexs[i].value
+          }
+        }
+        let check = ''
+        for (let i = 0; i < checkboxs.length; i++) {
+          if (checkboxs[i].checked) {
+            check += checkboxs[i].value
+          }
+        }
+
+        if (userName.value == '') {
+          alert('用户名不能为空')
+          return false
+        }
+        if (subject.value == '') {
+          alert('科目不能为空')
+          return false
+        }
+        if (score.value == '') {
+          alert('成绩不能为空')
+          return false
+        }
+        if (check == '') {
+          alert('爱好不能为空')
+          return false
+        }
+
+        tb.innerHTML = `
+        <tr>
+          <th>${userName.value}</th>
+          <th>${subject.value}</th>
+          <th>${score.value}</th>
+          <th>${sex}</th>
+          <th>${check}</th>
+          <th>${provice.value}</th>
+          <th>${text.value}</th>
+          <th><a href="">删除</a></th>
+          </tr>
+          `
+
+        return false
+      }
+      text.oninput = function () {
+        span.innerHTML = `还剩下${40 - text.value.length}个字可以输入`
+        if (text.value.length > 40) {
+          alert('不能超过40个字')
+          text.value = text.value.substring(0, 40)
+        }
+      }
+    </script>
+  </body>
+</html>

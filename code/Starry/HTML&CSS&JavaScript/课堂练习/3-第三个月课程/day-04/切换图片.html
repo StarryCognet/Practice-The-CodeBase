@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <!-- // document.querySelector("button").onclick = function () { // //获取随机下标 // var index =
+  Math.floor(Math.random() * (4 - 0 + 1)) + 0; // //获取img // var img =
+  document.querySelector("img"); // img.src = arr[index]; // } -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button>切换图片</button>
+    <img src="./images/01big.jpg" alt="" />
+  </body>
+</html>
+<script>
+  // 题目要求：点击按钮切换下面数组中的图片
+  var arr = [
+    './images/01big.jpg',
+    './images/02big.jpg',
+    './images/03big.jpg',
+    './images/04big.jpg',
+    './images/05big.jpg',
+  ]
+
+  document.querySelector('button').onclick = function(){
+    let ran = Math.floor(Math.random() * (4 - 0 + 1)) + 0
+    let img = document.querySelector('img')
+    img.src = `${arr[ran]}`
+    
+  }
+</script>

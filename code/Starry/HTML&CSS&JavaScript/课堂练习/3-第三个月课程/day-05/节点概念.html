@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="p1">
+        这是一段话
+    </p>
+</body>
+
+</html>
+<script>
+    // 节点的概念：dom树中的每一个标签，文本、空格都是dom的一部分，我们把它称之为节点
+    // 节点(node)的分类
+    // 1.元素节点（各个标签）
+    var p = document.querySelector('p');
+    console.log(p.nodeType)
+    console.log(p.nodeName)
+    console.log(p.nodeValue) //null
+    // 2.文本节点（指的是文字内容）
+    // 3.属性节点(指的是标签中的属性，例如href class id src等)
+</script>
