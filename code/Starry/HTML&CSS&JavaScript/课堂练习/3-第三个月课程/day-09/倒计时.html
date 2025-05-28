@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <!-- <script>
+    var inputTime = +new Date('2025-05-28 18:00:00')
+    function fn() {
+      var nowTime = +new Date()
+      var times = (inputTime - nowTime) / 1000
+      // 秒
+      var seconds = parseInt(times % 60)
+      console.log(seconds)
+      // 分
+      var minutes = parseInt((times / 60) % 60)
+      // 小时
+      var hours = parseInt((times / 60 / 60) % 24)
+      var span = document.querySelectorAll('span')
+      span[0].innerText = hours
+      span[1].innerText = minutes
+      span[2].innerText = seconds
+    }
+    setInterval(fn, 1000)
+  </script> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+      }
+      span {
+        display: inline-block;
+        width: 50px;
+        height: 100px;
+        background-color: black;
+        color: #fff;
+        line-height: 100px;
+        text-align: center;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span>09</span>
+      <span>38</span>
+      <span>45</span>
+    </div>
+    <script>
+      let date = +new Date('2025-05-28 18:00:00')
+      setInterval(function(){
+        let newTime = +new Date()
+        let tmiao = (date - newTime) / 1000
+        let miao = parseInt(tmiao % 60)
+        let fen = parseInt((tmiao / 60) % 60)
+        let shi = parseInt((tmiao / 60 / 60) % 24)
+
+        let span = document.querySelectorAll('span')
+        span[0].innerHTML = shi
+        span[1].innerHTML = fen
+        span[2].innerHTML = miao
+      }, 1000)
+    </script>
+  </body>
+</html>

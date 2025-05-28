@@ -1,5 +1,58 @@
 <!doctype html>
 <html lang="en">
+  <!-- <script>
+      var stuName = document.querySelector('#stuName')
+      //  验证姓名
+      stuName.onblur = function () {
+        // 3-20位，中文、字母、数字、下划线组合，以中文或字母开头
+        var reg = /^[a-zA-Z\u4e00-\u9fa5][a-zA-Z\u4e00-\u9fa50-9_]{2,19}$/
+        var result = reg.test(stuName.value)
+        if (result) {
+          document.querySelector('.stuNameRule').innerText = '正确'
+          document.querySelector('.stuNameRule').style.color = 'green'
+        } else {
+          document.querySelector('.stuNameRule').innerText = '错误'
+          document.querySelector('.stuNameRule').style.color = 'red'
+          return false
+        }
+      }
+    
+      // 提交按钮
+      var true_button = document.querySelector('.true_button')
+      true_button.onclick = function () {
+        // 确保表单中的内容，必须符合要求
+        if (stuName.value == '') {
+          alert('姓名不能为空')
+          return false
+        }
+        // 验证可选课程是否选择
+        //  可选课程
+        var classes = document.querySelectorAll('input[type="checkbox"]')
+        var num = 0
+        var checkbox_value = ''
+        for (var i = 0; i < classes.length; i++) {
+          if (classes[i].checked) {
+            num++
+            checkbox_value += classes[i].value
+          }
+        }
+        console.log(num)
+        if (num == 0) {
+          alert('可选课程最少选择一个')
+          return false
+        }
+        var tb = document.querySelector('table')
+        tb.innerHTML += `<tr>
+                      <th>${stuName.value}</th>
+                      <th>学号</th>
+                      <th>性别</th>
+                      <th>邮箱</th>
+                      <th>${checkbox_value}</th>
+                      <th>老师</th>
+                      <th>建议</th>
+                  </tr>`
+      }
+    </script> -->
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -88,58 +141,85 @@
         </table>
       </div>
     </div>
-  </body>
-  <script>
-    var stuName = document.querySelector('#stuName')
-    //  验证姓名
-    stuName.onblur = function () {
-      // 3-20位，中文、字母、数字、下划线组合，以中文或字母开头
-      var reg = /^[a-zA-Z\u4e00-\u9fa5][a-zA-Z\u4e00-\u9fa50-9_]{2,19}$/
-      var result = reg.test(stuName.value)
-      if (result) {
-        document.querySelector('.stuNameRule').innerText = '正确'
-        document.querySelector('.stuNameRule').style.color = 'green'
-      } else {
-        document.querySelector('.stuNameRule').innerText = '错误'
-        document.querySelector('.stuNameRule').style.color = 'red'
-        return false
-      }
-    }
+    <script>
+      let stuName = document.querySelector('#stuName')
+      let stuNumber = document.querySelector('#stuNumber')
+      let email = document.querySelector('#email')
+      let see = document.querySelectorAll('.see')
+      let checkbox = document.querySelectorAll('input[type=checkbox]')
+      let true_button = document.querySelector('.true_button')
+      let table = document.querySelector('table')
+      let select_t = document.querySelector('#select_t')
+      let textarea = document.querySelector('textarea')
 
-    // 提交按钮
-    var true_button = document.querySelector('.true_button')
-    true_button.onclick = function () {
-      // 确保表单中的内容，必须符合要求
-      if (stuName.value == '') {
-        alert('姓名不能为空')
-        return false
-      }
-      // 验证可选课程是否选择
-      //  可选课程
-      var classes = document.querySelectorAll('input[type="checkbox"]')
-      var num = 0
-      var checkbox_value = ''
-      for (var i = 0; i < classes.length; i++) {
-        if (classes[i].checked) {
-          num++
-          checkbox_value += classes[i].value
+      stuName.addEventListener('blur', function () {
+        // 3-20位，中文、字母、数字、下划线组合，以中文或字母开头
+        let names = /^[a-zA-Z\u4e00-\u9fa5][a-zA-Z\u4e00-\u9fa50-9_]{2,19}$/
+        let ret = names.test(stuName.value)
+        let stuNameRule = document.querySelector('.stuNameRule')
+        if (ret) {
+          stuNameRule.innerHTML = '正确✅'
+          stuNameRule.style.color = 'green'
+        } else {
+          stuNameRule.innerHTML = '错误❌-3-20位，中文、字母、数字、下划线组合，以中文或字母开头'
+          stuNameRule.style.color = 'red'
         }
-      }
-      console.log(num)
-      if (num == 0) {
-        alert('可选课程最少选择一个')
-        return false
-      }
-      var tb = document.querySelector('table')
-      tb.innerHTML += `<tr>
-                    <th>${stuName.value}</th>
-                    <th>学号</th>
-                    <th>性别</th>
-                    <th>邮箱</th>
-                    <th>${checkbox_value}</th>
-                    <th>老师</th>
-                    <th>建议</th>
-                </tr>`
-    }
-  </script>
+      })
+
+      stuNumber.addEventListener('blur', function () {
+        // 6-18位数字
+        let num = /^\d{6,17}$/
+        let rrey = num.test(stuNumber.value)
+        let stuNumberRule = document.querySelector('.stuNumberRule')
+        if (rrey) {
+          stuNumberRule.innerHTML = '正确✅'
+          stuNumberRule.style.color = 'green'
+        } else {
+          stuNumberRule.innerHTML = '错误❌-6-18位数字'
+          stuNumberRule.style.color = 'red'
+        }
+      })
+
+      email.addEventListener('blur', function () {
+        // 4-16个字符，可以使用小写字母、数字和下划线,域名为lening.com
+        let nums = /^[a-zA-Z\d_]{4,16}@lening.com$/
+        let rrey = nums.test(email.value)
+        let emailRule = document.querySelector('.emailRule')
+        if (rrey) {
+          emailRule.innerHTML = '正确✅'
+          emailRule.style.color = 'green'
+        } else {
+          emailRule.innerHTML = '错误❌-4-16个字符，可以使用小写字母、数字和下划线,域名为lening.com'
+          emailRule.style.color = 'red'
+        }
+      })
+
+      true_button.addEventListener('click', function () {
+        let sex = ''
+        for (let i = 0; i < see.length; i++) {
+          if (see[i].checked) {
+            sex = see[i].value
+          }
+        }
+
+        let checkboxs = ''
+        for (let i = 0; i < checkbox.length; i++) {
+          if (checkbox[i].checked) {
+            checkboxs += checkbox[i].value
+          }
+        }
+        table.innerHTML += `
+          <tr>
+            <th>${stuName.value}</th>
+            <th>${stuNumber.value}</th>
+            <th>${sex}</th>
+            <th>${email.value}</th>
+            <th>${checkboxs}</th>
+            <th>${select_t.value}</th>
+            <th>${textarea.value}</th>
+          </tr>
+        `
+      })
+    </script>
+  </body>
 </html>

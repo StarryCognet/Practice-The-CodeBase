@@ -1,0 +1,877 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/font-awesome.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/comment.css" />
+    <link rel="stylesheet" href="../css/detail.css" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <!-- <script src="../js/detail.js"></script> -->
+    <script src="../js/detail.js"></script>
+    <style>
+      .line {
+        width: 100%;
+        height: 39px;
+        border-bottom: 1px solid #cccccc;
+        /* display: none; */
+        /* position: absolute;
+			top: 843px;
+			z-index: 10; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="line"></div>
+    <!-- 顶部开始 -->
+    <div class="top">
+      <div class="w">
+        <ul class="topleft">
+          <li>
+            <a href="#">
+              <i class="fa fa-map-marker"></i>
+              <span>北京</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="topright">
+          <li>
+            <a href="#">你好，请登录</a>
+            <a href="#" class="style-red">免费注册</a>
+          </li>
+          <li class="spacer"></li>
+          <li>
+            <a href="#">我的订单</a>
+          </li>
+          <li class="spacer"></li>
+          <li>
+            <a href="#">我的京东</a>
+            <i class="fa fa-angle-down"></i>
+          </li>
+          <li class="spacer"></li>
+          <li>
+            <a href="#">京东会员</a>
+          </li>
+          <li class="spacer"></li>
+          <li>
+            <a href="#">企业采购</a>
+            <i class="fa fa-angle-down"></i>
+          </li>
+          <li class="spacer"></li>
+          <li>
+            <a href="#">客户服务</a>
+            <i class="fa fa-angle-down"></i>
+          </li>
+          <li class="spacer"></li>
+          <li>
+            <a href="#">网站导航</a>
+            <i class="fa fa-angle-down"></i>
+          </li>
+          <li class="spacer"></li>
+          <li>
+            <a href="#">手机京东</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 顶部结束 -->
+    <!-- 头部开始 -->
+    <div class="header">
+      <div class="w">
+        <!-- logo -->
+        <div class="logo">
+          <h1>
+            <a href="#" target="_blank">京东</a>
+          </h1>
+        </div>
+        <!-- 搜索框/购物车 -->
+        <div class="search">
+          <!-- 搜索框 -->
+          <div class="form">
+            <div class="search_bg">小米盒子</div>
+            <input type="text" class="txt" />
+            <span class="photo fa fa-camera camera">
+              <a href="#"></a>
+            </span>
+            <button class="btn">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+          <!-- 购物车 -->
+          <div class="dropdown">
+            <i class="fa fa-shopping-cart"></i>
+            <a href="#" target="_blank">我的购物车</a>
+            <span class="num">45</span>
+          </div>
+        </div>
+        <!-- 热词 -->
+        <div class="hotwords">
+          <a href="#" class="style-red">健康年货节</a>
+          <a href="#">寒假阅读</a>
+          <a href="#">语文阅读</a>
+          <a href="#">数学阅读</a>
+          <a href="#">英语阅读</a>
+          <a href="#">物理阅读</a>
+          <a href="#">化学阅读</a>
+          <a href="#">生物阅读</a>
+          <a href="#">地理阅读</a>
+        </div>
+      </div>
+    </div>
+    <!-- 头部结束 -->
+    <!-- 面包屑 -->
+    <div class="warp">
+      <div class="w">
+        <!-- 左边 -->
+        <div class="warp-left">
+          <div class="warpleft1">
+            <a href="#">手机通讯</a>
+          </div>
+          <div class="sep">></div>
+          <div class="warpleft2">
+            <a href="#">手机</a>
+          </div>
+          <div class="sep">></div>
+          <div class="warpleft3">
+            <a href="#">手机</a>
+          </div>
+          <div class="sep">></div>
+          <div class="warpleft4">
+            <div class="mi">
+              小米（mi）
+              <span class="arrow"></span>
+            </div>
+          </div>
+          <div class="sep">></div>
+          <div class="warpleft5">
+            <a href="#">小米Redmi</a>
+          </div>
+        </div>
+        <!-- 右边 -->
+        <div class="warp-right">
+          <div class="shop">
+            <a href="#">自营</a>
+          </div>
+          <div class="goodshop">
+            <div class="name">
+              <a href="#">小米京东自营官方旗舰店</a>
+            </div>
+            <div class="peive">
+              <i class="img"></i>
+              <a href="#">联系客服</a>
+            </div>
+            <div class="follow">
+              <i class="img"></i>
+              <a href="#">关注店铺</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 商品 -->
+    <div class="w">
+      <div class="intor">
+        <!-- 商品图片展示 -->
+        <div class="intorleft">
+          <!-- 大图 -->
+          <div class="intorspre">
+            <ul>
+              <li style="display: block">
+                <a href="#">
+                  <img src="../images/c881e0bb0bbabd4f.jpg" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../images/f8a1e0e877908389.jpg" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../images/hmmmd.jpg" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../images/hmd5.jpg" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../images/hmd2.jpg" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../images/c881e0bb0bbabd4f.jpg" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../images/f8a1e0e877908389.jpg" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="../images/hmmmd.jpg" alt="" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- 小图 -->
+          <div class="intorlist">
+            <!-- 左右的箭头 -->
+            <div class="jiantou">
+              <a href="javascript:void(0)" class="prev"></a>
+              <a href="javascript:void(0)" class="next"></a>
+            </div>
+            <div class="list">
+              <ul>
+                <li class="red">
+                  <a href="javascript:;">
+                    <img src="../images//hmx3.jpg" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <img src="../images//hmx1.jpg" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <img src="../images/hmmmx.jpg" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <img src="../images/d5d2a3fa4c7496c5.jpg" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <img src="../images/hmx2.jpg" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <img src="../images/hmx3.jpg" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <img src="../images/hmx1.jpg" alt="" />
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;">
+                    <img src="../images/hmmmx.jpg" alt="" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 关注分享 -->
+          <div class="ifore">
+            <div class="btn-left">
+              <a href="#" class="gz">
+                <i></i>
+                <span>关注</span>
+              </a>
+              <a href="#" class="fx">
+                <i></i>
+                <span>分享</span>
+              </a>
+              <a href="#" class="db">
+                <i></i>
+                <span>对比</span>
+              </a>
+            </div>
+            <div class="btn-right">
+              <a href="#">举报</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 商品的详情 -->
+        <div class="intorright">
+          <!-- 商品的名字 -->
+          <div class="sku-name">
+            <span>新品</span>
+            Redmi Note 9 Pro 5G 一亿像素 骁龙750G 33W快充 120Hz刷新率 碧海星辰 6GB+128GB 游戏智能手机 小米 红米
+          </div>
+          <!-- 品质好物 -->
+          <div class="quality">
+            【品质好物】小金刚品质液冷游戏芯，一亿像素，120Hz高刷屏【K305G火热抢购中】
+            <a href="#">查看></a>
+          </div>
+          <!-- 价格 -->
+          <div class="price">
+            <!-- 京东价 -->
+            <div class="jd-price">
+              <span class="jdj">京东价</span>
+              <span class="">￥</span>
+              <span class="money">1988.00</span>
+              <a href="#">降价通知</a>
+            </div>
+            <!-- 累计评论 -->
+            <div class="evaluate">
+              <p>累计评论</p>
+              <p><a href="#">27万+</a></p>
+            </div>
+            <!-- 促销 -->
+            <div class="promotion">
+              <div class="promo-txt">促销</div>
+              <div class="promo-gift">赠品</div>
+              <div class="promo-gift-list">
+                <a href="#">
+                  <img src="../images/3d634eb222b3f8c9.jpg" alt="" />
+                </a>
+                <em>*1</em>
+              </div>
+              <div class="promo-gift-litm">（赠完为止）</div>
+            </div>
+          </div>
+          <!-- 选择 -->
+          <div class="choose">
+            <!-- 增值服务 -->
+            <div class="choose-hide">
+              增值业务
+              <a href="#">
+                <i></i>
+                高价回收，极速到账
+              </a>
+            </div>
+            <!-- 配送至 -->
+            <di class="choosr-poore">
+              <div class="dt">配送至</div>
+              <div class="dd">
+                <div class="dd-addres">
+                  北京朝阳区
+                  <em></em>
+                </div>
+                <div class="dd-txt">
+                  <ul>
+                    <li><a href="#" class="zc">支持</a></li>
+                    <li><a href="#" class="yh">有货</a></li>
+                    <li><a href="#">有货有货</a></li>
+                    <li><a href="#">有货有货有货</a></li>
+                    <li><a href="#">有货有货</a></li>
+                  </ul>
+                </div>
+              </div>
+            </di>
+            <!-- 商品型号的选择 -->
+            <div class="choose-arres">
+              <div class="choose-arre1">
+                <div class="dt">选择颜色</div>
+                <div class="dd" id="color">
+                  <div class="item red1">
+                    <a href="#">
+                      <img src="../images/62f7056d9bfead1e.jpg" alt="" />
+                      <span>静默星空</span>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img src="../images/62f7056d9bfead1e.jpg" alt="" />
+                      <span>碧海星辰</span>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <img src="../images/62f7056d9bfead1e.jpg" alt="" />
+                      <span>湖光秋色</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="choose-arre2">
+                <div class="dt">选择型号</div>
+                <div class="dd" id="pic">
+                  <div class="item">
+                    <a href="#">
+                      <span>6GB+128GB</span>
+                    </a>
+                  </div>
+                  <div class="item red1">
+                    <a href="#">
+                      <!-- <img src="img/62f7056d9bfead1e.jpg" alt=""> -->
+                      <span>8GB+128GB</span>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="#">
+                      <!-- <img src="img/62f7056d9bfead1e.jpg" alt=""> -->
+                      <span>8GB+256GB</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="choose-arre3"></div>
+            </div>
+            <!-- 按钮 -->
+            <div class="choose-btn">
+              <div class="num">
+                <input type="text" value="1" id="num" />
+                <div class="jj">
+                  <p id="add" style="border-bottom: 0">+</p>
+                  <p id="sub">-</p>
+                </div>
+              </div>
+              <button>加入购物车</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 商品介绍、评论 -->
+    <div class="w">
+      <!-- 侧边栏 -->
+      <div class="aside">
+        <!-- 店铺 -->
+        <div class="popbox">
+          <div class="pop-hd" id="pop">
+            <h3>小米京东自营店</h3>
+            <b></b>
+          </div>
+          <div class="pop-bd">
+            <a href="#" class="jindian">
+              <em></em>
+              进店逛逛
+            </a>
+            <a href="#" class="guanzhu">
+              <em></em>
+              关注店铺
+            </a>
+          </div>
+        </div>
+        <!-- 商品 -->
+        <div class="view-buy">
+          <div class="buy-hd">
+            <h4>达人选购</h4>
+          </div>
+          <div class="buy-bd">
+            <ul>
+              <li>
+                <div class="buy-img">
+                  <a href="#">
+                    <img src="../images/9e5835e6e0f980dc.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="buy-name">
+                  <a href="#"> Redmi K30 5G双模 120Hz流速屏 骁龙765G 前置挖孔双摄 索尼6400 </a>
+                </div>
+                <div class="buy-jiage">
+                  <span>￥1599.00</span>
+                </div>
+              </li>
+              <li>
+                <div class="buy-img">
+                  <a href="#">
+                    <img src="../images/vb8.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="buy-name">
+                  <a href="#"> Redmi K30 5G双模 120Hz流速屏 骁龙765G 前置挖孔双摄 索尼6400 </a>
+                </div>
+                <div class="buy-jiage">
+                  <span>￥1599.00</span>
+                </div>
+              </li>
+              <li>
+                <div class="buy-img">
+                  <a href="#">
+                    <img src="../images/cb.png" alt="" />
+                  </a>
+                </div>
+                <div class="buy-name">
+                  <a href="#"> Redmi K30 5G双模 120Hz流速屏 骁龙765G 前置挖孔双摄 索尼6400 </a>
+                </div>
+                <div class="buy-jiage">
+                  <span>￥1599.00</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- 主要内容 -->
+      <div class="detail">
+        <!-- 商品介绍、规格包装 -->
+        <div class="tab-main">
+          <div class="tab-main-mc">
+            <a href="javascript:;" class="list8 mc-a">商品介绍</a>
+            <a href="javascript:;" class="list8">规格与包装</a>
+            <a href="javascript:;" class="list8">售后保障</a>
+            <a href="javascript:;" class="list8">商品评价（60万+）</a>
+            <a href="javascript:;" class="list8">手机社区</a>
+          </div>
+          <div class="tab-main-mt">
+            <a href="#">加入购物车</a>
+          </div>
+        </div>
+
+        <!-- 商品详情 -->
+        <div class="tab-con same8">
+          <!-- 商品参数 -->
+          <div class="parameter">
+            <ul class="para-mt">
+              <li>品牌：<a href="#">小米（mi）</a></li>
+            </ul>
+            <ul class="para-mc">
+              <li>商品名称：小米Redmi Note9 Pro</li>
+              <li>商品编号：100016773618</li>
+              <li>商品毛重：500.00g</li>
+              <li>商品产地：中国大陆大陆大陆大陆大陆大陆大陆大陆大陆</li>
+              <li>CPU型号：骁龙750G</li>
+              <li>运行内存：8GB</li>
+              <li>机身存储：256GB</li>
+              <li>存储卡：支持MicroSD(TF)</li>
+              <li>摄像头数量：后置四摄</li>
+              <li>后摄主摄像素：1亿像素</li>
+              <li>前摄主摄像素：1600万像素</li>
+              <li>主屏幕尺寸（英寸）：6.67英寸</li>
+              <li>分辨率：全高清FHD+</li>
+              <li>屏幕比例：19.6~20:9</li>
+              <li>屏幕前摄组合：盲孔屏</li>
+              <li>充电器：其他</li>
+            </ul>
+            <ul class="para-md">
+              <li><a href="#">更多参数</a></li>
+            </ul>
+          </div>
+          <!-- 活动 -->
+          <div class="activity">
+            <a href="#">
+              <img src="../images/50871eefd14fbd10.jpg" alt="" />
+            </a>
+          </div>
+          <!-- 商品详情 -->
+          <div class="detail-content"></div>
+        </div>
+        <!-- 规格包装 -->
+        <div class="baozh same8">
+          <img src="../images/add.jpg" alt="" />
+        </div>
+        <!-- 售后保障 -->
+        <div class="after same8">
+          <div class="after-top">
+            <p>售后保障</p>
+          </div>
+          <div class="after-fuwu">
+            <i></i>
+            <h3>厂家服务</h3>
+            <p>
+              本商品质保周期为1年质保，在此时间范围内可提交维修申请，具体请以厂家服务为准。
+              如因质量问题或故障，凭厂商维修中心或特约维修点的质量检测证明，享受7日内退货，15日内换货，15日以上在质保期内享受免费保修等三包服务！
+            </p>
+            <p>
+              (注:如厂家在商品介绍中有售后保障的说明,则此商品按照厂家说明执行售后保障服务。) 您可以查询本品牌在各地售后服务中心的联系方式，<a href=""
+                >请点击这儿查询......</a
+              >
+            </p>
+
+            <p>
+              品牌官方网站：<a href="">http://www.mi.com/</a><br />
+              售后服务电话：400-100-5678
+            </p>
+          </div>
+          <div class="after-fuwu">
+            <i></i>
+            <h3>京东承诺</h3>
+            <p>
+              京东平台卖家销售并发货的商品，由平台卖家提供发票和相应的售后服务。请您放心购买！<br />
+              注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！
+            </p>
+          </div>
+          <div class="after-fuwu">
+            <i></i>
+            <h3>正品行货</h3>
+            <p>京东商城向您保证所售商品均为正品行货，京东自营商品开具机打发票或电子发票。</p>
+          </div>
+          <div class="after-fuwu">
+            <i class="th"></i>
+            <h3>无忧退货</h3>
+            <p>
+              客户购买京东自营商品7日内（含7日，自客户收到商品之日起计算），在保证商品完好的前提下，可无理由退货。（部分商品除外，详情请见各商品细则）
+            </p>
+          </div>
+          <div class="after-last">
+            <h6>权力声明：</h6>
+            <p>京东上的所有商品信息、客户评价、商品咨询、网友讨论等内容，是京东重要的经营资源，未经许可，禁止非法转载使用。</p>
+            <p>
+              <b>注：</b>本站商品信息均来自于合作方，其真实性、准确性和合法性由信息拥有者（合作方）负责。本站不提供任何保证，并不承担任何法律责任。
+            </p>
+          </div>
+          <div class="after-last">
+            <h6>京东价格：</h6>
+            <p><b>京东价：</b>京东价为商品的销售价，是您最终决定是否购买商品的依据。</p>
+            <p>
+              <b>划线价：</b
+              >商品展示的划横线价格为参考价，并非原价，该价格可能是品牌专柜标价、商品吊牌价或由品牌供应商提供的正品零售价（如厂商指导价、建议零售价等）或该商品在京东平台上曾经展示过的销售价；由于地区、时间的差异性和市场行情波动，品牌专柜标价、商品吊牌价等可能会与您购物时展示的不一致，该价格仅供您参考。
+            </p>
+            <p>
+              <b>折扣：</b
+              >如无特殊说明，折扣指销售商在原价、或划线价（如品牌专柜标价、商品吊牌价、厂商指导价、厂商建议零售价）等某一价格基础上计算出的优惠比例或优惠金额；如有疑问，您可在购买前联系销售商进行咨询。
+            </p>
+            <p>
+              <b>异常问题：</b
+              >商品促销信息以商品详情页“促销”栏中的信息为准；商品的具体售价以订单结算页价格为准；如您发现活动商品售价或促销信息有异常，建议购买前先联系销售商咨询。
+            </p>
+          </div>
+        </div>
+        <!-- 商品评价 -->
+        <div class="pjia same8">
+          <div class="pjia-top">
+            <p>商品评价</p>
+          </div>
+          <div class="pjia-good">
+            <div class="pjia-good1">
+              <p>好评度</p>
+              <b>95</b><i>%</i>
+            </div>
+            <div class="pjia-good2">
+              <a href="">反应超快(138)</a>
+              <a href="">清晰度高(268)</a>
+              <a href="">漂亮大方(183)</a>
+              <a href="">颜色绚丽(133)</a>
+              <a href="">充电快速(120)</a>
+              <a href="">使用舒适(108)</a>
+              <a href="">功能齐全(62)</a>
+              <a href="">内存充足(57)</a>
+              <a href="">音质上乘(49)</a>
+              <a href="">拍照一流(43)</a>
+              <a href="">颜色绚丽(133)</a>
+            </div>
+          </div>
+          <div class="pjia-qb">
+            <a href="" style="color: red">全部评价(27万+)</a>
+            <a href="">晒图(500)</a>
+            <a href="">视频晒单(1000+)</a>
+            <a href="">晒图(500)</a>
+            <a href="">晒图(500)</a>
+            <a href="">视频晒单(1000+)</a>
+            <a href="">晒图(500)</a>
+            <a href="" class="qb-last">只看当前商品评价</a>
+            <b>推荐排序</b> <i class="fa fa-angle-down"></i>
+          </div>
+          <div class="pjia-user">
+            <div class="user1">
+              <i>
+                <img src="../images/peisong.jpg" /> </i
+              ><b>淘霜摇</b>
+            </div>
+            <div class="user2">
+              <div class="user2-one"></div>
+              <div class="user2-two">
+                <p>
+                  自己用的cc9pro，感觉这款速度上有提升，体验好多了。手机很漂亮，侧面指纹也不错。快充很实用，高刷屏也很棒。8+256这个价实在太香了。总之性价比太高了，值得入手。
+                </p>
+              </div>
+              <div class="user2-three">
+                <ul>
+                  <li class="redd">
+                    <img src="../images/pj_6.jpg" />
+                  </li>
+                  <li>
+                    <img src="../images/pj_5.jpg" />
+                  </li>
+                  <li>
+                    <img src="../images/pj_1.jpg" />
+                  </li>
+                  <li>
+                    <img src="../images/pj_2.jpg" />
+                  </li>
+                  <li>
+                    <img src="../images/pj_3.jpg" />
+                  </li>
+                  <li>
+                    <img src="../images/pj_4.jpg" />
+                  </li>
+                </ul>
+              </div>
+              <div class="user2-four">
+                <span class="_left"><i class="fa fa-undo"></i></span>
+                <span class="_right"><i class="fa fa-repeat"></i></span>
+                <img src="../images/pj_6.jpg" alt="" />
+              </div>
+              <div class="user2-five">
+                <p>湖光秋色 8GB+256GB <br />2020-12-22 22:04</p>
+              </div>
+              <div class="user2-six">
+                <!-- <a href="javascript:;">举报</a> -->
+                <a href="javascript:;" class="fa fa-thumbs-o-up"> 65</a>
+                <a href="javascript:;" class="fa fa-commenting-o"> 56</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="pjia-user">
+            <div class="user1">
+              <i>
+                <img src="../images/peisong.jpg" /> </i
+              ><b>淘霜摇</b>
+            </div>
+            <div class="user2">
+              <div class="user2-one"></div>
+              <div class="user2-two">
+                <p>
+                  自己用的cc9pro，感觉这款速度上有提升，体验好多了。手机很漂亮，侧面指纹也不错。快充很实用，高刷屏也很棒。8+256这个价实在太香了。总之性价比太高了，值得入手。
+                </p>
+              </div>
+              <div class="user2-three">
+                <ul>
+                  <li class="redd">
+                    <img src="../images/pj_6.jpg" />
+                  </li>
+                  <li>
+                    <img src="../images/pj_5.jpg" />
+                  </li>
+                  <li>
+                    <img src="../images/pj_1.jpg" />
+                  </li>
+                  <li>
+                    <img src="../images/pj_2.jpg" />
+                  </li>
+                  <li>
+                    <img src="../images/pj_3.jpg" />
+                  </li>
+                  <li>
+                    <img src="../images/pj_4.jpg" />
+                  </li>
+                </ul>
+              </div>
+              <div class="user2-four">
+                <span class="_left"><i class="fa fa-undo"></i></span>
+                <span class="_right"><i class="fa fa-repeat"></i></span>
+                <img src="../images/pj_6.jpg" alt="" />
+              </div>
+              <div class="user2-five">
+                <p>湖光秋色 8GB+256GB <br />2020-12-22 22:04</p>
+              </div>
+              <div class="user2-six">
+                <!-- <a href="javascript:;">举报</a> -->
+                <a href="javascript:;" class="fa fa-thumbs-o-up"> 65</a>
+                <a href="javascript:;" class="fa fa-commenting-o"> 56</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 手机社区 -->
+        <div class="phone3 same8">
+          <img src="../images/shsq.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- 底部开始 -->
+    <div class="footer">
+      <div class="mod_service">
+        <div class="w">
+          <ul>
+            <li>
+              <div class="mod_service_unit">
+                <h5></h5>
+                <p>品类齐全，轻松购物</p>
+              </div>
+            </li>
+            <li>
+              <div class="mod_service_unit">
+                <h5></h5>
+                <p>品类齐全，轻松购物</p>
+              </div>
+            </li>
+            <li>
+              <div class="mod_service_unit">
+                <h5></h5>
+                <p>品类齐全，轻松购物</p>
+              </div>
+            </li>
+            <li>
+              <div class="mod_service_unit">
+                <h5></h5>
+                <p>品类齐全，轻松购物</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mod_help">
+        <div class="w">
+          <div class="mod_help_list">
+            <dl>
+              <dt>购物指南</dt>
+              <dd><a href="#">购物流程</a></dd>
+              <dd><a href="#">购物流程</a></dd>
+              <dd><a href="#">购物流程</a></dd>
+              <dd><a href="#">购物流程</a></dd>
+              <dd><a href="#">购物流程</a></dd>
+            </dl>
+            <dl>
+              <dt>配送方式</dt>
+              <dd><a href="#">购物流程</a></dd>
+              <dd><a href="#">购物流程</a></dd>
+              <dd><a href="#">购物流程</a></dd>
+            </dl>
+            <dl>
+              <dt>购物指南</dt>
+              <dd><a href="#">购物流程</a></dd>
+              <dd><a href="#">购物流程</a></dd>
+              <dd><a href="#">购物流程</a></dd>
+              <dd><a href="#">购物流程</a></dd>
+              <dd><a href="#">购物流程</a></dd>
+            </dl>
+            <dl>
+              <dt>配送方式</dt>
+              <dd><a href="#">购物流程</a></dd>
+              <dd><a href="#">购物流程</a></dd>
+              <dd><a href="#">购物流程</a></dd>
+              <dd><a href="#">购物流程</a></dd>
+            </dl>
+            <dl>
+              <dt>配送方式</dt>
+              <dd><a href="#">购物流程</a></dd>
+              <dd><a href="#">购物流程</a></dd>
+              <dd><a href="#">购物流程</a></dd>
+              <dd><a href="#">购物流程</a></dd>
+              <dd><a href="#">购物流程</a></dd>
+              <dd><a href="#">购物流程</a></dd>
+            </dl>
+            <div class="mod_help_cover">
+              <h5>京东自营覆盖区县</h5>
+              <p>京东已向全国2661个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。</p>
+              <a href="#">查看详情></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mod_copyright">
+        <div class="w">
+          <p>
+            <a href="#">关于我们</a>
+            <span class="shuxian">|</span>
+            <a href="#">关于我们</a>
+            <span class="shuxian">|</span>
+            <a href="#">关于我们</a>
+            <span class="shuxian">|</span>
+            <a href="#">关于我们</a>
+            <span class="shuxian">|</span>
+            <a href="#">关于我们</a>
+            <span class="shuxian">|</span>
+            <a href="#">关于我们</a>
+            <span class="shuxian">|</span>
+            <a href="#">关于我们</a>
+            <span class="shuxian">|</span>
+            <a href="#">关于我们</a>
+            <span class="shuxian">|</span>
+            <a href="#">关于我们</a>
+            <span class="shuxian">|</span>
+            <a href="#">关于我们</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- 底部结束 -->
+  </body>
+</html>
