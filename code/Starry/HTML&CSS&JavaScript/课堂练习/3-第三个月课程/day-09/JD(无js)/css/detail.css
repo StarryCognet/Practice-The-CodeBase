@@ -198,10 +198,12 @@
 .intorleft .intorlist .jiantou a.prev {
 	background: url(../images/disabled-prev.png); 
 	left: 0px;
+	z-index: 99;
 }
 .intorleft .intorlist .jiantou a.next {
 	background: url(../images/disabled-next.png); 
 	right: 0;
+	z-index: 99;
 }
 .intorleft .intorlist .list {
 	position: relative;
@@ -710,6 +712,9 @@
 	width: 990px;
 }
 
+.same8{
+	display: block;
+}
 /*商品参数*/
 .parameter {
 	width: 940px;

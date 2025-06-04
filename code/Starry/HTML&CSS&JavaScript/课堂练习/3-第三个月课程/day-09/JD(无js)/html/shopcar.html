@@ -1,647 +1,638 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>购物车</title>
-    <link rel="stylesheet" href="../css/shop.css">
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
-   <!--  <script src="../js/shopcar2.js"></script> -->
+    <link rel="stylesheet" href="../css/shop.css" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <!--  <script src="../js/shopcar2.js"></script> -->
     <!-- <script src="../js/shopcar4.js"></script> -->
-</head>
-<body>
+  </head>
+  <body>
     <!-- 顶部 -->
     <div class="top">
-        <div class="top1 all">
-            <div class="top1-home">
-                <i class="fa fa-home same"></i>
-                <a href="/index.html" target="_blank">京东首页</a>
-            </div>
-            <div class="top1-map">
-                <i class="fa fa-map-marker same"></i>
-                <a href="">北京</a>
-            </div>
-            <div class="top1-list1">
-                <a href="">仰望星空</a>
-                <img src="../images/p_03.gif">
-                <!-- <span class="plus"></span> -->
-                <i class="fa fa-angle-down"></i>
-            </div>
-            <span>|</span>
-            <div class="top1-list1">
-                <a href="">我的订单</a>
-            </div>
-            <span>|</span>
-            <div class="top1-list1">
-                <a href="">我的京东</a>
-                <i class="fa fa-angle-down"></i>
-            </div>
-            <span>|</span>
-            <div class="top1-list1">
-                <a href="">京东会员</a>
-            </div>
-            <span>|</span>
-            <div class="top1-list1">
-                <a href="">企业采购</a>
-            </div>
-            <span>|</span>
-            <div class="top1-list1">
-                <a href="">客户服务</a>
-                <i class="fa fa-angle-down"></i>
-            </div>
-            <span>|</span>
-            <div class="top1-list1">
-                <a href="">网站导航</a>
-                <i class="fa fa-angle-down"></i>
-            </div>
-            <span>|</span>
-            <div class="top1-list1">
-                <a href="">手机京东</a>
-            </div>
+      <div class="top1 all">
+        <div class="top1-home">
+          <i class="fa fa-home same"></i>
+          <a href="/index.html" target="_blank">京东首页</a>
         </div>
+        <div class="top1-map">
+          <i class="fa fa-map-marker same"></i>
+          <a href="">北京</a>
+        </div>
+        <div class="top1-list1">
+          <a href="">仰望星空</a>
+          <img src="../images/p_03.gif" />
+          <!-- <span class="plus"></span> -->
+          <i class="fa fa-angle-down"></i>
+        </div>
+        <span>|</span>
+        <div class="top1-list1">
+          <a href="">我的订单</a>
+        </div>
+        <span>|</span>
+        <div class="top1-list1">
+          <a href="">我的京东</a>
+          <i class="fa fa-angle-down"></i>
+        </div>
+        <span>|</span>
+        <div class="top1-list1">
+          <a href="">京东会员</a>
+        </div>
+        <span>|</span>
+        <div class="top1-list1">
+          <a href="">企业采购</a>
+        </div>
+        <span>|</span>
+        <div class="top1-list1">
+          <a href="">客户服务</a>
+          <i class="fa fa-angle-down"></i>
+        </div>
+        <span>|</span>
+        <div class="top1-list1">
+          <a href="">网站导航</a>
+          <i class="fa fa-angle-down"></i>
+        </div>
+        <span>|</span>
+        <div class="top1-list1">
+          <a href="">手机京东</a>
+        </div>
+      </div>
     </div>
     <!-- 头部 -->
     <div class="head all">
-        <div class="head-logo"></div>
-        <div class="head-search">
-            <input type="text">
-        </div>
-        <div class="txt">搜索</div>
+      <div class="head-logo"></div>
+      <div class="head-search">
+        <input type="text" />
+      </div>
+      <div class="txt">搜索</div>
     </div>
     <!-- 商品 -->
     <div class="goods all">
-        <div class="goods-one">
-            <span>全部商品 <i id="i_num" style="font-style: normal;">8</i></span>
+      <div class="goods-one">
+        <span>全部商品 <i id="i_num" style="font-style: normal">8</i></span>
+      </div>
+      <div class="goods-two">
+        <div class="goods-two-box">
+          <p><b>降价</b>购物车中有1件商品已降价，快去看看</p>
+          <i id="del"></i>
         </div>
-        <div class="goods-two">
-            <div class="goods-two-box">
-                <p><b>降价</b>购物车中有1件商品已降价，快去看看</p>
-                <i id="del"></i>
-            </div>
+      </div>
+      <div class="goods-three">
+        <p>配送至：</p>
+        <div class="goods-three-box">
+          北京朝阳区八里庄街道
+          <i></i>
         </div>
-        <div class="goods-three">
-            <p>配送至：</p>
-            <div class="goods-three-box">
-                北京朝阳区八里庄街道
-                <i></i>
-            </div>
-        </div>
+      </div>
     </div>
     <!-- 全选 -->
     <div class="list all">
-        <div class="list-one">
-            <input type="checkbox" id="f_checked">
-            <p>全选</p>
-        </div>
-        <div class="list-two">
-            <p>商品</p>
-        </div>
-        <div class="list-three">
-            <p>单价</p>
-        </div>
-        <div class="list-four">
-            <p>数量</p>
-        </div>
-        <div class="list-five">
-            <p>小计</p>
-        </div>
-        <div class="list-six">
-            <p>操作</p>
-        </div>
+      <div class="list-one">
+        <input type="checkbox" id="f_checked" />
+        <p>全选</p>
+      </div>
+      <div class="list-two">
+        <p>商品</p>
+      </div>
+      <div class="list-three">
+        <p>单价</p>
+      </div>
+      <div class="list-four">
+        <p>数量</p>
+      </div>
+      <div class="list-five">
+        <p>小计</p>
+      </div>
+      <div class="list-six">
+        <p>操作</p>
+      </div>
     </div>
     <div class="_goods">
-        <!-- 京东自营 -->
-        <div class="ziying all">
-            <input type="checkbox" class="shop_type" id="jdzy">
-            <p>京东自营</p>
+      <!-- 京东自营 -->
+      <div class="ziying all">
+        <input type="checkbox" class="shop_type" id="jdzy" />
+        <p>京东自营</p>
+      </div>
+      <!-- 内容 -->
+      <div class="content all" id="jdzy_content">
+        <div class="content-list">
+          <div class="content-list-checked">
+            <input type="checkbox" class="checked" />
+          </div>
+          <div class="content-list-one">
+            <a href="JavaScript:;">
+              <div class="content-list-one-img">
+                <img src="../images/fang.jpg" />
+              </div>
+              <div class="content-list-one-txt">
+                <h6>京东超市</h6>
+                <p>韩国进口 RECIPE悦之秘水</p>
+                <p>晶防晒喷雾学生男女防水清爽隔离紫外线</p>
+              </div>
+            </a>
+          </div>
+          <div class="content-list-two">
+            <p>水晶防晒喷雾180ml+水晶防晒喷雾180ml</p>
+          </div>
+          <div class="content-list-three">
+            <i>￥</i>
+            <p class="dan">59.00</p>
+          </div>
+          <div class="content-list-four">
+            <div class="four-border">
+              <span class="sub">-</span>
+              <input type="text" class="four-border-one num" value="1" />
+              <span class="add">+</span>
+            </div>
+            <div class="four-txt">
+              <p>有货</p>
+            </div>
+          </div>
+          <div class="content-list-five"><i>￥</i><b class="sum">59.00</b></div>
+          <div class="content-list-six">
+            <p class="delet"><a href="JavaScript:;">删除</a></p>
+            <p><a href="JavaScript:;">移入关注</a></p>
+          </div>
         </div>
-        <!-- 内容 -->
-        <div class="content all" id="jdzy_content">
-            <div class="content-list">
-                <div class="content-list-checked">
-                    <input type="checkbox" class="checked">
-                </div>
-                <div class="content-list-one">
-                    <a href="JavaScript:;">
-                        <div class="content-list-one-img">
-                            <img src="../images/fang.jpg">
-                        </div>
-                        <div class="content-list-one-txt">
-                            <h6>京东超市</h6>
-                            <p>韩国进口 RECIPE悦之秘水</p>
-                            <p>晶防晒喷雾学生男女防水清爽隔离紫外线</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="content-list-two">
-                    <p>水晶防晒喷雾180ml+水晶防晒喷雾180ml</p>
-                </div>
-                <div class="content-list-three">
-                    <i>￥</i>
-                    <p class="dan">59.00</p>
-                </div>
-                <div class="content-list-four">
-                    <div class="four-border">
-                        <span class="sub">-</span>
-                        <input type="text"  class="four-border-one num" value="1">
-                        <span class="add">+</span>
-                    </div>
-                    <div class="four-txt">
-                        <p>有货</p>
-                    </div>
-                </div>
-                <div class="content-list-five">
-                    <i>￥</i><b class="sum">59.00</b>
-                </div>
-                <div class="content-list-six">
-                    <p class="delet"><a href="JavaScript:;">删除</a></p>
-                    <p><a href="JavaScript:;">移入关注</a></p>
-                </div>
+        <div class="content-list">
+          <div class="content-list-checked">
+            <input type="checkbox" class="checked" />
+          </div>
+          <div class="content-list-one">
+            <a href="JavaScript:;">
+              <div class="content-list-one-img">
+                <img src="../images/cp.jpg" />
+              </div>
+              <div class="content-list-one-txt">
+                <h6>京东超市</h6>
+                <p>公牛（BULL）新国标插座</p>
+                <p>/插线板/插排/排插/接线板/拖线板 GN-607 4位总控全长1.8米</p>
+              </div>
+            </a>
+          </div>
+          <div class="content-list-two">
+            <p>4位总控全长1.8米</p>
+          </div>
+          <div class="content-list-three">
+            <i>￥</i>
+            <p class="dan">27.00</p>
+          </div>
+          <div class="content-list-four">
+            <div class="four-border">
+              <span class="four-border-left sub">-</span>
+              <input type="text" class="four-border-one num" value="1" />
+              <span class="add">+</span>
             </div>
-            <div class="content-list">
-                <div class="content-list-checked">
-                    <input type="checkbox" class="checked">
-                </div>
-                <div class="content-list-one">
-                    <a href="JavaScript:;">
-                        <div class="content-list-one-img">
-                            <img src="../images/cp.jpg">
-                        </div>
-                        <div class="content-list-one-txt">
-                            <h6>京东超市</h6>
-                            <p>公牛（BULL）新国标插座</p>
-                            <p>/插线板/插排/排插/接线板/拖线板 GN-607  4位总控全长1.8米</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="content-list-two">
-                    <p>4位总控全长1.8米</p>
-                </div>
-                <div class="content-list-three">
-                    <i>￥</i><p class="dan">27.00</p>
-                </div>
-                <div class="content-list-four">
-                    <div class="four-border">
-                        <span class="four-border-left sub">-</span>
-                        <input type="text"  class="four-border-one num" value="1">
-                        <span class="add">+</span>
-                    </div>
-                    <div class="four-txt">
-                        <p>有货</p>
-                    </div>
-                </div>
-                <div class="content-list-five">
-                    <i>￥</i><b class="sum">27.00</b>
-                </div>
-                <div class="content-list-six">
-                    <p class="delet"><a href="JavaScript:;">删除</a></p>
-                    <p><a href="">移入关注</a></p>
-                </div>
+            <div class="four-txt">
+              <p>有货</p>
             </div>
-            <div class="content-list">
-                <div class="content-list-checked">
-                    <input type="checkbox"  class="checked">
-                </div>
-                <div class="content-list-one">
-                    <a href="JavaScript:;">
-                        <div class="content-list-one-img">
-                            <img src="../images/sb.jpg">
-                        </div>
-                        <div class="content-list-one-txt">
-                            <h6>京东超市</h6>
-                            <p>小米无线蓝牙双模鼠标 静音鼠标 办公</p>
-                            <p>鼠标 星光黑色</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="content-list-two">
-                    <p>【静音】无线蓝牙双模鼠标 黑色</p>
-                </div>
-                <div class="content-list-three">
-                    <i>￥</i><p class="dan">59.00</p>
-                </div>
-                <div class="content-list-four">
-                    <div class="four-border">
-                        <span class="four-border-left sub">-</span>
-                        <input type="text"  class="four-border-one num" value="1">
-                        <span class="add">+</span>
-                    </div>
-                    <div class="four-txt">
-                        <p>有货</p>
-                    </div>
-                </div>
-                <div class="content-list-five">
-                    <i>￥</i><b class="sum">59.00</b>
-                </div>
-                <div class="content-list-six">
-                    <p class="delet"><a href="JavaScript:;">删除</a></p>
-                    <p><a href="">移入关注</a></p>
-                </div>
-            </div>
-            <div class="content-list">
-                <div class="content-list-checked">
-                    <input type="checkbox" class="checked">
-                </div>
-                <div class="content-list-one">
-                    <a href="JavaScript:;">
-                        <div class="content-list-one-img">
-                            <img src="../images/jf.jpg">
-                        </div>
-                        <div class="content-list-one-txt">
-                            <h6>京东超市</h6>
-                            <p>金纺衣物柔顺剂 柔软留香</p>
-                            <p>防静电 清新依兰花香1L（漂洗时中和洗衣液残留 理顺衣物纤维 持久留香）</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="content-list-two">
-                    <p>清新柔顺</p>
-                </div>
-                <div class="content-list-three">
-                    <i>￥</i><p  class="dan">15.00</p>
-                </div>
-                <div class="content-list-four">
-                    <div class="four-border">
-                        <span class="four-border-left sub">-</span>
-                        <input type="text"  class="four-border-one num" value="1">
-                        <span class="add">+</span>
-                    </div>
-                    <div class="four-txt">
-                        <p>有货</p>
-                    </div>
-                </div>
-                <div class="content-list-five">
-                    <i>￥</i><b  class="sum">15.00</b>
-                </div>
-                <div class="content-list-six">
-                    <p class="delet"><a href="JavaScript:;">删除</a></p>
-                    <p><a href="">移入关注</a></p>
-                </div>
-            </div>
+          </div>
+          <div class="content-list-five"><i>￥</i><b class="sum">27.00</b></div>
+          <div class="content-list-six">
+            <p class="delet"><a href="JavaScript:;">删除</a></p>
+            <p><a href="">移入关注</a></p>
+          </div>
         </div>
+        <div class="content-list">
+          <div class="content-list-checked">
+            <input type="checkbox" class="checked" />
+          </div>
+          <div class="content-list-one">
+            <a href="JavaScript:;">
+              <div class="content-list-one-img">
+                <img src="../images/sb.jpg" />
+              </div>
+              <div class="content-list-one-txt">
+                <h6>京东超市</h6>
+                <p>小米无线蓝牙双模鼠标 静音鼠标 办公</p>
+                <p>鼠标 星光黑色</p>
+              </div>
+            </a>
+          </div>
+          <div class="content-list-two">
+            <p>【静音】无线蓝牙双模鼠标 黑色</p>
+          </div>
+          <div class="content-list-three">
+            <i>￥</i>
+            <p class="dan">59.00</p>
+          </div>
+          <div class="content-list-four">
+            <div class="four-border">
+              <span class="four-border-left sub">-</span>
+              <input type="text" class="four-border-one num" value="1" />
+              <span class="add">+</span>
+            </div>
+            <div class="four-txt">
+              <p>有货</p>
+            </div>
+          </div>
+          <div class="content-list-five"><i>￥</i><b class="sum">59.00</b></div>
+          <div class="content-list-six">
+            <p class="delet"><a href="JavaScript:;">删除</a></p>
+            <p><a href="">移入关注</a></p>
+          </div>
+        </div>
+        <div class="content-list">
+          <div class="content-list-checked">
+            <input type="checkbox" class="checked" />
+          </div>
+          <div class="content-list-one">
+            <a href="JavaScript:;">
+              <div class="content-list-one-img">
+                <img src="../images/jf.jpg" />
+              </div>
+              <div class="content-list-one-txt">
+                <h6>京东超市</h6>
+                <p>金纺衣物柔顺剂 柔软留香</p>
+                <p>防静电 清新依兰花香1L（漂洗时中和洗衣液残留 理顺衣物纤维 持久留香）</p>
+              </div>
+            </a>
+          </div>
+          <div class="content-list-two">
+            <p>清新柔顺</p>
+          </div>
+          <div class="content-list-three">
+            <i>￥</i>
+            <p class="dan">15.00</p>
+          </div>
+          <div class="content-list-four">
+            <div class="four-border">
+              <span class="four-border-left sub">-</span>
+              <input type="text" class="four-border-one num" value="1" />
+              <span class="add">+</span>
+            </div>
+            <div class="four-txt">
+              <p>有货</p>
+            </div>
+          </div>
+          <div class="content-list-five"><i>￥</i><b class="sum">15.00</b></div>
+          <div class="content-list-six">
+            <p class="delet"><a href="JavaScript:;">删除</a></p>
+            <p><a href="">移入关注</a></p>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="_goods">
-        <!-- 京东自营 -->
-        <div class="ziying all">
-            <input type="checkbox" class="shop_type" id="xmdp">
-            <p>小米店铺</p>
+      <!-- 京东自营 -->
+      <div class="ziying all">
+        <input type="checkbox" class="shop_type" id="xmdp" />
+        <p>小米店铺</p>
+      </div>
+      <!-- 内容 -->
+      <div class="content all" id="xmdp_content">
+        <div class="content-list">
+          <div class="content-list-checked">
+            <input type="checkbox" class="checked" />
+          </div>
+          <div class="content-list-one">
+            <a href="JavaScript:;">
+              <div class="content-list-one-img">
+                <img src="../images/sj1.jpg" />
+              </div>
+              <div class="content-list-one-txt">
+                <!-- <h6>京东超市</h6> -->
+                <p>Redmi Note 9 Pro 5G</p>
+                <p>一亿像素 骁龙750G 33W快充 120Hz刷新率 碧海星辰 6GB+128GB 游戏智能手机 小米 红米</p>
+              </div>
+            </a>
+          </div>
+          <div class="content-list-two">
+            <p>游戏智能手机 小米 红米</p>
+          </div>
+          <div class="content-list-three">
+            <i>￥</i>
+            <p class="dan">1559.00</p>
+          </div>
+          <div class="content-list-four">
+            <div class="four-border">
+              <span class="sub">-</span>
+              <input type="text" class="four-border-one num" value="1" />
+              <span class="add">+</span>
+            </div>
+            <div class="four-txt">
+              <p>有货</p>
+            </div>
+          </div>
+          <div class="content-list-five"><i>￥</i><b class="sum">1559.00</b></div>
+          <div class="content-list-six">
+            <p class="delet"><a href="JavaScript:;">删除</a></p>
+            <p><a href="JavaScript:;">移入关注</a></p>
+          </div>
         </div>
-        <!-- 内容 -->
-        <div class="content all" id="xmdp_content">
-            <div class="content-list">
-                <div class="content-list-checked">
-                    <input type="checkbox" class="checked">
-                </div>
-                <div class="content-list-one">
-                    <a href="JavaScript:;">
-                        <div class="content-list-one-img">
-                            <img src="../images/sj1.jpg">
-                        </div>
-                        <div class="content-list-one-txt">
-                            <!-- <h6>京东超市</h6> -->
-                            <p>Redmi Note 9 Pro 5G </p>
-                            <p>一亿像素 骁龙750G 33W快充 120Hz刷新率 碧海星辰 6GB+128GB 游戏智能手机 小米 红米</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="content-list-two">
-                    <p>游戏智能手机 小米 红米</p>
-                </div>
-                <div class="content-list-three">
-                    <i>￥</i><p class="dan">1559.00</p>
-                </div>
-                <div class="content-list-four">
-                    <div class="four-border">
-                        <span class="sub">-</span>
-                        <input type="text"  class="four-border-one num" value="1">
-                        <span class="add">+</span>
-                    </div>
-                    <div class="four-txt">
-                        <p>有货</p>
-                    </div>
-                </div>
-                <div class="content-list-five">
-                    <i>￥</i><b class="sum">1559.00</b>
-                </div>
-                <div class="content-list-six">
-                    <p class="delet"><a href="JavaScript:;">删除</a></p>
-                    <p><a href="JavaScript:;">移入关注</a></p>
-                </div>
+        <div class="content-list">
+          <div class="content-list-checked">
+            <input type="checkbox" class="checked" />
+          </div>
+          <div class="content-list-one">
+            <a href="JavaScript:;">
+              <div class="content-list-one-img">
+                <img src="../images/sj2.jpg" />
+              </div>
+              <div class="content-list-one-txt">
+                <!-- <h6>京东超市</h6> -->
+                <p>Redmi Note 9 Pro 5G</p>
+                <p>骁龙750G 33W快充 120Hz刷新率 碧海星辰 6GB+128GB 游戏智能手机 小米 红米</p>
+              </div>
+            </a>
+          </div>
+          <div class="content-list-two">
+            <p>4位总控全长1.8米</p>
+          </div>
+          <div class="content-list-three">
+            <i>￥</i>
+            <p class="dan">2750.00</p>
+          </div>
+          <div class="content-list-four">
+            <div class="four-border">
+              <span class="four-border-left sub">-</span>
+              <input type="text" class="four-border-one num" value="1" />
+              <span class="add">+</span>
             </div>
-            <div class="content-list">
-                <div class="content-list-checked">
-                    <input type="checkbox" class="checked">
-                </div>
-                <div class="content-list-one">
-                    <a href="JavaScript:;">
-                        <div class="content-list-one-img">
-                            <img src="../images/sj2.jpg">
-                        </div>
-                        <div class="content-list-one-txt">
-                            <!-- <h6>京东超市</h6> -->
-                            <p>Redmi Note 9 Pro 5G</p>
-                            <p>骁龙750G 33W快充 120Hz刷新率 碧海星辰 6GB+128GB 游戏智能手机 小米 红米</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="content-list-two">
-                    <p>4位总控全长1.8米</p>
-                </div>
-                <div class="content-list-three">
-                    <i>￥</i><p class="dan">2750.00</p>
-                </div>
-                <div class="content-list-four">
-                    <div class="four-border">
-                        <span class="four-border-left sub">-</span>
-                        <input type="text"  class="four-border-one num" value="1">
-                        <span class="add">+</span>
-                    </div>
-                    <div class="four-txt">
-                        <p>有货</p>
-                    </div>
-                </div>
-                <div class="content-list-five">
-                    <i>￥</i><b class="sum">2750.00</b>
-                </div>
-                <div class="content-list-six">
-                    <p class="delet"><a href="JavaScript:;">删除</a></p>
-                    <p><a href="">移入关注</a></p>
-                </div>
+            <div class="four-txt">
+              <p>有货</p>
             </div>
-            <div class="content-list">
-                <div class="content-list-checked">
-                    <input type="checkbox"  class="checked">
-                </div>
-                <div class="content-list-one">
-                    <a href="JavaScript:;">
-                        <div class="content-list-one-img">
-                            <img src="../images/sj3.jpg">
-                        </div>
-                        <div class="content-list-one-txt">
-                            <!-- <h6>京东超市</h6> -->
-                            <p>小米无线蓝牙双模鼠标 静音鼠标 办公</p>
-                            <p>33W快充 120Hz刷新率 碧海星辰 6GB+128GB 游戏智能手机 小米 红米</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="content-list-two">
-                    <p>【静音】无线蓝牙双模鼠标 黑色</p>
-                </div>
-                <div class="content-list-three">
-                    <i>￥</i><p class="dan">2559.00</p>
-                </div>
-                <div class="content-list-four">
-                    <div class="four-border">
-                        <span class="four-border-left sub">-</span>
-                        <input type="text"  class="four-border-one num" value="1">
-                        <span class="add">+</span>
-                    </div>
-                    <div class="four-txt">
-                        <p>有货</p>
-                    </div>
-                </div>
-                <div class="content-list-five">
-                    <i>￥</i><b class="sum">2559.00</b>
-                </div>
-                <div class="content-list-six">
-                    <p class="delet"><a href="JavaScript:;">删除</a></p>
-                    <p><a href="">移入关注</a></p>
-                </div>
-            </div>
-            <div class="content-list">
-                <div class="content-list-checked">
-                    <input type="checkbox" class="checked">
-                </div>
-                <div class="content-list-one">
-                    <a href="JavaScript:;">
-                        <div class="content-list-one-img">
-                            <img src="../images/hm.jpg">
-                        </div>
-                        <div class="content-list-one-txt">
-                            <!-- <h6>京东超市</h6> -->
-                            <p>金纺衣物柔顺剂 柔软留香</p>
-                            <p>120Hz刷新率 碧海星辰 6GB+128GB 游戏智能手机 小米 红米</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="content-list-two">
-                    <p>6GB+128GB 游戏智能手机</p>
-                </div>
-                <div class="content-list-three">
-                    <i>￥</i><p  class="dan">1500.00</p>
-                </div>
-                <div class="content-list-four">
-                    <div class="four-border">
-                        <span class="four-border-left sub">-</span>
-                        <input type="text"  class="four-border-one num" value="1">
-                        <span class="add">+</span>
-                    </div>
-                    <div class="four-txt">
-                        <p>有货</p>
-                    </div>
-                </div>
-                <div class="content-list-five">
-                    <i>￥</i><b  class="sum">1500.00</b>
-                </div>
-                <div class="content-list-six">
-                    <p class="delet"><a href="JavaScript:;">删除</a></p>
-                    <p><a href="">移入关注</a></p>
-                </div>
-            </div>
+          </div>
+          <div class="content-list-five"><i>￥</i><b class="sum">2750.00</b></div>
+          <div class="content-list-six">
+            <p class="delet"><a href="JavaScript:;">删除</a></p>
+            <p><a href="">移入关注</a></p>
+          </div>
         </div>
+        <div class="content-list">
+          <div class="content-list-checked">
+            <input type="checkbox" class="checked" />
+          </div>
+          <div class="content-list-one">
+            <a href="JavaScript:;">
+              <div class="content-list-one-img">
+                <img src="../images/sj3.jpg" />
+              </div>
+              <div class="content-list-one-txt">
+                <!-- <h6>京东超市</h6> -->
+                <p>小米无线蓝牙双模鼠标 静音鼠标 办公</p>
+                <p>33W快充 120Hz刷新率 碧海星辰 6GB+128GB 游戏智能手机 小米 红米</p>
+              </div>
+            </a>
+          </div>
+          <div class="content-list-two">
+            <p>【静音】无线蓝牙双模鼠标 黑色</p>
+          </div>
+          <div class="content-list-three">
+            <i>￥</i>
+            <p class="dan">2559.00</p>
+          </div>
+          <div class="content-list-four">
+            <div class="four-border">
+              <span class="four-border-left sub">-</span>
+              <input type="text" class="four-border-one num" value="1" />
+              <span class="add">+</span>
+            </div>
+            <div class="four-txt">
+              <p>有货</p>
+            </div>
+          </div>
+          <div class="content-list-five"><i>￥</i><b class="sum">2559.00</b></div>
+          <div class="content-list-six">
+            <p class="delet"><a href="JavaScript:;">删除</a></p>
+            <p><a href="">移入关注</a></p>
+          </div>
+        </div>
+        <div class="content-list">
+          <div class="content-list-checked">
+            <input type="checkbox" class="checked" />
+          </div>
+          <div class="content-list-one">
+            <a href="JavaScript:;">
+              <div class="content-list-one-img">
+                <img src="../images/hm.jpg" />
+              </div>
+              <div class="content-list-one-txt">
+                <!-- <h6>京东超市</h6> -->
+                <p>金纺衣物柔顺剂 柔软留香</p>
+                <p>120Hz刷新率 碧海星辰 6GB+128GB 游戏智能手机 小米 红米</p>
+              </div>
+            </a>
+          </div>
+          <div class="content-list-two">
+            <p>6GB+128GB 游戏智能手机</p>
+          </div>
+          <div class="content-list-three">
+            <i>￥</i>
+            <p class="dan">1500.00</p>
+          </div>
+          <div class="content-list-four">
+            <div class="four-border">
+              <span class="four-border-left sub">-</span>
+              <input type="text" class="four-border-one num" value="1" />
+              <span class="add">+</span>
+            </div>
+            <div class="four-txt">
+              <p>有货</p>
+            </div>
+          </div>
+          <div class="content-list-five"><i>￥</i><b class="sum">1500.00</b></div>
+          <div class="content-list-six">
+            <p class="delet"><a href="JavaScript:;">删除</a></p>
+            <p><a href="">移入关注</a></p>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- 结算 -->
     <div class="content-jies">
-        <div class="jies-border">
-            <div class="jies-border-one">
-                <input type="checkbox" id="l_checked">
-                <p>全选</p>
-            </div>
-            <div class="jies-border-two">
-                <a href="javascript:;" id="delMany">删除选中的商品</a>
-                <a href="#">移入关注</a>
-                <b><a href="">清理购物车</a></b>
-            </div>
-            <div class="jies-border-three">
-                <p>已选择<b id="_goods">0</b>件商品 <i class="fa fa-angle-down"></i></p>   
-            </div>
-            <div class="jies-border-four">
-                <p>总价：<i style="font-style: normal; color: red;">￥</i><b id="_tot">0.00</b> <i class="fa fa-lightbulb-o"></i></p>   
-            </div>
+      <div class="jies-border">
+        <div class="jies-border-one">
+          <input type="checkbox" id="l_checked" />
+          <p>全选</p>
         </div>
-        <div class="jies-txt">
-            <b>去结算</b>
+        <div class="jies-border-two">
+          <a href="javascript:;" id="delMany">删除选中的商品</a>
+          <a href="#">移入关注</a>
+          <b><a href="">清理购物车</a></b>
         </div>
+        <div class="jies-border-three">
+          <p>已选择<b id="_goods">0</b>件商品 <i class="fa fa-angle-down"></i></p>
+        </div>
+        <div class="jies-border-four">
+          <p>总价：<i style="font-style: normal; color: red">￥</i><b id="_tot">0.00</b> <i class="fa fa-lightbulb-o"></i></p>
+        </div>
+      </div>
+      <div class="jies-txt">
+        <b>去结算</b>
+      </div>
     </div>
     <!-- 计算提示 -->
     <div class="sett_hint">
-        <img src="../images/tit.jpg" alt="">
-        <!-- <p class="vann">知道了</p>
+      <img src="../images/tit.jpg" alt="" />
+      <!-- <p class="vann">知道了</p>
         <i class="vann fa fa-times"></i> -->
     </div>
-   
+
     <!-- 结尾 -->
     <div class="footer">
-        <div class="f-one">
-            <ul>
-                <li class="f-one1">
-                    <div class="f-one-img1"></div>
-                    <p>品类齐全，轻松购物</p>
-                </li>
-                <li class="f-one1">
-                    <div class="f-one-img2"></div>
-                    <p>多仓直发，急速配速</p>
-                </li>
-                <li class="f-one1">
-                    <div class="f-one-img3"></div>
-                    <p>正品行货，精致服务</p>
-                </li>
-                <li class="f-one1">
-                    <div class="f-one-img4"></div>
-                    <p>天天低价，畅选无忧</p>
-                </li>
-            </ul>
+      <div class="f-one">
+        <ul>
+          <li class="f-one1">
+            <div class="f-one-img1"></div>
+            <p>品类齐全，轻松购物</p>
+          </li>
+          <li class="f-one1">
+            <div class="f-one-img2"></div>
+            <p>多仓直发，急速配速</p>
+          </li>
+          <li class="f-one1">
+            <div class="f-one-img3"></div>
+            <p>正品行货，精致服务</p>
+          </li>
+          <li class="f-one1">
+            <div class="f-one-img4"></div>
+            <p>天天低价，畅选无忧</p>
+          </li>
+        </ul>
+      </div>
+      <div class="f-two">
+        <div class="f-two1">
+          <dl>
+            <dt><b>购物指南</b></dt>
+            <dd><a href="#">购物流程</a></dd>
+            <dd><a href="#">会员介绍</a></dd>
+            <dd><a href="#">生活旅行</a></dd>
+            <dd><a href="#">常见问题</a></dd>
+            <dd><a href="#">大家电</a></dd>
+            <dd><a href="#">联系客服</a></dd>
+          </dl>
+          <dl>
+            <dt><b>配送方式</b></dt>
+            <dd><a href="#">上门自提</a></dd>
+            <dd><a href="#">211限时达</a></dd>
+            <dd><a href="#">配送服务查询</a></dd>
+            <dd><a href="#">海外配送</a></dd>
+          </dl>
+          <dl>
+            <dt><b>支付方式</b></dt>
+            <dd><a href="#">上门自提</a></dd>
+            <dd><a href="#">211限时达</a></dd>
+            <dd><a href="#">配送服务查询</a></dd>
+            <dd><a href="#">海外配送</a></dd>
+          </dl>
+          <dl>
+            <dt><b>售后服务</b></dt>
+            <dd><a href="#">上门自提</a></dd>
+            <dd><a href="#">211限时达</a></dd>
+            <dd><a href="#">配送服务查询</a></dd>
+            <dd><a href="#">海外配送</a></dd>
+          </dl>
+          <dl class="f-last1">
+            <dt><b>特色服务</b></dt>
+            <dd><a href="#">上门自提</a></dd>
+            <dd><a href="#">211限时达</a></dd>
+            <dd><a href="#">配送服务查询</a></dd>
+            <dd><a href="#">海外配送</a></dd>
+          </dl>
+          <dl class="f-last">
+            <dt class="llast"><b>京东自营覆盖区县</b></dt>
+            <dd>京东已向全国2661个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。</dd>
+            <dd class="xiangq"><a href="#">查看详情 ></a></dd>
+          </dl>
         </div>
-        <div class="f-two">
-            <div class="f-two1">
-                <dl>
-                    <dt><b>购物指南</b></dt>
-                    <dd><a href="#">购物流程</a></dd>
-                    <dd><a href="#">会员介绍</a></dd>
-                    <dd><a href="#">生活旅行</a></dd>
-                    <dd><a href="#">常见问题</a></dd>
-                    <dd><a href="#">大家电</a></dd>
-                    <dd><a href="#">联系客服</a></dd>
-                </dl>
-                <dl>
-                    <dt><b>配送方式</b></dt>
-                    <dd><a href="#">上门自提</a></dd>
-                    <dd><a href="#">211限时达</a></dd>
-                    <dd><a href="#">配送服务查询</a></dd>
-                    <dd><a href="#">海外配送</a></dd>
-                </dl>
-                <dl>
-                    <dt><b>支付方式</b></dt>
-                    <dd><a href="#">上门自提</a></dd>
-                    <dd><a href="#">211限时达</a></dd>
-                    <dd><a href="#">配送服务查询</a></dd>
-                    <dd><a href="#">海外配送</a></dd>
-                </dl>
-                <dl>
-                    <dt><b>售后服务</b></dt>
-                    <dd><a href="#">上门自提</a></dd>
-                    <dd><a href="#">211限时达</a></dd>
-                    <dd><a href="#">配送服务查询</a></dd>
-                    <dd><a href="#">海外配送</a></dd>
-                </dl>
-                <dl class="f-last1">
-                    <dt><b>特色服务</b></dt>
-                    <dd><a href="#">上门自提</a></dd>
-                    <dd><a href="#">211限时达</a></dd>
-                    <dd><a href="#">配送服务查询</a></dd>
-                    <dd><a href="#">海外配送</a></dd>
-                </dl>
-                <dl class="f-last">
-                    <dt class="llast"><b>京东自营覆盖区县</b></dt>
-                    <dd>京东已向全国2661个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。</dd>
-                    <dd class="xiangq"><a href="#">查看详情 ></a></dd>
-                </dl>
-            </div>
+      </div>
+      <div class="f-three">
+        <div class="f-three-list">
+          <ul>
+            <li><a href="#">关于我们 |</a></li>
+            <li><a href="#">关于我们 |</a></li>
+            <li><a href="#">关于我们 |</a></li>
+            <li><a href="#">关于我们 |</a></li>
+            <li><a href="#">关于我们 |</a></li>
+            <li><a href="#">关于我们 |</a></li>
+            <li><a href="#">关于我们 |</a></li>
+            <li><a href="#">关于我们 |</a></li>
+            <li><a href="#">关于我们 |</a></li>
+            <li><a href="#">关于我们 |</a></li>
+            <li><a href="#">关于我们 |</a></li>
+            <li><a href="#">关于我们 |</a></li>
+            <li><a href="#">关于我们 |</a></li>
+            <li><a href="#">关于我们 |</a></li>
+            <li><a href="#">关于我们</a></li>
+          </ul>
         </div>
-        <div class="f-three">
-            <div class="f-three-list">
-                <ul>
-                    <li><a href="#">关于我们 |</a></li>
-                    <li><a href="#">关于我们 |</a></li>
-                    <li><a href="#">关于我们 |</a></li>
-                    <li><a href="#">关于我们 |</a></li>
-                    <li><a href="#">关于我们 |</a></li>
-                    <li><a href="#">关于我们 |</a></li>
-                    <li><a href="#">关于我们 |</a></li>
-                    <li><a href="#">关于我们 |</a></li>
-                    <li><a href="#">关于我们 |</a></li>
-                    <li><a href="#">关于我们 |</a></li>
-                    <li><a href="#">关于我们 |</a></li>
-                    <li><a href="#">关于我们 |</a></li>
-                    <li><a href="#">关于我们 |</a></li>
-                    <li><a href="#">关于我们 |</a></li>
-                    <li><a href="#">关于我们</a></li>
-                </ul>
-            </div>
-            <div class="f-three-list1">
-                <p><a href="">京公网安备 11000002000088号</a></p>
-                <span>|</span>
-                <p><a href="">京ICP备11041704号</a></p>
-                <span>|</span>
-                <p><a href="">互联网药品信息服务资格证编号（京）-经营性-2014-0008</a></p>
-                <span>|</span>
-                <p>新出发零 字第大120007号</p>
-            </div>
-            <div class="f-three-list1 list2">
-                <p>互联网出版许可证编号新出网证（京）字150号</p>
-                <span>|</span>
-                <p><a href="">出版物经营许可证</a></p>
-                <span>|</span>
-                <p><a href="">网络文化经营许可证京网文[2014]2148-348号</a></p>
-                <span>|</span>
-                <p>违法和不良信息举报电话：4006561155</p>
-            </div>
-            <div class="f-three-list1 list3">
-                <p>Copyright@2004-2021 京东JD.com版权所有</p>
-                <span>|</span>
-                <p><a href="">出版物经营许可证</a></p>
-                <span>|</span>
-                <p><a href="">网络文化经营许可证京网文[2014]2148-348号</a></p>
-                <span>|</span>
-                <p>违法和不良信息举报电话：4006561155</p>
-            </div>
-            <div class="f-three-list1 list4">
-                <div>
-                    <div class="list4-1"></div>
-                    Global Site
-                </div>
-                <span>|</span>
-                <div>
-                    <div class="list4-2"></div>
-                    Global Site
-                </div>
-                <span>|</span>
-                <div>
-                    <div class="list4-2"></div>
-                    Global Site
-                </div>
-                <span>|</span>
-                <div>
-                    <div class="list4-2"></div>
-                    Global Site
-                </div>
-            </div>
-            <div class="f-three-list1 list5">
-                <p>京东旗下网站：<a href="">京东钱包</a></p>
-                <span>|</span>
-                <p><a href="">京东智联云</a></p>
-            </div>
-            <div class="f-three-list1 list6">
-                <a href="">
-                    <img src="../images/htu_03.gif" alt="">
-                </a>
-                <a href="">
-                    <img src="../images/htu_05.gif" alt="">
-                </a>
-                <a href="">
-                    <img src="../images/htu_07.gif" alt="">
-                </a>
-                <a href="">
-                    <img src="../images/htu_09.gif" alt="">
-                </a>
-                <a href="">
-                    <img src="../images/htu_11.gif" alt="">
-                </a>
-                <a href="">
-                    <img src="../images/htu_13.gif" alt="">
-                </a>
-            </div>
+        <div class="f-three-list1">
+          <p><a href="">京公网安备 11000002000088号</a></p>
+          <span>|</span>
+          <p><a href="">京ICP备11041704号</a></p>
+          <span>|</span>
+          <p><a href="">互联网药品信息服务资格证编号（京）-经营性-2014-0008</a></p>
+          <span>|</span>
+          <p>新出发零 字第大120007号</p>
         </div>
+        <div class="f-three-list1 list2">
+          <p>互联网出版许可证编号新出网证（京）字150号</p>
+          <span>|</span>
+          <p><a href="">出版物经营许可证</a></p>
+          <span>|</span>
+          <p><a href="">网络文化经营许可证京网文[2014]2148-348号</a></p>
+          <span>|</span>
+          <p>违法和不良信息举报电话：4006561155</p>
+        </div>
+        <div class="f-three-list1 list3">
+          <p>Copyright@2004-2021 京东JD.com版权所有</p>
+          <span>|</span>
+          <p><a href="">出版物经营许可证</a></p>
+          <span>|</span>
+          <p><a href="">网络文化经营许可证京网文[2014]2148-348号</a></p>
+          <span>|</span>
+          <p>违法和不良信息举报电话：4006561155</p>
+        </div>
+        <div class="f-three-list1 list4">
+          <div>
+            <div class="list4-1"></div>
+            Global Site
+          </div>
+          <span>|</span>
+          <div>
+            <div class="list4-2"></div>
+            Global Site
+          </div>
+          <span>|</span>
+          <div>
+            <div class="list4-2"></div>
+            Global Site
+          </div>
+          <span>|</span>
+          <div>
+            <div class="list4-2"></div>
+            Global Site
+          </div>
+        </div>
+        <div class="f-three-list1 list5">
+          <p>京东旗下网站：<a href="">京东钱包</a></p>
+          <span>|</span>
+          <p><a href="">京东智联云</a></p>
+        </div>
+        <div class="f-three-list1 list6">
+          <a href="">
+            <img src="../images/htu_03.gif" alt="" />
+          </a>
+          <a href="">
+            <img src="../images/htu_05.gif" alt="" />
+          </a>
+          <a href="">
+            <img src="../images/htu_07.gif" alt="" />
+          </a>
+          <a href="">
+            <img src="../images/htu_09.gif" alt="" />
+          </a>
+          <a href="">
+            <img src="../images/htu_11.gif" alt="" />
+          </a>
+          <a href="">
+            <img src="../images/htu_13.gif" alt="" />
+          </a>
+        </div>
+      </div>
     </div>
-
-</body>
+  </body>
+  <script src="../js/shopcar.js"></script>
 </html>
