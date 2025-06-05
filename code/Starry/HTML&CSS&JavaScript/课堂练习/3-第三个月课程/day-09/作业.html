@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1" cellspacing="0" cellpadding="0" style="width: 400px">
+      <tr align="center">
+        <td colspan="2">添加图书信息</td>
+      </tr>
+      <tr>
+        <td>图书名称：</td>
+        <td><input type="text" class="tsmc" /></td>
+      </tr>
+      <tr>
+        <td>作者：</td>
+        <td><input type="text" class="zz" /></td>
+      </tr>
+      <tr>
+        <td>出版社：</td>
+        <td>
+          <select>
+            <option value="0">--请选择--</option>
+            <option value="山东">山东</option>
+            <option value="菏泽">菏泽</option>
+            <option value="北京">北京</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>存放位置：</td>
+        <td>
+          <input type="checkbox" class="ch" value="1-1" />1-1 <input type="checkbox" class="ch" value="1-2" />1-2
+          <input type="checkbox" class="ch" value="1-3" />1-3 <input type="checkbox" class="ch" value="1-4" />1-4
+          <br />
+          <input type="checkbox" class="ch" value="1-5" />1-5 <input type="checkbox" class="ch" value="1-6" />1-6
+          <input type="checkbox" class="ch" value="1-7" />1-7 <input type="checkbox" class="ch" value="1-8" />1-8
+        </td>
+      </tr>
+      <tr>
+        <td>图书类型：</td>
+        <td>
+          <input type="radio" name="xue" class="ra" value="历史" />历史 <input type="radio" name="xue" class="ra" value="传说" />传说
+          <input type="radio" name="xue" class="ra" value="名著" />名著
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <!-- <input type="submit" value="提交" class="tj" /> -->
+          <button class="tj">提交</button>
+          <input type="reset" value="重置" />
+        </td>
+      </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+    <table border="1" cellspacing="0" cellpadding="0" style="width: 400px" class="tred">
+      <tr>
+        <td>选中</td>
+        <td>图书名称</td>
+        <td>作者</td>
+        <td>出版社</td>
+        <td>存放位置</td>
+        <td>图书类型</td>
+        <td>操作</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="all" />全选</td>
+        <td colspan="6" align="center">
+          <input type="button" value="选中删除" class="xzsc" />
+          <input type="button" value="反选" class="fan" />
+        </td>
+      </tr>
+    </table>
+    <script>
+      let tsmc = document.querySelector('.tsmc')
+      let zz = document.querySelector('.zz')
+      let select = document.querySelector('select')
+      let ch = document.querySelectorAll('.ch')
+      let ra = document.querySelectorAll('.ra')
+      let sub = document.querySelector('.tj')
+      let tred = document.querySelector('.tred')
+      let all = document.querySelector('.all')
+
+      sub.addEventListener('click', function () {
+        let chs = ''
+        for (let i = 0; i < ch.length; i++) {
+          if (ch[i].checked) {
+            chs += ch[i].value + ','
+          }
+        }
+
+        let ras = ''
+        for (let i = 0; i < ra.length; i++) {
+          if (ra[i].checked) {
+            ras = ra[i].value
+          }
+        }
+
+        tred.innerHTML += `
+        <tr>
+          <td><input type="checkbox" class="dan"></td>
+          <td>${tsmc.value}</td>
+          <td>${zz.value}</td>
+          <td>${select.value}</td>
+          <td>${chs}</td>
+          <td>${ras}</td>
+          <td><a href="#" class='dla'>删除</a></td>
+          </tr>
+          `
+        function allCheck() {
+          let all = document.querySelector('.all')
+          let dan = document.querySelectorAll('.dan')
+          all.checked = document.querySelectorAll('.dan:checked').length === dan.length
+        }
+        let all = document.querySelector('.all')
+        let dan = document.querySelectorAll('.dan')
+        all.addEventListener('click', function () {
+          for (let i = 0; i < dan.length; i++) {
+            dan[i].checked = all.checked
+          }
+        })
+        let dla = document.querySelectorAll('.dla')
+        for (let i = 0; i < dan.length; i++) {
+          dla[i].addEventListener('click', function () {
+            dla[i].parentNode.parentNode.remove()
+          })
+        }
+        let xzsc = document.querySelector('.xzsc')
+        xzsc.addEventListener('click', function () {
+          for (let i = 0; i < dan.length; i++) {
+            if (dan[i].checked) {
+              dan[i].parentNode.parentNode.remove()
+            }
+            // let all = document.querySelector('.all')
+            // if(dan.length == 0){
+            //   all.checked = false
+            // }
+          }
+        })
+        let fan = document.querySelector('.fan')
+        fan.addEventListener('click', function () {
+          for (let i = 0; i < dan.length; i++) {
+            dan[i].checked == true ? (dan[i].checked = false) : (dan[i].checked = true)
+            allCheck()
+          }
+        })
+        for (let i = 0; i < dan.length; i++) {
+          dan[i].addEventListener('click', function () {
+            allCheck()
+          })
+        }
+      })
+    </script>
+  </body>
+</html>

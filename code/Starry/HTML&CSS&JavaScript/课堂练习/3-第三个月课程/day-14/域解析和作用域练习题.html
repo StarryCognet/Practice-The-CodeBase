@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //1---------------------------------------------------
+
+    // var a = 33;
+    // function fu(a) {
+    //     console.log(a);
+    //     var a = 123;
+    //     console.log(a);
+    //     function a() {
+    //         console.log(a);
+    //     }
+    //     console.log(b);
+    //     var b = function () { }
+    //     console.log(b);
+    //     function b() { }
+    // }
+    // console.log(a)
+    // fu(2);
+
+
+    //2---------------------------------------------------
+    // var a = 123;
+    // function fun() {
+    //     console.log(a); 
+    //     var a = 456;
+    //     console.log(a); 
+    // }
+    // fun();
+    // console.log(a); 
+
+    //3---------------------------------------------------
+    
+    // function fun() {
+    //     console.log("b1 = " + b); 
+    //     b = 456;
+    // }
+
+
+    
+    // var b = 123;
+    // fun(); 
+    // console.log("b2 = " + b); 
+    //4---------------------------------------------------
+    function test(a, b) {
+        console.log(a);
+        c = 0;
+        var c;
+        a = 3;
+        b = 2;
+        console.log(b);
+        function b() { }
+        function d() { }
+        console.log(d);
+    }
+    test(2);
+
+
+    //5---------------------------------------------------
+
+    // fn();
+    // console.log(a);
+    // var a = 10;
+    // console.log(a);
+    // function fn() {
+    //     var a = 1;
+
+    // }
+    //6---------------------------------------------------
+    // function outFun2() {
+    //     value1= "嘿嘿"; //隐式全局变量
+    //     var value2= "哈哈";
+    // }
+    // outFun2();
+    // console.log(value1); 
+    // console.log(value2); 
+    //7---------------------------------------------------
+    // var a=20;
+    //     var b=12;
+    //     function test(a){
+    //         console.log(a);
+    //         a=45;
+    //         b=23;
+    //     }
+    //     test(a);
+    //     console.log(a);
+    //     console.log(b);
+    //8---------------------------------------------------
+    // function f1() {
+    //     var a = b = c = 9;
+    //     console.log(a);
+    //     console.log(b);
+    //     console.log(c);
+    // }
+    // f1();
+    // console.log(c);
+    // console.log(b); 
+    // console.log(a);
+    
+    //9---------------------------------------------------
+
+    //     console.log(foo);
+    // var foo = 1 
+    // console.log(foo)
+    // foo()
+    // function foo(){
+    // console.log('函数')
+    // }
+    // 10---------------------------------------------------
+    // var a, b;
+    // (function () {
+    //     var a
+    //     alert(a);
+    //     alert(b);
+    //     a=3
+    //     b = 3;
+    //     alert(a);
+    //     alert(b);
+    // })();
+    // alert(a);
+    // alert(b);
+    // 11---------------------------------------------------
+    // var val = 12;
+    // function fun1() {
+    //     console.log(val);
+    //     var val = 20;
+    //     console.log(val);
+    // }
+    // fun1();
+</script>

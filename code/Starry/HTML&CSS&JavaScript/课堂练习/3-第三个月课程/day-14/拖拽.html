@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .box{
+      width: 200px;
+      height: 200px;
+      background-color: skyblue;
+      position: relative;
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
+<script>
+  // 点击div中的任意位置，打印出点击的坐标
+  var dv = document.querySelector('.box')
+  
+  // 用鼠标拖动盒子，拖动到哪里盒子就在哪里
+  dv.onmousedown = function(e){
+    // 先拿到当前点击的坐标
+    var x = e.clientX - dv.offsetLeft
+    var y = e.clientY - dv.offsetTop
+    console.log(x)
+    console.log(y)
+    document.onmousemove = function(e){
+      dv.style.left = e.clientX -x + 'px'
+      dv.style.top = e.clientY-y + 'px'
+    }
+  }
+
+  dv.onmouseup = function(){
+    document.onmousemove = null
+  }
+</script>
