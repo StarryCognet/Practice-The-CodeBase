@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Student(name, sex, age, tel) {
+        this.name = name
+        this.sex = sex
+        this.age = age
+        this.tel = tel
+      }
+      Student.prototype = {
+        show: function () {
+          console.log(`学生姓名是${this.name}，性别是${this.sex},年龄是${this.age},手机号${this.tel}`)
+        },
+        getScore: function (score) {
+          if (score < 60) {
+            return `${this.name}同学，成绩为${score}，不及格`
+          } else {
+            return `${this.name}同学，成绩为${score}，及格`
+          }
+        },
+        getSum: function (yuw, shux, yingy) {
+          let num = yuw + shux + yingy
+          if (num < 260) {
+            return `总成绩为${num}不予录取`
+          } else {
+            return `总成绩为${num}录取成功`
+          }
+        },
+        getTel: function () {
+          return `手机号${this.tel}`
+        }
+      }
+      let st = new Student('ddd')
+      console.log(st.getScore('60'))
+      console.log(st.getSum(150, 60, 60))
+    </script>
+  </body>
+</html>
