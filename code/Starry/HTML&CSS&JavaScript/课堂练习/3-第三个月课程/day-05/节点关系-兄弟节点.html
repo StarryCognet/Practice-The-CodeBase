@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>这是一段话</p>
+        <a href="#">超链接</a>
+        <h6>这是一个标题</h6>
+        <span>这是一个span</span>
+    </div>
+</body>
+
+</html>
+<script>
+    var link = document.querySelector('a')
+    // 获取兄弟节点
+    // 获取下一个兄弟节点
+    console.log(link.nextSibling)
+    // 获取下一个兄弟元素节点 常用
+    console.log(link.nextElementSibling)
+
+    // 上一个兄弟节点
+    console.log(link.previousSibling)
+
+    // 上一个兄弟元素节点
+    console.log(link.previousElementSibling)
+</script>

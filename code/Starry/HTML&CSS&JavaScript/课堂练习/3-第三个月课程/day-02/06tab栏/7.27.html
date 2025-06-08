@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+  <!-- <script>
+    // 功能：点击上面的4个span，让对应的li去显示
+  
+    // 获取元素
+    var spans = document.querySelectorAll('span')
+    var list = document.querySelectorAll('li')
+  
+    for (var i = 0; i < spans.length; i++) {
+      //每一个span的点击事件
+      spans[i].onclick = function () {
+        //小方块  span   点击  颜色编程紫色，其他的恢复原来颜色
+        //排他操作
+        for (var j = 0; j < spans.length; j++) {
+          spans[j].className = '' //移除span的current类样式
+          list[j].className = '' //移除li的show 类样式
+          //在每一个span上面设置一个自定义属性，来表明span的顺序
+          spans[j].setAttribute('index', j)
+        }
+        
+        //让被点击的span的背景颜色出现  current
+        this.className = 'current'
+        //获取表明span顺序的index属性值
+        var index = this.getAttribute('index')
+        //让被点击的span所对应的li出现
+        list[index].className = 'show'
+      }
+    }
+  </script> -->
+  <!-- <script>
+    let span = document.querySelectorAll('span')
+    let li = document.querySelectorAll('li')
+    for (let i = 0; i < span.length; i++) {
+      span[i].onclick = function () {
+        for (let j = 0; j < span.length; j++) {
+          span[j].className = ''
+          li[j].className = ''
+        }
+        this.className = 'current'
+        li[i].className = 'show'
+      }
+    }
+  </script> -->
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <title></title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      .box {
+        width: 400px;
+        height: 300px;
+        border: 1px solid #ccc;
+        margin: 100px auto;
+        /*overflow: hidden;*/
+      }
+
+      .hd {
+        height: 45px;
+      }
+
+      .hd span {
+        display: inline-block;
+        width: 90px;
+        background-color: pink;
+        line-height: 45px;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .hd span.current {
+        background-color: purple;
+      }
+
+      .bd li {
+        height: 255px;
+        background-color: purple;
+        display: none;
+        padding: 10px;
+        color: white;
+      }
+
+      .bd li.show {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box" id="box1">
+      <div class="hd">
+        <span class="current">体育</span>
+        <span>娱乐</span>
+        <span>新闻</span>
+        <span>综合</span>
+      </div>
+      <div class="bd">
+        <ul>
+          <li class="show">我是体育模块</li>
+          <li>我是娱乐模块</li>
+          <li>我是新闻模块</li>
+          <li>我是综合模块</li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      let span = document.querySelectorAll('span')
+      let li = document.querySelectorAll('li')
+      for (let i = 0; i < span.length; i++) {
+        span[i].onclick = function () {
+          for (let j = 0; j < span.length; j++) {
+            span[j].className = ''
+            li[j].className = ''
+          }
+          span[i].className = 'current'
+          li[i].className = 'show'
+        }
+      }
+    </script>
+  </body>
+</html>

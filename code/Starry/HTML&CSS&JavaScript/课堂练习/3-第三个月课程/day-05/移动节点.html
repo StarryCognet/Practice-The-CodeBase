@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+
+        .dv {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p>这是一段话</p>
+        <a href="#">超链接</a>
+        <h6>这是一个标题</h6>
+        <span>这是一个span</span>
+    </div>
+
+    <button id="btn">过去</button>
+
+    <div class="dv">
+        <h6>这是一个标题</h6>
+        <span>这是一个span</span>
+        <h4>我是老大</h4>
+    </div>
+</body>
+
+</html>
+<script>
+    var btn = document.querySelector("#btn");
+    var p = document.querySelector(".box p");
+    var dv = document.querySelector(".dv");
+    var h6 = document.querySelector(".dv h6");
+
+    btn.onclick = function () {
+        // 给class为dv的盒子追加子节点
+        // 追加子节点（追加到最后） 父节点.appendChild(要移动的节点)  添加到最后
+        // dv.appendChild(p);
+        // 追加子节点（追加到某一个标签的前面）  父节点.insertBefore(要移动的节点,追加的位置);
+        dv.insertBefore(p,h6);
+    }
+</script>

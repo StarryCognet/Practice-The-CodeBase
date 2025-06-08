@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .box {
+        width: 600px;
+        height: 600px;
+        border: 5px solid #00d9ff;
+        margin: 0 auto;
+      }
+      table {
+        width: 100%;
+        text-align: center;
+      }
+      .rens {
+        width: 30px;
+        text-align: center;
+      }
+      .jia,
+      .jian {
+        width: 19px;
+      }
+      td {
+        width: 100px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h2 style="text-align: center">购物车</h2>
+      <table border="1" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><input type="checkbox" id="quanx" />全选</td>
+          <td>编号</td>
+          <td>主题</td>
+          <td>单价</td>
+          <td>人数</td>
+          <td>总价</td>
+          <td>操作</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="fuxk" checked /></td>
+          <td>1</td>
+          <td>青山医院</td>
+          <td>198</td>
+          <td>
+            <input type="button" value="-" class="jian" />
+            <input type="text" value="1" class="rens" />
+            <input type="button" value="+" class="jia" />
+          </td>
+          <td>198</td>
+          <td><input type="button" value="删除" class="delet" /></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="fuxk" checked /></td>
+          <td>2</td>
+          <td>殡仪馆</td>
+          <td>199</td>
+          <td>
+            <input type="button" value="-" class="jian" />
+            <input type="text" value="1" class="rens" />
+            <input type="button" value="+" class="jia" />
+          </td>
+          <td>199</td>
+          <td><input type="button" value="删除" class="delet" /></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="fuxk" checked /></td>
+          <td>3</td>
+          <td>人魅</td>
+          <td>197</td>
+          <td>
+            <input type="button" value="-" class="jian" />
+            <input type="text" value="1" class="rens" />
+            <input type="button" value="+" class="jia" />
+          </td>
+          <td>197</td>
+          <td><input type="button" value="删除" class="delet" /></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="fuxk" checked /></td>
+          <td>4</td>
+          <td>追凶</td>
+          <td>188</td>
+          <td>
+            <input type="button" value="-" class="jian" />
+            <input type="text" value="1" class="rens" />
+            <input type="button" value="+" class="jia" />
+          </td>
+          <td>188</td>
+          <td><input type="button" value="删除" class="delet" /></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="fuxk" /></td>
+          <td>5</td>
+          <td>大婚将至</td>
+          <td>168</td>
+          <td>
+            <input type="button" value="-" class="jian" />
+            <input type="text" value="1" class="rens" />
+            <input type="button" value="+" class="jia" />
+          </td>
+          <td>168</td>
+          <td><input type="button" value="删除" class="delet" /></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="fuxk" /></td>
+          <td>6</td>
+          <td>寂静岭</td>
+          <td>158</td>
+          <td>
+            <input type="button" value="-" class="jian" />
+            <input type="text" value="1" class="rens" />
+            <input type="button" value="+" class="jia" />
+          </td>
+          <td>158</td>
+          <td><input type="button" value="删除" class="delet" /></td>
+        </tr>
+      </table>
+      <input type="button" value="删除勾选" class="scgx" style="margin: 10px" />
+      <input type="reset" name="" id="" />
+      <p style="float: right; margin: 10px">总计：<span class="zongj">0</span>元</p>
+    </div>
+    <script>
+      let zongj = document.querySelector('.zongj')
+      let fuxk = document.querySelectorAll('.fuxk')
+      let quanx = document.querySelector('#quanx')
+      let rens = document.querySelectorAll('.rens')
+      let jia = document.querySelectorAll('.jia')
+      let jian = document.querySelectorAll('.jian')
+      let delet = document.querySelectorAll('.delet')
+      let scgx = document.querySelector('.scgx')
+
+      function zongJia() {
+        let total = 0
+        for (let i = 0; i < fuxk.length; i++) {
+          if (fuxk[i].checked) {
+            let price = Number(rens[i].parentNode.previousElementSibling.innerHTML)
+            let count = Number(rens[i].value)
+            total += price * count
+          }
+        }
+        zongj.innerHTML = total
+      }
+      zongJia()
+      for (let i = 0; i < rens.length; i++) {
+        jia[i].addEventListener('click', function () {
+          rens[i].value++
+          this.parentNode.nextElementSibling.innerHTML = Number(rens[i].value) * Number(this.parentNode.previousElementSibling.innerHTML)
+          zongJia()
+        })
+        jian[i].addEventListener('click', function () {
+          if (rens[i].value > 0) {
+            rens[i].value--
+            this.parentNode.nextElementSibling.innerHTML = Number(rens[i].value) * Number(this.parentNode.previousElementSibling.innerHTML)
+            zongJia()
+          }
+        })
+        fuxk[i].addEventListener('click', function () {
+          quanx.checked = document.querySelectorAll('.fuxk:checked').length === fuxk.length
+          zongJia()
+        })
+        delet[i].addEventListener('click', function () {
+          this.parentNode.parentNode.remove()
+          // 重新获取元素集合
+          fuxk = document.querySelectorAll('.fuxk')
+          rens = document.querySelectorAll('.rens')
+          zongJia()
+        })
+      }
+
+      quanx.addEventListener('click', function () {
+        for (let i = 0; i < rens.length; i++) {
+          fuxk[i].checked = quanx.checked
+          zongJia()
+        }
+      })
+      scgx.addEventListener('click', function () {
+        for (let i = 0; i < rens.length; i++) {
+          if (fuxk[i].checked) {
+            fuxk[i].checked = false
+            quanx.checked = false
+            zongJia()
+          }
+        }
+      })
+    </script>
+  </body>
+</html>

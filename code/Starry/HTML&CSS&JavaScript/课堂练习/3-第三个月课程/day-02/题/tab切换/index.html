@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <!-- <script>
+    let li = document.querySelectorAll('li')
+    let img = document.querySelector('img')
+    for(let i = 0; i < li.length; i++){
+      li[i].onclick = function(){
+        for(let j = 0; j < li.length; j++){
+          li[j].style.backgroundColor = ''
+          li[j].style.fontWeight = ''
+        }
+        li[i].style.backgroundColor = '#ffd900'
+        li[i].style.fontWeight = '600'
+        console.log(i);
+        img.src = `${i + 1}.png`
+      }
+    }
+  </script> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .big {
+        width: 600px;
+        margin: 0 auto;
+        border: 1px solid #e7e7e7;
+      }
+      li {
+        list-style: none;
+        float: left;
+        width: 136px;
+        height: 30px;
+        border-radius: 5px;
+        text-align: center;
+        padding-top: 4px;
+      }
+      img {
+        width: 545px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="big">
+      <ul>
+        <li style="background-color: #ffd900">首页</li>
+        <li>点击看看</li>
+        <li>会自动的</li>
+        <li>我的网站</li>
+      </ul>
+      <img src="1.png" alt="" />
+    </div>
+    <script>
+      let div = document.querySelector('.big')
+      let li = document.querySelectorAll('li')
+      let img = document.querySelector('img')
+      for (let i = 0; i < li.length; i++) {
+        li[i].onclick = function () {
+          for (let j = 0; j < li.length; j++) {
+            li[j].style.backgroundColor = ''
+          }
+          li[i].style.backgroundColor = '#ffd900'
+          img.src = `${i+1}.png`
+        }
+      }
+    </script>
+  </body>
+</html>

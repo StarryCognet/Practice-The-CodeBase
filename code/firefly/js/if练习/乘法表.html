@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    span{
+        display: inline-block;
+        border: 1px solid #000;
+        margin: 5px;
+        border-radius: 5px;
+        padding: 15px;
+        width: 70px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <script>
+        for(let i = 1; i <= 9; i++){
+            for(let j = 1; j <=i; j++){
+                document.write(`<span>${j} x ${i} = ${i * j}</span>`)
+            }
+            document.write(`<br>`)
+        }
+    </script>
+</body>
+</html>

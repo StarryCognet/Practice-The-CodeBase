@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //字面量方式
+    // var obj = {
+    //     name: "张三",
+    //     age: 20,
+    //     show: function () {
+    //         console.log("姓名:" + this.name + ",年龄:" + this.age);
+    //     }
+    // };
+
+    // console.log(obj.name);
+    // console.log(obj.age);
+    // obj.show();
+
+
+    // //new
+    // var obj2 = new Object();
+
+    // obj2.name = "李四";
+    // obj2.age = 20;
+    // obj2.show = function () {
+    //     console.log("姓名:" + this.name + ",年龄:" + this.age);
+    // };
+
+    // console.log(obj2.name);
+    // console.log(obj2.age);
+    // obj2.show();
+
+
+    //构造方法方式  构造方法的作用是用来创建对象的
+    function Student(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    Student.sex = "女";     ////静态成员只能通过构造函数来访问
+
+    Student.prototype.show = function () {
+        console.log("姓名:" + this.name + ",年龄:" + this.age);
+    }
+
+    var stu1 = new Student("张三", 20);     //创建对象   实例化对象    实例化    对象的中普通属性和方法都称之为 实例成员，即必须通过创建对象才能访问的属性和方法
+    console.log(stu1.name);
+    console.log(stu1.age);
+    console.log(stu1.sex);
+    console.log(Student.sex);
+
+    stu1.show();
+
+
+
+    var stu2 = new Student("李四", 22);
+    console.log(stu2.name);
+    console.log(stu2.age);      //实例成员只能通过实例化的对象来访问
+    stu2.show();
+
+    var stu3 = new Student("王五", 23);
+    console.log(stu3.name);
+    console.log(stu3.age);
+    stu3.show();
+
+
+
+    function Star(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Star.prototype = {
+    //     // 如果我们修改了原来的原型对象,给原型对象赋值的是一个对象,则必须手动的利用constructor指回原来的构造函数
+    //     constructor: Star,   // 手动设置指回原来的构造函数
+    //     sing: function () {
+    //         console.log('我会唱歌');
+    //     },
+    //     movie: function () {
+    //         console.log('我会演电影');
+    //     }
+    // }
+
+    Star.prototype.sing = function(){}
+    Star.prototype.movie = function(){}
+
+
+    var zxy = new Star('张学友', 19);
+    console.log(zxy)
+
+</script>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0
+    }
+
+    ul {
+      list-style: none
+    }
+
+    .box {
+      width: 600px;
+      margin: 100px auto;
+      border: 1px solid #000;
+      padding: 20px;
+    }
+
+    textarea {
+      width: 450px;
+      height: 160px;
+      outline: none;
+      resize: none;
+    }
+
+    ul {
+      width: 450px;
+      padding-left: 80px;
+    }
+
+    ul li {
+      /*line-height: 25px;*/
+      border-bottom: 1px dashed #cccccc;
+      word-break: break-all;
+    }
+
+    input {
+      float: right;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="box" id="weibo">
+    <span>微博发布</span>
+    <textarea name="" id="txt" cols="20" rows="10"></textarea>
+    <button id="btn">发布</button>
+    <ul id="ul">
+      <!-- 用于放置新发布的内容 -->
+    </ul>
+  </div>
+  <script>
+    window.onload = function () {
+      var btn = document.querySelector('#btn')
+      var txt = document.querySelector('#txt')
+      var ul = document.querySelector('#ul')
+
+      btn.onclick = function () {
+        //判断文本域非空
+        if (txt.value == "") {
+          alert('发布信息不能为空!');
+          return false;
+        }
+
+        //创建li节点
+        var liDom = document.createElement("li");
+        liDom.innerHTML = txt.value;
+        //创建button节点
+        var buttonDom = document.createElement("button");
+        buttonDom.innerHTML = "删除";
+        buttonDom.className = "del";
+        //将button追加到li内部末尾
+        liDom.appendChild(buttonDom);
+        //给ul追加子节点
+        ul.appendChild(liDom);
+        //清空文本域
+        txt.value = "";
+
+
+        // var delList = document.querySelectorAll(".del");
+        // for (var i = 0; i < delList.length; i++) {
+        //   delList[i].onclick = function () {
+        //     this.parentNode.remove();
+        //   }
+        // }
+      }
+
+
+      //使用事件委派解决删除问题
+      ul.onclick = function (e) {
+        //e.target表示事件触发对象，即删除按钮
+        e.target.parentNode.remove();
+      }
+    }
+  </script>
+
+</body>
+
+</html>

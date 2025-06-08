@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>循环作业5</title>
+</head>
+
+<body>
+  <script>
+    // 分别在页面打印和在控制台打印
+    // 1.打印5行5列的⭐
+    // for (let i = 1; i <= 5; i++) {
+    //   for (let j = 1; j <= 5; j++) {
+    //     document.write('⭐')
+    //   }
+    //   document.writeln('<br>')
+    // }
+
+    // 2.打印直角三角形
+    // for (let i = 1; i <= 5; i++) {
+    //   for (let j = 1; j <= i; j++) {
+    //     document.write('⭐')
+    //   }
+    //   document.writeln('<br>')
+    // }
+
+
+    // 3.打印倒直角三角形
+    // for (let i = 5; i >= 1; i--) {
+    //   for (let j = i; j >= 1; j--) {
+    //     document.write('⭐')
+    //   }
+    //   document.writeln('<br>')
+    // }
+
+    // 4.打印99乘法表
+    // for (let i = 1; i <= 9; i++) {
+    //   for (let j = 1; j <= i; j++) {
+    //     document.write(j + 'X' + i + '=' + j * i + '&nbsp;&nbsp;&nbsp;&nbsp;')
+    //   }
+    //   document.writeln('<br>')
+    // }
+
+    // 5.打印用户输入的行和列的⭐（用户输入5，那么就打印5行5列，输入6，就打印6行6列）
+    // let num = +prompt()
+    // for(let i = 1; i <= num; i++){
+    //   for(let j = 1; j <= num; j++){
+    //     document.write('⭐')
+    //   }
+    //   document.writeln('<br>')
+    // }
+
+    // 6.打印1-用户输入的乘法表（用户输入5，那么就打印55乘法表，输入6，就打印66乘法表）
+    // let num = +prompt()
+    // for(let i = 1; i <= num; i++){
+    //   for(let j = 1; j <= i; j++){
+    //     document.write(j + 'X' + i + '=' + j * i + '&nbsp;&nbsp;&nbsp;&nbsp;')
+    //   }
+    //   document.writeln('<br>')
+    // }
+
+    // 单层循环
+    // 5.打印1-100的数字
+    // for(let i = 1; i <= 100; i++){
+    //   console.log(i);
+    // }
+
+    // 6.计算1-100的和
+    // let num = 0
+    // for (let i = 1; i <= 100; i++) {
+    //   num += i
+    // }
+    // console.log(num);
+    
+
+    // 7.计算1-100的奇数和偶数的和
+    // 8.计算1-100的即能被3整除又能被7整除的数的和
+    // 9.计算1-用户输入之间的即能被3整除又能被7整除的数的和
+
+    // 扩展：
+    // 打印100-999水仙花数 （一个数字的各位十位百位相乘等于数字本身）
+    // for(let i = 100; i <= 999; i++){
+    //   let ge = i % 10
+    //   let shi = Math.floor(i / 10) % 10
+    //   let bai = Math.floor(i / 100)
+    //   if(ge * ge * ge + shi * shi * shi + bai * bai * bai === i){
+    //     console.log(i);
+    //   }
+    // }
+
+  </script>
+</body>
+
+</html>

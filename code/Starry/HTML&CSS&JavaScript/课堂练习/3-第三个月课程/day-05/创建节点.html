@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <!-- <script>
+        // 创建节点的三种方式
+        // 1.document.write()  基本不用
+        // document.write('<a href="#">你好</a>')
+    
+        // 2.innerHTML
+        // var dv = document.querySelector('div')
+        // dv.innerHTML = '<p>这是一个p标签</p>'
+    
+        // 3.document.createElement('要创建的标签名');
+    
+        document.querySelector("button").onclick = function () {
+            //创建p标签节点
+            var p = document.createElement("p");
+            //给p标签节点设置文本信息
+            p.innerHTML = "这是一个p标签节点";
+            //添加类样式
+            p.className = "p1";
+    
+            //appendChild();            在父元素的内部的末尾追加子节点
+            document.querySelector("div").appendChild(p);
+        }
+    
+        // 对比：最经常用哪种创建标签方式  
+        // 当创建多个元素时，比较复杂的页面结构，用innerHTML,如果页面比较简单，可以使用createElement
+    
+        // 举例：在页面中创建ul和6个li，6个li中的文字内容为第一个，第二个第三个第四个等
+    
+        //第二种方式
+        document.querySelector("div").innerHTML += `   <ul>
+            <li>第一个</li>
+            <li>第二个</li>
+            <li>第三个</li>
+            <li>第四个</li>
+            <li>第五个</li>
+            <li>第六个</li>
+        </ul>`;
+    
+        //第三种方式
+        var ul = document.createElement('ul')
+        var li1 = document.createElement('li')
+        li1.innerText = '第一个'
+        var li2 = document.createElement('li')
+        li2.innerText = '第2个'
+        var li3 = document.createElement('li')
+        li3.innerText = '第3个'
+        var li4 = document.createElement('li')
+        li4.innerText = '第4个'
+        var li5 = document.createElement('li')
+        li5.innerText = '第5个'
+        var li6 = document.createElement('li')
+        li6.innerText = '第6个'
+        ul.appendChild(li1)
+        ul.appendChild(li2)
+        ul.appendChild(li3)
+        ul.appendChild(li4)
+        ul.appendChild(li5)
+        ul.appendChild(li6)
+    
+        
+        dv.appendChild(ul)
+    
+    
+    </script> -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 400px;
+        height: 200px;
+        border: 1px solid red;
+      }
+
+      .p1 {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="dev">
+      <span>我div的span1</span>
+      <span>我div的span2</span>
+    </div>
+    <button>创建一个p标签</button>
+    <script>
+        let but = document.querySelector('button')
+        let dev = document.querySelector('.dev')
+        but.onclick = function(){
+            let newjd = document.createElement('p')
+            newjd.innerHTML = '1231232'
+            dev.appendChild(newjd)
+        }
+    </script>
+  </body>
+</html>

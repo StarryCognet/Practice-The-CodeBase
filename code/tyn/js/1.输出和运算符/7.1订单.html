@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+h1{
+  text-align: center;
+}
+
+table th,td{
+  border: 1px solid #060606;
+  padding: 20px;
+ 
+}
+
+table{
+  margin: 0 auto;
+  border-collapse:collapse;
+  text-align: center;
+}
+
+  </style>
+
+</head>
+<body>
+
+</body>
+</html>
+
+
+<script>
+
+let q1 = +prompt("请输入商品价格")
+let q2 = +prompt("请输入商品数量")
+let q3 = prompt("请输入收货地址")
+let q = q1 * q2
+
+document.write(`
+  <table>
+<h1>订单确认</h1>
+<tr>
+  <th>商品名字</th>
+  <th>商品价格</th>
+  <th>商品数量</th>
+  <th>总价</th>
+  <th>收货地址</th>
+</tr>
+<tr>
+  <td>平板</td>
+  <td>${q1}</td>
+  <td>${q2}</td>
+  <td>${q}</td>
+  <td>${q3}</td>
+</tr>
+  </table>
+`)
+
+</script>

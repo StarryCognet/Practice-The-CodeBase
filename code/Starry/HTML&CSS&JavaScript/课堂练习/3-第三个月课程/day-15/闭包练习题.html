@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body></body>
+</html>
+<script>
+  // 1.以下代码输出的结果是？
+  // function Foo(){
+  //    var i=0;
+  //    return function(){
+  //        document.write(i++);
+  //    }
+  // }
+  // // console.log(Foo()())
+  // var f1 = Foo(),
+  // f2=Foo();
+  // f1();
+  // f1();
+  // f2();
+
+  // 2.以下代码输出的结果是？
+  function test() {
+    var n = 4399
+    function add() {
+      n++
+      console.log(n)
+    }
+    return { n: n, add: add }
+  }
+
+  var result1 = test()
+  var result2 = test()
+
+  result1.add()
+  result1.add()
+  result2.add()
+</script>

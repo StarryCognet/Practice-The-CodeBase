@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .box{
+      width: 200px;
+      height: 200px;
+      background-color: skyblue;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
+<script>
+  // 点击div中的任意位置，打印出点击的坐标
+  var dv = document.querySelector('.box')
+  // dv.onclick = function(e){
+  //   // 通过事件对象获取坐标
+  //   // clientX
+  //   // clientY
+  //   console.log(e.clientX)
+  //   console.log(e.clientY)
+  // }
+  // 点击页面中的任意位置，让蓝色的盒子移动到此处
+  document.onclick = function(e){
+    // console.log(e.clientX)
+    // console.log(e.clientY)
+    dv.style.left = e.clientX - dv.offsetWidth/2 +'px'
+    dv.style.top = e.clientY - dv.offsetHeight/2 +'px'
+  }
+</script>

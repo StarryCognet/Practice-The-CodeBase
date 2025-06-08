@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="win">打开窗口</button>
+    <button id="close">关闭窗口</button>
+    <button id="local">跳转到百度</button>
+    <button id="reload">刷新页面</button>
+    <button id="forward">前进</button>
+    <button id="backword">后退</button>
+</body>
+
+</html>
+<script>
+    // js三大部分：
+    // bom: 操作浏览器
+    // dom: document  操作文档的
+    // ECMAScript: 规定了js的基本语法 比如 变量 for if swith case
+
+    // window对象
+    //页面文档加载事件： 页面中的标签和内容加载完毕之后，执行该事件
+    // window.onload = function(){}
+    // window.open和window.close
+    var mywindow;
+    document.querySelector("#win").onclick = function () {
+        //window.open('参数1：打开新窗口的地址','打开方式','窗口样式')
+        //_blank:新窗口打开
+        //_self:当前窗口打开
+        mywindow = window.open('定时器.html', '_self', 'width=500px,height=500px');
+    }
+
+    document.querySelector("#close").onclick = function () {
+        mywindow.close();
+    }
+
+    //location对象
+    //location.href 跳转页面
+    document.querySelector("#local").onclick = function () {
+        //window.open("https://www.baidu.com");
+        location.href = 'https://www.baidu.com';
+        //location.href='定时器.html';
+    }
+
+    //location.reload();        //刷新页面
+    document.querySelector("#reload").onclick = function () {
+        //location.reload();
+        history.go(0);
+    }
+
+    // navigator对象
+    console.log(navigator.userAgent )
+
+    //history对象   
+    //前进
+    document.querySelector("#forward").onclick = function () {
+        //history.forward();
+        history.go(1);
+    }
+
+    //后退
+    document.querySelector("#backword").onclick = function () {
+        //history.back();
+        history.go(-1);
+    }
+</script>

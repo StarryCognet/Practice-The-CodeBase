@@ -1,0 +1,61 @@
+<script>
+    // let num = 10
+    // let num1 = '10'
+
+    // console.log(typeof num + 11)
+    // console.log(typeof num1)
+
+    // let age = prompt('请输入年龄')
+    // console.log(typeof age)
+
+    // 为什么要进行类型转换：把已汇总昂数据类型转换成我们需要的数据类型
+   /* 1.隐式转换
+        某些运算符被执行时，系统内部自动将数据类型进行转换，这种称为隐式转换
+        规则：
+        +号两边只要有一个是字符串，都会把另外一个转换成字符串   除了+号以外， - * / 都会把数据类型转成数字型
+
+        console.log('10' + 10)
+        console.log('15' - 5)
+
+        +可以作为正号 解析转换成数字型
+        let num = +'10'
+
+        console.log(+num + 10)
+
+        console.log(11 + 11)
+        console.log('11' + 11)
+        console.log(+'11' + 1)
+        console.log('11' * 10)
+        console.log(typeof +num)
+    */
+
+        // 2.显示转换
+        /* 转成数字型    语法:转成数字型：Number(数据)      只保留整数：parseInt(数据)     可以保留小数：parseFloat(数据)
+        let num = '10.11'
+        console.log(Number(num))
+
+        // 转换成数字型  只保留整数
+        console.log(parseInt(num))
+
+        // 转换成数字型，会保留小数
+        console.log(parseFloat(num))
+
+        console.log(Number('10a'))
+        console.log(parseInt('10.1a'))
+        console.log(parseFloat('10.11a'))
+        */
+
+
+    /*   转换为字符串     语法： String(数据)        数据.toString()
+        let num = 10
+        console.log(String(num))   强制转换
+        console.log(num.toString())  
+    */ 
+
+//    转换成布尔值  有5个值代表false 空   假    ' ', 0 , NaN, null, undefined
+       let num = 10
+       console.log(Boolean(num))
+
+
+       console.log(Boolean(''))
+</script>

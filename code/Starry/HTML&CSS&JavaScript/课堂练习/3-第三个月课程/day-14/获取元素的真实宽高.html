@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .box{
+      width: 200px;
+      height: 200px;
+      background-color: skyblue;
+      border: 10px solid red;
+      padding: 20px;
+      margin: 100px 100px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
+<script>
+  // 盒模型：内容+padding+border+margin
+  window.onload=function(){
+    var dv = document.querySelector('.box')
+    // offsetWidth:获取元素的真实宽度
+    // offsetHeight:获取元素的真实高度
+    console.log(dv.offsetWidth)
+    console.log(dv.offsetHeight)
+
+    // offsetLeft:获取元素距离浏览器左侧的真实距离
+    // offsetTop:获取元素距离浏览器上面的真实距离
+    // console.log(dv.offsetLeft)
+    // console.log(dv.offsetTop)
+  }
+</script>

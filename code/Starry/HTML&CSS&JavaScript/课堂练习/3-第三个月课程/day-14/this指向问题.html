@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+
+  // 1.在全局下，this指向window
+  //console.log(this);
+
+  // 2.在事件里this指向当前事件源
+
+  // 3.在函数里,this指向window
+  function fn() {
+    console.log(this)
+  }
+  fn()
+
+  // 4.在对象里的this，指向了当前对象
+  var obj = {
+    name: '秦怀伟',
+    run: function () {
+      console.log(this.name + '会跑')
+      console.log(this)
+    }
+  }
+  obj.run()
+
+  // ⭐：this指向哪里，要看谁在调用它
+
+
+  // 改变this指向
+  var obj = {
+    name: '小张',
+    sex: "男",
+    show: function (from, hobby) {
+      console.log(this.name + "性别：" + this.sex + '来自：' + from + '爱好：' + hobby);
+    }
+  }
+
+  var db = {
+    name: '小王',
+    sex: "女"
+  }
+
+
+  obj.show('乌干达', '捉鱼')
+
+  // 三种方式改变this指向，并且传值 
+  // call('要改变的对象','传值','传值')  
+  obj.show.call(db, '美国', '打网球');
+  // apply('要改变的对象',['传值','传值'])  
+  obj.show.apply(db, ["美国", "打网球"])
+  // bind('要改变的对象','传值','传值')方法的返回值是一个函数
+  obj.show.bind(db, '印度', '巨蜥')();
+
+
+</script>

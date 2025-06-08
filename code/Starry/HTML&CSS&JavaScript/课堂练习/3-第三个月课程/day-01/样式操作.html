@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #hh {
+            color: blue;
+        }
+
+        .box {
+            color: red;
+        }
+
+        .coo {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            border: 10px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="hh">今天天气转晴了，又热了</h1>
+    <div class="box">这是div</div>
+</body>
+
+</html>
+<script>
+    //获取h1标签的dom元素
+    var h1 = document.querySelector("#hh");
+    //操作元素样式
+    h1.style.color = "purple";
+    h1.style.backgroundColor = "grey";
+
+    //将div用js设置宽高都为200px，且背景颜色为黄色
+    var div = document.querySelector(".box");
+    // div.style.width = "200px";
+    // div.style.height = "200px";
+    // div.style.backgroundColor = "yellow";
+    // div.style.border = "10px solid green";
+
+    //使用类样式
+    //通过类名修改
+    div.className = "box coo";
+</script>

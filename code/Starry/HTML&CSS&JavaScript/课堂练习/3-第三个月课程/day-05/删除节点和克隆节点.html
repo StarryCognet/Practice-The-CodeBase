@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <p>这是一个p标签</p>
+        <span>这是一个span</span>
+        <h1 class="hh" id="heihie">这是h1</h1>
+    </div>
+</body>
+
+</html>
+<script>
+    // 1.父元素.removeChild('要删除的子元素')       他杀
+    // var box = document.querySelector(".box");
+    // var span = document.querySelector("span");
+
+    // box.removeChild(span);
+
+    // 2. 要删除的元素.remove()   自杀
+    //document.querySelector("h1").remove();
+
+    // 克隆节点
+    // 要克隆元素.cloneNode(false)
+    // true:代表深拷贝，不仅克隆标签，还克隆内容
+    // false:代表浅拷贝，只克隆标签，不克隆内容
+    var h1 = document.querySelector("h1");
+    console.log(h1.cloneNode(false));
+    console.log(h1.cloneNode(true));
+
+    var h1copy = h1.cloneNode(true);
+    document.querySelector(".box").appendChild(h1copy);
+</script>

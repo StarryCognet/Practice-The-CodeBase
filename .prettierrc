@@ -1,0 +1,25 @@
+{
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "useTabs": false,
+  "trailingComma": "es5",
+  "printWidth": 150,
+  "arrowParens": "always",
+  "endOfLine": "auto",
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "htmlWhitespaceSensitivity": "css",
+  "vueIndentScriptAndStyle": false,
+  "quoteProps": "as-needed",
+  "proseWrap": "preserve",
+  "overrides": [
+  {
+    "files": "*.ts",
+    "options": {
+      "parser": "typescript",
+      "trailingComma": "all"
+    }
+  }
+]
+}

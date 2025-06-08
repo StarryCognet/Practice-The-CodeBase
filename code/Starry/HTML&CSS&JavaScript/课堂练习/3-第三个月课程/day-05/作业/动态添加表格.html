@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        border: 1px solid black;
+        width: 600px;
+        margin: 0 auto;
+      }
+      td {
+        border: 1px solid black;
+      }
+      .tb2 {
+        margin-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="tb1">
+      <tr>
+        <td colspan="2" style="text-align: center">用户注册信息</td>
+      </tr>
+      <tr>
+        <td>用户名：</td>
+        <td><input type="text" id="username" /></td>
+      </tr>
+      <tr>
+        <td>密 码：</td>
+        <td><input type="password" id="pass" /></td>
+      </tr>
+      <tr>
+        <td>籍贯：</td>
+        <td>
+          <select name="" id="provice">
+            <option value="">请选择</option>
+            <option value="河北">河北</option>
+            <option value="山东">山东</option>
+            <option value="陕西">陕西</option>
+            <option value="北京">北京</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>兴趣</td>
+        <td>
+          <input type="checkbox" value="篮球" />篮球 <input type="checkbox" value="足球" />足球 <input type="checkbox" value="书法" />书法
+          <input type="checkbox" value="音乐" />音乐
+          <br />
+          <input type="checkbox" value="绘画" />绘画 <input type="checkbox" value="散打" />散打 <input type="checkbox" value="瑜伽" />瑜伽
+          <input type="checkbox" value="其他" />其他
+        </td>
+      </tr>
+      <tr>
+        <td>政治面貌：</td>
+        <td>
+          <input type="radio" name="people" value="团员" />团员 <input type="radio" name="people" value="党员" />党员
+          <input type="radio" name="people" value="群众" />群众
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center">
+          <button id="btn">提交</button>
+          <button>重置</button>
+        </td>
+      </tr>
+    </table>
+
+    <table class="tb2">
+      <thead>
+        <tr>
+          <th>选中</th>
+          <th>用户名</th>
+          <th>密 码</th>
+          <th>籍贯</th>
+          <th>兴趣</th>
+          <th>政治面貌</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+
+      <tbody id="tb">
+        <tr>
+          <td><input type="checkbox" id="allCheck" />全选</td>
+          <td colspan="6" style="text-align: center">
+            <button id="delChecked">选中删除</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <script>
+      let username = document.querySelector('#username')
+      let pass = document.querySelector('#pass')
+      let provice = document.querySelector('#provice')
+      let checkboxs = document.querySelectorAll('input[type="checkbox"]')
+      let radios = document.querySelectorAll('input[type="radio"]')
+      let btn = document.querySelector('#btn')
+      let tb2 = document.querySelector('.tb2')
+      let allCheck = document.querySelector('#allCheck')
+      let delChecked = document.querySelector('#delChecked')
+
+      btn.onclick = function () {
+        let checkbox = ''
+        for (let i = 0; i < checkboxs.length; i++) {
+          if (checkboxs[i].checked) {
+            checkbox += checkboxs[i].value + '  '
+          }
+        }
+        let radio = ''
+        for (let i = 0; i < radios.length; i++) {
+          if (radios[i].checked) {
+            radio = radios[i].value
+          }
+        }
+
+        let newtb = document.createElement('tr')
+        newtb.innerHTML += `
+        <td><input type="checkbox" class="allChecks" /></td>
+        <td>${username.value}</td>
+        <td>${pass.value}</td>
+        <td>${provice.value}</td>
+        <td>${checkbox}</td>
+        <td>${radio}</td>
+        <td>操作</td>
+        `
+        tb2.appendChild(newtb)
+
+        
+        delChecked.onclick = function () {
+            let trs = document.querySelectorAll('.allChecks')
+            for (let i = 0; i < trs.length; i++) {
+                console.log(trs[i].parentNode.parentNode)
+                if (trs[i].checked) {
+                    trs[i].parentNode.parentNode.remove()
+                }
+            }
+        }
+        return false
+      }
+      allCheck.onclick = function () {
+        let trs = document.querySelectorAll('.allChecks')
+        for (let i = 0; i < trs.length; i++) {
+          trs[i].checked = allCheck.checked
+        }
+      }
+    </script>
+  </body>
+</html>

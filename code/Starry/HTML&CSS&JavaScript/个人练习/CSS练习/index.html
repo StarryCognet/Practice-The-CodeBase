@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+            font-size: 19px;
+        }
+        li{
+            line-height: 35px;
+        }
+        span{
+            display: inline-block;
+            width: 20px;
+        }
+        li:nth-of-type(1) span{
+            color: #ff0000;
+        }
+        li:nth-of-type(2) span{
+            color: #ff8800;
+        }
+        li:nth-of-type(3) span{
+            color: #ffd900;
+        }
+        li:nth-of-type(n + 4) span{
+            color: #acacac;
+        }
+
+        .re{
+            display: inline-block;
+            color: #ffffff;
+            font-size: 25px;
+            background-color: #ffbb00;
+            border-radius: 10px;
+            padding: 0 5px;
+            transform: scale(0.7);
+        }
+        .xin{
+            display: inline-block;
+            color: #ffffff;
+            font-size: 25px;
+            background-color: #ff0000;
+            border-radius: 10px;
+            padding: 0 5px;
+            transform: scale(0.7);
+        }
+    </style>
+</head>
+<body>
+    <h4>百度热搜</h4>
+    <ul>
+        <li><span>1</span>广东新增11例本土确诊病例&nbsp;&nbsp;<div class="re">热</div></li>
+        <li><span>2</span>三孩生育政策来了!</li>
+        <li><span>3</span>佛山部分区域今起全员居家隔离</li>
+        <li><span>4</span>三孩生育政策或将改变传统户型</li>
+        <li><span>5</span>玄彬孙艺珍明年将结婚&nbsp;&nbsp;<div class="xin">新</div></li>
+        <li><span>6</span>新未保法今日正式施行</li>
+        <li><span>7</span>卫健委就实施三孩政策答记者问</li>
+        <li><span>8</span>五粮液旗下公司销售员酒后身亡</li>
+        <li><span>9</span>成年人的快乐六一</li>
+        <li><span>10</span>全球最累城市前十名亚洲占六个</li>
+    </ul>
+</body>
+</html>

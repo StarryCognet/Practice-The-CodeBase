@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <!-- <script>
+    window.onload = function () {
+      //获取小二维码
+      //鼠标移入
+      document.querySelector(".nodeSmall").onmouseover = function(){
+        //让大二维码出现
+        document.querySelector("#er").className = "show erweima";
+      }
+  
+      //鼠标移出
+      document.querySelector(".nodeSmall").onmouseout = function(){
+        //让大二维码出现
+        document.querySelector("#er").className = "hide erweima";
+      }
+    }
+  </script> -->
+
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <title></title>
+    <style>
+      .nodeSmall {
+        width: 50px;
+        height: 50px;
+        background: url(images/bgs.png) no-repeat -159px -51px;
+        position: fixed;
+        right: 10px;
+        top: 40%;
+      }
+
+      .erweima {
+        position: absolute;
+        top: 0;
+        left: -150px;
+      }
+
+      .nodeSmall a {
+        display: block;
+        width: 50px;
+        height: 50px;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      .show {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--父盒子-->
+    <div class="nodeSmall" id="node_small">
+      <a href="#"></a>
+      <!--二维码的盒子-->
+      <div class="hide erweima" id="er">
+        <img src="images/456.png" alt="" />
+      </div>
+    </div>
+    <script>
+      let bo = document.querySelector('a')
+      let div = document.querySelector('#er')
+      bo.onmousemove = function () {
+        div.className = 'show erweima'
+      }
+      bo.onmouseout = function () {
+        div.className = 'hide erweima'
+      }
+    </script>
+  </body>
+</html>

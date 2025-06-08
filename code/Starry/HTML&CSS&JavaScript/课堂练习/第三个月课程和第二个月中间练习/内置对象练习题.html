@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <a href="">
+  <script>
+    // 1.将下面数组arr的首尾两个元素互换
+    // var arr = ["鹿晗", "王俊凯", "蔡徐坤", "彭于晏", "周杰伦", "刘德华", "赵本山"];
+    // let arr = ["鹿晗", "王俊凯", "蔡徐坤", "彭于晏", "周杰伦", "刘德华", "赵本山"];
+    // let temp = arr[0];
+    // arr[0] = arr[arr.length - 1];
+    // arr[arr.length - 1] = temp;
+    // console.log(arr);
+
+    
+  
+    // 2.求数组[2,6,1,77,52,25,7]中的最大值
+    // let arr = [2,6,1,77,52,25,7]
+    // let max = 0
+    // for(let i in arr){
+    //   if(arr[i] > max){
+    //     max = arr[i]
+    //   }
+    // }
+    // console.log(max);
+    
+  
+    // 3.将数组 ['red','green','blue','pink']转换为字符串，并且用 | 分割
+    // let arr = ['red','green','blue','pink']
+    // let str = ''
+    // for(let i in arr){
+    //   if(i == arr.length - 1){
+    //     str += arr[i]
+    //   }else{
+    //     str += arr[i] + ' | '
+    //   }
+    // }
+    // console.log(str);
+    
+  
+    // 4、数组筛选：将数组[2,0,6,1,77,0,52,0,25,7]中大于10的元素选出来，放入新数组
+    // let arr = [2,0,6,1,77,0,52,0,25,7]
+    // let narr = []
+    // for(let i in arr){
+    //   if(arr[i] > 10){
+    //     narr.push(arr[i])
+    //   }
+    // }
+    // console.log(narr);
+    
+  
+    // 5. 将下面字符串中的成绩计算总和（思路：分割字符串成数组）
+    // var scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+    
+    let scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+    let arr = scoreStr.split('')
+    let narr = []
+    let num = 0
+    for(let i = 0; i <= arr.length; i++){
+      if(arr[i] == ':'){
+        narr.push(`${arr[i + 1]}${arr[i + 2]}`) 
+        console.log(arr[i]);
+      }
+    }
+    for(let i in narr){
+      num += +narr[i]
+    }
+    console.log(narr);
+    console.log(num);
+    // // AI写的↓
+    // let scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+    // // 第一步：按分号分割成多个键值对
+    // let pairs = scoreStr.split(";");
+    // // 第二步：遍历每个键值对，取出分数部分
+    // let sum = 0;
+    // for (let pair of pairs) {
+    //   let [name, score] = pair.split(":"); // 结构赋值，分离姓名和分数
+    //   sum += Number(score); // 累加分数
+    // }
+    // console.log("总分为：", sum);
+    // // AI写的↑
+    
+    
+  
+    // 6.数组去重 [1,2,3,4,4,3,2,1];  
+      // let arr = [1, 2, 3, 4, 4, 3, 2, 1];
+      // let narr = [];
+      // for (let i = 0; i < arr.length; i++) {
+      //     if (narr.indexOf(arr[i]) === -1) {
+      //         narr.push(arr[i]);
+      //     }
+      // }
+      // console.log(narr);
+  
+    // var str = 'abaasdffggghhjjkkgggfddssss344343';
+    // 7.取出 str中‘3’ 和 ‘d’ 存放到新数组中
+    // let str = 'abaasdffggghhjjkkgggfddssss344343';
+    // let arr = str.split('')
+    // let narr = []
+    // for(let i in arr){
+    //   if(arr[i] == 3 || arr[i] == 'd'){
+    //     narr.push(arr[i])
+    //   }
+    // }
+    // console.log(narr);
+    
+
+
+  
+    // 8.截取字符串str中第1-5的字符串
+    // let str = 'abaasdffggghhjjkkgggfddssss344343';
+    // let result = str.substring(0, 5);
+    // console.log(result);
+     
+    //  9.输出一个60-100之间的随机数
+    // let ran = Math.floor(Math.random() * (100 - 60 - 1)) + 60
+    // console.log(ran);
+    
+  
+    // 10.要求将数组[4, 0, 7, 9, 0, 0, 2, 6, 0, 3, 1, 0]中的0项去掉，将不为0的值存入一个新的数组，生成新的数组
+    // let arr = [4, 0, 7, 9, 0, 0, 2, 6, 0, 3, 1, 0]
+    // let narr = []
+    // for(let i in arr){
+    //   if(arr[i] !== 0){
+    //     narr.push(arr[i])
+    //   }
+    // }
+    // console.log(narr);
+    
+  </script>
+</body>
+</html>

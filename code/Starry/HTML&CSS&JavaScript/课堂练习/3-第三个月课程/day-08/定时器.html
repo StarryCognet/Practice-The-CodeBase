@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <button id="start">开始</button>
+    <button id="stop">停止</button>
+    <button id="backword">后退</button>
+  </body>
+</html>
+<script>
+  // 延时定时器（只执行一次）
+  // 语法：setTimeout(function(){事件处理程序},时间);     时间单位是毫秒   1秒=1000毫秒
+  var timer1 = setTimeout(function () {
+    console.log('爆炸了!')
+  }, 3000)
+
+  // 移除延时定时器
+  // 语法：clearTimeout(要移出的定时器名称)
+  // clearTimeout(timer2)
+  clearTimeout(timer1)
+
+  // 间歇定时器   (每隔多少毫秒执行一次处理程序)
+  // 语法：setInterval(function(){处理程序},时间)
+
+  var start = document.querySelector('#start')
+  var stop = document.querySelector('#stop')
+
+  var timer2
+  start.onclick = function () {
+    timer2 = setInterval(function () {
+      console.log('醒一醒!')
+    }, 1000)
+  }
+
+  stop.onclick = function () {
+    // 移除延时定时器
+    // 语法：clearInterval(定时器名称)
+    clearInterval(timer2)
+  }
+
+  //后退
+  document.querySelector('#backword').onclick = function () {
+    history.back()
+  }
+</script>

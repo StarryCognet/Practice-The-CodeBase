@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // 正则：验证的规则
+    // 作用：表单里的验证
+    // 组成：由一些[普通字符]和[特殊字符]组成
+
+    // 普通字符：例如 abcd...z   0123456789
+    // 特殊字符：/*^#@$
+
+    // 使用正则：
+
+    // 1.字面量方式
+    // var reg = /正则表达式/
+
+    // 2.构造函数方式
+    // var reg = new RegExp('正则表达式')
+
+    // // 如何验证正则写的对不对
+    // var reg1 = /zhangsan/;
+    // var reg2 = new RegExp('lisi');
+
+
+    // // 1.test方法  返回值是true和false
+    // var result = reg1.test("zhangsan");
+    // console.log(result);
+    // var result2 = reg2.test("lisi");
+    // console.log(result2);
+
+
+    // //2.exec方法  如果满足正则，返回数组，否则返回null
+    // var result3 = reg1.exec('abcd');
+    // console.log(result3);
+
+
+    //数字3位
+    // var reg = /^[0-9][0-9][0-9]$/;
+    // var reg = /^[0-9]{3}$/;
+    // //\d 表示0-9  数字
+    // var reg = /^\d{3}$/;
+    var ds = /^\w{2,5}$/
+    console.log(ds.test(''));
+    
+
+    // //\D 表示非数字
+    // var reg = /^\D{3}$/;
+
+    // var reg = /^[0-9]{3}$/;
+    // var num = 8823
+    // console.log(reg.test(num))
+
+    // 数字 4-10位
+    // var reg = /^\d{4,10}$/
+    // var num = 882123123123
+    // console.log(reg.test(num))
+
+    // 数字 4-10位 首位不为0
+    // var reg = /^[1-9]\d{3,9}$/
+    // var num = '182123166663'
+    // console.log(reg.test(num));
+
+
+    // 账号- 字母6-12位  [a-zA-Z_0-9] \w
+    // 账号  数字、字母 下划线组成 非数字开头 4-12位
+    // var reg = /^[^0-9]\w{3,11}$/;
+    // var num = 'q13asjadasdadasdadsadsa'
+    // console.log(reg.test(num));
+
+    // 密码 数字6-12位
+    // 手机号正则 数字 开头必须是1 必须11位  第二位不能0,1,2,4
+    // var reg = /^1[^0124]\d{9}$/;
+    // var num = '13873912836'
+    // console.log("13873912836:" + reg.test(num))
+
+    // 邮箱正则 **** @**.com
+    // qq邮箱正则   5-11位  首位不能为0   ***@qq.com
+    // var reg = /^[1-9]\d{4,10}@qq.com$/  
+    // var num = '21323@qqq.com'
+    // console.log(reg.test(num)) 
+
+    // 通用邮箱  
+    // 真实姓名 汉字2-4位 [\u4e00-\u9fa5]{2,4}
+
+    // 身份证号    
+    // var reg = /^[^0][1-9][0-9]$/      
+    // var num = '21323@qqq.com'
+    // console.log(reg.test(num)) 
+    // 座机号   010-3418767
+</script>

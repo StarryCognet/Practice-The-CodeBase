@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <!-- <script>
+      window.onload = function () {
+        document.querySelector('#btn').onclick = function () {
+          var username = document.querySelector('#username').value
+          var pass = document.querySelector('#pass').value
+          var provice = document.querySelector('#provice').value
+          var xingquList = document.querySelectorAll('.xingqu')
+          var xingqu = ''
+          for (var i = 0; i < xingquList.length; i++) {
+            if (xingquList[i].checked) {
+              xingqu += xingquList[i].value + ' '
+            }
+          }
+    
+          var peopleList = document.querySelectorAll('input[name=people]')
+          var people = ''
+    
+          for (var i = 0; i < peopleList.length; i++) {
+            if (peopleList[i].checked) {
+              people = peopleList[i].value
+            }
+          }
+    
+          document.querySelector('#tb').innerHTML += `   <tr>
+                    <td><input type="checkbox" class='ck'></td>
+                    <td>${username}</td>
+                    <td>${pass}</td>
+                    <td>${provice}</td>
+                    <td>${xingqu}</td>
+                    <td>${people}</td>
+                    <td><button class='del'>删除</button></td>
+                </tr>`
+    
+          //删除事件
+          var delList = document.querySelectorAll('.del')
+          for (var i = 0; i < delList.length; i++) {
+            delList[i].onclick = function () {
+              this.parentNode.parentNode.remove()
+            }
+          }
+    
+          //全选和反选
+          document.querySelector('#allCheck').onclick = function () {
+            //获取表格中的复选框
+            var ckList = document.querySelectorAll('.ck')
+    
+            for (var i = 0; i < ckList.length; i++) {
+              ckList[i].checked = this.checked
+            }
+          }
+    
+          //表格中每个复选框的点击事件
+          var ckList = document.querySelectorAll('.ck')
+    
+          for (var i = 0; i < ckList.length; i++) {
+            ckList[i].onclick = function () {
+              //获取下面表格中所有被选中的复选框
+              var ckList2 = document.querySelectorAll('.ck:checked')
+    
+              if (ckList2.length == ckList.length) {
+                document.querySelector('#allCheck').checked = true
+              } else {
+                document.querySelector('#allCheck').checked = false
+              }
+            }
+          }
+    
+          //选中删除
+          document.querySelector('#delChecked').onclick = function () {
+            //获取下面表格中所有被选中的复选框
+            var ckList = document.querySelectorAll('.ck:checked')
+    
+            for (var i = 0; i < ckList.length; i++) {
+              ckList[i].parentNode.parentNode.remove()
+            }
+          }
+        }
+      }
+    </script> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        border: 1px solid black;
+        width: 600px;
+        margin: 0 auto;
+      }
+
+      td {
+        border: 1px solid black;
+      }
+
+      .tb2 {
+        margin-top: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table class="tb1">
+      <tr>
+        <td colspan="2" style="text-align: center">用户注册信息</td>
+      </tr>
+      <tr>
+        <td>用户名：</td>
+        <td><input type="text" id="username" /></td>
+      </tr>
+      <tr>
+        <td>密 码：</td>
+        <td><input type="password" id="pass" /></td>
+      </tr>
+      <tr>
+        <td>籍贯：</td>
+        <td>
+          <select name="" id="provice">
+            <option value="">请选择</option>
+            <option value="河北">河北</option>
+            <option value="山东">山东</option>
+            <option value="陕西">陕西</option>
+            <option value="北京">北京</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>兴趣</td>
+        <td>
+          <input type="checkbox" class="xingqu" value="篮球" />篮球 <input type="checkbox" class="xingqu" value="足球" />足球
+          <input type="checkbox" class="xingqu" value="书法" />书法 <input type="checkbox" class="xingqu" value="音乐" />音乐<br />
+          <input type="checkbox" class="xingqu" value="绘画" />绘画 <input type="checkbox" class="xingqu" value="散打" />散打
+          <input type="checkbox" class="xingqu" value="瑜伽" />瑜伽 <input type="checkbox" class="xingqu" value="其他" />其他
+        </td>
+      </tr>
+      <tr>
+        <td>政治面貌：</td>
+        <td>
+          <input type="radio" name="people" value="团员" />团员 <input type="radio" name="people" value="党员" />党员
+          <input type="radio" name="people" value="群众" />群众
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center">
+          <button id="btn">提交</button>
+          <button>重置</button>
+        </td>
+      </tr>
+    </table>
+
+    <table class="tb2">
+      <thead>
+        <tr>
+          <th>选中</th>
+          <th>用户名</th>
+          <th>密 码</th>
+          <th>籍贯</th>
+          <th>兴趣</th>
+          <th>政治面貌</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+
+      <tbody id="tb">
+        <tr>
+          <td><input type="checkbox" id="allCheck" />全选</td>
+          <td colspan="6" style="text-align: center">
+            <button id="delChecked">选中删除</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+  <script>
+    let username = document.querySelector('#username')
+    let pass = document.querySelector('#pass')
+    let provice = document.querySelector('#provice')
+    let xingqus = document.querySelectorAll('.xingqu')
+    let peoples = document.querySelectorAll('input[name=people]')
+    let btn = document.querySelector('#btn')
+    // let allCheck = document.querySelector('#allCheck')
+    // let delChecked = document.querySelector('#delChecked')
+    let tb = document.querySelector('#tb')
+
+    btn.onclick = function () {
+      let xingqu = ''
+      for (let i = 0; i < xingqus.length; i++) {
+        if (xingqus[i].checked) {
+          xingqu += xingqus[i].value + '  '
+        }
+      }
+      let people = ''
+      for (let i = 0; i < peoples.length; i++) {
+        if (peoples[i].checked) {
+          people += peoples[i].value
+        }
+      }
+
+      tb.innerHTML += `
+        <tr>
+          <td><input type="checkbox" class="cklick" /></td>
+          <td>${username.value}</td>
+          <td>${pass.value}</td>
+          <td>${provice.value}</td>
+          <td>${xingqu}</td>
+          <td>${people}</td>
+          <td><a href="#">删除</a></td>
+        </tr>
+        `
+
+      let cklick = document.querySelectorAll('.cklick')
+      let delets = document.querySelectorAll('a')
+      for (let i = 0; i < cklick.length; i++) {
+        delets[i].onclick = function (event) {
+          delets[i].parentNode.parentNode.remove()
+          event.preventDefault()
+        }
+      }
+      allCheck.onclick = function () {
+        let allCheck = document.querySelector('#allCheck')
+        let cklick = document.querySelectorAll('.cklick')
+        for (let i = 0; i < cklick.length; i++) {
+          cklick[i].checked = allCheck.checked
+        }
+      }
+      let delChecked = document.querySelector('#delChecked')
+      delChecked.onclick = function () {
+        let trs = document.querySelectorAll('.cklick')
+        for (let i = 0; i < trs.length; i++) {
+          if (trs[i].checked) {
+            trs[i].parentNode.parentNode.remove()
+          }
+        }
+      }
+      let trs = document.querySelectorAll('.cklick')
+      for (let i = 0; i < trs.length; i++) {
+        trs[i].onclick = function () {
+          let trs = document.querySelectorAll('.cklick')
+          let allCheck = document.querySelector('#allCheck')
+          allCheck.checked = document.querySelectorAll('.cklick:checked').length === trs.length
+        }
+      }
+    }
+  </script>
+</html>

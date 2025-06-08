@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B卷</title>
+  </head>
+
+  <body>
+    <script>
+      //一、考试要求：
+      //1、技能考试必须录屏，考试结束需显示电脑录屏时间。考生创建以自己姓名命名的文件夹，文件夹内容包含代码和录屏。
+      //2、考试期间可以查看手册，不可以翻看之前的代码，否则视为作弊。
+      //3、按照以后公司入职要求，程序员代码必须书写规范，否则无法团队协作，也有员工因此被开除的情况。
+      //以下题目变量命名要符合命名标准，且语义化，否则扣10分。
+      //4、需按照题目要求作答，否则相应扣分。
+
+      // 二、技能题(满分100分)
+
+      //1 输入一个数字，判断是否为 偶数，如果为偶数控制台输出 **数字为偶数，否则输出**数字为奇数
+      // let num = +prompt()
+      // if (num % 2 === 0) {
+      //   console.log(num + '数字为偶数')
+      // } else {
+      //   console.log(num + '数字为奇数')
+      // }
+
+      //2 输入两个数字，控制台输出 这两个数字的和
+      // let num = +prompt()
+      // let num2 = +prompt()
+      // console.log(num + num2);
+
+      //3 输入一个年龄，如果小于60岁，提示“加油继续上班",如果大于60岁 提示"已经退休了，可以享受晚年生活了"
+      // let age = +prompt()
+      // if(age < 60){
+      //     alert('加油继续上班')
+      // }else{
+      //     alert('已经退休了，可以享受晚年生活了')
+      // }
+      // let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+      //4 请输出 1-100之间 能被5整除 或者 能被7整数的数字
+      //   for (let i = 1; i <= 100; i++) {
+      //     if (i % 5 === 0 || i % 7 === 0) {
+      //       console.log(i);
+      //     }
+      //   }
+
+      //5 输出50-100之间所有 能被3整数的数字的和
+      // let num = 0
+      // for(let i = 50; i <= 100; i++){
+      //     if(i % 3 === 0){
+      //         num += i
+      //     }
+      // }
+      // console.log(num);
+
+      //6 输出20-80之间所有10的倍数的数字
+      // for(let i = 2; i <= 80; i++){
+      //     if(i % 10 === 0){
+      //         console.log(i);
+      //     }
+      // }
+
+      //7 输出30-50之间所有数字的平均值
+      // let num = 0
+      // for(let i = 30; i <= 50; i++){
+      //     num += i
+      // }
+      // console.log(num / (50 - 30 + 1));
+      // // AI写的↓
+      // let sum = 0; // 用于累加所有数字的和
+      // let count = 0; // 用于记录数字的个数
+      // for (let i = 30; i <= 50; i++) {
+      //     sum += i; // 将每个数字累加到 sum 中
+      //     count++; // 每个数字都计数
+      // }
+      // let average = sum / count; // 计算平均值
+      // console.log("30 到 50 之间所有数字的平均值是：" + average);
+      // // AI写的↑
+
+      //8 求7的阶乘
+      // let num = 1
+      // for(let i = 1; i <= 7; i++){
+      //     num *= i
+      // }
+      // console.log(num);
+
+      //9 输入两个数字，求这两个数字之间所有 偶数的和
+      // let num1 = +prompt()
+      // let num2 = +prompt()
+      // let max = Math.max(num1, num2)
+      // let min = Math.min(num1, num2)
+      // let num = 0
+      // for (let i = min; i <= max; i++) {
+      //     if (i % 2 == 0) {
+      //        num += i
+      //     }
+      // }
+      // console.log(num);
+
+      //10 输入任意行数 打印直角三角形（例如输入数字 5 打印5行的直角三角形）
+      // let num1 = +prompt()
+      // let num2 = +prompt()
+      // for(let i = 1 ; i <= num1; i++){
+      //     for(let j = 1; j <= num2; j++){
+      //         document.write('*')
+      //     }
+      //     document.write('<br>')
+      // }
+
+      //11 输入任意两个数字，输出这两个数字之间的 一个随机整数
+      // let num1 = +prompt()
+      // let num2 = +prompt()
+      // let max = Math.max(num1, num2)
+      // let min = Math.min(num1, num2)
+      // let ran = Math.floor(Math.random() * (max - min + 1)) + min
+      // console.log(ran);
+
+      //12 正序、倒序输出 字符串"我爱中华人民共和国"
+      // let str = "我爱中华人民共和国"
+      // console.log(str);
+      // let rev = str.split('').reverse().join('')
+      // console.log(rev);
+
+      //13 邮箱 "zhangsanfafafa@126.cn" 分别截取 126 和 126.cn(邮箱名我可以任意改变)
+      // let str = "zhangsanfafafa@126.cn"
+      // console.log(str.slice(str.indexOf('@') + 1, str.indexOf('.')));
+      // console.log(str.slice(str.indexOf('@') + 1, str.indexOf('.') + 3));
+      // let gai = '3398377037'
+      // console.log(str.replace(str.substring(0, str.lastIndexOf('@')), gai));
+
+      //14 获取当前的 年月日 格式为 “现在北京时间为2024-09-18 10:30:50”
+      // let date = new Date
+      // console.log(`现在北京时间为${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`);
+
+      //15 循环输出数组 var arr = ["小明","男",22];中的每一个值，使用 for  for in两种方式各输出一次
+      // let arr = ["小明", "男", 22]
+      // for(let i = 0; i < arr.length; i++){
+      //     console.log(arr[i]);
+      // }
+      // for(let i in arr){
+      //     console.log(arr[i]);
+      // }
+
+      //16 将数组 [10,15,23,47,100]中的值 翻倍
+      // let arr = [10, 15, 23, 47, 100]
+      // for(let i in arr){
+      //     arr[i] = arr[i] * 2
+      // }
+      // console.log(arr);
+
+      //17 将数组 [1,2,3,4,5,6,7,8,9,10,15,19,22] 中所有有偶数求和
+      // let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 19, 22]
+      // let num = 0
+      // for(let i in arr){
+      //     if(arr[i] % 2 === 0){
+      //         num += arr[i]
+      //     }
+      // }
+      // console.log(num);
+
+      //18 将数组 ["小亮","小明","小丽"] 数组中每一个值加上 "张家口"，最终打印数组为["小亮-张家口","小明-张家口","小丽-张家口"]
+      // let arr = ["小亮", "小明", "小丽"]
+      // for(let i in arr){
+      //     arr[i] += '-张家口'
+      // }
+      // console.log(arr);
+
+      //19 封装函数 传入任意个数的实参（数字），获取所有实参的乘积， 并 将结果返回。函数外部输出 乘积为**
+      // function gitJi(){
+      //     let num = 1
+      //     console.log(arguments);
+
+      //     for(let i in arguments){
+      //         num = num * arguments[i]
+      //     }
+      //     return num
+      // }
+      // console.log(`乘积为${gitJi(12, 9)}`);
+      // // AI写的↓
+      // function multiplyArgs(...args) {
+      //     let product = 1;
+      //     for (let num of args) {
+      //         if (typeof num === 'number' && !isNaN(num)) {
+      //             product *= num;
+      //         }
+      //     }
+      //     return product;
+      // }
+      // console.log(`乘积为${multiplyArgs(12, 9)}`); // 输出：乘积为108
+      // // AI写的↑
+
+      //20 封装函数 传入一个数组[0,3,0,5,10,20]，将数组中 所有偶数，存入一个新数组返回。函数外部打印 新数组
+      // let arr = [0, 3, 0, 5, 10, 20]
+      // function gitOs(arr) {
+      //     let narr = []
+      //     for (let i in arr) {
+      //         if(arr[i] % 2 === 0){
+      //             narr.push(arr[i])
+      //         }
+      //     }
+      //     return narr
+      // }
+      // console.log(gitOs(arr));
+      let a = 1
+    </script>
+  </body>
+</html>

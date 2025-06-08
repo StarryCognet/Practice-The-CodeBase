@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .box {
+            width: 800px;
+            height: 500px;
+            border: 1px solid #177ecb;
+            margin: 0 auto;
+        }
+
+        h4 {
+            width: 785px;
+            height: 36px;
+            font-weight: normal;
+            line-height: 36px;
+            padding-left: 15px;
+            background: skyblue;
+            color: black;
+            font-weight: bold;
+        }
+
+        td {
+            height: 31px;
+            line-height: 31px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h4>购物车</h4>
+        <form action="#" method="get">
+            <table cellspacing="0" cellpadding="0" border="1px">
+                <tr>
+                    <td style="width: 110px;">
+                        <input type="checkbox" name="" id="quan">全选
+                    </td>
+                    <td style="width: 98px;">
+                        商品代码
+                    </td>
+                    <td style="width: 192px;">
+                        商品名称
+                    </td>
+                    <td style="width: 97px;">
+                        商品单价
+                    </td>
+                    <td style="width: 97px;">
+                        商品数量
+                    </td>
+                    <td style="width: 97px;">
+                        商品库存
+                    </td>
+                    <td style="width: 111px;">
+                        商品小计
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 110px;">
+                        <input type="checkbox" name="" id="" class="fux" checked>
+                    </td>
+                    <td style="width: 98px;">
+                        10001
+                    </td>
+                    <td style="width: 192px;">
+                        商品一
+                    </td>
+                    <td style="width: 97px;">
+                        ￥<span class="price">26</span>
+                    </td>
+                    <td style="width: 97px; position: relative;">
+                        <button
+                            style="width: 20px; height: 20px; position: absolute; top: 6px; left: 3px; background: green; color: white;"
+                            class="jian">-</button>
+                        <input type="text" value="1" style="width: 40px; height: 20px;" class="shiq">
+                        <button
+                            style="width: 20px; height: 20px; position: absolute; top: 6px; right: 3px; background: green; color: white;"
+                            class="jia">+</button>
+                    </td>
+                    <td style="width: 97px;">
+                        6
+                    </td>
+                    <td style="width: 111px;">
+                        ￥<span class="danz">26</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 110px;">
+                        <input type="checkbox" name="" id="" class="fux">
+                    </td>
+                    <td style="width: 98px;">
+                        10002
+                    </td>
+                    <td style="width: 192px;">
+                        商品二
+                    </td>
+                    <td style="width: 97px;">
+                        ￥<span class="price">34</span>
+                    </td>
+                    <td style="width: 97px; position: relative;">
+                        <button
+                            style="width: 20px; height: 20px; position: absolute; top: 6px; left: 3px; background: green; color: white;"
+                            class="jian">-</button>
+                        <input type="text" value="1" style="width: 40px; height: 20px;" class="shiq">
+                        <button
+                            style="width: 20px; height: 20px; position: absolute; top: 6px; right: 3px; background: green; color: white;"
+                            class="jia">+</button>
+                    </td>
+                    <td style="width: 97px;">
+                        14
+                    </td>
+                    <td style="width: 111px;">
+                        ￥<span class="danz">34</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 110px;">
+                        <input type="checkbox" name="" id="" class="fux">
+                    </td>
+                    <td style="width: 98px;">
+                        10003
+                    </td>
+                    <td style="width: 192px;">
+                        商品三
+                    </td>
+                    <td style="width: 97px;">
+                        ￥<span class="price">48</span>
+                    </td>
+                    <td style="width: 97px; position: relative;">
+                        <button
+                            style="width: 20px; height: 20px; position: absolute; top: 6px; left: 3px; background: green; color: white;"
+                            class="jian">-</button>
+                        <input type="text" value="1" style="width: 40px; height: 20px;" class="shiq">
+                        <button
+                            style="width: 20px; height: 20px; position: absolute; top: 6px; right: 3px; background: green; color: white;"
+                            class="jia">+</button>
+                    </td>
+                    <td style="width: 97px;">
+                        2
+                    </td>
+                    <td style="width: 111px;">
+                        ￥<span class="danz">48</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 110px;">
+                        <input type="checkbox" name="" id="" class="fux">
+                    </td>
+                    <td style="width: 98px;">
+                        10004
+                    </td>
+                    <td style="width: 192px;">
+                        商品四
+                    </td>
+                    <td style="width: 97px;">
+                        ￥<span class="price">63</span>
+                    </td>
+                    <td style="width: 97px; position: relative;">
+                        <button
+                            style="width: 20px; height: 20px; position: absolute; top: 6px; left: 3px; background: green; color: white;"
+                            class="jian">-</button>
+                        <input type="text" value="1" style="width: 40px; height: 20px;" class="shiq">
+                        <button
+                            style="width: 20px; height: 20px; position: absolute; top: 6px; right: 3px; background: green; color: white;"
+                            class="jia">+</button>
+                    </td>
+                    <td style="width: 97px;">
+                        12
+                    </td>
+                    <td style="width: 111px;">
+                        ￥<span class="danz">63</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 110px;">
+                        <input type="checkbox" name="" id="" class="fux">
+                    </td>
+                    <td style="width: 98px;">
+                        10005
+                    </td>
+                    <td style="width: 192px;">
+                        商品五
+                    </td>
+                    <td style="width: 97px;">
+                        ￥<span class="price">50</span>
+                    </td>
+                    <td style="width: 97px; position: relative;">
+                        <button
+                            style="width: 20px; height: 20px; position: absolute; top: 6px; left: 3px; background: green; color: white;"
+                            class="jian">-</button>
+                        <input type="text" value="1" style="width: 40px; height: 20px;" class="shiq">
+                        <button
+                            style="width: 20px; height: 20px; position: absolute; top: 6px; right: 3px; background: green; color: white;"
+                            class="jia">+</button>
+                    </td>
+                    <td style="width: 97px;">
+                        92
+                    </td>
+                    <td style="width: 111px;">
+                        ￥<span class="danz">50</span>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div class="xia"
+            style="width: 800px; height: 80px; border-top: 1px solid #177ecb; margin-top: 186px; background: pink;">
+            <p style="text-align: right; margin-top: 22px; width: 800px;"><span class="zongpin">0</span>件商品</p>
+            <h3 style="float: right;">总计： <b style="color: red;">￥</b><span style="color: red;" class="zong">0</span>
+            </h3>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    //计算商品总件数(复选框被选中的商品)
+    function getTotalCount() {
+        //获取所有商品前面的复选框
+        var fuxList = document.querySelectorAll(".fux");
+        //总数量
+        var count = 0;
+        for (var i = 0; i < fuxList.length; i++) {
+            if (fuxList[i].checked) {
+                count += fuxList[i].parentNode.parentNode.children[4].children[1].value * 1;
+            }
+        }
+        //输出在对应位置
+        document.querySelector(".zongpin").innerHTML = count;
+    }
+    //计算商品总价格(复选框被选中的商品)
+    function getTotalPrice() {
+        //获取所有商品前面的复选框
+        var fuxList = document.querySelectorAll(".fux");
+        //总价格
+        var price = 0;
+        for (var i = 0; i < fuxList.length; i++) {
+            if (fuxList[i].checked) {
+                price += fuxList[i].parentNode.parentNode.lastElementChild.children[0].innerHTML * 1;
+            }
+        }
+        //输出在对应位置
+        document.querySelector(".zong").innerHTML = price;
+    }
+
+
+    //调用总价格和总数量函数
+    getTotalCount();
+    getTotalPrice();
+
+
+    //加号
+    var jiaList = document.querySelectorAll(".jia");
+    for (var i = 0; i < jiaList.length; i++) {
+        jiaList[i].onclick = function () {
+            //判断库存是否充足
+            //获取库存量
+            var kucun = this.parentNode.nextElementSibling.innerHTML * 1;
+            //获取购买数量
+            var count = this.previousElementSibling.value;
+
+            if (count == kucun) {
+                alert("库存不足!");
+            } else {
+                //数量增加+1
+                this.previousElementSibling.value++;
+                //计算小计    商品单价*商品数量
+                var price = this.parentNode.previousElementSibling.children[0].innerHTML * this.previousElementSibling.value;
+                //将结果输出在小计的位置
+                this.parentNode.parentNode.lastElementChild.children[0].innerHTML = price;
+            }
+
+            //调用总价格和总数量函数
+            getTotalCount();
+            getTotalPrice();
+        }
+    }
+
+
+
+    //减号
+    var jianList = document.querySelectorAll(".jian");
+    for (var i = 0; i < jianList.length; i++) {
+        jianList[i].onclick = function () {
+            //获取购买数量
+            var count = this.nextElementSibling.value;
+            if (count == 1) {
+                alert("买一件吧!");
+            } else {
+                //数量增加-1
+                this.nextElementSibling.value--;
+                //计算小计    商品单价*商品数量
+                var price = this.parentNode.previousElementSibling.children[0].innerHTML * this.nextElementSibling.value;
+                //将结果输出在小计的位置
+                this.parentNode.parentNode.lastElementChild.children[0].innerHTML = price;
+            }
+            //调用总价格和总数量函数
+            getTotalCount();
+            getTotalPrice();
+        }
+    }
+
+    //全选
+    document.querySelector("#quan").onclick = function () {
+        //获取所有商品前面的复选框
+        var fuxList = document.querySelectorAll(".fux");
+
+        for (var i = 0; i < fuxList.length; i++) {
+            fuxList[i].checked = this.checked;
+        }
+
+        //调用总价格和总数量函数
+        getTotalCount();
+        getTotalPrice();
+    }
+
+
+    //复选框的点击事件
+    //获取所有商品前面的复选框
+    var fuxList = document.querySelectorAll(".fux");
+
+    for (var i = 0; i < fuxList.length; i++) {
+        fuxList[i].onclick = function () {
+            //调用总价格和总数量函数
+            getTotalCount();
+            getTotalPrice();
+        }
+    }
+</script>

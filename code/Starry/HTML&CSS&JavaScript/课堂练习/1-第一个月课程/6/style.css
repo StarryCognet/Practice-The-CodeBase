@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.page-container {
+  width: 1920px;
+  height: 941px;
+  background-color: #f5f5f5;
+}
+
+.page-container>div:first-of-type {
+  width: 346px;
+  height: 909px;
+  background-color: #fff;
+  margin-top: 8px;
+  margin-left: 20px;
+  float: left;
+}
+
+.product-grid {
+  width: 1540px;
+  margin-left: 380px;
+}
+
+.product-grid>div:not(.product-grid>div:last-of-type) {
+  width: 364px;
+  height: 444px;
+  margin: 8px;
+  background-color: #fff;
+  float: left;
+}
+
+.product-grid>div:last-of-type {
+  width: 364px;
+  height: 444px;
+  margin: 8px;
+  display: inline-block;
+}
+
+.product-grid>div:last-of-type>div {
+  width: 100%;
+  height: 209px;
+  margin-bottom: 25px;
+  background-color: #fff;
+}
+
+.page-container>div:first-of-type img {
+  width: 100%;
+}
+
+.product-grid>div>img {
+  width: 250px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.product-grid div p:first-of-type:not(.last-products p) {
+  text-align: center;
+}
+
+.product-grid div p:nth-of-type(2):not(.last-products p) {
+  text-align: center;
+  color: #a7a7a7;
+}
+
+.product-grid div p:last-of-type:not(.last-products p) {
+  text-align: center;
+  margin-top: 10px;
+  color: #ff9d00;
+  font-weight: 700;
+}
+
+.last-products div>div {
+  float: left;
+  margin: 40px;
+}
+
+.last-products div img {
+  float: right;
+  margin-top: 60px;
+  margin-right: 40px;
+}
+
+.last-products div p:nth-child(4) {
+  color: #ff9d00;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.last-products div {
+  color: #a7a7a7;
+}

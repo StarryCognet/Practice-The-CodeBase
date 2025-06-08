@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  账号:<input type="text" id="username"> <span id="usernameSpan">账号必须由字符数字下划线组成，8-20位，首位不能为0</span>
+</body>
+
+</html>
+<script>
+  var username = document.querySelector("#username");
+  var span = document.querySelector("#usernameSpan");
+
+  username.onblur = function () {
+    if (this.value == "") {
+      span.innerHTML = "账号不能为空!";
+      span.style.color = "red";
+      return false;
+    }
+
+    var reg = /^[^0]\w{7,19}$/;
+
+    if (reg.test(this.value)) {
+      span.innerHTML = "√";
+      span.style.color = "green";
+    } else {
+      span.innerHTML = "×";
+      span.style.color = "red";
+      return false;
+    }
+  }
+</script>

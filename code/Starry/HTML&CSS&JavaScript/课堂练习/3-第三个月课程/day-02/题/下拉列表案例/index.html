@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      ul {
+        display: none;
+      }
+      li {
+        padding: 10px 29px;
+        border: 1px solid #ffe600;
+        display: block;
+      }
+
+      .box {
+        float: left;
+        /* border: 1px solid #000; */
+      }
+      span {
+        /* float: left; */
+        /* background-color: #cfcfcf; */
+        padding: 10px 30px;
+        text-align: center;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <span>微博</span>
+      <ul>
+        <li>私信</li>
+        <li>评论</li>
+        <li>@我</li>
+      </ul>
+    </div>
+    <div class="box">
+      <span>微博</span>
+      <ul>
+        <li>私信</li>
+        <li>评论</li>
+        <li>@我</li>
+      </ul>
+    </div>
+    <div class="box">
+      <span>微博</span>
+      <ul>
+        <li>私信</li>
+        <li>评论</li>
+        <li>@我</li>
+      </ul>
+    </div>
+    <div class="box">
+      <span>微博</span>
+      <ul>
+        <li>私信</li>
+        <li>评论</li>
+        <li>@我</li>
+      </ul>
+    </div>
+    <script>
+      let span = document.querySelectorAll('span')
+      let ul = document.querySelectorAll('ul')
+      for (let i = 0; i < span.length; i++) {
+        span[i].onclick = function () {
+          for(let j = 0; j < ul.length; j++){
+            span[j].style.backgroundColor = ''
+            ul[j].style.display = ''
+          }
+          if (ul[i].style.display == 'block') {
+            span[i].style.backgroundColor = ''
+            ul[i].style.display = 'none'
+          } else {
+            span[i].style.backgroundColor = '#cfcfcf'
+            ul[i].style.display = 'block'
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

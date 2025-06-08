@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <!-- <script>
+    //获取四个按钮的dom对象
+    var allRight = document.querySelector('#allRight')
+    var allLeft = document.querySelector('#allLeft')
+    var right = document.querySelector('#right')
+    var left = document.querySelector('#left')
+  
+    //左边下拉框
+    var leftSel = document.querySelector('#leftSel')
+    //右边的下拉框
+    var rightSel = document.querySelector('#rightSel')
+  
+    //右移全部
+    allRight.onclick = function () {
+      for (var i = 0; i < leftSel.children.length; i++) {
+        //右边下拉框循环追加左边下拉框每一个子元素节点
+        rightSel.appendChild(leftSel.children[i])
+        i--
+      }
+    }
+  
+    //左移全部
+    allLeft.onclick = function () {
+      for (var i = 0; i < rightSel.children.length; i++) {
+        //左边下拉框循环追加右边下拉框每一个子元素节点
+        leftSel.appendChild(rightSel.children[i])
+        i--
+      }
+    }
+  
+    //右移选中的
+    right.onclick = function () {
+      //把左侧select下拉框中所有的option中被选中的移到右边select中
+      for (var i = 0; i < leftSel.children.length; i++) {
+        if (leftSel.children[i].selected) {
+          //被选中的
+          rightSel.appendChild(leftSel.children[i])
+          i-- //指针回退
+        }
+      }
+    }
+  
+    //左移选中的
+    left.onclick = function () {
+      //把右侧select下拉框中所有的option中被选中的移到左边select中
+      for (var i = 0; i < rightSel.children.length; i++) {
+        if (rightSel.children[i].selected) {
+          //被选中的
+          leftSel.appendChild(rightSel.children[i])
+          i-- //指针回退
+        }
+      }
+    }
+  </script> -->
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      select {
+        width: 150px;
+        /* background-color: #0099cc; */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--左边的下拉菜单   multiple：可以让下拉菜单多选 -->
+    <select id="leftSel" size="10" multiple="multiple">
+      <option>苹果</option>
+      <option>香蕉</option>
+      <option>西瓜</option>
+      <option>牛油果</option>
+      <option>西红柿</option>
+    </select>
+
+    <!--四个选择按钮位置-->
+    <input type="button" value=">>" id="allRight" />
+    <input type="button" value="<<" id="allLeft" />
+    <input type="button" value=">" id="right" />
+    <input type="button" value="<" id="left" />
+
+    <!--右边的下拉菜单-->
+    <select id="rightSel" size="10" multiple="multiple"></select>
+    <script>
+      let allRight = document.querySelector('#allRight')
+      let allLeft = document.querySelector('#allLeft')
+      let right = document.querySelector('#right')
+      let left = document.querySelector('#left')
+      let leftSel = document.querySelector('#leftSel')
+      let rightSel = document.querySelector('#rightSel')
+
+      allRight.onclick = function () {
+        for (let i = 0; i < leftSel.children.length; i++) {
+          rightSel.appendChild(leftSel.children[i])
+          i--
+        }
+      }
+      allLeft.onclick = function () {
+        for (let i = 0; i < rightSel.children.length; i++) {
+          leftSel.appendChild(rightSel.children[i])
+          i--
+        }
+      }
+
+      right.onclick = function () {
+        for (let i = 0; i < leftSel.children.length; i++) {
+          if (leftSel.children[i].selected) {
+            rightSel.appendChild(leftSel.children[i])
+            i--
+          }
+        }
+      }
+      left.onclick = function () {
+        for (let i = 0; i < rightSel.children.length; i++) {
+          if (rightSel.children[i].selected) {
+            leftSel.appendChild(rightSel.children[i])
+            i--
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

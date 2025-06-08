@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //3.封装函数，利用内置对象的方法，完成字符串翻转的功能，将结果做为返回值返回，例如'abcd'变为'dcba'
+    function reverse(str) {
+        //abcd   dcba
+        //拆分字符串成数组
+        var arr = str.split("");
+        //翻转数组
+        arr.reverse();
+        //拼接
+        var newStr = arr.join("");
+        return newStr;
+    }
+
+    var str = "hello";
+    console.log(reverse(str));
+
+
+    // 4、已知页面的网址，
+    //var url = 'https://search.jd.com/Search?keyword=手机&enc=utf-8'
+    // 利用内置对象的方法，找出问号?后面的keyword，以及第一个等号'='后面的'手机'两个字,控制台最终输出'keyword:手机'
+    // 以及找出&符号后面的enc，第二个等号后面的'utf-8'，在控制台最终输出'enc:utf-8'（10分）
+    var url = 'https://search.jd.com/Search?keyword=手机&enc=utf-8'
+    //截取keyword=手机&enc=utf-8
+    var str1 = url.substring(url.indexOf('?') + 1);
+    //截取keyword
+    var str2 = str1.substring(0, str1.indexOf('='));
+    //手机
+    var str3 = str1.substring(str1.indexOf("=") + 1, str1.indexOf('&'));
+    //enc
+    var str4 = str1.substring(str1.indexOf("&") + 1, str1.lastIndexOf('='));
+    //utf-8
+    var str5 = str1.substring(str1.lastIndexOf('='));
+
+    console.log(str2 + ":" + str3 + "," + str4 + ":" + str5);
+
+
+    // 6.利用indexOf的方法，将数组[1,2,3,4,4,3,2,1]中重复的元素去除，形成一个新的数组（10分）
+    var arr = [1, 2, 3, 4, 4, 3, 2, 1];
+
+    for (var i = 0; i < arr.length; i++) {
+        //该元素在数组中第一次出现的位置
+        var index = arr.indexOf(arr[i]);
+
+        if (index != i) {
+            //重复数据
+            arr.splice(i, 1);
+            i--;        //回退指针
+        }
+    }
+
+    console.log(arr);
+
+    // 7.删除数组[2, 0, 0, 6, 77, 0, 52, 0, 25, 7]中为0的元素（10分）
+    var arr = [2, 0, 0, 6, 77, 0, 52, 0, 25, 7];
+    for (var i = 0; i < arr.length; i++) {
+
+        if (arr[i] == 0) {
+            arr.splice(i, 1);
+            i--;        //回退指针
+        }
+    }
+
+    console.log(arr);
+
+
+    //8.利用内置对象的方法，实现每次点击“随机按钮”，根据数组的特点，在控制台打印出不同的人名
+    var names = ["张三", "李四", "王五", "赵六", "田七"];
+
+    var index = Math.floor(Math.random() * (4 - 0 + 1)) + 0;
+
+    console.log(name[index]);
+
+    // 9.有如下的数据、请完成以下要求（共30分）
+    // var arr=[
+    //     {'id': 1, name: '张三', score: 55, subject: '语文'},
+    //     {'id': 4, name: '张三', score: 23, subject: '数学'},
+    //     {'id': 2, name: '李四', score: 76, subject: '语文'},
+    //     {'id': 3, name: '王五', score: 67, subject: '语文'},
+    //     {'id': 5, name: '李四', score: 81, subject: '数学'},
+    //     {'id': 6, name: '王五', score: 64, subject: '数学'},
+    // ]
+    // a)求所有学生总成绩（5分）
+    // b)求所有学生的语文总成绩（5分）
+    // c)求所有超过60分的学生语文总成绩（10分）
+    // d)删除不及格的科目信息（10分）
+
+    var arr = [
+        { 'id': 1, name: '张三', score: 55, subject: '语文' },
+        { 'id': 4, name: '张三', score: 23, subject: '数学' },
+        { 'id': 2, name: '李四', score: 76, subject: '语文' },
+        { 'id': 3, name: '王五', score: 67, subject: '语文' },
+        { 'id': 5, name: '李四', score: 81, subject: '数学' },
+        { 'id': 6, name: '王五', score: 64, subject: '数学' },
+    ];
+
+    // a)求所有学生总成绩（5分）
+
+    var sumScore = 0;           //和
+    for (var i in arr) {
+        sumScore += arr[i].score;
+    }
+
+    console.log("总成绩是:" + sumScore);
+
+    // b)求所有学生的语文总成绩（5分）
+    var sumScore = 0;           //和
+    for (var i in arr) {
+        if (arr[i].subject == "语文") {
+            sumScore += arr[i].score;
+        }
+    }
+
+    console.log("语文总成绩是:" + sumScore);
+    // c)求所有超过60分的学生语文总成绩（10分）
+    var sumScore = 0;           //和
+    for (var i in arr) {
+        if (arr[i].subject == "语文" && arr[i].score > 60) {
+            sumScore += arr[i].score;
+        }
+    }
+
+    console.log("语文总成绩是:" + sumScore);
+    // d)删除不及格的科目信息（10分）
+    for (var i = 0; i < arr.length; i++) {
+        if(arr[i].score < 60){
+            arr.splice(i,1);
+            i--;        //回退指针
+        }
+    }
+
+    console.log(arr);
+    
+</script>

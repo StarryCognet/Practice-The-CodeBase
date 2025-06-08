@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    /*
+    for循环语法：
+      for(变量的起始值；退出条件；变量变化量){
+          循环体
+      }
+      
+     for(let i = 1; i <= 10; i++){
+          document.write(`你好<br>`)
+     }*/
+
+
+    /*  1.用for循环输出1-100岁
+  for(let i = 1; i <= 100; i++){
+  document.write(`我今年${i}岁了<br>`)
+  }
+  */
+
+    /*  2.求1-100 之间所有的偶数和
+    let num1 = 0
+    for (let i = 1; i <= 100; i++) {
+      if (i % 2 === 0) {
+        num1 = num1 + i
+      }
+    }
+    document.write(`1-100 之间所有的偶数和是${num1}`)
+*/
+
+    /*    3.输入次数，打印好好学习
+let num1 = prompt(`请输入次数`)
+for(let i = 1; i <= num1; i++){
+  document.write(`好好学习${i}<br>`)
+}
+*/
+    //  4.输出1-100岁，并提示 你1岁了  你100岁了
+
+for(let i = 1; i <= 100; i++ ){
+
+if(i === 1){
+  document.write(` 你1岁了,我学会了走路<br>`)
+}else if (i === 100){
+  document.write(` 你100岁了,我不能走路了<br>`)
+}else{
+  document.write(`我今年${i}岁了<br>`)
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B卷</title>
+</head>
+
+<body>
+    <script>
+        //一、考试要求：
+        //1、技能考试必须录屏，考试结束需显示电脑录屏时间。考生创建以自己姓名命名的文件夹，文件夹内容包含代码和录屏。
+        //2、考试期间可以查看笔记或大纲，不可以翻看之前的代码，否则视为作弊。
+        //3、按照以后公司入职要求，程序员代码必须书写规范，否则无法团队协作，也有员工因此被开除的情况。
+        //以下题目变量命名要符合命名标准，且语义化，否则扣10分。
+        //4、需按照题目要求作答，否则相应扣分。
+
+
+        // 二、技能题(满分100分)
+
+        // 1、根据用户输入的行、列，打印对应的“好好学习，天天向上”（5分）
+        // let row = prompt("请输入行多少")
+        // let column = prompt("请输入列多少")
+        // for(let i = 0; i < row; i++){
+        //     for(let j = 0; j < column; j++){
+        //         document.write("好好学习，天天向上")
+        //     }
+        //     document.write("<br>")
+        // }
+
+        // 2、请输出 50-180之间 既能被三整除 又能被5整除的数，在控制台输出结果（5分）
+        // for(let i = 50; i <= 180; i++){
+        //     if(i % 3 == 0 && i % 5 == 0){
+        //         console.log(i)
+        //     }
+        // }
+
+        // 3、用三目运算(三元表达式)判断用户输入的数字是奇数还是偶数，弹窗显示‘某数是奇数’(需显示具体的哪个数字)(5分)
+        // let num = prompt("请输入")
+        // num % 2 == 0 ?  alert("是偶数") : alert("是奇数")
+
+        // 4、用户prompt()输入一个年份，检测年份是否为闰年，如果是弹窗“哪年是闰年”，如果不是弹窗“哪年不是闰年”(5分)
+        //（闰年计算方法：能被4整除且不能被100整除,或能被400整除）
+        // let num = prompt("请输入年份")
+        // if(num % 4 == 0 && num % 100 !== 0 || num % 400 == 0){
+        //     alert("是闰年")
+        // }else{
+        //     alert("不是闰年")
+        // }
+
+
+        // 6、将下列JSON串转换成对象,使用for in循环对象的每个属性，打印到控制台（5分）
+        // var jsonStr='{"userName":"小强","age":29,"sex":"男"}'
+        // 给定的 JSON 字符串
+        // var jsonStr = '{"userName":"小强","age":29,"sex":"男"}';
+        // var obj = JSON.parse(jsonStr);
+
+        // for (var k in obj) {
+        //     console.log(`${k} : ${obj[k]}`);
+        // }
+
+        // 7、求30-150之间的随机数 （5分）
+        // document.write(Math.random() * (150 - 30) + 30);
+
+
+        // 8、弹出两个输入框，打印这两个数之间的偶数的个数（10分）
+
+        // 9、分别用console.log的方式和document.write的方式打印99乘法表(10分)
+        // for(let i = 1; i < 9; i++){
+        //     for(let j = 1; j <= i; j++){
+        //         document.write(`${j}X${i}=${i*j}&nbsp;&nbsp;&nbsp;`)
+        //     }
+        //     document.write(`<br>`)
+        // }
+
+        // 10、打印三位数中有3或者7的数字（15分）
+        // 固定用法：
+        //     parseInt(a%10) 可以求得个位数的数字
+        //     parseInt((a%100)/10) 可以求得十位数的数字
+        //     parseInt((a%1000)/100) 可以求得百位数的数字
+        //     parseInt((a%10000)/1000) 可以求得千位数的数字
+        // for(let i = 100; i <= 999; i++){
+        //     let ge = parseInt(i % 10)
+        //     let shi = parseInt((i % 100) / 10)
+        //     let bai = parseInt((i % 1000) / 100)
+        //     if(ge === 3 || ge === 7 || shi === 3 || shi === 7 || bai === 3 || bai === 7){
+        //         console.log(i);
+        //     }
+        // }
+
+        // 11、出租车，起步价(2公里以内)为7元，（15分）
+        // 超过2公里的按照每公里3元计算。要求根据路程计算费用
+        // function tx(i) {
+        //     if (i < 0 || i === Number) {
+        //         return "请输入有效的路程距离（公里）";
+        //     }
+        //     if (i <= 2) {
+        //         return 7;
+        //     }
+        //     return i * 3;
+        // }
+        // alert(tx(prompt("输入公里数")))
+        
+     
+
+
+        // 12、定义一个函数名称为：calc，传入两个数时，做加法。传入1个数时，求平方。（提示：用arguments）（20分）
+
+
+
+
+        let ww = +prompt("1")
+        let qq = +prompt("2")
+        for (let i = ww; i <= qq; i++){
+            document.write(i)
+        }
+
+    </script>
+</body>
+
+</html>

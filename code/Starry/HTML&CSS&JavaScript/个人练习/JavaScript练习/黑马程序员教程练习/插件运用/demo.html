@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./swiper-3.4.2.min.css">
+  <link rel="stylesheet" href="./animate.min.css">
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #fff;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      font-size: 18px;
+      height: auto;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <p class="ani bounceInLeft">左边进入</p>
+        <p class="ani bounceInDown">下面进入</p>
+        <p class="ani bounceInRight">右面进入</p>
+        <p class="ani bounceInUp">上面进入</p>
+        <p class="ani flash">闪亮</p>
+        <p class="ani shake">摇动</p>
+        <p class="ani flip">翻转</p>
+        <p class="ani bounceInUp">上面进入A11y（无障碍阅读）为残障人士浏览网页提供辅助功能，在屏幕阅读器添加语音提示等信息。</p>
+      </div>
+    </div>
+    <!-- Add Scroll Bar -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+
+
+
+
+  <script src="./swiper-3.4.2.min.js"></script>
+  <script>
+    let lll = document.querySelector('.swiper-slide')
+    for (let i = 0; i <= 1000; i++) {
+      let p = document.createElement('p');
+      p.innerHTML = "上面进入A11y（无障碍阅读）为残障人士浏览网页提供辅助功能，在屏幕阅读器添加语音提示等信息。上面进入A11y（无障碍阅读）为残障人士浏览网页提供辅助功能，在屏幕阅读器添加语音提示等信息上面进入A11y（无障碍阅读）为残障人士浏览网页提供辅助功能，在屏幕阅读器添加语音提示等信息上面进入A11y（无障碍阅读）为残障人士浏览网页提供辅助功能，在屏幕阅读器添加语音提示等信息上面进入A11y（无障碍阅读）为残障人士浏览网页提供辅助功能，在屏幕阅读器添加语音提示等信息";
+      lll.appendChild(p);
+      p.classList.add('ani');
+      p.classList.add('flip');//在这里改动效，直接在上面复制就行了
+
+    }
+    var swiper = new Swiper('.swiper-container', {
+      scrollbar: '.swiper-scrollbar',
+      direction: 'vertical',
+      slidesPerView: 'auto',
+      mousewheelControl: true,
+      freeMode: true,
+      freeModeMomentumRatio: 2,
+    });
+    var anis = swiper.slides[0].querySelectorAll('.ani');
+    for (i = 0; i < anis.length; i++) {
+      anis[i].style.visibility = 'hidden';
+      anis[i].classCache = anis[i].className;
+      anis[i].className = '';
+    }
+
+
+
+
+    setInterval(checkScroll, 50);
+
+    function checkScroll() {
+
+      _wrapperTranslate = swiper.getWrapperTranslate()
+
+      for (i = 0; i < anis.length; i++) {
+        if (anis[i].offsetTop < (-_wrapperTranslate + swiper.height - 50) && anis[i].style.visibility == 'hidden') {
+          anis[i].style.visibility = 'visible';
+          anis[i].className = "" + anis[i].classCache + " " + 'animated';
+
+        }
+      }
+
+    }
+
+  </script>
+</body>
+
+</html>

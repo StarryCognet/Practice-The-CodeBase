@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // 对象：万事万物皆对象
+    // 意义（作用）：存储数据
+
+    // 目前存储数据：变量，数组,
+    // ['张三','男',28,'李四','女',18,...]
+
+    // 对象的存储方式更大
+
+    // 复杂数据类型：数组，函数，对象
+
+    // 怎么定义对象
+    // 对象的存储数据形式：键值对   键名字自己自定义
+
+    // 1.构造函数定义对象
+    var stu = new Object();
+    stu.name = "张三";
+    stu['sex'] = "男";
+    stu.hobbies = ["篮球", "足球", "乒乓球"];
+    stu.eat = function () {
+        console.log("该学生" + this.name + "正在吃饭!");
+    }
+
+
+    console.log(stu.name);
+    console.log(stu.sex);
+    console.log(stu['sex']);
+    stu.eat();
+
+
+    //2.字面量方式
+    var book = {
+        bname: "三国演义",
+        author: "罗贯中",
+        show: function () {
+            console.log("书名:" + this.bname + ",作者:" + this.author);
+        }
+    };
+
+
+    console.log(book.bname);
+    console.log(book.author);
+    book.show();
+
+</script>

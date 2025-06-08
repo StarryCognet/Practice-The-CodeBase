@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 微软雅黑;
+}
+ul,
+ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.box {
+    width: 100%;
+    /* background-color: aqua; */
+}
+.box .top {
+    width: 1190px;
+    height: 90px;
+    background-color: blueviolet;
+    margin: auto;
+    margin-bottom: 30px;
+    background: url(../images/logo-201305-b.png) no-repeat;
+    cursor: pointer;
+}
+.box .top h1 {
+    line-height: 90px;
+    float: left;
+    margin-left: 240px;
+    font-size: 30px;
+
+}
+.box .top .denglu {
+    float: right;
+    /* width: 160px; */
+    height: 20px;
+    /* background-color: #2be23a; */
+    margin-top: 85px;
+}
+.box .top .denglu .tub {
+    float: left;
+    color: red;
+    font-size: 20px;
+    margin-right: 8px;
+}
+.box .top .denglu .font {
+    float: right;
+    color: #999;
+    font-size: 16px;
+    cursor: pointer;
+}
+.box .top .denglu .font:hover {
+    color: red;
+    text-decoration: underline;
+}
+.box .two {
+    width: 100%;
+    height: 45px;
+    background-color: #fff8f0;
+}
+.box .yiju {
+    font-size: 14px;
+    color: #999;
+    margin-left: 500px;
+    line-height: 45px;
+}
+.box p a {
+    color: black;
+}
+.box p a:hover {
+    text-decoration: underline;
+}
+.box .banner {
+    width: 100%;
+    height: 593px;
+    background-color: #e93854;
+    margin: auto;
+    margin-bottom: 30px;
+    background: url(../images/bj.jpg) no-repeat;
+    background-size: 100% 593px;
+    position: relative;
+}
+.box .banner .saoma {
+    width: 435px;
+    height: 530px;
+    background-color: #fff;
+    position: absolute;
+    top:15px;
+    right: 340px;
+}
+.box .banner .saoma .one {
+    width: 435px;
+    height: 40px;
+    background-color: #fff8f0;
+    color: #999;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+}
+.box .banner .saoma .two {
+    width: 435px;
+    height: 70px;
+    border-bottom: 1px solid #f4f4f4;
+    margin-bottom: 25px;
+    background-color: #fff;
+}
+.box .banner .saoma .two>div {
+    float: left;
+    width: 215px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #666d74;
+    cursor: pointer;
+}
+.box .banner .saoma .two .txt p:hover {
+    color: red;
+}
+.box .banner .saoma .two .two-txt:hover {
+    color: red;
+}
+.box .banner .saoma .two>span {
+    float: left;
+    height: 70px;
+    line-height: 70px;
+    color: #f4f4f4;
+}
+.box .banner .saoma .two .txt {
+    position: relative;
+}
+.box .banner .saoma .two .txt .form {
+    width: 380px;
+    height: 355px;
+    border-top: 1px solid #f4f4f4;
+    background-color: #fff;
+    left: -190px;
+    position: absolute;
+    /* display: none; */
+}
+.box .banner .saoma .two .txt .form .form-one {
+    width: 380px;
+    height: 50px;
+    border: 1px solid #bdbdbd;
+    margin-top: 45px;
+    position: relative;
+}
+.box .banner .saoma .two .txt .form .form-one .form-img {
+    width: 50px;
+    height: 50px;
+    background-color: #f4f4f4;
+    color: #d4d4d4;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    left: 0;
+}
+.box .banner .saoma .two .txt .form .form-one input {
+    width: 330px;
+    height: 50px;
+    position: absolute;
+    left: 48px;
+    border: 0;
+    border-left: 1px solid #bdbdbd;
+    outline: none;
+}
+.box .banner .saoma .two .txt .form .form-mima {
+    margin: 20px 0 0 320px;
+}
+.box .banner .saoma .two .txt .form .form-mima .mima {
+    font-size: 14px;
+    color: #666666;
+    font-weight: normal;
+}
+.box .banner .saoma .two .txt .form .form-mima .mima:hover {
+    color: red;
+    text-decoration: underline;
+}
+.box .banner .saoma .two .txt .form a .form-txt {
+    width: 380px;
+    height: 40px;
+    border: 1px solid #cb2a2d;
+    background-color: #e4393c;
+    line-height: 40px;
+}
+.box .banner .saoma .two .txt .form a .form-txt b {
+    color: #fff;
+    margin-right: 30px;
+}
+.box .banner .saoma .three {
+    width: 210px;
+    height: 210px;
+    border: 1px solid #999;
+    margin: auto;
+    margin-bottom: 30px;
+    background: url(../images/erweim_03.gif) no-repeat center center;
+}
+.box .banner .saoma .fure {
+    width: 200px;
+    height: 20px;
+    /* background-color: #88d424; */
+    margin: auto;
+    margin-bottom: 20px;
+}
+.box .banner .saoma .fure>p {
+    float: left;
+    color: #999;
+    font-size: 14px;
+    margin-right: 20px;
+}
+.box .banner .saoma .fure a {
+    color: red;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.box .banner .saoma .five {
+    width: 295px;
+    height: 40px;
+    /* background-color: #d424ae; */
+    margin: auto;
+    margin-bottom: 10px;
+}
+.box .banner .saoma .five .zuo {
+    margin-left: 20px;
+}
+.box .banner .saoma .five>div {
+    float: left;
+    color: #999;
+    font-size: 16px;
+    margin-right: 30px;
+    /* text-align: center; */
+    line-height: 40px;
+}
+.box .banner .saoma .six {
+    width: 435px;
+    height: 60px;
+    border-top: 1px solid #f4f4f4;
+}
+.box .banner .saoma .six>div {
+    float: left;
+    line-height: 60px;
+    margin: 0 20px;
+}
+.box .banner .saoma .six>span {
+    float: left;
+    line-height: 60px;
+    color: #999;
+}
+.box .banner .saoma .six a {
+    font-size: 14px;
+    color: #999;
+    cursor: pointer;
+}
+.box .banner .saoma .six a:hover {
+   text-decoration: underline;
+    color: red;
+}
+.box .banner .saoma .six .six-qq {
+    color: #10a8ff;
+}
+.box .banner .saoma .six .weixin {
+    color: #00cc00;
+}
+.box .banner .saoma .six .zhuce {
+    color: red;
+    margin-left: 150px;
+}
+.box .banner .saoma .six .zhuce>a {
+    color: red;
+}
+.box .buttom {
+    width: 1150px;
+    height: 20px;
+    /* background-color: #38e96d; */
+    margin: auto;
+    margin-bottom: 20px;
+}
+.box .buttom>div {
+    float: left;
+    margin: 0 15px;
+    color: #999;
+    cursor: pointer;
+}
+.box .buttom>div:hover {
+    text-decoration: underline;
+    color: red;
+}
+.box .buttom>span {
+    float: left;
+    color: #999;
+}
+.box .same {
+    float: left;
+    color: #999;
+    /* background-color: #999; */
+}
+.box .last1 {
+    margin-left: 800px;
+}
+.box .last2 {
+    margin-left: 10px;
+}

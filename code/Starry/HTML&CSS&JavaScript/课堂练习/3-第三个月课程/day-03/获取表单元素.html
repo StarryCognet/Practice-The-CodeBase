@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text">
+    <input type="checkbox" name='hobbies' value="篮球1">篮球
+    <input type="checkbox" name='hobbies' value="足球2">足球
+    <input type="checkbox" name='hobbies' value="排球3">排球
+
+    <input type="radio" name="sex" value="男1">男
+    <input type="radio" name="sex" value="女2">女
+
+    <select name="" id="sel">
+        <option value="河北">河北</option>
+        <option value="山东">山东</option>
+        <option value="陕西">陕西</option>
+        <option value="河南">河南</option>
+    </select>
+
+    <textarea></textarea>
+
+    <button id="btn">提交</button>
+</body>
+
+</html>
+<script>
+
+    document.querySelector("#btn").onclick = function () {
+        // ⭐：表单内容获取还是设置，统统操作value
+        var input = document.querySelector("input");
+        console.log(input.value);
+
+        //复选框
+        var hobbies = document.querySelectorAll("input[name='hobbies']");
+
+        var str = "";
+        for (var i = 0; i < hobbies.length; i++) {
+            if (hobbies[i].checked) {
+                str += hobbies[i].value + " ";
+            }
+        }
+        console.log(str);
+
+        //单选按钮
+        var sexs = document.querySelectorAll("input[name='sex']");
+
+        var sex = "";
+        for (var i = 0; i < sexs.length; i++) {
+            if (sexs[i].checked) {
+                sex = sexs[i].value;
+            }
+        }
+
+        console.log(sex);
+
+        //下拉框
+        var options = document.querySelectorAll("#sel option");
+        var grade = "";
+        for (var i = 0; i < options.length; i++) {
+            if (options[i].selected) {
+                grade = options[i].value;
+            }
+        }
+
+        console.log(grade);
+
+        
+        // 获取文本域内容
+        var text = document.querySelector('textarea')
+        console.log(text.value)
+    }
+
+
+</script>

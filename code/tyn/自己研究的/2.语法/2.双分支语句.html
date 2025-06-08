@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+  /*
+  if (条件){
+    满足条件要执行的代码
+  }else{
+    不满足条件要执行的代码
+  }                     */
+
+  /*
+          // 练习
+  // 需求：用户输入，用户名：权威，密码：123456，则提示登陆成功，否则登录失败
+  
+  let q = prompt("请输入用户名")
+  let q1 = prompt("请输入密码")
+  
+  if (q === "权威" && q1 === "123456"){
+    
+     document.write("恭喜登录成功")
+  
+  }else{
+  
+    document.write("用户名或者密码不正确")
+     
+  }
+  */
+
+
+  //  练习
+  // 需求：让用户输入年份，判断一年是闰年还是平年并且弹出对应的警示框。
+
+  let q = +prompt("请输入年份")
+
+  if (q % 4 === 0 && q % 100 !== 0 || q % 400 === 0) {
+
+    document.write("闰年")
+
+  } else {
+
+    document.write("平年")
+
+  }
+
+
+
+
+
+
+</script>

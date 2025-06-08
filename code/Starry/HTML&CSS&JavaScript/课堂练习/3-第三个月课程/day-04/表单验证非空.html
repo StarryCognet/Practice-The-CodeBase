@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <!-- <script>
+    var btn = document.querySelector('button')
+    var spans = document.querySelectorAll('span')
+    var txt = document.querySelector('#txt')
+  
+    btn.onclick = function (e) {
+      //普通输入框验证非空
+      var name = document.querySelector('#name').value
+      if (name == '') {
+        spans[0].innerText = '账号不能为空!'
+        spans[0].className = 'redColor'
+        return false
+        //e.preventDefault();     //阻止事件的默认行为
+      } else {
+        spans[0].innerText = ''
+        spans[0].className = ''
+      }
+  
+      //密码验证非空和长度    长度>=6  <=8
+      var pwd = document.querySelector('#pwd').value
+      if (pwd == '') {
+        spans[1].innerText = '密码不能为空!'
+        spans[1].className = 'redColor'
+        return false
+      } else {
+        if (pwd.length >= 6 && pwd.length <= 8) {
+          spans[1].innerText = ''
+          spans[1].className = ''
+        } else {
+          spans[1].innerText = '密码长度为6到8位!'
+          spans[1].className = 'redColor'
+          return false
+        }
+      }
+  
+      //获取所有复选框
+      var hobbies = document.querySelectorAll("input[name='hobbies']")
+      //复选框验证非空即所选中的复选框个数为0
+      var count = 0
+      for (var i = 0; i < hobbies.length; i++) {
+        if (hobbies[i].checked) {
+          count++
+        }
+      }
+  
+      if (count == 0) {
+        //没有复选框被选中
+        spans[3].innerText = '爱好不能为空!'
+        spans[3].className = 'redColor'
+        return false
+      } else {
+        spans[3].innerText = ''
+        spans[3].className = ''
+      }
+  
+      //获取下拉框
+      var grade = document.querySelector('#grade')
+      if (grade.value == '0') {
+        spans[4].innerText = '请选择班级'
+        spans[4].className = 'redColor'
+        return false
+      } else {
+        spans[4].innerText = ''
+        spans[4].className = ''
+      }
+  
+      if (txt.value == '') {
+        spans[5].innerText = '自我介绍不能为空'
+        spans[5].className = 'redColor'
+        return false
+      } else {
+        spans[5].innerText = ''
+        spans[5].className = ''
+      }
+    }
+  
+    //表单输入事件
+    txt.oninput = function () {
+      if (txt.value.length > 40) {
+        spans[5].innerText = '您输入的文字个数不能超过40个'
+        txt.value = txt.value.substring(0, 40)
+      }
+  
+      //剩余字符数
+      var len = 40 - txt.value.length
+      spans[5].innerText = '还剩下' + len + '个字可以输入'
+    }
+  </script> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .redColor {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="">
+      账号：<input type="text" id="name" /> <span></span><br />
+      密码：<input type="password" id="pwd" /> <span></span><br />
+      确认密码：<input type="password" id="pwd2" /><span></span><br />
+      爱好：<input type="checkbox" name="hobbies" />吃饭
+      <input type="checkbox" name="hobbies" />睡觉
+      <input type="checkbox" name="hobbies" />打豆豆<span></span><br />
+      班级:
+      <select id="grade">
+        <option value="0">--请选择--</option>
+        <option value="1">一年级</option>
+        <option value="2">二年级</option>
+        <option value="3">三年级</option>
+      </select>
+      <span></span> <br />
+      自我介绍: <textarea name="" id="txt" cols="30" rows="10"></textarea>
+      <span>还剩下40个字可以输入</span><br />
+      <button>提交</button>
+    </form>
+    <script>
+      let button = document.querySelector('button')
+      let span = document.querySelectorAll('span')
+      let namew = document.querySelector('#name')
+      let pwd = document.querySelector('#pwd')
+      let pwd2 = document.querySelector('#pwd2')
+      let hobbies = document.querySelectorAll('#hobbies')
+      let grade = document.querySelector('#grade')
+      let textarea = document.querySelector('#txt')
+      button.onclick = function () {
+        if (namew.value == '') {
+          span[0].innerText = '账户名不能为空'
+          span[0].className = 'redColor'
+        }
+        if (pwd.value == '') {
+          span[1].innerText = '密码不能为空'
+          span[1].className = 'redColor'
+        }
+        if(pwd2.value !== pwd.value){
+          span[2].innerText = '请输入一样的密码'
+          span[2].className = 'redColor'
+        }
+        let hobbie = 0
+        for(let i = 0; i < hobbies.length; i++){
+          if(hobbies[i].checked){
+            hobbieb++
+          }
+        }
+        if(hobbie == 0){
+          span[3].innerText = '请选择'
+          span[3].className = 'redColor'
+        }
+        if(grade.value == 0){
+          span[4].innerText = '请选择一个'
+          span[4].className = 'redColor'
+        }
+        return false
+      }
+      textarea.oninput = function(){
+        span[5].innerHTML = `还剩下${40-textarea.value.length}个字可以输入`
+        if(textarea.value.length > 40){
+          alert('不能超过40个字')
+          textarea.value = textarea.value.substring(0, 40)
+        }
+      }
+    </script>
+  </body>
+</html>
