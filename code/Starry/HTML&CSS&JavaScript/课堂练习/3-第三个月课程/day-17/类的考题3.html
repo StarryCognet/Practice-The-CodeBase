@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1.创建一个Book类 拥有属性 bookName(图书名字) author(作者)  wordsNumber(字数)，number(数量)（10分）
+      function Book(bookName, author, wordsNumber, number, libraryName, address) {
+        Library.call(this, libraryName, address)
+        this.bookName = bookName
+        this.author = author
+        this.wordsNumber = wordsNumber
+        this.number = number
+      }
+
+      // 2.实现book类拥有方法 getBookInfo() 并可以实现返回内容如下“***书，作者是***字数是****”（10分）
+      // ！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+      Book.prototype.getBookInfo = function () {
+        return `${this.bookName}书，作者是${this.author}字数是${this.number}`
+      }
+      // ！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+      // 3.创建一个Library类 拥有属性 libraryName(图书馆名字) address（地址）（5分）
+      function Library(libraryName, address) {
+        this.libraryName = libraryName
+        this.address = address
+      }
+
+      // 4.实现Book类继承Library类（5分）
+      Book.prototype = new Library()
+
+      // 5.实现Library类拥有方法 getLibraryName 实现如果图书馆名字有字母则返回大写字母否则原样返回（10分）
+      Book.prototype.getLibraryName = function () {
+        let arr = this.libraryName.split('')
+        let num = ''
+        for (let i in arr) {
+          if (/^[A-Z]+$/.test(arr[i])) {
+            num += arr[i]
+          }
+        }
+        if (num == '') {
+          return this.libraryName
+        }
+        return num
+      }
+
+      // 6.实现Book类拥有方法 getInfo 实现根据当前书的字数判断低于10000字提示“***书作者***您太懒了！需要再接再励”否则返回“***书作者***实现了人生一个小目标哦~”（5分）
+      Book.prototype.getInfo = function () {
+        if (this.wordsNumber < 10000) {
+          return `${this.bookName}书作者${this.author}您太懒了！需要再接再励`
+        } else {
+          return `${this.bookName}书作者${this.author}实现了人生一个小目标哦~`
+        }
+      }
+
+      // 7.实例化Book类并调用各个属性和方法进行输出（5分）
+
+      let bo = new Book('黑暗森林', '刘慈欣', 60000, 3, 'XinHua', '北京')
+      console.log(bo.getLibraryName())
+      console.log(bo.getInfo())
+      console.log(bo.getBookInfo())
+    </script>
+  </body>
+</html>

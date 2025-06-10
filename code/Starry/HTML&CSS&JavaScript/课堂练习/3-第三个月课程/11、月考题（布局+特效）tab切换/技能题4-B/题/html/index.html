@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+      }
+      .tag{
+        width: 510px;
+        height: 50px;
+        margin: 0 auto;
+        /* background-color: rgb(196, 196, 196); */
+      }
+      ul{
+        margin: 0 auto;
+      }
+      li{
+        list-style: none;
+        float: left;
+        border: 1px solid #d4d4d4;
+        color: #505050;
+        border-radius: 5px;
+        padding: 5px 15px;
+        margin: 10px;
+      }
+      .cont{
+        width: 1100px;
+        margin: 0 auto;
+        /* background-color: #8f8f8f; */
+      }
+      .co{
+        display: inline-block;
+        margin: 10px;
+      }
+      .blue{
+        color: #1394f7;
+        background-color: #e1f1fe;
+        border: 1px solid #e1f1fe;
+      }
+      img{
+        border-radius: 15px;
+        width: 250px;
+        height: 150px;
+      }
+      .title p:first-of-type{
+        background-color: #4978ce;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: center;
+        color: #ffffff;
+        width: 40px;
+        border-radius: 3px;
+        padding-bottom: 1px;
+        margin-top: 5px;
+      }
+      .title span{
+        font-size: 11px;
+        color: #9fb7e5;
+      }
+      .title p:last-of-type{
+        font-size: 15px;
+        font-weight: 600;
+        color: #0080f5;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2 align="center">优惠酒店</h2>
+    <div class="tag">
+      <ul>
+        <li>上海</li>
+        <li>北京</li>
+        <li>杭州</li>
+        <li class="blue">成都</li>
+        <li>广州</li>
+        <li>天津</li>
+      </ul>
+    </div>
+    <br>
+    <div class="cont" style="display: none;">
+      <script>
+        for(let i = 0; i < 4; i++){
+          document.write(`
+      <div class="co">
+        <img src="../images/1.png" alt="">
+        <div class="title">
+          <h4>崇州街子古镇斯维登温泉度假酒店</h4>
+          <p>4.5<span>/5</span></p>
+          <p>￥427</p>
+        </div>
+      </div>
+          `)
+        }
+      </script>
+    </div>
+    <div class="cont" style="display: none;">
+      <script>
+        for(let i = 0; i < 4; i++){
+          document.write(`
+      <div class="co">
+        <img src="../images/2.png" alt="">
+        <div class="title">
+          <h4>崇州街子古镇斯维登温泉度假酒店</h4>
+          <p>4.5<span>/5</span></p>
+          <p>￥427</p>
+        </div>
+      </div>
+          `)
+        }
+      </script>
+    </div>
+    <div class="cont" style="display: none;">
+      <script>
+        for(let i = 0; i < 4; i++){
+          document.write(`
+      <div class="co">
+        <img src="../images/3.png" alt="">
+        <div class="title">
+          <h4>崇州街子古镇斯维登温泉度假酒店</h4>
+          <p>4.5<span>/5</span></p>
+          <p>￥427</p>
+        </div>
+      </div>
+          `)
+        }
+      </script>
+    </div>
+    <div class="cont" style="display: block;">
+      <script>
+        for(let i = 0; i < 4; i++){
+          document.write(`
+      <div class="co">
+        <img src="../images/4.png" alt="">
+        <div class="title">
+          <h4>崇州街子古镇斯维登温泉度假酒店</h4>
+          <p>4.5<span>/5</span></p>
+          <p>￥427</p>
+        </div>
+      </div>
+          `)
+        }
+      </script>
+    </div>
+    <div class="cont" style="display: none;">
+      <script>
+        for(let i = 0; i < 4; i++){
+          document.write(`
+      <div class="co">
+        <img src="../images/5.png" alt="">
+        <div class="title">
+          <h4>崇州街子古镇斯维登温泉度假酒店</h4>
+          <p>4.5<span>/5</span></p>
+          <p>￥427</p>
+        </div>
+      </div>
+          `)
+        }
+      </script>
+    </div>
+    <div class="cont" style="display: none;">
+      <script>
+        for(let i = 0; i < 4; i++){
+          document.write(`
+      <div class="co">
+        <img src="../images/6.png" alt="">
+        <div class="title">
+          <h4>崇州街子古镇斯维登温泉度假酒店</h4>
+          <p>4.5<span>/5</span></p>
+          <p>￥427</p>
+        </div>
+      </div>
+          `)
+        }
+      </script>
+    </div>
+    <script src="../js/index.js"></script>
+  </body>
+</html>

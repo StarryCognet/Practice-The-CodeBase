@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1、创建学生类 Student，有属性姓名name，性别sex，生日birth，邮箱email。属性不能写死，构造函数以参数传入。
+      function Student(name, sex, birth, email) {
+        this.name = name
+        this.sex = sex
+        this.birth = birth
+        this.email = email
+      }
+      // 2、学生类中有方法 getInfo,返回”学生姓名为**,性别为**，生日为**”
+      Student.prototype.getInfo = function () {
+        return `学生姓名为${this.name},性别为${this.sex}，生日为${this.birth}`
+      }
+      // 3、学生类中有方法  getEmail, 询问用户邮箱是否为输入的邮箱（例如:尊敬的用户是否确定您的邮箱为**？），如果确定 返回”用户**已确定邮箱为***”，如果不确定返回”用户***，不确定邮箱为**，后续可能会改动”
+      Student.prototype.getEmail = function () {
+        let qd = prompt(`尊敬的用户是否确定您的邮箱为${this.email}`)
+        if (qd == '确定') {
+          return `用户${this.name}已确定邮箱为${this.email}`
+        } else if (qd == '不确定') {
+          return `用户${this.name}不确定邮箱为${this.email}，后续可能会改动`
+        }
+      }
+      // 4、学生类中有方法  getAge,如果学生成年 返回“**学生，今年**岁了，已成年”，如果学生未成年返回”**学生，今年**岁了，未成年”;
+      Student.prototype.getAge = function () {
+        let date = new Date()
+        let age = date.getFullYear() - this.birth
+        if (age >= 18) {
+          return `${this.name}学生，今年${age}岁了，未成年`
+        } else {
+          return `${this.name}学生，今年${age}岁了，已成年`
+        }
+      }
+      // 5、定义成绩类 Grade，有属性 语文grade1，数学grade2，英语grade3
+      // 属性不能写死，以参数形式传入。
+      function Grade(name, sex, birth, email, grade1, grade2, grade3) {
+        Student.call(this, name, sex, birth, email)
+        this.grade1 = grade1
+        this.grade2 = grade2
+        this.grade3 = grade3
+      }
+      // 6、成绩类继承学生类（使用组合继承-构造函数继承、原型链继承）
+      Grade.prototype = new Student()
+      // 7、成绩类中有方法 getGrade,返回”学生***，语文成绩是***,数学成绩是**,英语成绩是**，关于成绩的具体信息已发送您的邮箱***”
+      Grade.prototype.getGrade = function () {
+        return `学生${this.name}，语文成绩是${this.grade1},数学成绩是${this.grade2},英语成绩是${this.grade3}，关于成绩的具体信息已发送您的邮箱${this.email}`
+      }
+      // 8、成绩类中有方法 getAvg,返回”**同学，三科平均分为**分”
+      Grade.prototype.getAve = function () {
+        let gra = (this.grade1 + this.grade2 + this.grade3) / 3
+        return `${this.name}同学，三科平均分为${gra}分`
+      }
+      // 9、成绩类中有方法 getSum,返回”**同学，三科总分为**分”
+      Grade.prototype.getSum = function () {
+        let gra = this.grade1 + this.grade2 + this.grade3
+        return `${this.name}同学，三科总分为${gra}分`
+      }
+      // 10、实例化成绩类，调用所有自己及继承的父类所有属性，调用所有自己及继承的父类的方法
+      let gr = new Grade('刘海', '男', 2007, '3398377037@qq.com', 60, 80, 70)
+      console.log(gr.getInfo())
+      console.log(gr.getEmail())
+      console.log(gr.getAge())
+      console.log(gr.getGrade())
+      console.log(gr.getAve())
+      console.log(gr.getSum())
+    </script>
+  </body>
+</html>
