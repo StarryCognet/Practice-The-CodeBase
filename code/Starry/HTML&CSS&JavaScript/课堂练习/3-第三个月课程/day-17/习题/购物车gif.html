@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+    h3 {
+      width: 584px;
+      padding: 5px;
+      background-color: #177ecb;
+    }
+    td {
+      padding: 5px 10px;
+      text-align: center;
+    }
+    input[type='text'] {
+      text-align: center;
+      width: 30px;
+    }
+    input[type='button'] {
+      width: 20px;
+      background-color: #000000;
+      color: #ffffff;
+    }
+  </style>
+  <body>
+    <table border="1">
+      <thead>
+        <h3>购物车</h3>
+        <tr>
+          <td><input type="checkbox" id="quanxuan" />全选</td>
+          <td>商品代码</td>
+          <td>商品名称</td>
+          <td>商品单价</td>
+          <td>商品库存</td>
+          <td>商品数量</td>
+          <td>商品小计</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="checkbox" class="fux" /></td>
+          <td>10001</td>
+          <td>商品一</td>
+          <td>￥<span class="danj">26</span></td>
+          <td>
+            <input type="button" value="-" />
+            <input type="text" class="spkc" value="1" />
+            <input type="button" value="+" />
+          </td>
+          <td class="spsl">6</td>
+          <td>￥<span class="xiaoj">52</span></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="fux" checked /></td>
+          <td>10001</td>
+          <td>商品一</td>
+          <td>￥<span class="danj">26</span></td>
+          <td>
+            <input type="button" value="-" />
+            <input type="text" class="spkc" value="1" />
+            <input type="button" value="+" />
+          </td>
+          <td class="spsl">6</td>
+          <td>￥<span class="xiaoj">52</span></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="fux" /></td>
+          <td>10001</td>
+          <td>商品一</td>
+          <td>￥<span class="danj">26</span></td>
+          <td>
+            <input type="button" value="-" />
+            <input type="text" class="spkc" value="1" />
+            <input type="button" value="+" />
+          </td>
+          <td class="spsl">6</td>
+          <td>￥<span class="xiaoj">52</span></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="fux" /></td>
+          <td>10001</td>
+          <td>商品一</td>
+          <td>￥<span class="danj">26</span></td>
+          <td>
+            <input type="button" value="-" />
+            <input type="text" class="spkc" value="1" />
+            <input type="button" value="+" />
+          </td>
+          <td class="spsl">6</td>
+          <td>￥<span class="xiaoj">52</span></td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" class="fux" /></td>
+          <td>10001</td>
+          <td>商品一</td>
+          <td>￥<span class="danj">26</span></td>
+          <td>
+            <input type="button" value="-" />
+            <input type="text" class="spkc" value="1" />
+            <input type="button" value="+" />
+          </td>
+          <td class="spsl">6</td>
+          <td>￥<span class="xiaoj">52</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p><span class="zsp">0</span>件商品</p>
+    <p>
+      总计：
+      <span style="color: red"><b>￥</b></span>
+      <span style="color: red; font-weight: 700" class="zongji">0</span>
+    </p>
+    <script>
+      let quanxuan = document.querySelector('#quanxuan')
+      let fux = document.querySelectorAll('.fux')
+      let spkc = document.querySelectorAll('.spkc')
+      let spsl = document.querySelectorAll('.spsl')
+      let danj = document.querySelectorAll('.danj')
+      let xiaoj = document.querySelectorAll('.xiaoj')
+      let zsp = document.querySelector('.zsp')
+      let zongJii = document.querySelector('.zongji')
+
+      function zongJ() {
+        let num = 0
+        for (let i = 0; i < fux.length; i++) {
+          if (fux[i].checked) {
+            num += parseInt(xiaoj[i].innerHTML)
+          }
+          console.log(num)
+          zongJii.innerHTML = num
+        }
+      }
+
+      function zongSp() {
+        let count = 0
+        for (let i = 0; i < fux.length; i++) {
+          if (fux[i].checked) {
+            count += parseInt(spkc[i].value)
+          }
+        }
+        zsp.textContent = count
+      }
+      // function spxj(){
+      //   for (let i = 0; i < fux.length; i++) {
+      //       xiaoj[i].innerHTML =parseInt(xiaoj[i].innerHTML) + parseInt(danj[i].innerHTML) * parseInt(xiaoj[i].innerHTML)
+      //       console.log();
+            
+      //   }
+      // }
+      zongSp()
+      zongJ()
+      for (let i = 0; i < spkc.length; i++) {
+        spkc[i].previousElementSibling.addEventListener('click', function () {
+          if (spkc[i].value > 0) {
+            spkc[i].value--
+            xiaoj[i].innerHTML = parseInt(danj[i].innerHTML) * spkc[i].value
+            zongSp()
+            zongJ()
+          }
+        })
+        spkc[i].nextElementSibling.addEventListener('click', function () {
+          if (spkc[i].value < parseInt(spsl[i].innerHTML)) {
+            spkc[i].value++
+            xiaoj[i].innerHTML = parseInt(danj[i].innerHTML) * spkc[i].value
+            zongSp()
+            zongJ()
+          }
+        })
+        fux[i].addEventListener('click', function () {
+          quanxuan.checked = document.querySelectorAll('.fux:checked').length === fux.length
+          zongJ()
+          zongSp()
+        })
+      }
+      quanxuan.addEventListener('click', function(){
+        for(let i = 0; i < fux.length; i++){
+          fux[i].checked = quanxuan.checked
+          zongJ()
+          zongSp()
+        }
+      })
+    </script>
+  </body>
+</html>

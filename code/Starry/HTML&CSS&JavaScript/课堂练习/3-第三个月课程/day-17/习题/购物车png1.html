@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: #ea4335;
+      }
+      .banner {
+        width: 700px;
+        margin: 0 auto;
+        margin-top: 10px;
+      }
+      .top {
+        background-color: #fce3e1;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .top input {
+        height: 25px;
+      }
+      .box {
+        background-color: #fce3e1;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 15px 0;
+        text-align: center;
+      }
+      tr td:first-of-type {
+        text-align: left;
+      }
+      .jia,
+      .jian {
+        background-color: #ffffff00;
+        border-color: #ea443500;
+      }
+      .sl {
+        width: 40px;
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      td {
+        padding: 5px 23px;
+        border-bottom: 1px solid #e2d5d4;
+      }
+      .end {
+        background-color: #fce3e1;
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 110px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <div class="top">
+        商品名称：
+        <input type="text" name="" class="spmc" />
+        商品价格：
+        <input type="text" name="" class="spjg" />
+        <input type="button" value="加入购物车" class="but" />
+      </div>
+      <div class="box">
+        <table id="cartTable">
+          <tr>
+            <td><input type="checkbox" name="" class="quanxuan" />全选按钮</td>
+            <td>商品名称</td>
+            <td>商品价格</td>
+            <td>数量</td>
+            <td>操作</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="" class="fux" />
+            </td>
+            <td>梅赛德斯 w13-B</td>
+            <td><i>2500000000</i> 元</td>
+            <td>
+              <input type="button" value="-" class="jian" />
+              <input type="text" class="sl" value="1" />
+              <input type="button" value="+" class="jia" />
+            </td>
+            <td><a href="#">删除</a></td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="" class="fux" />
+            </td>
+            <td>阿尔法罗密欧 四叶草</td>
+            <td><i>430000</i> 元</td>
+            <td>
+              <input type="button" value="-" class="jian" />
+              <input type="text" class="sl" value="1" />
+              <input type="button" value="+" class="jia" />
+            </td>
+            <td><a href="#">删除</a></td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="" class="fux" />
+            </td>
+            <td>自行车</td>
+            <td><i>1298</i> 元</td>
+            <td>
+              <input type="button" value="-" class="jian" />
+              <input type="text" class="sl" value="1" />
+              <input type="button" value="+" class="jia" />
+            </td>
+            <td><a href="#">删除</a></td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="" class="fux" />
+            </td>
+            <td>手机</td>
+            <td><i>2323</i> 元</td>
+            <td>
+              <input type="button" value="-" class="jian" />
+              <input type="text" class="sl" value="1" />
+              <input type="button" value="+" class="jia" />
+            </td>
+            <td><a href="#">删除</a></td>
+          </tr>
+        </table>
+      </div>
+      <div class="end">
+        <span>共计<span class="spzj">0</span>种商品，合计<span class="heji">0</span>元。</span>
+        <input type="button" value="清空购物车" />
+      </div>
+    </div>
+
+    <script>
+      let spmc = document.querySelector('.spmc')
+      let spjg = document.querySelector('.spjg')
+      let but = document.querySelector('.but')
+      let cartTable = document.getElementById('cartTable')
+
+      // 事件委托实现全选
+      cartTable.addEventListener('change', function (event) {
+        if (event.target.classList.contains('quanxuan')) {
+          var checkboxes = cartTable.querySelectorAll('.fux')
+          checkboxes.forEach(function (checkbox) {
+            checkbox.checked = event.target.checked
+          })
+        }
+      })
+
+      // 加入购物车
+      but.addEventListener('click', function () {
+        var productName = spmc.value.trim()
+        var productPrice = spjg.value.trim()
+
+        if (!productName || !productPrice) return
+
+        // 检查是否已经存在相同商品
+        var rows = cartTable.querySelectorAll('tr')
+        var found = false
+
+        rows.forEach(function (row) {
+          var cells = row.getElementsByTagName('td')
+          if (cells.length > 1 && cells[1].textContent === productName) {
+            var slInput = row.querySelector('.sl')
+            slInput.value = parseInt(slInput.value) + 1
+            found = true
+          }
+        })
+
+        if (!found) {
+          var newRow = cartTable.insertRow()
+          newRow.innerHTML = `
+        <td><input type="checkbox" name="" class="fux" /></td>
+        <td>${productName}</td>
+        <td><i>${productPrice}</i> 元</td>
+        <td>
+          <input type="button" value="-" class="jian" />
+          <input type="text" class="sl" value="1" />
+          <input type="button" value="+" class="jia" />
+        </td>
+        <td><a href="#">删除</a></td>
+      `
+        }
+
+        jiaJian()
+        updateTotal()
+      })
+
+      // 数量加减功能
+      function jiaJian() {
+        var rows = cartTable.querySelectorAll('tr')
+        rows.forEach(function (row) {
+          var jiaBtn = row.querySelector('.jia')
+          var jianBtn = row.querySelector('.jian')
+          var slInput = row.querySelector('.sl')
+
+          if (jiaBtn && !jiaBtn.dataset.listenerAdded) {
+            jiaBtn.addEventListener('click', function () {
+              slInput.value = parseInt(slInput.value) + 1
+              updateTotal()
+            })
+            jiaBtn.dataset.listenerAdded = true // 防止重复绑定
+          }
+
+          if (jianBtn && !jianBtn.dataset.listenerAdded) {
+            jianBtn.addEventListener('click', function () {
+              if (parseInt(slInput.value) > 1) {
+                slInput.value = parseInt(slInput.value) - 1
+              } else {
+                row.remove() // 删除整行
+              }
+              updateTotal()
+            })
+            jianBtn.dataset.listenerAdded = true // 防止重复绑定
+          }
+        })
+      }
+
+      // 更新总价和商品种类数
+      function updateTotal() {
+        var rows = cartTable.querySelectorAll('tr')
+        var totalItems = 0
+        var totalPrice = 0
+
+        rows.forEach(function (row) {
+          var cells = row.getElementsByTagName('td')
+          if (cells.length > 1 && row.querySelector('.fux').checked) {
+            var price = parseFloat(cells[2].querySelector('i').textContent)
+            var quantity = parseInt(row.querySelector('.sl').value)
+            totalItems += quantity
+            totalPrice += price * quantity
+          }
+        })
+
+        document.querySelector('.spzj').textContent = totalItems
+        document.querySelector('.heji').textContent = totalPrice.toFixed(2)
+      }
+
+      // 初始化数量加减功能
+      jiaJian()
+    </script>
+  </body>
+</html>
