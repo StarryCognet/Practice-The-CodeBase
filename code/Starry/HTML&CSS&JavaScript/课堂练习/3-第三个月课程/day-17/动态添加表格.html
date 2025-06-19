@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .top tr td:nth-child(1) {
+        width: 70px;
+        text-align: center;
+      }
+
+      table {
+        margin: 0 auto;
+      }
+
+      .bottom {
+        margin-top: 100px;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <table class="top" border="1" width="320px">
+      <tr>
+        <td colspan="2">用户注册信息</td>
+      </tr>
+      <tr>
+        <td>用户名</td>
+        <td><input type="text" name="name" class="name" /></td>
+      </tr>
+      <tr>
+        <td>密码</td>
+        <td><input type="password" name="pwd" class="pwd" /></td>
+      </tr>
+      <tr>
+        <td>籍贯</td>
+        <td>
+          <select name="prov" class="prov">
+            <option value="0">--请选择--</option>
+            <option value="河北">河北</option>
+            <option value="山东">山东</option>
+            <option value="河南">河南</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>兴趣</td>
+        <td>
+          <input type="checkbox" name="hobbies" value="篮球" checked />篮球 <input type="checkbox" name="hobbies" value="足球" />足球
+          <input type="checkbox" name="hobbies" value="书法" />书法 <input type="checkbox" name="hobbies" value="音乐" />音乐
+          <input type="checkbox" name="hobbies" value="绘画" />绘画 <input type="checkbox" name="hobbies" value="散打" />散打
+          <input type="checkbox" name="hobbies" value="瑜伽" />瑜伽 <input type="checkbox" name="hobbies" value="其他" />其他
+        </td>
+      </tr>
+      <tr>
+        <td>政治面貌</td>
+        <td>
+          <input type="radio" name="zheng" value="党员" />党员 <input type="radio" name="zheng" value="团员" />团员
+          <input type="radio" name="zheng" value="群众" checked />群众
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><button class="submit">提交</button><button>重置</button></td>
+      </tr>
+    </table>
+    <table class="bottom" border="1" width="800px">
+      <tr>
+        <td>选中</td>
+        <td>用户名</td>
+        <td>密码</td>
+        <td>籍贯</td>
+        <td>兴趣</td>
+        <td>政治面貌</td>
+        <td>操作</td>
+      </tr>
+      <tr>
+        <td>全选<input type="checkbox" class="quan" /></td>
+        <td colspan="6">
+          <button class="remove">选中删除</button>
+          <button class="checkAll">全选</button>
+          <button class="checkNone">全不选</button>
+          <button class="fanxuan">反选</button>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+<script>
+  document.querySelector('.submit').onclick = function () {
+    var fuxlist = document.querySelectorAll('.fux')
+    var namelist = document.querySelector('.name').value
+    var pwdlist = document.querySelector('.pwd').value
+    var prov = document.querySelector('.prov').value
+    var hobbieslist = document.querySelectorAll("input[name='hobbies']")
+    var hob = ''
+    for (var i = 0; i < hobbieslist.length; i++) {
+      if (hobbieslist[i].checked) {
+        hob += hobbieslist[i].value + ' '
+      }
+    }
+    var zhenglist = document.querySelectorAll("input[type='radio']")
+    var zlt = ''
+    for (var i = 0; i < zhenglist.length; i++) {
+      if (zhenglist[i].checked) {
+        zlt = zhenglist[i].value
+      }
+    }
+    document.querySelector('.bottom').innerHTML += `<tr>
+            <td><input type="checkbox" class='fux'></td>
+            <td>${namelist}</td>
+            <td>${pwdlist}</td>
+            <td>${prov}</td>
+            <td>${hob}</td>
+            <td>${zlt}</td>
+            <td><a href="" class="del">删除</a></td>
+            </tr>`
+    // 全选
+    var checkAlllist = document.querySelector('.checkAll')
+    var quanlist = document.querySelector('.quan')
+    checkAlllist.onclick = function () {
+      var fuxlist = document.querySelectorAll('.fux')
+      for (var i = 0; i < fuxlist.length; i++) {
+        fuxlist[i].checked = true
+      }
+      quanlist.checked = true
+    }
+
+    // 全不选
+    document.querySelector('.checkNone').onclick = function () {
+      var fuxlist = document.querySelectorAll('.fux')
+      for (var i = 0; i < fuxlist.length; i++) {
+        fuxlist[i].checked = false
+      }
+      quanlist.checked = false
+    }
+
+    // 选中删除
+    document.querySelector('.remove').onclick = function () {
+      var fuxlist = document.querySelectorAll('.fux')
+      for (var i = 0; i < fuxlist.length; i++) {
+        if (fuxlist[i].checked) {
+          fuxlist[i].parentNode.parentNode.remove()
+        }
+      }
+    }
+    // 删除
+    var dellist = document.querySelectorAll('.del')
+    dellist.onclick = function () {
+      for (var i = 0; i < dellist.length; i++) {
+        dellist[i]
+      }
+    }
+    // // 反选
+    var fanxuan = document.querySelector('.fanxuan')
+    fanxuan.onclick = function () {
+      var fuxlist = document.querySelectorAll('.fux')
+      var quanlist = document.querySelector('.quan')
+      for (var i = 0; i < fuxlist.length; i++) {
+        fuxlist[i].checked = !fuxlist[i].checked
+      }
+    }
+    var quanlist = document.querySelector('.quan')
+    var fuxlist = document.querySelectorAll('.fux')
+    for(let i = 0; i < fuxlist.length; i++){
+    fuxlist[i].onclick = function () {
+      var sss = document.querySelectorAll('.fux:checked')
+      if (fuxlist.length == sss.length) {
+          quanlist.checked = true;
+      } else {
+          quanlist.checked = false;
+      }
+    }
+}
+  }
+</script>

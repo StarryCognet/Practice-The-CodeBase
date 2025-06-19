@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <!-- <script>
+      var saveBtn = document.getElementById('save')
+      var goodsController = document.querySelectorAll('.addGoods')
+      var goods = []
+      var car = []
+      saveBtn.onclick = function () {
+        var goodName = goodsController[0].value
+        var price = goodsController[1].value
+        var info = goodsController[2].value
+        // var image=goodsController[3].value
+        var id = Date.now()
+        goods.push({
+          goodName,
+          price,
+          info,
+          id,
+        })
+        addToGood(goodName, price, info, id)
+        goodName = goodsController[0].value = ''
+        price = goodsController[1].value = ''
+        info = goodsController[2].value = ''
+        // image = goodsController[3].value=''
+      }
+      var goodList = document.getElementById('goodList')
+      function addToGood(goodName, price, info, id) {
+        goodList.innerHTML += `
+            <li>
+                <div>${id}</div>
+                <div>${goodName}</div>
+                <div>${price}</div>
+                <div>${info}</div>
+                <div>
+                    <a href="javascript:;" onclick='addToCar(${id})'>加入购物车</a>
+                    <a href="javascript:;" onclick='rmCar(${id},goods)'>删除</a>
+                    </div>
+            </li>
+            `
+      }
+    
+      function addToCar(id) {
+        var currentGood = {}
+        for (var good of goods) {
+          if (good.id == id) {
+            currentGood = good
+            break
+          }
+        }
+        var flag = false
+        for (var index in car) {
+          if (car[index].id == currentGood.id) {
+            flag = index
+          }
+        }
+        if (flag || flag === 0) {
+          car[flag].count++
+          document.querySelectorAll('.count')[flag].innerHTML = car[flag].count
+        } else {
+          currentGood.count = 1
+          car.push(currentGood)
+          randerToTable(currentGood)
+        }
+      }
+    
+      var tb = document.querySelector('#carTB')
+      function randerToTable(good) {
+        var keys = ['goodName', 'price', 'info', 'count']
+        var row = tb.insertRow(-1)
+        for (var i = 0; i < 6; i++) {
+          var cell = row.insertCell(i)
+          if (i == 5) {
+            cell.innerHTML = `<button onclick='rmCar(${good.id},car)'>移除购物车</button>`
+          } else {
+            cell.innerHTML = good[keys[i]]
+          }
+          if (i == 4) {
+            cell.className = 'count'
+          }
+        }
+      }
+      function rmCar(id, arr) {
+        event.target.parentElement.parentElement.remove()
+        var rmIndex
+        for (var index in arr) {
+          if (arr[index] == id) {
+            rmIndex = index
+            break
+          }
+        }
+        arr.splice(rmIndex, 1)
+      }
+    </script> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    ul > li {
+      margin-top: 20px;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    ul > li > div {
+      width: 120px;
+    }
+    ul > li > div > a {
+      width: 50px;
+    }
+    .box {
+      width: 900px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      background-color: skyblue;
+    }
+  </style>
+
+  <body>
+    <div class="box">
+      商品名:<input type="text" placeholder="请输入商品" class="addGoods" /> 价格:<input type="number" class="addGoods" /> 描述:<textarea
+        class="addGoods"
+      ></textarea>
+      <!-- 图片:<input type="text" placeholder="请输入图片" class="addGoods"> -->
+      <button id="save">添加商品</button>
+
+      <ul id="goodList">
+        <li>
+          <div>id</div>
+          <div>商品名</div>
+          <div>价格</div>
+          <div>描述</div>
+          <!-- <div>图片</div> -->
+          <div>操作</div>
+        </li>
+      </ul>
+
+      <table id="carTB" border="1px">
+        <tr>
+          <th>商品名</th>
+          <th>价格</th>
+          <th>描述</th>
+          <th>图片地址</th>
+          <th>数量</th>
+          <th>操作</th>
+        </tr>
+      </table>
+    </div>
+    <script>
+      let save = document.querySelector('#save')
+      let goodList = document.querySelector('#goodList')
+      let addGoods = document.querySelectorAll('.addGoods')
+      let carTB = document.querySelector('#carTB')
+      save.addEventListener('click', function () {
+        let num = Math.floor(Math.random() * (9999 - 1111 + 1) + 1111)
+        goodList.innerHTML += `
+        <li>
+          <div class='num'>${num}</div>
+          <div>${addGoods[0].value}</div>
+          <div>${addGoods[1].value}</div>
+          <div>${addGoods[2].value}</div>
+          <div><a href="#" class='gwc'>加入购物车</a><a href="#" class=''>删除</a></div>
+        </li>
+        `
+
+        let gwc = document.querySelectorAll('.gwc')
+        let nums = document.querySelectorAll('.num')
+        for (let i = 0; i < gwc.length; i++) {
+          gwc[i].addEventListener('click', function () {
+            let sp = document.querySelectorAll('.sp')
+            let currentNum = nums[i].innerHTML
+            if (sp.length == 0) {
+              carTB.innerHTML += `
+            <tr>
+                <th class='sp' id='${currentNum}'>商品名</th>
+                <th>${addGoods[1].value}</th>
+                <th>${addGoods[2].value}</th>
+                <th>图片地址</th>
+                <th class='count'>1</th>
+                <th>操作</th>
+            </tr>
+                `
+              return
+            }
+            let tf = false
+            for (let j = 0; j < sp.length; j++) {
+              if (sp[j].id === currentNum) {
+                tf = true
+                let countCell = sp[j].parentNode.children[4]
+                let currentCount = parseInt(countCell.innerHTML)
+                countCell.innerHTML = currentCount + 1
+                break
+              }
+            }
+            if (!tf) {
+              carTB.innerHTML += `
+            <tr>
+                <th class='sp' id='${currentNum}'>${addGoods[0].value}</th>
+                <th>${addGoods[1].value}</th>
+                <th>${addGoods[2].value}</th>
+                <th>图片地址</th>
+                <th class='count'>1</th>
+                <th>操作</th>
+            </tr>
+            `
+            }
+          })
+        }
+      })
+      removeFromCart()
+    </script>
+  </body>
+</html>

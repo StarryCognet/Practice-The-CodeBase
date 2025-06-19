@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <!-- <script>
+        //1.创建一个班级类 拥有属性 className(班级名字) subject(课程名字)  teacher(讲师)、num人数、classroom（教室号），属性值不能固定写死，构造方法传入赋值（10分）
+        function Grade(className, subject, teacher, num, classroom) {
+            this.className = className;
+            this.subject = subject;
+            this.teacher = teacher;
+            this.num = num;
+            this.classroom = classroom;
+        }
+    
+        //实现班级类拥有方法 getTeacher() 并可以实现返回内容如下“***班***课程授课老师是****老师”（10分）
+        Grade.prototype.getTeacher = function (ccc) {
+            console.log(this.className + "班"+this.subject+"课程授课老师是"+this.teacher+"老师");
+        }
+    
+        //3.实现班级类拥有方法 getPosition,教室号尾号1-5的在东面。尾号为6-9的在西面。所以教室号如果为309 输出结果为教室位置在三楼西面。教室号为203 输出教室位置在二楼东面。 (20分)
+        Grade.prototype.getPosition = function(){
+            //获取教师号的个位数字
+            var ge = this.classroom % 10;
+            var bai = Math.floor(this.classroom / 100);
+    
+            if(ge >= 1 && ge <= 5){
+                console.log("教室位置在"+bai+"楼东面");
+            }else{
+                console.log("教室位置在"+bai+"楼西面");
+            }
+        }
+    
+        //4.创建一个学生类 拥有属性 name(学生姓名) sex（性别）  age（年龄），属性值不能写死 构造方法传入（10分）
+        function Student(name,sex,age,className, subject, teacher, num, classroom){
+            Grade.call(this,className, subject, teacher, num, classroom);
+            this.name = name;
+            this.sex = sex;
+            this.age = age;
+        }
+    
+        Student.address = "北京市昌平区沙河镇";
+    
+        //5.实现学生类继承班级类--必须使用组合继承（10分）
+        Student.prototype = new Grade();
+    
+        //6.实现学生类拥有方法 upperName 实现让自己的名字大写进行返回（10分）
+        Student.prototype.upperName = function(){
+            return this.name.toUpperCase();
+        }
+    
+        //7.实现学生类拥有方法 getScore 实现传入分数返回“***课程及格或者不及格”（10分）
+        Student.prototype.getScore = function(score){
+            if(score >= 60){
+                return this.subject +"课程及格";
+            }else{
+                return this.subject + "课程不及格";
+            }
+        }
+    
+        //8.实现学生类拥有方法 getInfo。返回 学生姓名为:**,年龄为**，性别为**，讲师为**，所在班级为**，班级人数共**人，教室号为**，所学习课程为**(10分)
+        Student.prototype.getInfo = function(){
+            return "学生姓名为:"+this.name+",年龄为"+this.age+"，性别为"+this.sex+"，讲师为"+this.teacher+"，所在班级为"+this.className+"，班级人数共"+this.num+"人，教室号为"+this.classroom+"，所学习课程为"+this.subject;
+        }
+    
+        //9.实例化学生类并调用各个属性和方法进行输出（10分）
+        var stu = new Student("张三","男",20,"教室一","js高级","张思",30,"209");
+        console.log(stu.name,stu.sex,stu.age,stu.className,stu.subject,stu.teacher,stu.num,stu.classroom);
+        console.log(stu.upperName());
+        console.log(stu.getInfo());
+        console.log(stu.getScore(70));
+        
+        stu.getTeacher();
+        stu.getPosition();
+        
+        
+        
+    </script> -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body></body>
+</html>
+<script>
+  //1.创建一个班级类 拥有属性 className(班级名字) subject(课程名字)  teacher(讲师)、num人数、classroom（教室号），属性值不能固定写死，构造方法传入赋值（10分）
+  function Grade(className, subject, teacher, num, classroom) {
+    this.className = className
+    this.subject = subject
+    this.teacher = teacher
+    this.num = num
+    this.classroom = classroom
+  }
+
+  //实现班级类拥有方法 getTeacher() 并可以实现返回内容如下“***班***课程授课老师是****老师”（10分）
+  Grade.prototype.getTeacher = function () {
+    return `${this.className}班${this.subject}课程授课老师是${this.teacher}老师`
+  }
+
+  //3.实现班级类拥有方法 getPosition,教室号尾号1-5的在东面。尾号为6-9的在西面。所以教室号如果为309 输出结果为教室位置在三楼西面。教室号为203 输出教室位置在二楼东面。 (20分)
+  Grade.prototype.getPosition = function () {
+    let zh = parseInt(this.classroom.substr(2))
+    if ((zh <= 9, zh >= 6)) {
+      return `教室号为${this.classroom} 教室位置在三楼西面`
+    } else if ((zh >= 1, zh <= 5)) {
+      return `教室号为${this.classroom} 输出教室位置在二楼东面`
+    }
+  }
+
+  //4.创建一个学生类 拥有属性 name(学生姓名) sex（性别）  age（年龄），属性值不能写死 构造方法传入（10分）
+  function Student(name, sex, age, className, subject, teacher, num, classroom) {
+    Grade.call(this, className, subject, teacher, num, classroom)
+    this.name = name
+    this.sex = sex
+    this.age = age
+  }
+
+  //5.实现学生类继承班级类--必须使用组合继承（10分）
+  Student.prototype = new Grade()
+
+  //6.实现学生类拥有方法 upperName 实现让自己的名字大写进行返回（10分）
+  Student.prototype.upperName = function () {
+    return this.name.toUpperCase()
+  }
+
+  //7.实现学生类拥有方法 getScore 实现传入分数返回“***课程及格或者不及格”（10分）
+  Student.prototype.getScore = function (chengji) {
+    if (chengji >= 60) {
+      return `${this.subject}课程及格`
+    } else {
+      return `${this.subject}课程不及格`
+    }
+  }
+
+  //8.实现学生类拥有方法 getInfo。返回 学生姓名为:**,年龄为**，性别为**，讲师为**，所在班级为**，班级人数共**人，教室号为**，所学习课程为**(10分)
+  Student.prototype.getInfo = function () {
+    return `学生姓名为:${this.name},年龄为${this.age}，性别为${this.sex}，讲师为${this.teacher}，所在班级为${this.className}，班级人数共${this.num}人，教室号为${this.classroom}，所学习课程为${this.subject}`
+  }
+
+  //9.实例化学生类并调用各个属性和方法进行输出（10分）
+
+  let stu = new Student('zhangjun', '男', 18, '一年三班', '语文', '张三', 10, '309')
+  console.log(stu.name, stu.sex, stu.age, stu.className, stu.subject, stu.teacher, stu.num, stu.classroom)
+  console.log(stu.upperName())
+  console.log(stu.getInfo())
+  console.log(stu.getScore(70))
+
+  stu.getTeacher()
+  stu.getPosition()
+</script>

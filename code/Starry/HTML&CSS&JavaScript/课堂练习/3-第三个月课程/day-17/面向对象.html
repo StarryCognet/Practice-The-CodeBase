@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body></body>
+</html>
+<script>
+  //创建3个学生信息
+  var name1 = '张三'
+  var sex1 = '男'
+  var age1 = 20
+
+  var name2 = '李四'
+  var sex2 = '男'
+  var age2 = 20
+
+  var name3 = '王五'
+  var sex3 = '男'
+  var age3 = 20
+
+  function Student(name, sex, age) {
+    this.name = name
+    this.sex = sex
+    this.age = age
+  }
+  Student.prototype.show = function () {
+    console.log('姓名:' + this.name + ',性别:' + this.sex + ',年龄:' + this.age)
+  }
+
+  var stu1 = new Student('张三', '男', 20)
+  stu1.show()
+  var stu2 = new Student('李四', '男', 22)
+  stu2.show()
+  var stu3 = new Student('王五', '男', 24)
+  stu3.show()
+
+
+  
+</script>

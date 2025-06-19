@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6d0789e8-496f-4349-8f29-8210aacbbe89" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/../../HTML&amp;CSS&amp;JavaScript/课堂练习/4-第四个月课程/day-01/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HTML&amp;CSS&amp;JavaScript/课堂练习/4-第四个月课程/day-01/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HTML&amp;CSS&amp;JavaScript/课堂练习/4-第四个月课程/day-01/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HTML&amp;CSS&amp;JavaScript/课堂练习/4-第四个月课程/day-01/day-01.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HTML&amp;CSS&amp;JavaScript/课堂练习/4-第四个月课程/day-01/out/production/day-01/HelloWorld.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HTML&amp;CSS&amp;JavaScript/课堂练习/4-第四个月课程/day-01/src/HelloWorld.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HTML&amp;CSS&amp;JavaScript/课堂练习/4-第四个月课程/笔记/day-01笔记.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HTML&amp;CSS&amp;JavaScript/课堂练习/4-第四个月课程/配置文件/idea-2020/ideaIU-2020.1.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HTML&amp;CSS&amp;JavaScript/课堂练习/4-第四个月课程/配置文件/idea-2020/lib/ACTIVATION_CODE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HTML&amp;CSS&amp;JavaScript/课堂练习/4-第四个月课程/配置文件/idea-2020/lib/jetbrains-agent.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HTML&amp;CSS&amp;JavaScript/课堂练习/4-第四个月课程/配置文件/idea-2020/lib/sha1sum.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HTML&amp;CSS&amp;JavaScript/课堂练习/4-第四个月课程/配置文件/jdk-8u131-windows-x64_8.0.1310.11.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../HTML&amp;CSS&amp;JavaScript/课堂练习/4-第四个月课程/配置文件/jdk安装配置文档.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../.idea/Practice-The-CodeBase.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.idea/Practice-The-CodeBase.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HTML&amp;CSS&amp;JavaScript/个人练习/Java练习/黑马程序员Java课程练习/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HTML&amp;CSS&amp;JavaScript/个人练习/Java练习/黑马程序员Java课程练习/HelloWorld.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2yUFS5oCOmmWXPuevOWvbrFuN2U" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "E:/Visual Studio Code/git/Practice-The-CodeBase",
+    "settings.editor.selected.configurable": "configurable.group.language",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="6d0789e8-496f-4349-8f29-8210aacbbe89" name="更改" comment="" />
+      <created>1749881243931</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1749881243931</updated>
+      <workItem from="1749881244941" duration="109000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

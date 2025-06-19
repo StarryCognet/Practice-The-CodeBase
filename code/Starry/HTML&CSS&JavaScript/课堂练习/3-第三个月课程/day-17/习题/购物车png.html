@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        transition: 0.5s ease;
+      }
+      body {
+        background-color: #ea4335;
+      }
+      .banner {
+        width: 700px;
+        margin: 0 auto;
+        margin-top: 10px;
+      }
+      .top {
+        background-color: #fce3e1;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .top input {
+        height: 25px;
+      }
+      .box {
+        background-color: #fce3e1;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 15px 0;
+        text-align: center;
+      }
+      tr td:first-of-type {
+        text-align: left;
+      }
+      .jia,
+      .jian {
+        background-color: #ffffff00;
+        border-color: #ea443500;
+      }
+      .sl {
+        width: 40px;
+        text-align: center;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      td {
+        padding: 5px 23px;
+        border-bottom: 1px solid #e2d5d4;
+      }
+      .end {
+        background-color: #fce3e1;
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 110px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <form>
+        <div class="top">
+          商品名称：
+          <input type="text" name="" class="spmc" />
+          商品价格：
+          <input type="text" name="" class="spjg" />
+          <input type="button" value="加入购物车" class="but" />
+        </div>
+        <div class="box">
+          <table>
+            <tr>
+              <td><input type="checkbox" name="" class="quanxuan" />全选按钮</td>
+              <td>商品名称</td>
+              <td>商品价格</td>
+              <td>数量</td>
+              <td>操作</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" name="" class="fux" />
+              </td>
+              <td>梅赛德斯 w13-B</td>
+              <td><i>2500000000</i> 元</td>
+              <td>
+                <input type="button" value="-" class="jian" />
+                <input type="text" class="sl" value="1" />
+                <input type="button" value="+" class="jia" />
+              </td>
+              <td><a href="#" class="dele">删除</a></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" name="" class="fux" />
+              </td>
+              <td>阿尔法罗密欧 四叶草</td>
+              <td><i>430000</i> 元</td>
+              <td>
+                <input type="button" value="-" class="jian" />
+                <input type="text" class="sl" value="1" />
+                <input type="button" value="+" class="jia" />
+              </td>
+              <td><a href="#" class="dele">删除</a></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" name="" class="fux" />
+              </td>
+              <td>自行车</td>
+              <td><i>1298</i> 元</td>
+              <td>
+                <input type="button" value="-" class="jian" />
+                <input type="text" class="sl" value="1" />
+                <input type="button" value="+" class="jia" />
+              </td>
+              <td><a href="#" class="dele">删除</a></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" name="" class="fux" />
+              </td>
+              <td>手机</td>
+              <td><i>2323</i> 元</td>
+              <td>
+                <input type="button" value="-" class="jian" />
+                <input type="text" class="sl" value="1" />
+                <input type="button" value="+" class="jia" />
+              </td>
+              <td><a href="#" class="dele">删除</a></td>
+            </tr>
+          </table>
+        </div>
+        <div class="end">
+          <span>共计<span class="spzj">0</span>种商品，合计<span class="heji">0</span>元。</span>
+          <input type="button" value="清空购物车" />
+        </div>
+      </form>
+    </div>
+    <script>
+      let spmc = document.querySelector('.spmc')
+      let spjg = document.querySelector('.spjg')
+      let but = document.querySelector('.but')
+      let table = document.querySelector('table')
+
+      but.addEventListener('click', function (event) {
+        table.innerHTML += `
+        <tr>
+          <td>
+            <input type="checkbox" name="" class="fux" />
+            </td>
+            <td>${spmc.value}</td>
+            <td><i>${spjg.value}</i> 元</td>
+            <td>
+              <input type="button" value="-" class="jian" />
+              <input type="text" class="sl" value="1" />
+              <input type="button" value="+" class="jia" />
+              </td>
+              <td><a href="#" class="dele">删除</a></td>
+              </tr>
+              `
+        jiaJian()
+        quanX()
+        dleet()
+        event.preventDefault()
+      })
+      jiaJian()
+      quanX()
+      dleet()
+      function dleet() {
+        let dele = document.querySelectorAll('.dele')
+        for (let i = 0; i < dele.length; i++) {
+          dele[i].addEventListener('click', function () {
+            dele[i].parentNode.parentNode.remove()
+          })
+        }
+      }
+      function quanX() {
+        let quanxuan = document.querySelector('.quanxuan')
+        let fux = document.querySelectorAll('.fux')
+        quanxuan.addEventListener('click', function () {
+          for (let i = 0; i < fux.length; i++) {
+            fux[i].checked = quanxuan.checked
+          }
+        })
+      }
+      function jiaJian() {
+        let sl = document.querySelectorAll('.sl')
+        let jia = document.querySelectorAll('.jia')
+        let jian = document.querySelectorAll('.jian')
+        for (let i = 0; i < sl.length; i++) {
+          jia[i].addEventListener('click', function () {
+            sl[i].value++
+          })
+        }
+      }
+    </script>
+  </body>
+</html>
