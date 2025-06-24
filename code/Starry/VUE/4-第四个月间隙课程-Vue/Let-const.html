@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var a = 1
+      var a = 2
+      console.log(a)
+      //1  let 不能重复声明
+      let b = 1
+      console.log(b)
+      // let b = 2
+      // console.log(b);
+
+      var tmp = 123
+      for (var i = 0; i < 2; i++) {
+        console.log(tmp)
+        // let tmp
+      }
+
+      if (true) {
+        const a = 10
+        if (true) {
+          const a = 20
+          console.log(a)
+        }
+        console.log(a)
+      }
+      console.log(a)
+    </script>
+  </body>
+</html>
